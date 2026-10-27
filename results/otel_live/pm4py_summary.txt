@@ -1,0 +1,14 @@
+pm4py 2.7.23.8, inductive miner noise threshold 0.0
+8 runs, 28 events shown, 4 activities
+start activities: {'list_files': 8}
+end activities:   {'read_file': 4, 'run_python': 4}
+directly-follows edges: 7, variants: 7
+Petri net: 9 places, 11 transitions
+process tree: ->( 'list_files', +( X( tau, ->( X( tau, 'write_file' ), *( 'run_python', tau ) ) ), *( 'read_file', tau ) ) )
+  2x  list_files > read_file > run_python
+  1x  list_files > read_file
+  1x  list_files > read_file > run_python > run_python
+  1x  list_files > read_file > read_file > run_python
+  1x  list_files > read_file > read_file
+  1x  list_files > read_file > write_file > run_python > read_file
+  1x  list_files > read_file > read_file > read_file

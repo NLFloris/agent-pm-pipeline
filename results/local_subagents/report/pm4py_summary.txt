@@ -1,0 +1,14 @@
+pm4py 2.7.23.8, inductive miner noise threshold 0.0
+10 runs, 239 events shown, 6 activities
+start activities: {'report': 10}
+end activities:   {'orchestrate': 10}
+directly-follows edges: 16, variants: 7
+Petri net: 13 places, 20 transitions
+process tree: +( *( 'orchestrate', tau ), *( *( 'report', tau ), ->( X( tau, 'spawn' ), X( tau, *( 'run_python', tau ), ->( X( tau, 'list_files' ), X( tau, 'read_file' ) ) ) ) ) )
+  4x  report > orchestrate > orchestrate > list_files > report > orchestrate > read_file > report > orchestrate > run_python > report > orchestrate > spawn > list_files > read_file > report > spawn > run_python > run_python > run_python > report > report > orchestrate
+  1x  report > orchestrate > orchestrate > list_files > report > orchestrate > read_file > report > orchestrate > run_python > report > orchestrate > spawn > list_files > read_file > report > spawn > run_python > run_python > run_python > run_python > report > report > orchestrate
+  1x  report > orchestrate > orchestrate > list_files > report > orchestrate > read_file > report > orchestrate > run_python > report > orchestrate
+  1x  report > orchestrate > orchestrate > list_files > report > orchestrate > read_file > report > orchestrate > run_python > report > orchestrate > spawn > list_files > read_file > report > spawn > run_python > report > report > orchestrate > spawn > report > report > orchestrate
+  1x  report > orchestrate > orchestrate > list_files > report > orchestrate > read_file > report > orchestrate > run_python > report > orchestrate > spawn > list_files > read_file > report > spawn > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > run_python > report > report > orchestrate
+  1x  report > orchestrate > orchestrate > list_files > report > orchestrate > read_file > report > orchestrate > run_python > report > orchestrate > spawn > list_files > read_file > report > spawn > run_python > run_python > report > report > orchestrate
+  1x  report > orchestrate > orchestrate > list_files > report > orchestrate > read_file > report > orchestrate > run_python > report > orchestrate > spawn > list_files > read_file > report > spawn > run_python > report > report > orchestrate

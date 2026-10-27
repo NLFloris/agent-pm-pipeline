@@ -1,0 +1,51 @@
+ground truth: tau2 action_checks, all gold actions matched = compliant
+runs with ground truth: 172   violations: 37
+
+ALIGNMENT with ground truth (positive class = protocol violation)
+  each method on every run it judged; n differs where a judge did not cover a run
+  method                            n    acc   prec    rec     F1  kappa   95% CI on kappa
+  process mining                  172   0.90   0.88   0.59   0.71   0.65   [0.48, 0.79]
+  judge full glm-5-3-flash        164   0.56   0.26   0.59   0.36   0.10   [-0.02, 0.23]
+  judge full gpt-oss-120b         170   0.58   0.26   0.51   0.35   0.09   [-0.05, 0.23]
+  judge full gpt-oss-120b t0.7     50   0.56   0.20   0.40   0.27   0.00   [-0.24, 0.29]
+  judge gold-actions glm-5-3-flash  172   0.99   0.95   1.00   0.97   0.97   [0.91, 1.00]
+  judge gold-actions gpt-oss-120b  172   0.98   0.93   1.00   0.96   0.95   [0.89, 1.00]
+  judge output-only gpt-oss-120b  170   0.25   0.21   0.89   0.34  -0.02   [-0.07, 0.03]
+
+PAIRED COMPARISON, McNemar exact test, process mining vs each judge on the runs both scored
+  vs judge full glm-5-3-flash  (n=164)
+    both right  83   both wrong   7   only process mining right  65   only judge right   9
+    p = 0.0000  -> difference is unlikely to be chance
+  vs judge full gpt-oss-120b  (n=170)
+    both right  88   both wrong   7   only process mining right  64   only judge right  11
+    p = 0.0000  -> difference is unlikely to be chance
+  vs judge full gpt-oss-120b t0.7  (n=50)
+    both right  27   both wrong   3   only process mining right  19   only judge right   1
+    p = 0.0000  -> difference is unlikely to be chance
+  vs judge gold-actions glm-5-3-flash  (n=172)
+    both right 152   both wrong   0   only process mining right   2   only judge right  18
+    p = 0.0004  -> difference is unlikely to be chance
+  vs judge gold-actions gpt-oss-120b  (n=172)
+    both right 151   both wrong   0   only process mining right   3   only judge right  18
+    p = 0.0015  -> difference is unlikely to be chance
+  vs judge output-only gpt-oss-120b  (n=170)
+    both right  29   both wrong   4   only process mining right 123   only judge right  14
+    p = 0.0000  -> difference is unlikely to be chance
+
+REPRODUCIBILITY
+  process mining: three full repetitions hash identically (measured in run_three_corpora)
+  judge full glm-5-3-flash: n/a
+  judge full gpt-oss-120b: unanimous on 170/170 runs, Fleiss kappa 1.00
+  judge full gpt-oss-120b t0.7: unanimous on 50/50 runs, Fleiss kappa 1.00
+  judge gold-actions glm-5-3-flash: n/a
+  judge gold-actions gpt-oss-120b: unanimous on 172/172 runs, Fleiss kappa 1.00
+  judge output-only gpt-oss-120b: unanimous on 170/170 runs, Fleiss kappa 1.00
+
+COST per verdict, over the calls the model answered (cache copies left out)
+  process mining: 0 tokens, well under a millisecond per run
+  judge full glm-5-3-flash: 5,376 prompt + 6,346 completion tokens, 169 s; 171 answered calls, 0 cache copies left out
+  judge full gpt-oss-120b: 5,371 prompt + 883 completion tokens, 19 s; 172 answered calls, 688 cache copies left out
+  judge full gpt-oss-120b t0.7: 4,874 prompt + 833 completion tokens, 25 s; 50 answered calls, 200 cache copies left out
+  judge gold-actions glm-5-3-flash: 3,960 prompt + 662 completion tokens, 45 s; 173 answered calls, 0 cache copies left out
+  judge gold-actions gpt-oss-120b: 3,943 prompt + 501 completion tokens, 19 s; 172 answered calls, 688 cache copies left out
+  judge output-only gpt-oss-120b: 442 prompt + 419 completion tokens, 7 s; 174 answered calls, 578 cache copies left out

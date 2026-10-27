@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-pm-pipeline"
+version = "0.1.0"
+description = "Turn the execution traces of LLM-based agents into OCEL 2.0 event logs and check them with process mining."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Floris Kuijpers" }]
+requires-python = ">=3.10"
+keywords = ["process mining", "conformance checking", "OCEL", "OpenTelemetry", "LLM agents"]
+dependencies = []
+
+[project.optional-dependencies]
+pm = ["pm4py>=2.7", "pandas>=2.0", "graphviz>=0.20"]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Repository = "https://github.com/NLFloris/agent-pm-pipeline"
+
+[project.scripts]
+agentpm = "agentpm.cli:main"
+
+[tool.setuptools]
+packages = ["agentpm", "agentpm.ingest", "agentpm.logbuild", "agentpm.analysis"]

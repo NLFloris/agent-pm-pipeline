@@ -1,0 +1,55 @@
+{
+  "_comment": [
+    "Tasks for the local Magentic-One corpus (slot 1).",
+    "Each runs in a sandbox seeded with sales.csv, notes.md and calc.py, so no",
+    "network and no private content are involved and the suite is reproducible.",
+    "'shape' records the collaboration the task is meant to elicit, so a later",
+    "claim about the discovered model can be checked against what was asked:",
+    "  single     one specialist should be enough",
+    "  relay      one specialist finds something, another acts on it",
+    "  verify     work is produced and then independently checked",
+    "  loop       the answer needs more than one pass to get right"
+  ],
+  "tasks": [
+    {
+      "id": "l01_read_csv",
+      "shape": "single",
+      "prompt": "Read sales.csv in the working directory and report how many rows it has and what the column names are."
+    },
+    {
+      "id": "l02_revenue",
+      "shape": "relay",
+      "prompt": "Using sales.csv, compute total revenue per region as units times price. Write the answer as a markdown table."
+    },
+    {
+      "id": "l03_growth",
+      "shape": "relay",
+      "prompt": "Use the growth function in calc.py to compute the Q1 to Q2 change in units for every region in sales.csv. Report which region fell the most."
+    },
+    {
+      "id": "l04_cross_check",
+      "shape": "verify",
+      "prompt": "notes.md claims east sales fell in Q2 after a price rise. Check that against sales.csv and say whether the note is accurate."
+    },
+    {
+      "id": "l05_fix_bug",
+      "shape": "loop",
+      "prompt": "The growth function in calc.py divides by a without guarding against a being zero. Fix it, then run a quick check that growth(0, 5) no longer raises."
+    },
+    {
+      "id": "l06_summarise_all",
+      "shape": "verify",
+      "prompt": "Summarise all three files in the working directory in one paragraph each, then state one thing the files disagree about or leave unclear."
+    },
+    {
+      "id": "l07_best_quarter",
+      "shape": "relay",
+      "prompt": "Which single region and quarter produced the highest revenue in sales.csv? Show the calculation you used."
+    },
+    {
+      "id": "l08_price_effect",
+      "shape": "loop",
+      "prompt": "Did raising the price in a region reduce its units sold? Answer using only sales.csv, and state how confident the data lets you be."
+    }
+  ]
+}

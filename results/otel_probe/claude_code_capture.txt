@@ -1,0 +1,968 @@
+Claude Code OpenTelemetry capture
+==============================================================================
+Two throwaway sandbox runs, collected with experiments/otel_capture/collector.py.
+Personal fields (user.id, user.email, account and organization ids) removed.
+Claude Code emits OTel LOGS and METRICS, not spans.
+
+
+==============================================================================
+RUN A  two concurrent sub-agents, telemetry default
+==============================================================================
+
+seq   0  2026-10-12T15:03:28.288Z  managed_settings_resolved
+       managed_settings.helper.applied none
+       managed_settings.helper.state none
+       managed_settings.source_behavior first-wins
+       managed_settings.sources     {'values': []}
+       managed_settings.trigger     startup
+
+seq   1  2026-10-12T15:03:28.354Z  hook_registered
+       hook_event                   PostToolUse
+       hook_source                  pluginHook
+       hook_type                    command
+       plugin.name                  third-party
+       plugin_id_hash               7db9f25f16fa177f
+       safe_mode                    false
+
+seq   2  2026-10-12T15:03:28.354Z  hook_registered
+       hook_event                   Stop
+       hook_source                  pluginHook
+       hook_type                    command
+       plugin.name                  third-party
+       plugin_id_hash               7db9f25f16fa177f
+       safe_mode                    false
+
+seq   3  2026-10-12T15:03:28.354Z  plugin_loaded
+       agent_path_count             1
+       command_path_count           0
+       enabled_via                  user-install
+       has_hooks                    True
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             third-party
+       plugin.name                  third-party
+       plugin.scope                 user-local
+       plugin_id_hash               7db9f25f16fa177f
+       safe_mode                    false
+       skill_path_count             1
+
+seq   4  2026-10-12T15:03:28.355Z  plugin_loaded
+       agent_path_count             0
+       command_path_count           0
+       enabled_via                  user-install
+       has_hooks                    False
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             third-party
+       plugin.name                  third-party
+       plugin.scope                 user-local
+       plugin_id_hash               ba91113e693e8c83
+       safe_mode                    false
+       skill_path_count             1
+
+seq   5  2026-10-12T15:03:28.355Z  plugin_loaded
+       agent_path_count             0
+       command_path_count           0
+       enabled_via                  user-install
+       has_hooks                    False
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             third-party
+       plugin.name                  third-party
+       plugin.scope                 user-local
+       plugin_id_hash               213d337874af7879
+       safe_mode                    false
+       skill_path_count             1
+
+seq   6  2026-10-12T15:03:28.355Z  plugin_loaded
+       agent_path_count             0
+       command_path_count           0
+       enabled_via                  default-enable
+       has_hooks                    False
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             builtin
+       plugin.name                  agents-md
+       plugin.scope                 default-bundle
+       plugin_id_hash               0426e5d92e22a851
+       safe_mode                    false
+       skill_path_count             0
+
+seq   7  2026-10-12T15:03:29.213Z  mcp_server_connection
+       duration_ms                  431
+       is_plugin                    False
+       server_scope                 claudeai
+       status                       connected
+       transport_type               claudeai-proxy
+
+seq   8  2026-10-12T15:03:29.738Z  api_request
+       cache_creation_tokens        0
+       cache_read_tokens            0
+       client_request_id            75a0b457-b005-4e62-ac8e-62fc19da39fb
+       cost_usd                     0.001007
+       cost_usd_micros              1007
+       duration_ms                  922
+       input_tokens                 927
+       model                        claude-haiku-4-5-20251001
+       output_tokens                16
+       query_source                 generate_session_title
+       request_id                   req_011CfxYgBERhGSRoF4QazsFU
+       speed                        normal
+       ttft_ms                      769
+
+seq   9  2026-10-12T15:03:29.738Z  assistant_response
+       message.uuid                 20e15904-15b3-47f9-bb5a-446e8f8c0f8e
+       model                        claude-haiku-4-5-20251001
+       query_source                 generate_session_title
+       request_id                   req_011CfxYgBERhGSRoF4QazsFU
+       response                     <REDACTED>
+       response_length              48
+
+seq  10  2026-10-12T15:03:30.832Z  user_prompt
+       message.uuid                 f5c2b1d3-2fb0-4e6e-b105-8f0d054a322d
+       prompt                       <REDACTED>
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       prompt_length                131
+
+seq  11  2026-10-12T15:03:30.835Z  mcp_server_connection
+       duration_ms                  2050
+       is_plugin                    False
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       server_scope                 claudeai
+       status                       connected
+       transport_type               claudeai-proxy
+
+seq  12  2026-10-12T15:03:35.797Z  tool_decision
+       decision                     accept
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       source                       config
+       tool_name                    Agent
+       tool_source                  builtin
+       tool_use_id                  toolu_01GipmNCoToSpHnsSsX9F3GD
+
+seq  13  2026-10-12T15:03:37.580Z  tool_decision
+       decision                     accept
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       source                       config
+       tool_name                    Agent
+       tool_source                  builtin
+       tool_use_id                  toolu_01DW5GUeMwJrv1R4vBvMsrQf
+
+seq  14  2026-10-12T15:03:37.603Z  api_request
+       cache_creation_tokens        17563
+       cache_read_tokens            21560
+       client_request_id            5b3dadf2-941b-4fc5-a830-9b504becb2c9
+       cost_usd                     0.19866999999999999
+       cost_usd_micros              198670
+       duration_ms                  6741
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                490
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 sdk
+       request_id                   req_011CfxYgKsLdnhz8cDThyZLy
+       speed                        normal
+       ttft_ms                      1804
+
+seq  15  2026-10-12T15:03:37.603Z  assistant_response
+       message.uuid                 99a59f3b-f4cb-492e-9b85-f3e6e181c9bb
+       model                        claude-opus-5
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 sdk
+       request_id                   req_011CfxYgKsLdnhz8cDThyZLy
+       response                     <REDACTED>
+       response_length              62
+
+seq  16  2026-10-12T15:03:38.662Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        31531
+       cache_read_tokens            0
+       client_request_id            f28a61ee-6225-48cd-8f5d-649d5a817834
+       cost_usd                     0.19892875000000002
+       cost_usd_micros              198929
+       duration_ms                  2841
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                74
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYgh9mH1oJuDXa4B4GR
+       speed                        normal
+       ttft_ms                      1674
+
+seq  17  2026-10-12T15:03:38.662Z  assistant_response
+       message.uuid                 608d373b-eb04-4963-a327-f39cc55cc040
+       model                        claude-opus-5
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYgh9mH1oJuDXa4B4GR
+       response                     <REDACTED>
+       response_length              19
+
+seq  18  2026-10-12T15:03:38.671Z  tool_decision
+       decision                     accept
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       source                       config
+       tool_name                    Read
+       tool_source                  builtin
+       tool_use_id                  toolu_01Voeiiznuhq6XCUpk9EMNrP
+
+seq  19  2026-10-12T15:03:38.675Z  tool_result
+       duration_ms                  3
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       success                      true
+       tool_input_size_bytes        47
+       tool_name                    Read
+       tool_result_size_bytes       35
+       tool_use_id                  toolu_01Voeiiznuhq6XCUpk9EMNrP
+
+seq  20  2026-10-12T15:03:40.739Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        13329
+       cache_read_tokens            18202
+       client_request_id            e8e1f3c0-28dd-47c0-aa42-0ec9b62838f7
+       cost_usd                     0.09426725
+       cost_usd_micros              94267
+       duration_ms                  3134
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                74
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYgpdDmyARQFfiPisH7
+       speed                        normal
+       ttft_ms                      1873
+
+seq  21  2026-10-12T15:03:40.739Z  assistant_response
+       message.uuid                 7e7d51d3-c4cc-49cf-8b1b-dce0f6f00581
+       model                        claude-opus-5
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYgpdDmyARQFfiPisH7
+       response                     <REDACTED>
+       response_length              19
+
+seq  22  2026-10-12T15:03:40.743Z  tool_decision
+       decision                     accept
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       source                       config
+       tool_name                    Read
+       tool_source                  builtin
+       tool_use_id                  toolu_01RxKJvrgbQNY9TgU1RpgA3j
+
+seq  23  2026-10-12T15:03:40.746Z  tool_result
+       duration_ms                  3
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       success                      true
+       tool_input_size_bytes        47
+       tool_name                    Read
+       tool_result_size_bytes       38
+       tool_use_id                  toolu_01RxKJvrgbQNY9TgU1RpgA3j
+
+seq  24  2026-10-12T15:03:42.696Z  tool_decision
+       decision                     accept
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       source                       config
+       tool_name                    Bash
+       tool_source                  builtin
+       tool_use_id                  toolu_01HbnCtNPT4385QCsZCH1RYa
+
+seq  25  2026-10-12T15:03:42.703Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        2369
+       cache_read_tokens            31531
+       client_request_id            4d87d5ba-2c2d-4f26-bd5b-40a6210a9691
+       cost_usd                     0.034856750000000006
+       cost_usd_micros              34857
+       duration_ms                  3999
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                171
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYguGWuo1Cqi7aWYz1f
+       speed                        normal
+       ttft_ms                      1633
+
+seq  26  2026-10-12T15:03:43.517Z  tool_result
+       duration_ms                  821
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       success                      true
+       tool_input_size_bytes        99
+       tool_name                    Bash
+       tool_result_size_bytes       247
+       tool_use_id                  toolu_01HbnCtNPT4385QCsZCH1RYa
+
+seq  27  2026-10-12T15:03:46.298Z  tool_decision
+       decision                     accept
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       source                       config
+       tool_name                    Bash
+       tool_source                  builtin
+       tool_use_id                  toolu_011fzxTKDHY12yVuyrc4Cfe4
+
+seq  28  2026-10-12T15:03:46.303Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        2369
+       cache_read_tokens            31531
+       client_request_id            a0e5ec1d-8e1e-4366-b6f2-adb433c52b3d
+       cost_usd                     0.03703175
+       cost_usd_micros              37032
+       duration_ms                  5542
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                258
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYh44Mo4dYi1yyoNpAK
+       speed                        normal
+       ttft_ms                      1427
+
+seq  29  2026-10-12T15:03:46.335Z  tool_result
+       duration_ms                  37
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       success                      true
+       tool_input_size_bytes        95
+       tool_name                    Bash
+       tool_result_size_bytes       247
+       tool_use_id                  toolu_011fzxTKDHY12yVuyrc4Cfe4
+
+seq  30  2026-10-12T15:03:52.045Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        356
+       cache_read_tokens            33900
+       client_request_id            c98f7f8c-e3d8-4880-a395-e499462d049c
+       cost_usd                     0.03116
+       cost_usd_micros              31160
+       duration_ms                  8519
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                479
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYhFtW3vaV7Wbd8C43x
+       speed                        normal
+       ttft_ms                      1504
+
+seq  31  2026-10-12T15:03:52.045Z  assistant_response
+       message.uuid                 d8c21b2d-c40f-4319-92fd-f93cb9dc8201
+       model                        claude-opus-5
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYhFtW3vaV7Wbd8C43x
+       response                     <REDACTED>
+       response_length              1232
+
+seq  32  2026-10-12T15:03:52.052Z  subagent_completed
+       agent.source                 built-in
+       agent_type                   general-purpose
+       duration_ms                  16254
+       final_model                  claude-opus-5[1m]
+       is_async                     False
+       is_built_in                  True
+       model                        claude-opus-5[1m]
+       model_swapped                False
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       total_tokens                 34737
+       total_tool_uses              2
+
+seq  33  2026-10-12T15:03:52.112Z  tool_result
+       duration_ms                  16315
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       success                      true
+       tool_input_size_bytes        411
+       tool_name                    Agent
+       tool_result_size_bytes       1997
+       tool_use_id                  toolu_01GipmNCoToSpHnsSsX9F3GD
+
+seq  34  2026-10-12T15:03:52.744Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        443
+       cache_read_tokens            33900
+       client_request_id            2a10223e-a031-44d4-a73c-bb4cbbd2fd82
+       cost_usd                     0.02887875
+       cost_usd_micros              28879
+       duration_ms                  6400
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                366
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYhTxJEN6GjSZvNPfqM
+       speed                        normal
+       ttft_ms                      1504
+
+seq  35  2026-10-12T15:03:52.744Z  assistant_response
+       message.uuid                 733ceb38-88a8-441c-b287-17fa21d61b0f
+       model                        claude-opus-5
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYhTxJEN6GjSZvNPfqM
+       response                     <REDACTED>
+       response_length              888
+
+seq  36  2026-10-12T15:03:52.746Z  subagent_completed
+       agent.source                 built-in
+       agent_type                   general-purpose
+       duration_ms                  15166
+       final_model                  claude-opus-5[1m]
+       is_async                     False
+       is_built_in                  True
+       model                        claude-opus-5[1m]
+       model_swapped                False
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       total_tokens                 34711
+       total_tool_uses              2
+
+seq  37  2026-10-12T15:03:52.747Z  tool_result
+       duration_ms                  15167
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       success                      true
+       tool_input_size_bytes        411
+       tool_name                    Agent
+       tool_result_size_bytes       1618
+       tool_use_id                  toolu_01DW5GUeMwJrv1R4vBvMsrQf
+
+seq  38  2026-10-12T15:03:58.036Z  api_request
+       cache_creation_tokens        2950
+       cache_read_tokens            39123
+       client_request_id            638b27c2-efcf-4104-bdd9-9f57b5624541
+       cost_usd                     0.0573215
+       cost_usd_micros              57322
+       duration_ms                  5275
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                330
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 sdk
+       request_id                   req_011CfxYhwVzv4TAoWRYnDYwP
+       speed                        normal
+       ttft_ms                      1616
+
+seq  39  2026-10-12T15:03:58.036Z  assistant_response
+       message.uuid                 fa8fd018-17e2-4b59-9cc9-09faaf912072
+       model                        claude-opus-5
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       query_source                 sdk
+       request_id                   req_011CfxYhwVzv4TAoWRYnDYwP
+       response                     <REDACTED>
+       response_length              816
+
+seq  40  2026-10-12T15:03:58.092Z  hook_execution_start
+       hook_event                   Stop
+       hook_name                    Stop
+       hook_source                  merged
+       managed_only                 false
+       num_hooks                    1
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       safe_mode                    false
+
+seq  41  2026-10-12T15:03:58.237Z  hook_execution_complete
+       hook_event                   Stop
+       hook_name                    Stop
+       hook_source                  merged
+       managed_only                 false
+       num_blocking                 0
+       num_cancelled                0
+       num_hooks                    1
+       num_non_blocking_error       0
+       num_success                  1
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       safe_mode                    false
+       total_duration_ms            144
+
+seq  42  2026-10-12T15:03:58.242Z  mcp_server_connection
+       duration_ms                  29028
+       is_plugin                    False
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       server_scope                 claudeai
+       status                       disconnected
+       transport_type               claudeai-proxy
+
+seq  43  2026-10-12T15:03:58.242Z  mcp_server_connection
+       duration_ms                  27407
+       is_plugin                    False
+       prompt.id                    93ea18d4-e920-427d-ae4b-f3e2bf5f381b
+       server_scope                 claudeai
+       status                       disconnected
+       transport_type               claudeai-proxy
+
+==============================================================================
+RUN B  one sub-agent, CLAUDE_CODE_ENHANCED_TELEMETRY_BETA=1
+==============================================================================
+
+seq   0  2026-10-12T15:06:52.133Z  managed_settings_resolved
+       managed_settings.helper.applied none
+       managed_settings.helper.state none
+       managed_settings.source_behavior first-wins
+       managed_settings.sources     {'values': []}
+       managed_settings.trigger     startup
+
+seq   1  2026-10-12T15:06:52.196Z  hook_registered
+       hook_event                   PostToolUse
+       hook_source                  pluginHook
+       hook_type                    command
+       plugin.name                  third-party
+       plugin_id_hash               7db9f25f16fa177f
+       safe_mode                    false
+
+seq   2  2026-10-12T15:06:52.196Z  hook_registered
+       hook_event                   Stop
+       hook_source                  pluginHook
+       hook_type                    command
+       plugin.name                  third-party
+       plugin_id_hash               7db9f25f16fa177f
+       safe_mode                    false
+
+seq   3  2026-10-12T15:06:52.197Z  plugin_loaded
+       agent_path_count             1
+       command_path_count           0
+       enabled_via                  user-install
+       has_hooks                    True
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             third-party
+       plugin.name                  third-party
+       plugin.scope                 user-local
+       plugin_id_hash               7db9f25f16fa177f
+       safe_mode                    false
+       skill_path_count             1
+
+seq   4  2026-10-12T15:06:52.197Z  plugin_loaded
+       agent_path_count             0
+       command_path_count           0
+       enabled_via                  user-install
+       has_hooks                    False
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             third-party
+       plugin.name                  third-party
+       plugin.scope                 user-local
+       plugin_id_hash               ba91113e693e8c83
+       safe_mode                    false
+       skill_path_count             1
+
+seq   5  2026-10-12T15:06:52.197Z  plugin_loaded
+       agent_path_count             0
+       command_path_count           0
+       enabled_via                  user-install
+       has_hooks                    False
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             third-party
+       plugin.name                  third-party
+       plugin.scope                 user-local
+       plugin_id_hash               213d337874af7879
+       safe_mode                    false
+       skill_path_count             1
+
+seq   6  2026-10-12T15:06:52.197Z  plugin_loaded
+       agent_path_count             0
+       command_path_count           0
+       enabled_via                  default-enable
+       has_hooks                    False
+       has_mcp                      False
+       host_owned_mcp               False
+       marketplace.name             builtin
+       plugin.name                  agents-md
+       plugin.scope                 default-bundle
+       plugin_id_hash               0426e5d92e22a851
+       safe_mode                    false
+       skill_path_count             0
+
+seq   7  2026-10-12T15:06:52.608Z  user_prompt
+       message.uuid                 f321ec28-5f81-46ba-ae2c-22862f13f4b2
+       prompt                       <REDACTED>
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       prompt_length                80
+
+seq   8  2026-10-12T15:06:53.088Z  mcp_server_connection
+       duration_ms                  493
+       is_plugin                    False
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       server_scope                 claudeai
+       status                       connected
+       transport_type               claudeai-proxy
+
+seq   9  2026-10-12T15:06:53.221Z  api_request
+       cache_creation_tokens        0
+       cache_read_tokens            0
+       client_request_id            75bf8070-62a3-482e-bd9d-9f5e2320cc0d
+       cost_usd                     0.001004
+       cost_usd_micros              1004
+       duration_ms                  657
+       input_tokens                 914
+       model                        claude-haiku-4-5-20251001
+       output_tokens                18
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 generate_session_title
+       request_id                   req_011CfxYwCDtHuLRjcKfMt5uy
+       speed                        normal
+       ttft_ms                      532
+
+seq  10  2026-10-12T15:06:53.221Z  assistant_response
+       message.uuid                 713bbbc5-aa79-4b5e-a9c9-c8fb8fb24786
+       model                        claude-haiku-4-5-20251001
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 generate_session_title
+       request_id                   req_011CfxYwCDtHuLRjcKfMt5uy
+       response                     <REDACTED>
+       response_length              36
+
+seq  11  2026-10-12T15:06:55.613Z  mcp_server_connection
+       duration_ms                  3016
+       is_plugin                    False
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       server_scope                 claudeai
+       status                       connected
+       transport_type               claudeai-proxy
+
+seq  12  2026-10-12T15:07:04.980Z  tool_decision
+       decision                     accept
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       source                       config
+       tool_name                    Agent
+       tool_source                  builtin
+       tool_use_id                  toolu_01LE7FxULKMxuBUbQzYaBkxY
+
+seq  13  2026-10-12T15:07:04.988Z  tool_result
+       duration_ms                  8
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       success                      true
+       tool_input_size_bytes        507
+       tool_name                    Agent
+       tool_result_size_bytes       1091
+       tool_use_id                  toolu_01LE7FxULKMxuBUbQzYaBkxY
+
+seq  14  2026-10-12T15:07:05.373Z  api_request
+       cache_creation_tokens        12858
+       cache_read_tokens            24242
+       client_request_id            587c6b38-a401-4a43-b1ee-e810f8e45a2e
+       cost_usd                     0.162186
+       cost_usd_micros              162186
+       duration_ms                  12730
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                859
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 sdk
+       request_id                   req_011CfxYwCjt2Pxx1izRtPYzr
+       speed                        normal
+       ttft_ms                      1492
+
+seq  15  2026-10-12T15:07:05.373Z  assistant_response
+       message.uuid                 d03cdecb-0fc5-41d2-b488-66bd1d1421b6
+       model                        claude-opus-5
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 sdk
+       request_id                   req_011CfxYwCjt2Pxx1izRtPYzr
+       response                     <REDACTED>
+       response_length              70
+
+seq  16  2026-10-12T15:07:05.382Z  tool_decision
+       decision                     accept
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       source                       config
+       tool_name                    Read
+       tool_source                  builtin
+       tool_use_id                  toolu_01XBoRqKm3XJPEjbEJjTUz4M
+
+seq  17  2026-10-12T15:07:05.386Z  tool_result
+       duration_ms                  3
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       success                      true
+       tool_input_size_bytes        47
+       tool_name                    Read
+       tool_result_size_bytes       38
+       tool_use_id                  toolu_01XBoRqKm3XJPEjbEJjTUz4M
+
+seq  18  2026-10-12T15:07:07.606Z  tool_decision
+       decision                     accept
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       source                       config
+       tool_name                    Read
+       tool_source                  builtin
+       tool_use_id                  toolu_015uRw8vv8v3LNh9rWTniRqb
+
+seq  19  2026-10-12T15:07:07.611Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        30281
+       cache_read_tokens            0
+       client_request_id            bd28cdfd-719d-48d5-9de3-83be9fce97d5
+       cost_usd                     0.19111625
+       cost_usd_micros              191116
+       duration_ms                  2606
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                74
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYx7H17GLPgmDK3vBq3
+       speed                        normal
+       ttft_ms                      1386
+
+seq  20  2026-10-12T15:07:07.611Z  assistant_response
+       message.uuid                 08b0c536-d12c-4721-9e45-6d96f2f69fe1
+       model                        claude-opus-5
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYx7H17GLPgmDK3vBq3
+       response                     <REDACTED>
+       response_length              19
+
+seq  21  2026-10-12T15:07:07.615Z  tool_result
+       duration_ms                  7
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       success                      true
+       tool_input_size_bytes        47
+       tool_name                    Read
+       tool_result_size_bytes       35
+       tool_use_id                  toolu_015uRw8vv8v3LNh9rWTniRqb
+
+seq  22  2026-10-12T15:07:08.895Z  api_request
+       cache_creation_tokens        4082
+       cache_read_tokens            37100
+       client_request_id            92c959cd-afee-4809-89d5-47371cbb7a92
+       cost_usd                     0.06367999999999999
+       cost_usd_micros              63680
+       duration_ms                  3493
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                172
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 sdk
+       request_id                   req_011CfxYx9NWAycr6Wa3LHrJ7
+       speed                        normal
+       ttft_ms                      1153
+
+seq  23  2026-10-12T15:07:08.895Z  assistant_response
+       message.uuid                 396cfe91-2750-4420-8d5b-acda580150cf
+       model                        claude-opus-5
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 sdk
+       request_id                   req_011CfxYx9NWAycr6Wa3LHrJ7
+       response                     <REDACTED>
+       response_length              378
+
+seq  24  2026-10-12T15:07:08.900Z  hook_execution_start
+       hook_event                   Stop
+       hook_name                    Stop
+       hook_source                  merged
+       managed_only                 false
+       num_hooks                    1
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       safe_mode                    false
+
+seq  25  2026-10-12T15:07:09.115Z  hook_execution_complete
+       hook_event                   Stop
+       hook_name                    Stop
+       hook_source                  merged
+       managed_only                 false
+       num_blocking                 0
+       num_cancelled                0
+       num_hooks                    1
+       num_non_blocking_error       0
+       num_success                  1
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       safe_mode                    false
+       total_duration_ms            215
+
+seq  26  2026-10-12T15:07:13.670Z  tool_decision
+       decision                     accept
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       source                       config
+       tool_name                    Bash
+       tool_source                  builtin
+       tool_use_id                  toolu_018Hs2UxdNKm9T5L4xGnXzL5
+
+seq  27  2026-10-12T15:07:13.678Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        2369
+       cache_read_tokens            30281
+       client_request_id            03972714-b312-4421-9d8e-c624563cfe9f
+       cost_usd                     0.03970675
+       cost_usd_micros              39707
+       duration_ms                  6049
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                390
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYxJWvnRGM1wisGQ9Af
+       speed                        normal
+       ttft_ms                      1025
+
+seq  28  2026-10-12T15:07:14.180Z  tool_result
+       duration_ms                  509
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       success                      true
+       tool_input_size_bytes        136
+       tool_name                    Bash
+       tool_result_size_bytes       288
+       tool_use_id                  toolu_018Hs2UxdNKm9T5L4xGnXzL5
+
+seq  29  2026-10-12T15:07:16.625Z  tool_decision
+       decision                     accept
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       source                       config
+       tool_name                    Read
+       tool_source                  builtin
+       tool_use_id                  toolu_01MSyq3BSNucJeFrdFM43KKy
+
+seq  30  2026-10-12T15:07:16.627Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        598
+       cache_read_tokens            32650
+       client_request_id            8647f30a-7572-44a3-81c9-f30491a53e2f
+       cost_usd                     0.0232975
+       cost_usd_micros              23298
+       duration_ms                  2439
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                129
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYxniKSod6okiUNX46G
+       speed                        normal
+       ttft_ms                      1151
+
+seq  31  2026-10-12T15:07:16.629Z  tool_result
+       duration_ms                  3
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       success                      true
+       tool_input_size_bytes        47
+       tool_name                    Read
+       tool_result_size_bytes       38
+       tool_use_id                  toolu_01MSyq3BSNucJeFrdFM43KKy
+
+seq  32  2026-10-12T15:07:24.232Z  api_request
+       agent.name                   general-purpose
+       cache_creation_tokens        178
+       cache_read_tokens            33248
+       client_request_id            9506eb97-67b1-4ae6-a608-01fc85252492
+       cost_usd                     0.0291715
+       cost_usd_micros              29172
+       duration_ms                  7592
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                457
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYxy6AETqw6xjyS2xAG
+       speed                        normal
+       ttft_ms                      1059
+
+seq  33  2026-10-12T15:07:24.232Z  assistant_response
+       message.uuid                 f8eb75c0-0324-4171-adee-3a609cec808a
+       model                        claude-opus-5
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       query_source                 agent:builtin:general-purpose
+       request_id                   req_011CfxYxy6AETqw6xjyS2xAG
+       response                     <REDACTED>
+       response_length              1237
+
+seq  34  2026-10-12T15:07:24.235Z  subagent_completed
+       agent.source                 built-in
+       agent_type                   general-purpose
+       duration_ms                  19254
+       final_model                  claude-opus-5[1m]
+       is_async                     True
+       is_built_in                  True
+       model                        claude-opus-5[1m]
+       model_swapped                False
+       prompt.id                    78b8cebe-193a-4cc2-89d3-ffa444fc469f
+       total_tokens                 33885
+       total_tool_uses              3
+
+seq  35  2026-10-12T15:07:24.338Z  user_prompt
+       message.uuid                 613358f2-f71b-4f1f-af24-5498a8db5a2f
+       prompt                       <REDACTED>
+       prompt.id                    df1f4de4-088b-4019-9de9-5f09db0f52c3
+       prompt_length                1936
+
+seq  36  2026-10-12T15:07:30.032Z  api_request
+       cache_creation_tokens        1113
+       cache_read_tokens            41182
+       client_request_id            6d5971b8-3aec-4bbe-891b-2a8202f6cd74
+       cost_usd                     0.041431
+       cost_usd_micros              41431
+       duration_ms                  5686
+       effort                       xhigh
+       input_tokens                 2
+       model                        claude-opus-5
+       output_tokens                388
+       prompt.id                    df1f4de4-088b-4019-9de9-5f09db0f52c3
+       query_source                 sdk
+       request_id                   req_011CfxYyY34ETQr2raUKQz6D
+       speed                        normal
+       ttft_ms                      1074
+
+seq  37  2026-10-12T15:07:30.033Z  assistant_response
+       message.uuid                 62266cba-d86b-472f-bcb8-ac0e7db6e205
+       model                        claude-opus-5
+       prompt.id                    df1f4de4-088b-4019-9de9-5f09db0f52c3
+       query_source                 sdk
+       request_id                   req_011CfxYyY34ETQr2raUKQz6D
+       response                     <REDACTED>
+       response_length              944
+
+seq  38  2026-10-12T15:07:30.036Z  hook_execution_start
+       hook_event                   Stop
+       hook_name                    Stop
+       hook_source                  merged
+       managed_only                 false
+       num_hooks                    1
+       prompt.id                    df1f4de4-088b-4019-9de9-5f09db0f52c3
+       safe_mode                    false
+
+seq  39  2026-10-12T15:07:30.302Z  hook_execution_complete
+       hook_event                   Stop
+       hook_name                    Stop
+       hook_source                  merged
+       managed_only                 false
+       num_blocking                 0
+       num_cancelled                0
+       num_hooks                    1
+       num_non_blocking_error       0
+       num_success                  1
+       prompt.id                    df1f4de4-088b-4019-9de9-5f09db0f52c3
+       safe_mode                    false
+       total_duration_ms            266
+
+seq  40  2026-10-12T15:07:30.306Z  mcp_server_connection
+       duration_ms                  37217
+       is_plugin                    False
+       prompt.id                    df1f4de4-088b-4019-9de9-5f09db0f52c3
+       server_scope                 claudeai
+       status                       disconnected
+       transport_type               claudeai-proxy
+
+seq  41  2026-10-12T15:07:30.306Z  mcp_server_connection
+       duration_ms                  34693
+       is_plugin                    False
+       prompt.id                    df1f4de4-088b-4019-9de9-5f09db0f52c3
+       server_scope                 claudeai
+       status                       disconnected
+       transport_type               claudeai-proxy
+
+==============================================================================
+METRICS
+==============================================================================
+  claude_code.active_time.total
+  claude_code.cost.usage
+  claude_code.session.count
+  claude_code.token.usage

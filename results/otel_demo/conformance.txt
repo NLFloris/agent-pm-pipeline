@@ -1,0 +1,16 @@
+reference: demo-team-policy
+1/6 runs compliant, mean fitness 0.767
+
+ok        demo-001  fitness 1.00
+VIOLATION demo-002  fitness 0.80
+      precedence(run_python,write_file) at step 14 (Coder:write_file)
+VIOLATION demo-003  fitness 0.60
+      precedence(read_file,run_python) at step 10 (Coder:run_python)
+      precedence(run_python,write_file) at step 8 (Coder:write_file)
+VIOLATION demo-004  fitness 0.80
+      precedence(run_python,write_file) at step 8 (Coder:write_file)
+VIOLATION demo-005  fitness 0.80
+      precedence(read_file,run_python) at step 8 (Coder:run_python)
+VIOLATION demo-006  fitness 0.60
+      required(run_python)
+      precedence(run_python,write_file) at step 16 (Coder:write_file)

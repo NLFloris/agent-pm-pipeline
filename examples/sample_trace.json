@@ -1,0 +1,11 @@
+{
+  "case_id": "run-compliant-001",
+  "outcome": {"self_report": "success"},
+  "events": [
+    {"activity": "user_request", "timestamp": 0, "resource": "user", "attributes": {"text": "What is X?"}},
+    {"activity": "plan", "timestamp": 1, "resource": "agent:main", "attributes": {"reasoning": "Retrieve before answering."}},
+    {"activity": "retrieve", "timestamp": 2, "resource": "tool:search", "attributes": {"query": "X"}},
+    {"activity": "read_document", "timestamp": 3, "resource": "tool:reader", "attributes": {"doc": "doc-1"}},
+    {"activity": "answer", "timestamp": 4, "resource": "agent:main", "attributes": {"text": "X is ..."}}
+  ]
+}

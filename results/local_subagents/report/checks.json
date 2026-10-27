@@ -1,0 +1,34 @@
+[
+ {
+  "status": "ok",
+  "text": "110 tool calls over 4 distinct tools"
+ },
+ {
+  "status": "ok",
+  "text": "tool calls attributed to Recalculator (43), FileSurfer (20), Analyst (19), DataChecker (18), Coder (10)"
+ },
+ {
+  "status": "info",
+  "text": "arguments on 91/110 tool calls, results on 110/110"
+ },
+ {
+  "status": "info",
+  "text": "reasoning text on 22 events (kept as an attribute, never an activity)"
+ },
+ {
+  "status": "info",
+  "text": "1 turns hold several tool calls issued together (largest 21, in 1 runs). They share a timestamp; flat logs and pm4py serialise them anyway."
+ },
+ {
+  "status": "info",
+  "text": "no business objects in the OCEL log, only run, agent and tool. Give --objects rules.json if the tool arguments name things (a ticket, a file, a reservation)."
+ },
+ {
+  "status": "warn",
+  "text": "7 variants over 10 runs, 6 of them once. Expect spaghetti; the pictures are frequency-filtered."
+ },
+ {
+  "status": "ok",
+  "text": "OCEL log built twice: byte-identical"
+ }
+]

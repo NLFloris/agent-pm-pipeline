@@ -1,0 +1,13 @@
+pm4py 2.7.23.8, inductive miner noise threshold 0.0
+6 runs, 90 events shown, 8 activities
+start activities: {'transfer_to_filesurfer': 2, 'transfer_to_coder': 3, 'transfer_to_analyst': 1}
+end activities:   {'transfer_to_orchestrator': 6}
+directly-follows edges: 21, variants: 6
+Petri net: 21 places, 30 transitions
+process tree: *( ->( X( 'transfer_to_coder', ->( X( 'transfer_to_analyst', 'transfer_to_filesurfer' ), X( tau, +( X( tau, 'list_files' ), X( tau, *( 'read_file', tau ) ) ) ) ) ), X( tau, +( X( tau, *( 'run_python', tau ) ), X( tau, *( 'write_file', tau ) ) ) ), 'transfer_to_orchestrator' ), tau )
+  1x  transfer_to_filesurfer > list_files > read_file > transfer_to_orchestrator > transfer_to_analyst > run_python > run_python > transfer_to_orchestrator > transfer_to_coder > write_file > transfer_to_orchestrator > transfer_to_filesurfer > read_file > list_files > transfer_to_orchestrator
+  1x  transfer_to_filesurfer > read_file > transfer_to_orchestrator > transfer_to_coder > write_file > write_file > run_python > transfer_to_orchestrator > transfer_to_filesurfer > read_file > read_file > read_file > transfer_to_orchestrator
+  1x  transfer_to_coder > write_file > run_python > transfer_to_orchestrator > transfer_to_filesurfer > read_file > read_file > transfer_to_orchestrator > transfer_to_coder > write_file > write_file > write_file > transfer_to_orchestrator > transfer_to_coder > run_python > transfer_to_orchestrator
+  1x  transfer_to_coder > write_file > transfer_to_orchestrator > transfer_to_analyst > read_file > transfer_to_orchestrator > transfer_to_filesurfer > read_file > transfer_to_orchestrator > transfer_to_coder > run_python > transfer_to_orchestrator
+  1x  transfer_to_coder > run_python > write_file > run_python > transfer_to_orchestrator > transfer_to_filesurfer > list_files > transfer_to_orchestrator > transfer_to_coder > run_python > write_file > transfer_to_orchestrator > transfer_to_filesurfer > read_file > list_files > read_file > transfer_to_orchestrator > transfer_to_analyst > read_file > run_python > transfer_to_orchestrator
+  1x  transfer_to_analyst > read_file > read_file > transfer_to_orchestrator > transfer_to_coder > write_file > write_file > write_file > transfer_to_orchestrator > transfer_to_filesurfer > read_file > read_file > transfer_to_orchestrator

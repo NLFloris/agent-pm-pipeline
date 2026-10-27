@@ -1,0 +1,4490 @@
+[
+ {
+  "run_id": "demo-001",
+  "seed": 1,
+  "messages": [
+   {
+    "type": "TextMessage",
+    "source": "user",
+    "created_at": "2026-10-19T10:12:36.508395+00:00",
+    "received_at": "2026-10-19T10:12:36.515091+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Report Q1 revenue for the north region and the Q1 to Q2 growth per region."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.513397+00:00",
+    "received_at": "2026-10-19T10:12:36.515579+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h0",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.515647+00:00",
+    "received_at": "2026-10-19T10:12:36.517864+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h0",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.515914+00:00",
+    "received_at": "2026-10-19T10:12:36.519176+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.520648+00:00",
+    "received_at": "2026-10-19T10:12:36.522471+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c1",
+       "name": "list_files",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.522781+00:00",
+    "received_at": "2026-10-19T10:12:36.525221+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c1",
+       "name": "list_files",
+       "is_error": false,
+       "content": "calc.py  136 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.523107+00:00",
+    "received_at": "2026-10-19T10:12:36.526640+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "calc.py  136 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.528132+00:00",
+    "received_at": "2026-10-19T10:12:36.529472+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c2",
+       "name": "read_file",
+       "arguments": "{\"path\": \"calc.py\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.529739+00:00",
+    "received_at": "2026-10-19T10:12:36.531983+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c2",
+       "name": "read_file",
+       "is_error": false,
+       "content": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.529982+00:00",
+    "received_at": "2026-10-19T10:12:36.533358+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.534943+00:00",
+    "received_at": "2026-10-19T10:12:36.536027+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b0",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.536242+00:00",
+    "received_at": "2026-10-19T10:12:36.538373+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b0",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.536521+00:00",
+    "received_at": "2026-10-19T10:12:36.539740+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.540958+00:00",
+    "received_at": "2026-10-19T10:12:36.541947+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h1",
+       "name": "transfer_to_analyst",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.542198+00:00",
+    "received_at": "2026-10-19T10:12:36.544234+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h1",
+       "name": "transfer_to_analyst",
+       "is_error": false,
+       "content": "Transferred to Analyst, adopting the role of Analyst immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.542430+00:00",
+    "received_at": "2026-10-19T10:12:36.545628+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Analyst, adopting the role of Analyst immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.546954+00:00",
+    "received_at": "2026-10-19T10:12:36.551076+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c3",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nprint(sum(int(r['units']) * float(r['price']) for r in rows if r['region'] == 'north'))\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.573493+00:00",
+    "received_at": "2026-10-19T10:12:36.576782+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c3",
+       "name": "run_python",
+       "is_error": false,
+       "content": "2470.0\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.573980+00:00",
+    "received_at": "2026-10-19T10:12:36.578725+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "2470.0\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.580339+00:00",
+    "received_at": "2026-10-19T10:12:36.584212+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c4",
+       "name": "run_python",
+       "arguments": "{\"code\": \"exec(open('calc.py').read()); print(revenue(120, 9.5), growth(120, 140))\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.602295+00:00",
+    "received_at": "2026-10-19T10:12:36.604962+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c4",
+       "name": "run_python",
+       "is_error": false,
+       "content": "1140.0 0.16666666666666666\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.602786+00:00",
+    "received_at": "2026-10-19T10:12:36.606287+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "1140.0 0.16666666666666666\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.608781+00:00",
+    "received_at": "2026-10-19T10:12:36.609991+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b1",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.610211+00:00",
+    "received_at": "2026-10-19T10:12:36.612445+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b1",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.610495+00:00",
+    "received_at": "2026-10-19T10:12:36.613779+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.614727+00:00",
+    "received_at": "2026-10-19T10:12:36.615633+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h2",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.615879+00:00",
+    "received_at": "2026-10-19T10:12:36.617858+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h2",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.616094+00:00",
+    "received_at": "2026-10-19T10:12:36.619124+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.620314+00:00",
+    "received_at": "2026-10-19T10:12:36.622283+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c5",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.622529+00:00",
+    "received_at": "2026-10-19T10:12:36.624720+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c5",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.622799+00:00",
+    "received_at": "2026-10-19T10:12:36.626061+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.627266+00:00",
+    "received_at": "2026-10-19T10:12:36.628210+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b2",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.628421+00:00",
+    "received_at": "2026-10-19T10:12:36.630496+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b2",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.628692+00:00",
+    "received_at": "2026-10-19T10:12:36.631750+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.632652+00:00",
+    "received_at": "2026-10-19T10:12:36.633524+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h3",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.633766+00:00",
+    "received_at": "2026-10-19T10:12:36.635845+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h3",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.633980+00:00",
+    "received_at": "2026-10-19T10:12:36.637338+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.638718+00:00",
+    "received_at": "2026-10-19T10:12:36.640139+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c6",
+       "name": "read_file",
+       "arguments": "{\"path\": \"calc.py\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.640395+00:00",
+    "received_at": "2026-10-19T10:12:36.642699+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c6",
+       "name": "read_file",
+       "is_error": false,
+       "content": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.640655+00:00",
+    "received_at": "2026-10-19T10:12:36.644044+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.645202+00:00",
+    "received_at": "2026-10-19T10:12:36.646684+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c7",
+       "name": "list_files",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.647341+00:00",
+    "received_at": "2026-10-19T10:12:36.649912+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c7",
+       "name": "list_files",
+       "is_error": false,
+       "content": "calc.py  136 bytes\ngrowth.txt  38 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.647778+00:00",
+    "received_at": "2026-10-19T10:12:36.651253+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "calc.py  136 bytes\ngrowth.txt  38 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.652609+00:00",
+    "received_at": "2026-10-19T10:12:36.653625+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b3",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.653909+00:00",
+    "received_at": "2026-10-19T10:12:36.656130+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b3",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.654208+00:00",
+    "received_at": "2026-10-19T10:12:36.657582+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "TextMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.658641+00:00",
+    "received_at": "2026-10-19T10:12:36.661698+00:00",
+    "prompt_tokens": 148,
+    "completion_tokens": 6,
+    "payload": {
+     "text": "All delegated work is in. DONE"
+    }
+   }
+  ]
+ },
+ {
+  "run_id": "demo-002",
+  "seed": 2,
+  "messages": [
+   {
+    "type": "TextMessage",
+    "source": "user",
+    "created_at": "2026-10-19T10:12:36.667559+00:00",
+    "received_at": "2026-10-19T10:12:36.673486+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Report Q1 revenue for the north region and the Q1 to Q2 growth per region."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.672145+00:00",
+    "received_at": "2026-10-19T10:12:36.674060+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h0",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.674147+00:00",
+    "received_at": "2026-10-19T10:12:36.676724+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h0",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.674522+00:00",
+    "received_at": "2026-10-19T10:12:36.678384+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.679972+00:00",
+    "received_at": "2026-10-19T10:12:36.681554+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c1",
+       "name": "read_file",
+       "arguments": "{\"path\": \"notes.md\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.681841+00:00",
+    "received_at": "2026-10-19T10:12:36.684324+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c1",
+       "name": "read_file",
+       "is_error": false,
+       "content": "# Field notes\n\n- The south region changed price in Q1.\n- East sales fell in Q2 after the price rise.\n- North held price steady all year.\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.682158+00:00",
+    "received_at": "2026-10-19T10:12:36.685861+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "# Field notes\n\n- The south region changed price in Q1.\n- East sales fell in Q2 after the price rise.\n- North held price steady all year.\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.687321+00:00",
+    "received_at": "2026-10-19T10:12:36.688546+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b0",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.688774+00:00",
+    "received_at": "2026-10-19T10:12:36.690889+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b0",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.689028+00:00",
+    "received_at": "2026-10-19T10:12:36.692174+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.693270+00:00",
+    "received_at": "2026-10-19T10:12:36.694290+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h1",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.694494+00:00",
+    "received_at": "2026-10-19T10:12:36.696526+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h1",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.694767+00:00",
+    "received_at": "2026-10-19T10:12:36.697768+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.698877+00:00",
+    "received_at": "2026-10-19T10:12:36.700183+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c2",
+       "name": "write_file",
+       "arguments": "{\"path\": \"answer.txt\", \"content\": \"north Q1 revenue 1140.0\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.700426+00:00",
+    "received_at": "2026-10-19T10:12:36.702431+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c2",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 23 characters to answer.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.700648+00:00",
+    "received_at": "2026-10-19T10:12:36.703693+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 23 characters to answer.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.704888+00:00",
+    "received_at": "2026-10-19T10:12:36.706131+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c3",
+       "name": "write_file",
+       "arguments": "{\"path\": \"answer.txt\", \"content\": \"north Q1 revenue 1140.0\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.706345+00:00",
+    "received_at": "2026-10-19T10:12:36.708803+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c3",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 23 characters to answer.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.706624+00:00",
+    "received_at": "2026-10-19T10:12:36.710317+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 23 characters to answer.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.711623+00:00",
+    "received_at": "2026-10-19T10:12:36.715585+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c4",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.737735+00:00",
+    "received_at": "2026-10-19T10:12:36.740601+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c4",
+       "name": "run_python",
+       "is_error": false,
+       "content": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.738195+00:00",
+    "received_at": "2026-10-19T10:12:36.742175+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.743783+00:00",
+    "received_at": "2026-10-19T10:12:36.744883+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b1",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.745205+00:00",
+    "received_at": "2026-10-19T10:12:36.747514+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b1",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.745515+00:00",
+    "received_at": "2026-10-19T10:12:36.748876+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.749856+00:00",
+    "received_at": "2026-10-19T10:12:36.750772+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h2",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.750971+00:00",
+    "received_at": "2026-10-19T10:12:36.752950+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h2",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.751191+00:00",
+    "received_at": "2026-10-19T10:12:36.754445+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.755740+00:00",
+    "received_at": "2026-10-19T10:12:36.757102+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c5",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.757315+00:00",
+    "received_at": "2026-10-19T10:12:36.759416+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c5",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.757591+00:00",
+    "received_at": "2026-10-19T10:12:36.760770+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.761980+00:00",
+    "received_at": "2026-10-19T10:12:36.763168+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c6",
+       "name": "read_file",
+       "arguments": "{\"path\": \"calc.py\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.763379+00:00",
+    "received_at": "2026-10-19T10:12:36.765450+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c6",
+       "name": "read_file",
+       "is_error": false,
+       "content": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.763650+00:00",
+    "received_at": "2026-10-19T10:12:36.766794+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.768273+00:00",
+    "received_at": "2026-10-19T10:12:36.769653+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c7",
+       "name": "read_file",
+       "arguments": "{\"path\": \"calc.py\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.769876+00:00",
+    "received_at": "2026-10-19T10:12:36.771978+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c7",
+       "name": "read_file",
+       "is_error": false,
+       "content": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.770156+00:00",
+    "received_at": "2026-10-19T10:12:36.773270+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.774493+00:00",
+    "received_at": "2026-10-19T10:12:36.775414+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b2",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.775622+00:00",
+    "received_at": "2026-10-19T10:12:36.777947+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b2",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.775845+00:00",
+    "received_at": "2026-10-19T10:12:36.779402+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "TextMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.780524+00:00",
+    "received_at": "2026-10-19T10:12:36.783231+00:00",
+    "prompt_tokens": 161,
+    "completion_tokens": 6,
+    "payload": {
+     "text": "All delegated work is in. DONE"
+    }
+   }
+  ]
+ },
+ {
+  "run_id": "demo-003",
+  "seed": 3,
+  "messages": [
+   {
+    "type": "TextMessage",
+    "source": "user",
+    "created_at": "2026-10-19T10:12:36.788897+00:00",
+    "received_at": "2026-10-19T10:12:36.795685+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Report Q1 revenue for the north region and the Q1 to Q2 growth per region."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.794196+00:00",
+    "received_at": "2026-10-19T10:12:36.796084+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h0",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.796145+00:00",
+    "received_at": "2026-10-19T10:12:36.798646+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h0",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.796432+00:00",
+    "received_at": "2026-10-19T10:12:36.800006+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.801162+00:00",
+    "received_at": "2026-10-19T10:12:36.802538+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c1",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.802809+00:00",
+    "received_at": "2026-10-19T10:12:36.804860+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c1",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.803050+00:00",
+    "received_at": "2026-10-19T10:12:36.806148+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.807774+00:00",
+    "received_at": "2026-10-19T10:12:36.811738+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c2",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nprint(sum(int(r['units']) * float(r['price']) for r in rows if r['region'] == 'north'))\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.834638+00:00",
+    "received_at": "2026-10-19T10:12:36.837498+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c2",
+       "name": "run_python",
+       "is_error": false,
+       "content": "2470.0\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.835338+00:00",
+    "received_at": "2026-10-19T10:12:36.838857+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "2470.0\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.840446+00:00",
+    "received_at": "2026-10-19T10:12:36.841669+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b0",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.841890+00:00",
+    "received_at": "2026-10-19T10:12:36.843992+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b0",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.842123+00:00",
+    "received_at": "2026-10-19T10:12:36.845277+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.846220+00:00",
+    "received_at": "2026-10-19T10:12:36.847312+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h1",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.847663+00:00",
+    "received_at": "2026-10-19T10:12:36.849998+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h1",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.848023+00:00",
+    "received_at": "2026-10-19T10:12:36.851287+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.852422+00:00",
+    "received_at": "2026-10-19T10:12:36.853768+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c3",
+       "name": "read_file",
+       "arguments": "{\"path\": \"notes.md\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.854037+00:00",
+    "received_at": "2026-10-19T10:12:36.856092+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c3",
+       "name": "read_file",
+       "is_error": false,
+       "content": "# Field notes\n\n- The south region changed price in Q1.\n- East sales fell in Q2 after the price rise.\n- North held price steady all year.\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.854266+00:00",
+    "received_at": "2026-10-19T10:12:36.857385+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "# Field notes\n\n- The south region changed price in Q1.\n- East sales fell in Q2 after the price rise.\n- North held price steady all year.\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.858577+00:00",
+    "received_at": "2026-10-19T10:12:36.859694+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c4",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.859939+00:00",
+    "received_at": "2026-10-19T10:12:36.862383+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c4",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.860244+00:00",
+    "received_at": "2026-10-19T10:12:36.863739+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.864945+00:00",
+    "received_at": "2026-10-19T10:12:36.865990+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b1",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.866214+00:00",
+    "received_at": "2026-10-19T10:12:36.868255+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b1",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:36.866488+00:00",
+    "received_at": "2026-10-19T10:12:36.869482+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.870371+00:00",
+    "received_at": "2026-10-19T10:12:36.871278+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h2",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.871514+00:00",
+    "received_at": "2026-10-19T10:12:36.873518+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h2",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.871727+00:00",
+    "received_at": "2026-10-19T10:12:36.874873+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.876049+00:00",
+    "received_at": "2026-10-19T10:12:36.877368+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c5",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.877586+00:00",
+    "received_at": "2026-10-19T10:12:36.879639+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c5",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.877814+00:00",
+    "received_at": "2026-10-19T10:12:36.880960+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.882224+00:00",
+    "received_at": "2026-10-19T10:12:36.883476+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c6",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.883729+00:00",
+    "received_at": "2026-10-19T10:12:36.885711+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c6",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.883952+00:00",
+    "received_at": "2026-10-19T10:12:36.886980+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.888148+00:00",
+    "received_at": "2026-10-19T10:12:36.889404+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c7",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.889610+00:00",
+    "received_at": "2026-10-19T10:12:36.891686+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c7",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.889842+00:00",
+    "received_at": "2026-10-19T10:12:36.893106+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.894332+00:00",
+    "received_at": "2026-10-19T10:12:36.895294+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b2",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.895553+00:00",
+    "received_at": "2026-10-19T10:12:36.897703+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b2",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.895790+00:00",
+    "received_at": "2026-10-19T10:12:36.899043+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.900144+00:00",
+    "received_at": "2026-10-19T10:12:36.901411+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h3",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.901716+00:00",
+    "received_at": "2026-10-19T10:12:36.905042+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h3",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.902027+00:00",
+    "received_at": "2026-10-19T10:12:36.906751+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.908704+00:00",
+    "received_at": "2026-10-19T10:12:36.914985+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c8",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.942191+00:00",
+    "received_at": "2026-10-19T10:12:36.945675+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c8",
+       "name": "run_python",
+       "is_error": false,
+       "content": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.942840+00:00",
+    "received_at": "2026-10-19T10:12:36.947304+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.949137+00:00",
+    "received_at": "2026-10-19T10:12:36.950716+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b3",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.951124+00:00",
+    "received_at": "2026-10-19T10:12:36.953504+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b3",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.951514+00:00",
+    "received_at": "2026-10-19T10:12:36.954952+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "TextMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.956142+00:00",
+    "received_at": "2026-10-19T10:12:36.958833+00:00",
+    "prompt_tokens": 133,
+    "completion_tokens": 6,
+    "payload": {
+     "text": "All delegated work is in. DONE"
+    }
+   }
+  ]
+ },
+ {
+  "run_id": "demo-004",
+  "seed": 4,
+  "messages": [
+   {
+    "type": "TextMessage",
+    "source": "user",
+    "created_at": "2026-10-19T10:12:36.964596+00:00",
+    "received_at": "2026-10-19T10:12:36.970278+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Report Q1 revenue for the north region and the Q1 to Q2 growth per region."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.969062+00:00",
+    "received_at": "2026-10-19T10:12:36.970727+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h0",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.970782+00:00",
+    "received_at": "2026-10-19T10:12:36.972912+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h0",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.971028+00:00",
+    "received_at": "2026-10-19T10:12:36.974505+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.975786+00:00",
+    "received_at": "2026-10-19T10:12:36.977452+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c1",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.977692+00:00",
+    "received_at": "2026-10-19T10:12:36.980166+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c1",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.978017+00:00",
+    "received_at": "2026-10-19T10:12:36.981662+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.983140+00:00",
+    "received_at": "2026-10-19T10:12:36.984226+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b0",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.984462+00:00",
+    "received_at": "2026-10-19T10:12:36.986750+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b0",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:36.984751+00:00",
+    "received_at": "2026-10-19T10:12:36.988291+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.989445+00:00",
+    "received_at": "2026-10-19T10:12:36.990562+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h1",
+       "name": "transfer_to_analyst",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.990850+00:00",
+    "received_at": "2026-10-19T10:12:36.993155+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h1",
+       "name": "transfer_to_analyst",
+       "is_error": false,
+       "content": "Transferred to Analyst, adopting the role of Analyst immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:36.991125+00:00",
+    "received_at": "2026-10-19T10:12:36.994860+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Analyst, adopting the role of Analyst immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.996177+00:00",
+    "received_at": "2026-10-19T10:12:36.997536+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c2",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.997764+00:00",
+    "received_at": "2026-10-19T10:12:37.000059+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c2",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:36.998005+00:00",
+    "received_at": "2026-10-19T10:12:37.001460+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.002570+00:00",
+    "received_at": "2026-10-19T10:12:37.003518+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b1",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.003720+00:00",
+    "received_at": "2026-10-19T10:12:37.005790+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b1",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.003933+00:00",
+    "received_at": "2026-10-19T10:12:37.007319+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.008418+00:00",
+    "received_at": "2026-10-19T10:12:37.009362+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h2",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.009575+00:00",
+    "received_at": "2026-10-19T10:12:37.012047+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h2",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.009873+00:00",
+    "received_at": "2026-10-19T10:12:37.013319+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.014565+00:00",
+    "received_at": "2026-10-19T10:12:37.016294+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c3",
+       "name": "read_file",
+       "arguments": "{\"path\": \"calc.py\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.016526+00:00",
+    "received_at": "2026-10-19T10:12:37.018787+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c3",
+       "name": "read_file",
+       "is_error": false,
+       "content": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.016826+00:00",
+    "received_at": "2026-10-19T10:12:37.020135+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.021291+00:00",
+    "received_at": "2026-10-19T10:12:37.022197+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b2",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.022406+00:00",
+    "received_at": "2026-10-19T10:12:37.024546+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b2",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.022674+00:00",
+    "received_at": "2026-10-19T10:12:37.025882+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.026845+00:00",
+    "received_at": "2026-10-19T10:12:37.027741+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h3",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.027991+00:00",
+    "received_at": "2026-10-19T10:12:37.030031+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h3",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.028217+00:00",
+    "received_at": "2026-10-19T10:12:37.031332+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.032605+00:00",
+    "received_at": "2026-10-19T10:12:37.036551+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c4",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.058518+00:00",
+    "received_at": "2026-10-19T10:12:37.061455+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c4",
+       "name": "run_python",
+       "is_error": false,
+       "content": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.059009+00:00",
+    "received_at": "2026-10-19T10:12:37.062916+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.064583+00:00",
+    "received_at": "2026-10-19T10:12:37.065705+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b3",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.065939+00:00",
+    "received_at": "2026-10-19T10:12:37.068508+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b3",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.066186+00:00",
+    "received_at": "2026-10-19T10:12:37.069967+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "TextMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.071046+00:00",
+    "received_at": "2026-10-19T10:12:37.073511+00:00",
+    "prompt_tokens": 113,
+    "completion_tokens": 6,
+    "payload": {
+     "text": "All delegated work is in. DONE"
+    }
+   }
+  ]
+ },
+ {
+  "run_id": "demo-005",
+  "seed": 5,
+  "messages": [
+   {
+    "type": "TextMessage",
+    "source": "user",
+    "created_at": "2026-10-19T10:12:37.079389+00:00",
+    "received_at": "2026-10-19T10:12:37.085011+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Report Q1 revenue for the north region and the Q1 to Q2 growth per region."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.083605+00:00",
+    "received_at": "2026-10-19T10:12:37.085744+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h0",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.085813+00:00",
+    "received_at": "2026-10-19T10:12:37.089159+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h0",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.086233+00:00",
+    "received_at": "2026-10-19T10:12:37.091197+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.092813+00:00",
+    "received_at": "2026-10-19T10:12:37.097208+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c1",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nprint(sum(int(r['units']) * float(r['price']) for r in rows if r['region'] == 'north'))\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.121212+00:00",
+    "received_at": "2026-10-19T10:12:37.124630+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c1",
+       "name": "run_python",
+       "is_error": false,
+       "content": "2470.0\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.121847+00:00",
+    "received_at": "2026-10-19T10:12:37.126140+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "2470.0\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.128201+00:00",
+    "received_at": "2026-10-19T10:12:37.130207+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c2",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.130464+00:00",
+    "received_at": "2026-10-19T10:12:37.132804+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c2",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.130778+00:00",
+    "received_at": "2026-10-19T10:12:37.134725+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.136430+00:00",
+    "received_at": "2026-10-19T10:12:37.140307+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c3",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.162731+00:00",
+    "received_at": "2026-10-19T10:12:37.165436+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c3",
+       "name": "run_python",
+       "is_error": false,
+       "content": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.163191+00:00",
+    "received_at": "2026-10-19T10:12:37.166875+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.168302+00:00",
+    "received_at": "2026-10-19T10:12:37.169765+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b0",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.170048+00:00",
+    "received_at": "2026-10-19T10:12:37.172356+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b0",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.170355+00:00",
+    "received_at": "2026-10-19T10:12:37.174146+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.175667+00:00",
+    "received_at": "2026-10-19T10:12:37.177127+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h1",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.177385+00:00",
+    "received_at": "2026-10-19T10:12:37.179642+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h1",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.177704+00:00",
+    "received_at": "2026-10-19T10:12:37.180948+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.182182+00:00",
+    "received_at": "2026-10-19T10:12:37.183684+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c4",
+       "name": "list_files",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.183947+00:00",
+    "received_at": "2026-10-19T10:12:37.186172+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c4",
+       "name": "list_files",
+       "is_error": false,
+       "content": "calc.py  136 bytes\ngrowth.txt  38 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.184183+00:00",
+    "received_at": "2026-10-19T10:12:37.187930+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "calc.py  136 bytes\ngrowth.txt  38 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.189570+00:00",
+    "received_at": "2026-10-19T10:12:37.190767+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b1",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.191003+00:00",
+    "received_at": "2026-10-19T10:12:37.193277+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b1",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.191333+00:00",
+    "received_at": "2026-10-19T10:12:37.194869+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.196224+00:00",
+    "received_at": "2026-10-19T10:12:37.197482+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h2",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.197768+00:00",
+    "received_at": "2026-10-19T10:12:37.200136+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h2",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.198032+00:00",
+    "received_at": "2026-10-19T10:12:37.201976+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.203575+00:00",
+    "received_at": "2026-10-19T10:12:37.207534+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c5",
+       "name": "run_python",
+       "arguments": "{\"code\": \"import csv\\nrows = list(csv.DictReader(open('sales.csv')))\\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.229549+00:00",
+    "received_at": "2026-10-19T10:12:37.232250+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c5",
+       "name": "run_python",
+       "is_error": false,
+       "content": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.230049+00:00",
+    "received_at": "2026-10-19T10:12:37.233693+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "{'north': 0.16666666666666666, 'south': 0.6842105263157895, 'east': -0.0625}\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.235169+00:00",
+    "received_at": "2026-10-19T10:12:37.236781+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c6",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.237012+00:00",
+    "received_at": "2026-10-19T10:12:37.239249+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c6",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.237262+00:00",
+    "received_at": "2026-10-19T10:12:37.240670+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.242306+00:00",
+    "received_at": "2026-10-19T10:12:37.243739+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b2",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.244126+00:00",
+    "received_at": "2026-10-19T10:12:37.246525+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b2",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.244435+00:00",
+    "received_at": "2026-10-19T10:12:37.248070+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.249134+00:00",
+    "received_at": "2026-10-19T10:12:37.250296+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h3",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.250665+00:00",
+    "received_at": "2026-10-19T10:12:37.253234+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h3",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.251017+00:00",
+    "received_at": "2026-10-19T10:12:37.255066+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.256509+00:00",
+    "received_at": "2026-10-19T10:12:37.257810+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c7",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.258028+00:00",
+    "received_at": "2026-10-19T10:12:37.260215+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c7",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.258263+00:00",
+    "received_at": "2026-10-19T10:12:37.261943+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.263503+00:00",
+    "received_at": "2026-10-19T10:12:37.264865+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c8",
+       "name": "list_files",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.265101+00:00",
+    "received_at": "2026-10-19T10:12:37.267473+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c8",
+       "name": "list_files",
+       "is_error": false,
+       "content": "calc.py  136 bytes\ngrowth.txt  38 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.265350+00:00",
+    "received_at": "2026-10-19T10:12:37.268971+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "calc.py  136 bytes\ngrowth.txt  38 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.270275+00:00",
+    "received_at": "2026-10-19T10:12:37.272138+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c9",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.272442+00:00",
+    "received_at": "2026-10-19T10:12:37.275441+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c9",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.272720+00:00",
+    "received_at": "2026-10-19T10:12:37.276899+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.278300+00:00",
+    "received_at": "2026-10-19T10:12:37.279496+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b3",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.279797+00:00",
+    "received_at": "2026-10-19T10:12:37.282283+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b3",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.280160+00:00",
+    "received_at": "2026-10-19T10:12:37.283672+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.284839+00:00",
+    "received_at": "2026-10-19T10:12:37.285863+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h4",
+       "name": "transfer_to_analyst",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.286131+00:00",
+    "received_at": "2026-10-19T10:12:37.288589+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h4",
+       "name": "transfer_to_analyst",
+       "is_error": false,
+       "content": "Transferred to Analyst, adopting the role of Analyst immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.286383+00:00",
+    "received_at": "2026-10-19T10:12:37.290014+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Analyst, adopting the role of Analyst immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.291259+00:00",
+    "received_at": "2026-10-19T10:12:37.293107+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c10",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.293343+00:00",
+    "received_at": "2026-10-19T10:12:37.296056+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c10",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.293595+00:00",
+    "received_at": "2026-10-19T10:12:37.297865+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.299207+00:00",
+    "received_at": "2026-10-19T10:12:37.322384+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c11",
+       "name": "run_python",
+       "arguments": "{\"code\": \"exec(open('calc.py').read()); print(revenue(120, 9.5), growth(120, 140))\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.323679+00:00",
+    "received_at": "2026-10-19T10:12:37.326233+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c11",
+       "name": "run_python",
+       "is_error": false,
+       "content": "1140.0 0.16666666666666666\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.324098+00:00",
+    "received_at": "2026-10-19T10:12:37.327579+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "1140.0 0.16666666666666666\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.329108+00:00",
+    "received_at": "2026-10-19T10:12:37.330170+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b4",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.330399+00:00",
+    "received_at": "2026-10-19T10:12:37.332516+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b4",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.330673+00:00",
+    "received_at": "2026-10-19T10:12:37.333898+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "TextMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.335115+00:00",
+    "received_at": "2026-10-19T10:12:37.337595+00:00",
+    "prompt_tokens": 150,
+    "completion_tokens": 6,
+    "payload": {
+     "text": "All delegated work is in. DONE"
+    }
+   }
+  ]
+ },
+ {
+  "run_id": "demo-006",
+  "seed": 6,
+  "messages": [
+   {
+    "type": "TextMessage",
+    "source": "user",
+    "created_at": "2026-10-19T10:12:37.342751+00:00",
+    "received_at": "2026-10-19T10:12:37.348026+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Report Q1 revenue for the north region and the Q1 to Q2 growth per region."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.346879+00:00",
+    "received_at": "2026-10-19T10:12:37.348476+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h0",
+       "name": "transfer_to_analyst",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.348531+00:00",
+    "received_at": "2026-10-19T10:12:37.350664+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h0",
+       "name": "transfer_to_analyst",
+       "is_error": false,
+       "content": "Transferred to Analyst, adopting the role of Analyst immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.348802+00:00",
+    "received_at": "2026-10-19T10:12:37.351946+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Analyst, adopting the role of Analyst immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.353054+00:00",
+    "received_at": "2026-10-19T10:12:37.354305+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c1",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.354524+00:00",
+    "received_at": "2026-10-19T10:12:37.356643+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c1",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.354759+00:00",
+    "received_at": "2026-10-19T10:12:37.357986+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.359129+00:00",
+    "received_at": "2026-10-19T10:12:37.360397+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c2",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.360628+00:00",
+    "received_at": "2026-10-19T10:12:37.362690+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c2",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.360860+00:00",
+    "received_at": "2026-10-19T10:12:37.364009+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.365192+00:00",
+    "received_at": "2026-10-19T10:12:37.366104+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b0",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.366350+00:00",
+    "received_at": "2026-10-19T10:12:37.368548+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b0",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Analyst",
+    "created_at": "2026-10-19T10:12:37.366586+00:00",
+    "received_at": "2026-10-19T10:12:37.370059+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.371003+00:00",
+    "received_at": "2026-10-19T10:12:37.371919+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h1",
+       "name": "transfer_to_coder",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.372125+00:00",
+    "received_at": "2026-10-19T10:12:37.374243+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h1",
+       "name": "transfer_to_coder",
+       "is_error": false,
+       "content": "Transferred to Coder, adopting the role of Coder immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.372345+00:00",
+    "received_at": "2026-10-19T10:12:37.375524+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Coder, adopting the role of Coder immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.376693+00:00",
+    "received_at": "2026-10-19T10:12:37.378138+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c3",
+       "name": "write_file",
+       "arguments": "{\"path\": \"growth.txt\", \"content\": \"north +16.7%, south +68.4%, east -6.2%\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.378387+00:00",
+    "received_at": "2026-10-19T10:12:37.381430+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c3",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 38 characters to growth.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.378697+00:00",
+    "received_at": "2026-10-19T10:12:37.383079+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 38 characters to growth.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.384441+00:00",
+    "received_at": "2026-10-19T10:12:37.385875+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c4",
+       "name": "write_file",
+       "arguments": "{\"path\": \"answer.txt\", \"content\": \"north Q1 revenue 1140.0\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.386098+00:00",
+    "received_at": "2026-10-19T10:12:37.388226+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c4",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 23 characters to answer.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.386340+00:00",
+    "received_at": "2026-10-19T10:12:37.389531+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 23 characters to answer.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.390788+00:00",
+    "received_at": "2026-10-19T10:12:37.392182+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c5",
+       "name": "write_file",
+       "arguments": "{\"path\": \"answer.txt\", \"content\": \"north Q1 revenue 1140.0\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.392394+00:00",
+    "received_at": "2026-10-19T10:12:37.394700+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c5",
+       "name": "write_file",
+       "is_error": false,
+       "content": "wrote 23 characters to answer.txt"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.392654+00:00",
+    "received_at": "2026-10-19T10:12:37.396051+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "wrote 23 characters to answer.txt"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.397226+00:00",
+    "received_at": "2026-10-19T10:12:37.398190+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b1",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.398400+00:00",
+    "received_at": "2026-10-19T10:12:37.400658+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b1",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Coder",
+    "created_at": "2026-10-19T10:12:37.398624+00:00",
+    "received_at": "2026-10-19T10:12:37.401997+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.403007+00:00",
+    "received_at": "2026-10-19T10:12:37.403919+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "h2",
+       "name": "transfer_to_filesurfer",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.404131+00:00",
+    "received_at": "2026-10-19T10:12:37.407084+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "h2",
+       "name": "transfer_to_filesurfer",
+       "is_error": false,
+       "content": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.404391+00:00",
+    "received_at": "2026-10-19T10:12:37.408815+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to FileSurfer, adopting the role of FileSurfer immediately."
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.410344+00:00",
+    "received_at": "2026-10-19T10:12:37.411968+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c6",
+       "name": "read_file",
+       "arguments": "{\"path\": \"calc.py\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.412234+00:00",
+    "received_at": "2026-10-19T10:12:37.415081+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c6",
+       "name": "read_file",
+       "is_error": false,
+       "content": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.412581+00:00",
+    "received_at": "2026-10-19T10:12:37.416759+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "def revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    # returns percent change from a to b\n    return (b - a) / a\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.418052+00:00",
+    "received_at": "2026-10-19T10:12:37.419269+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "c7",
+       "name": "read_file",
+       "arguments": "{\"path\": \"sales.csv\"}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.419494+00:00",
+    "received_at": "2026-10-19T10:12:37.422058+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "c7",
+       "name": "read_file",
+       "is_error": false,
+       "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallSummaryMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.419778+00:00",
+    "received_at": "2026-10-19T10:12:37.423765+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+    }
+   },
+   {
+    "type": "ToolCallRequestEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.425283+00:00",
+    "received_at": "2026-10-19T10:12:37.426389+00:00",
+    "prompt_tokens": 10,
+    "completion_tokens": 5,
+    "payload": {
+     "items": [
+      {
+       "kind": "call",
+       "id": "b2",
+       "name": "transfer_to_orchestrator",
+       "arguments": "{}"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ToolCallExecutionEvent",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.426709+00:00",
+    "received_at": "2026-10-19T10:12:37.429241+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "items": [
+      {
+       "kind": "result",
+       "call_id": "b2",
+       "name": "transfer_to_orchestrator",
+       "is_error": false,
+       "content": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+      }
+     ]
+    }
+   },
+   {
+    "type": "HandoffMessage",
+    "source": "FileSurfer",
+    "created_at": "2026-10-19T10:12:37.427058+00:00",
+    "received_at": "2026-10-19T10:12:37.430614+00:00",
+    "prompt_tokens": null,
+    "completion_tokens": null,
+    "payload": {
+     "text": "Transferred to Orchestrator, adopting the role of Orchestrator immediately."
+    }
+   },
+   {
+    "type": "TextMessage",
+    "source": "Orchestrator",
+    "created_at": "2026-10-19T10:12:37.431614+00:00",
+    "received_at": "2026-10-19T10:12:37.434593+00:00",
+    "prompt_tokens": 122,
+    "completion_tokens": 6,
+    "payload": {
+     "text": "All delegated work is in. DONE"
+    }
+   }
+  ]
+ }
+]

@@ -1,0 +1,5906 @@
+{
+ "eventTypes": [
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "type": "float"
+    },
+    {
+     "name": "ended_ns",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "parent_span_id",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "started_ns",
+     "type": "integer"
+    }
+   ],
+   "name": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "type": "string"
+    },
+    {
+     "name": "agent_id",
+     "type": "string"
+    },
+    {
+     "name": "duration_ms",
+     "type": "float"
+    },
+    {
+     "name": "ended_ns",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "parent_span_id",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "started_ns",
+     "type": "integer"
+    },
+    {
+     "name": "to",
+     "type": "string"
+    }
+   ],
+   "name": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "type": "float"
+    },
+    {
+     "name": "ended_ns",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "parent_span_id",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "started_ns",
+     "type": "integer"
+    },
+    {
+     "name": "workflow",
+     "type": "string"
+    }
+   ],
+   "name": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "type": "string"
+    },
+    {
+     "name": "call_id",
+     "type": "string"
+    },
+    {
+     "name": "duration_ms",
+     "type": "float"
+    },
+    {
+     "name": "ended_ns",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "parent_span_id",
+     "type": "string"
+    },
+    {
+     "name": "result",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "started_ns",
+     "type": "integer"
+    },
+    {
+     "name": "tool_type",
+     "type": "string"
+    }
+   ],
+   "name": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "type": "string"
+    },
+    {
+     "name": "call_id",
+     "type": "string"
+    },
+    {
+     "name": "duration_ms",
+     "type": "float"
+    },
+    {
+     "name": "ended_ns",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "parent_span_id",
+     "type": "string"
+    },
+    {
+     "name": "result",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "started_ns",
+     "type": "integer"
+    },
+    {
+     "name": "tool_type",
+     "type": "string"
+    }
+   ],
+   "name": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "type": "string"
+    },
+    {
+     "name": "call_id",
+     "type": "string"
+    },
+    {
+     "name": "duration_ms",
+     "type": "float"
+    },
+    {
+     "name": "ended_ns",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "parent_span_id",
+     "type": "string"
+    },
+    {
+     "name": "result",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "started_ns",
+     "type": "integer"
+    },
+    {
+     "name": "tool_type",
+     "type": "string"
+    }
+   ],
+   "name": "run_python"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "type": "string"
+    },
+    {
+     "name": "call_id",
+     "type": "string"
+    },
+    {
+     "name": "duration_ms",
+     "type": "float"
+    },
+    {
+     "name": "ended_ns",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "parent_span_id",
+     "type": "string"
+    },
+    {
+     "name": "result",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "started_ns",
+     "type": "integer"
+    },
+    {
+     "name": "tool_type",
+     "type": "string"
+    }
+   ],
+   "name": "write_file"
+  }
+ ],
+ "events": [
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 42766.551
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405630390170000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "04d203a363478b29"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405587623619000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l01_read_csv:000000",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 62452.63
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405692847906000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "1555f90eb3c76a63"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405630395276000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l02_revenue:000000",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 68988.118
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405761839148000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "74abe75a16fa77cc"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405692851030000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l03_growth:000000",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 59759.154
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405821602165000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "caf0d3a162a60dda"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405761843011000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l04_cross_check:000000",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 88234.903
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405909842683000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "a8646a4f8ec80cf4"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405821607780000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l05_fix_bug:000000",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 75512.752
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405985359751000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "2a4664a877442bd3"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405909846999000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l06_summarise_all:000000",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 59276.916
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406044641527000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "fdbac76d787c244a"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405985364611000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l07_best_quarter:000000",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 110057.132
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406154701508000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "fa318f1f602d8fee"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406044644376000
+    },
+    {
+     "name": "workflow",
+     "value": "magentic_one"
+    }
+   ],
+   "id": "l08_price_effect:000000",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_workflow",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "invoke_workflow"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.009
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405587623700000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "04d203a363478b29"
+    },
+    {
+     "name": "span_id",
+     "value": "124d2618cd951ceb"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405587623691000
+    }
+   ],
+   "id": "l01_read_csv:000001",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.013
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405630395397000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "1555f90eb3c76a63"
+    },
+    {
+     "name": "span_id",
+     "value": "e891c38b13340ff7"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405630395384000
+    }
+   ],
+   "id": "l02_revenue:000001",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.008
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405692851130000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "74abe75a16fa77cc"
+    },
+    {
+     "name": "span_id",
+     "value": "b05ecfe8866458a5"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405692851122000
+    }
+   ],
+   "id": "l03_growth:000001",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.012
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405761843162000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "caf0d3a162a60dda"
+    },
+    {
+     "name": "span_id",
+     "value": "26e83464f465f7ca"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405761843150000
+    }
+   ],
+   "id": "l04_cross_check:000001",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.012
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405821607901000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "a8646a4f8ec80cf4"
+    },
+    {
+     "name": "span_id",
+     "value": "55cc89e5f0fc63d2"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405821607889000
+    }
+   ],
+   "id": "l05_fix_bug:000001",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.013
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405909847141000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "2a4664a877442bd3"
+    },
+    {
+     "name": "span_id",
+     "value": "44d8cd5b86ff7357"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405909847128000
+    }
+   ],
+   "id": "l06_summarise_all:000001",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.011
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405985364732000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "fdbac76d787c244a"
+    },
+    {
+     "name": "span_id",
+     "value": "4cb0110727498f93"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405985364721000
+    }
+   ],
+   "id": "l07_best_quarter:000001",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.009
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406044644495000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "fa318f1f602d8fee"
+    },
+    {
+     "name": "span_id",
+     "value": "77e4d2833479952b"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406044644486000
+    }
+   ],
+   "id": "l08_price_effect:000001",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.006
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405587624674000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "04d203a363478b29"
+    },
+    {
+     "name": "span_id",
+     "value": "86b4adaa3195e47f"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405587624668000
+    }
+   ],
+   "id": "l01_read_csv:000002",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.013
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405630396881000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "1555f90eb3c76a63"
+    },
+    {
+     "name": "span_id",
+     "value": "9719f88a361d6cc5"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405630396868000
+    }
+   ],
+   "id": "l02_revenue:000002",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.006
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405692851973000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "74abe75a16fa77cc"
+    },
+    {
+     "name": "span_id",
+     "value": "5c99a86f4744464d"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405692851967000
+    }
+   ],
+   "id": "l03_growth:000002",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.01
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405761844945000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "caf0d3a162a60dda"
+    },
+    {
+     "name": "span_id",
+     "value": "bde1eca1caeb9599"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405761844935000
+    }
+   ],
+   "id": "l04_cross_check:000002",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.01
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405821609266000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "a8646a4f8ec80cf4"
+    },
+    {
+     "name": "span_id",
+     "value": "839a06c71aaa6ebb"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405821609256000
+    }
+   ],
+   "id": "l05_fix_bug:000002",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.011
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405909848879000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "2a4664a877442bd3"
+    },
+    {
+     "name": "span_id",
+     "value": "54c5fb0c1816b27b"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405909848868000
+    }
+   ],
+   "id": "l06_summarise_all:000002",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.016
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405985366377000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "fdbac76d787c244a"
+    },
+    {
+     "name": "span_id",
+     "value": "b0972e6c0cd3e63f"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405985366361000
+    }
+   ],
+   "id": "l07_best_quarter:000002",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.009
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406044645983000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "fa318f1f602d8fee"
+    },
+    {
+     "name": "span_id",
+     "value": "4eff20bd1fceb74b"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406044645974000
+    }
+   ],
+   "id": "l08_price_effect:000002",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.004
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405587625142000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "04d203a363478b29"
+    },
+    {
+     "name": "span_id",
+     "value": "65e6120ac2167a48"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405587625138000
+    }
+   ],
+   "id": "l01_read_csv:000003",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.009
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405630397839000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "1555f90eb3c76a63"
+    },
+    {
+     "name": "span_id",
+     "value": "25299dee618a770e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405630397830000
+    }
+   ],
+   "id": "l02_revenue:000003",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.016
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405692852546000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "74abe75a16fa77cc"
+    },
+    {
+     "name": "span_id",
+     "value": "06ced8d05907237f"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405692852530000
+    }
+   ],
+   "id": "l03_growth:000003",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.01
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405761845874000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "caf0d3a162a60dda"
+    },
+    {
+     "name": "span_id",
+     "value": "83dc87d67a0f632b"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405761845864000
+    }
+   ],
+   "id": "l04_cross_check:000003",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.045
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405821610422000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "a8646a4f8ec80cf4"
+    },
+    {
+     "name": "span_id",
+     "value": "8939413636ac3d81"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405821610377000
+    }
+   ],
+   "id": "l05_fix_bug:000003",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.008
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405909849807000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "2a4664a877442bd3"
+    },
+    {
+     "name": "span_id",
+     "value": "139f9a7a347c41d2"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405909849799000
+    }
+   ],
+   "id": "l06_summarise_all:000003",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.01
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405985367959000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "fdbac76d787c244a"
+    },
+    {
+     "name": "span_id",
+     "value": "e0dd90824ba6cf6f"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405985367949000
+    }
+   ],
+   "id": "l07_best_quarter:000003",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "duration_ms",
+     "value": 0.006
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406044646587000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "fa318f1f602d8fee"
+    },
+    {
+     "name": "span_id",
+     "value": "093316dffe8d679e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406044646581000
+    }
+   ],
+   "id": "l08_price_effect:000003",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:create_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "create_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_d0b65317-8c77-404e-b07a-24aac9f741e2/d0b65317-8c77-404e-b07a-24aac9f741e2"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1322.564
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405609188228000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "63132e2103d8d2a3"
+    },
+    {
+     "name": "span_id",
+     "value": "949a32f9a67309cc"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405607865664000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l01_read_csv:000004",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_6df103a4-9204-4c9d-b8f9-8bc57388ae8d/6df103a4-9204-4c9d-b8f9-8bc57388ae8d"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1216.915
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405648098037000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "ce15182b41981888"
+    },
+    {
+     "name": "span_id",
+     "value": "b00dcb6abc62c20f"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405646881122000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l02_revenue:000004",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_5b611d6d-03fc-4e06-abf1-f31d215f6542/5b611d6d-03fc-4e06-abf1-f31d215f6542"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1550.333
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405716739444000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "3cc8b84cc851075e"
+    },
+    {
+     "name": "span_id",
+     "value": "e490cbe16b1ba7e0"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405715189111000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l03_growth:000004",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_bd04d571-2600-4857-a2a9-b16fd0a66bda/bd04d571-2600-4857-a2a9-b16fd0a66bda"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1776.499
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405782460115000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "6b146c49200693ac"
+    },
+    {
+     "name": "span_id",
+     "value": "9a6914ba88967794"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405780683616000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l04_cross_check:000004",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_1a4c07c1-e8e2-495c-b087-0a952e12a1ab/1a4c07c1-e8e2-495c-b087-0a952e12a1ab"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1359.326
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405841433759000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "084cc8a6de81f217"
+    },
+    {
+     "name": "span_id",
+     "value": "f250c88b8ab18a70"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405840074433000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l05_fix_bug:000004",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_735ce57b-15f8-4afb-99dd-e50674406948/735ce57b-15f8-4afb-99dd-e50674406948"
+    },
+    {
+     "name": "duration_ms",
+     "value": 2204.27
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405931139887000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "648762483ae39b0b"
+    },
+    {
+     "name": "span_id",
+     "value": "678d8b2c1f2fbea1"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405928935617000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l06_summarise_all:000004",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_0707f486-b03d-4c0d-81ed-32ae7d92d656/0707f486-b03d-4c0d-81ed-32ae7d92d656"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1291.767
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406008205726000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "fcec5e6ed562decd"
+    },
+    {
+     "name": "span_id",
+     "value": "f39da69af5c577ff"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406006913959000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l07_best_quarter:000004",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_a401122d-0988-4cb2-b816-94f63e5f8b25/a401122d-0988-4cb2-b816-94f63e5f8b25"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1687.974
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406068660261000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "e8931976461bca8c"
+    },
+    {
+     "name": "span_id",
+     "value": "9d15cb167c6b3498"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406066972287000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l08_price_effect:000004",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_2348019e"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.263
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405609187454000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "949a32f9a67309cc"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "d88894fffe3f07fe"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405609187191000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l01_read_csv:000005",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_ea8dee50"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.497
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405648097316000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "b00dcb6abc62c20f"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "41ce54c87d58c66c"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405648096819000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l02_revenue:000005",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_3fa47aa0"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.411
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405716738569000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "e490cbe16b1ba7e0"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "1e444338bfd91b43"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405716738158000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l03_growth:000005",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_0f35f254"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.563
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405782458894000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "9a6914ba88967794"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "a52182b65db3bdee"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405782458331000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l04_cross_check:000005",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_5f944b4a"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.293
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405841433023000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "f250c88b8ab18a70"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "c326f049522be770"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405841432730000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l05_fix_bug:000005",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_681511d2"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.486
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405931138669000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "678d8b2c1f2fbea1"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "7cbc3d083470759e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405931138183000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l06_summarise_all:000005",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_b82cf8a1"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.487
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406008204874000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "f39da69af5c577ff"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "c3965892f33bfee1"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406008204387000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l07_best_quarter:000005",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_38a515ef"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.348
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406068658911000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "9d15cb167c6b3498"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "d12a4a520878b167"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406068658563000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l08_price_effect:000005",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:list_files",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "list_files"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_d0b65317-8c77-404e-b07a-24aac9f741e2/d0b65317-8c77-404e-b07a-24aac9f741e2"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1444.054
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405616900742000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "84aafc6cffa9efea"
+    },
+    {
+     "name": "span_id",
+     "value": "628bfeebc084995d"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405615456688000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l01_read_csv:000006",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_6df103a4-9204-4c9d-b8f9-8bc57388ae8d/6df103a4-9204-4c9d-b8f9-8bc57388ae8d"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1505.652
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405656062811000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "686ccae940a6d100"
+    },
+    {
+     "name": "span_id",
+     "value": "b0bc77b850326ca2"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405654557159000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l02_revenue:000006",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_5b611d6d-03fc-4e06-abf1-f31d215f6542/5b611d6d-03fc-4e06-abf1-f31d215f6542"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1232.049
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405725112600000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "ac24b751a62e6213"
+    },
+    {
+     "name": "span_id",
+     "value": "2844a4bd6b9c3971"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405723880551000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l03_growth:000006",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_bd04d571-2600-4857-a2a9-b16fd0a66bda/bd04d571-2600-4857-a2a9-b16fd0a66bda"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1947.773
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405790342142000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "e55f7b75d1ee2cbf"
+    },
+    {
+     "name": "span_id",
+     "value": "a98e63423e0b29b5"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405788394369000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l04_cross_check:000006",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_1a4c07c1-e8e2-495c-b087-0a952e12a1ab/1a4c07c1-e8e2-495c-b087-0a952e12a1ab"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1444.212
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405848513780000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "5066a9f8fe3648d2"
+    },
+    {
+     "name": "span_id",
+     "value": "bcea4cede834bc60"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405847069568000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l05_fix_bug:000006",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_735ce57b-15f8-4afb-99dd-e50674406948/735ce57b-15f8-4afb-99dd-e50674406948"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1332.38
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405938410678000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "966b86732fe7a5c0"
+    },
+    {
+     "name": "span_id",
+     "value": "d9a92447398874ee"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405937078298000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l06_summarise_all:000006",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_0707f486-b03d-4c0d-81ed-32ae7d92d656/0707f486-b03d-4c0d-81ed-32ae7d92d656"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1032.051
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406014941004000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "26ec0bfef6b43c64"
+    },
+    {
+     "name": "span_id",
+     "value": "84d3ba7f9962348b"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406013908953000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l07_best_quarter:000006",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_a401122d-0988-4cb2-b816-94f63e5f8b25/a401122d-0988-4cb2-b816-94f63e5f8b25"
+    },
+    {
+     "name": "duration_ms",
+     "value": 2049.833
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406076042193000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "59b15c1260aff0fc"
+    },
+    {
+     "name": "span_id",
+     "value": "db6299a90616db0e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406073992360000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l08_price_effect:000006",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_06c54646"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.461
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405616899146000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "628bfeebc084995d"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "20a3d43da6fe750e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405616898685000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l01_read_csv:000007",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_922086d9"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.488
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405656061533000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "b0bc77b850326ca2"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "11adc077088cf37e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405656061045000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l02_revenue:000007",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_97a17138"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.508
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405725111562000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "2844a4bd6b9c3971"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "7392156f4a0a2e7d"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405725111054000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l03_growth:000007",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_e1535e78"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.868
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405790340811000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "a98e63423e0b29b5"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "f1803101a3017f80"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405790339943000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l04_cross_check:000007",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_65ce4daa"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.43
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405848512227000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "bcea4cede834bc60"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "9320f54882a24996"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405848511797000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l05_fix_bug:000007",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_5a1e8dd5"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.493
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405938409586000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "d9a92447398874ee"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "fa1099c215d97db8"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405938409093000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l06_summarise_all:000007",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_743f4d15"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1.781
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406014939669000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "84d3ba7f9962348b"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "c5d72e0a189b1f08"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406014937888000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l07_best_quarter:000007",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_14f277aa"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.678
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406076040764000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "db6299a90616db0e"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "4a4975db6194c9e9"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406076040086000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l08_price_effect:000007",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_6df103a4-9204-4c9d-b8f9-8bc57388ae8d/6df103a4-9204-4c9d-b8f9-8bc57388ae8d"
+    },
+    {
+     "name": "duration_ms",
+     "value": 5147.745
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405667118310000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "f0588dd47b7510d0"
+    },
+    {
+     "name": "span_id",
+     "value": "b0956152d80c7ef7"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405661970565000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l02_revenue:000008",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_5b611d6d-03fc-4e06-abf1-f31d215f6542/5b611d6d-03fc-4e06-abf1-f31d215f6542"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1022.391
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405732178609000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "7cc30730a29737b3"
+    },
+    {
+     "name": "span_id",
+     "value": "12e4164be5364ac3"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405731156218000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l03_growth:000008",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_bd04d571-2600-4857-a2a9-b16fd0a66bda/bd04d571-2600-4857-a2a9-b16fd0a66bda"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1415.469
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405797618307000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "7d5e357ef5ed3ad3"
+    },
+    {
+     "name": "span_id",
+     "value": "3daa5a713d99adeb"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405796202838000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l04_cross_check:000008",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_1a4c07c1-e8e2-495c-b087-0a952e12a1ab/1a4c07c1-e8e2-495c-b087-0a952e12a1ab"
+    },
+    {
+     "name": "duration_ms",
+     "value": 3484.341
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405861388352000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "5c2ad7b511e11a83"
+    },
+    {
+     "name": "span_id",
+     "value": "0e523130a329efbd"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405857904011000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l05_fix_bug:000008",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_735ce57b-15f8-4afb-99dd-e50674406948/735ce57b-15f8-4afb-99dd-e50674406948"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1077.464
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405946007446000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "2bee371475347694"
+    },
+    {
+     "name": "span_id",
+     "value": "e003c5a3cc1c4e93"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405944929982000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l06_summarise_all:000008",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_0707f486-b03d-4c0d-81ed-32ae7d92d656/0707f486-b03d-4c0d-81ed-32ae7d92d656"
+    },
+    {
+     "name": "duration_ms",
+     "value": 5639.821
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406030575833000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "9122292c5b1fe890"
+    },
+    {
+     "name": "span_id",
+     "value": "83263da5dd508a5e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406024936012000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l07_best_quarter:000008",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_a401122d-0988-4cb2-b816-94f63e5f8b25/a401122d-0988-4cb2-b816-94f63e5f8b25"
+    },
+    {
+     "name": "duration_ms",
+     "value": 6492.006
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406089626770000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "ddd98267611a1b6d"
+    },
+    {
+     "name": "span_id",
+     "value": "53393c2a293574f1"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406083134764000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l08_price_effect:000008",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_09eeaf7a"
+    },
+    {
+     "name": "duration_ms",
+     "value": 683.487
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405667117496000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "b0956152d80c7ef7"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "edffb09f7441f505"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405666434009000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l02_revenue:000009",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Coder",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:run_python",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "run_python"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_17e4ae5f"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.562
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405732176570000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "12e4164be5364ac3"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "9747e8cbd38f824e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405732176008000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l03_growth:000009",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_2a6305f4"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.895
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405797616493000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "3daa5a713d99adeb"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "6a8946d9041a9a48"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405797615598000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l04_cross_check:000009",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_21e3046d"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.988
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405861387418000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "0e523130a329efbd"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "86cbd108e4f0567a"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405861386430000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l05_fix_bug:000009",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Coder",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:write_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "write_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_3708e60c"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.611
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405946006196000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "e003c5a3cc1c4e93"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "bb61a2cc70505681"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405946005585000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l06_summarise_all:000009",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_3cbd02d6"
+    },
+    {
+     "name": "duration_ms",
+     "value": 502.848
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406030575003000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "83263da5dd508a5e"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "3de5a220cad808b5"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406030072155000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l07_best_quarter:000009",
+   "relationships": [
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Coder",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:run_python",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "run_python"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_a401122d-0988-4cb2-b816-94f63e5f8b25/a401122d-0988-4cb2-b816-94f63e5f8b25"
+    },
+    {
+     "name": "duration_ms",
+     "value": 9207.265
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406108581660000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "1a64fa41a8190bd5"
+    },
+    {
+     "name": "span_id",
+     "value": "61a32b14011f01f8"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406099374395000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l08_price_effect:000009",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_6df103a4-9204-4c9d-b8f9-8bc57388ae8d/6df103a4-9204-4c9d-b8f9-8bc57388ae8d"
+    },
+    {
+     "name": "duration_ms",
+     "value": 7790.3
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405682621946000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "e7fc46d3fb18f4bc"
+    },
+    {
+     "name": "span_id",
+     "value": "ffd4d24853e80ed7"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405674831646000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l02_revenue:000010",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:10+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_5b611d6d-03fc-4e06-abf1-f31d215f6542/5b611d6d-03fc-4e06-abf1-f31d215f6542"
+    },
+    {
+     "name": "duration_ms",
+     "value": 7385.744
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405749247447000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "e27ca1240b52f521"
+    },
+    {
+     "name": "span_id",
+     "value": "b71b07209165d9a2"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405741861703000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l03_growth:000010",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:10+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Checks claims against the data and verifies results."
+    },
+    {
+     "name": "agent_id",
+     "value": "Analyst_bd04d571-2600-4857-a2a9-b16fd0a66bda/bd04d571-2600-4857-a2a9-b16fd0a66bda"
+    },
+    {
+     "name": "duration_ms",
+     "value": 5639.969
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405810925735000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "45bc3dfd579295b3"
+    },
+    {
+     "name": "span_id",
+     "value": "6986ee27c1bbd56b"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405805285766000
+    },
+    {
+     "name": "to",
+     "value": "Analyst"
+    }
+   ],
+   "id": "l04_cross_check:000010",
+   "relationships": [
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:10+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_1a4c07c1-e8e2-495c-b087-0a952e12a1ab/1a4c07c1-e8e2-495c-b087-0a952e12a1ab"
+    },
+    {
+     "name": "duration_ms",
+     "value": 2235.857
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405871673291000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "3b3af250c073bb44"
+    },
+    {
+     "name": "span_id",
+     "value": "385d561571c865df"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405869437434000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l05_fix_bug:000010",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:10+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_735ce57b-15f8-4afb-99dd-e50674406948/735ce57b-15f8-4afb-99dd-e50674406948"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1020.727
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405952643483000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "88abf93b55178b37"
+    },
+    {
+     "name": "span_id",
+     "value": "dc25c0eb7d862b44"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405951622756000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l06_summarise_all:000010",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:10+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_adf5fa3d"
+    },
+    {
+     "name": "duration_ms",
+     "value": 388.887
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792406108580775000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "61a32b14011f01f8"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "a9b7c62504f9f4be"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792406108191888000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l08_price_effect:000010",
+   "relationships": [
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Coder",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:run_python",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:10+00:00",
+   "type": "run_python"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_a46b64e6"
+    },
+    {
+     "name": "duration_ms",
+     "value": 308.945
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405682621081000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "ffd4d24853e80ed7"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "53560269c09c7c5a"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405682312136000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l02_revenue:000011",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Coder",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:run_python",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:11+00:00",
+   "type": "run_python"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_5a15dba8"
+    },
+    {
+     "name": "duration_ms",
+     "value": 49.042
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405749246427000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "b71b07209165d9a2"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "a06a3d2a289e58f1"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405749197385000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l03_growth:000011",
+   "relationships": [
+    {
+     "objectId": "l03_growth",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Coder",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:run_python",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:11+00:00",
+   "type": "run_python"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_2d6af413"
+    },
+    {
+     "name": "duration_ms",
+     "value": 53.324
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405871671995000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "385d561571c865df"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "4fcd5998885ac526"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405871618671000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l05_fix_bug:000011",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Coder",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:run_python",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:11+00:00",
+   "type": "run_python"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_777f1ff9"
+    },
+    {
+     "name": "duration_ms",
+     "value": 1.213
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405952642762000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "dc25c0eb7d862b44"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "d9b1e41cd246ed9d"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405952641549000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l06_summarise_all:000011",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:11+00:00",
+   "type": "read_file"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Writes and runs Python to compute answers."
+    },
+    {
+     "name": "agent_id",
+     "value": "Coder_1a4c07c1-e8e2-495c-b087-0a952e12a1ab/1a4c07c1-e8e2-495c-b087-0a952e12a1ab"
+    },
+    {
+     "name": "duration_ms",
+     "value": 4195.295
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405884314708000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "a1cd37e26662fd9f"
+    },
+    {
+     "name": "span_id",
+     "value": "e95e1668144d246e"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405880119413000
+    },
+    {
+     "name": "to",
+     "value": "Coder"
+    }
+   ],
+   "id": "l05_fix_bug:000012",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:12+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Checks claims against the data and verifies results."
+    },
+    {
+     "name": "agent_id",
+     "value": "Analyst_735ce57b-15f8-4afb-99dd-e50674406948/735ce57b-15f8-4afb-99dd-e50674406948"
+    },
+    {
+     "name": "duration_ms",
+     "value": 10166.672
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405968862455000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "506192bd178eb470"
+    },
+    {
+     "name": "span_id",
+     "value": "312e53a6291952b3"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405958695783000
+    },
+    {
+     "name": "to",
+     "value": "Analyst"
+    }
+   ],
+   "id": "l06_summarise_all:000012",
+   "relationships": [
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:12+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agent_description",
+     "value": "Finds and reads files in the working directory."
+    },
+    {
+     "name": "agent_id",
+     "value": "FileSurfer_1a4c07c1-e8e2-495c-b087-0a952e12a1ab/1a4c07c1-e8e2-495c-b087-0a952e12a1ab"
+    },
+    {
+     "name": "duration_ms",
+     "value": 2069.421
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405896326339000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "bfed34fe8f018b16"
+    },
+    {
+     "name": "span_id",
+     "value": "17c7045ae592c014"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405894256918000
+    },
+    {
+     "name": "to",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "l05_fix_bug:000013",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:root",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:invoke_agent",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:13+00:00",
+   "type": "invoke_agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": null
+    },
+    {
+     "name": "call_id",
+     "value": "call_fa963d15"
+    },
+    {
+     "name": "duration_ms",
+     "value": 0.594
+    },
+    {
+     "name": "ended_ns",
+     "value": 1792405896325201000
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "parent_span_id",
+     "value": "17c7045ae592c014"
+    },
+    {
+     "name": "result",
+     "value": null
+    },
+    {
+     "name": "span_id",
+     "value": "063e782688a20444"
+    },
+    {
+     "name": "started_ns",
+     "value": 1792405896324607000
+    },
+    {
+     "name": "tool_type",
+     "value": null
+    }
+   ],
+   "id": "l05_fix_bug:000014",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:FileSurfer",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:read_file",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:14+00:00",
+   "type": "read_file"
+  }
+ ],
+ "objectTypes": [
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "type": "string"
+    }
+   ],
+   "name": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "type": "string"
+    },
+    {
+     "name": "source",
+     "type": "string"
+    },
+    {
+     "name": "spans",
+     "type": "string"
+    }
+   ],
+   "name": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "type": "string"
+    }
+   ],
+   "name": "tool"
+  }
+ ],
+ "objects": [
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:09+00:00",
+     "value": "Coder"
+    }
+   ],
+   "id": "agent:Coder",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "participates_in"
+    }
+   ],
+   "type": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:05+00:00",
+     "value": "FileSurfer"
+    }
+   ],
+   "id": "agent:FileSurfer",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "participates_in"
+    }
+   ],
+   "type": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "root"
+    }
+   ],
+   "id": "agent:root",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "participates_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "participates_in"
+    }
+   ],
+   "type": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 90
+    }
+   ],
+   "id": "l01_read_csv",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"Coder\", \"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 142
+    }
+   ],
+   "id": "l02_revenue",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"Coder\", \"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 142
+    }
+   ],
+   "id": "l03_growth",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"Analyst\", \"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 138
+    }
+   ],
+   "id": "l04_cross_check",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"Coder\", \"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 190
+    }
+   ],
+   "id": "l05_fix_bug",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"Analyst\", \"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 164
+    }
+   ],
+   "id": "l06_summarise_all",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"Coder\", \"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 116
+    }
+   ],
+   "id": "l07_best_quarter",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "agents",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[\"Coder\", \"FileSurfer\", \"root\"]"
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "otel_semconv"
+    },
+    {
+     "name": "spans",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 138
+    }
+   ],
+   "id": "l08_price_effect",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:01+00:00",
+     "value": "create_agent"
+    }
+   ],
+   "id": "tool:create_agent",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:04+00:00",
+     "value": "invoke_agent"
+    }
+   ],
+   "id": "tool:invoke_agent",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "invoke_workflow"
+    }
+   ],
+   "id": "tool:invoke_workflow",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:05+00:00",
+     "value": "list_files"
+    }
+   ],
+   "id": "tool:list_files",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:07+00:00",
+     "value": "read_file"
+    }
+   ],
+   "id": "tool:read_file",
+   "relationships": [
+    {
+     "objectId": "l01_read_csv",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l04_cross_check",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l06_summarise_all",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:09+00:00",
+     "value": "run_python"
+    }
+   ],
+   "id": "tool:run_python",
+   "relationships": [
+    {
+     "objectId": "l02_revenue",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l03_growth",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l07_best_quarter",
+     "qualifier": "used_in"
+    },
+    {
+     "objectId": "l08_price_effect",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:09+00:00",
+     "value": "write_file"
+    }
+   ],
+   "id": "tool:write_file",
+   "relationships": [
+    {
+     "objectId": "l05_fix_bug",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  }
+ ]
+}

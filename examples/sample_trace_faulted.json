@@ -1,0 +1,9 @@
+{
+  "case_id": "run-faulted-002",
+  "outcome": {"self_report": "success"},
+  "events": [
+    {"activity": "user_request", "timestamp": 0, "resource": "user", "attributes": {"text": "What is X?"}},
+    {"activity": "answer", "timestamp": 1, "resource": "agent:main", "attributes": {"text": "X is ...", "note": "answered from parametric memory"}},
+    {"activity": "retrieve", "timestamp": 2, "resource": "tool:search", "attributes": {"query": "X"}}
+  ]
+}

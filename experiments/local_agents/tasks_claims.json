@@ -1,0 +1,33 @@
+{
+  "_comment": [
+    "Ten tasks of one type, claim_check, for the sub-agent corpus (run with --subagents).",
+    "Same sandbox as tasks.json. Every task asks the team to check one claim about",
+    "sales.csv and to end with VERDICT: TRUE or VERDICT: FALSE, so the outcome can be",
+    "scored by a program. 'answer' is the correct verdict; check_claims.py recomputes",
+    "it from sales.csv and refuses to score if the two disagree. The agents never see it.",
+    "Six claims are true and four false, so a team that always agrees is caught."
+  ],
+  "tasks": [
+    {"id": "c01_east_units", "type": "claim_check", "shape": "verify", "answer": true,
+     "claim": "East sold fewer units in Q2 than in Q1."},
+    {"id": "c02_north_revenue", "type": "claim_check", "shape": "verify", "answer": true,
+     "claim": "North's revenue grew from Q1 to Q2."},
+    {"id": "c03_south_top_q2", "type": "claim_check", "shape": "verify", "answer": true,
+     "claim": "South had the highest revenue of any region in Q2."},
+    {"id": "c04_east_top_units_q1", "type": "claim_check", "shape": "verify", "answer": false,
+     "claim": "East sold more units in Q1 than any other region."},
+    {"id": "c05_q1_total_revenue", "type": "claim_check", "shape": "verify", "answer": false,
+     "claim": "Total Q1 revenue across all regions exceeds 3,000."},
+    {"id": "c06_south_growth", "type": "claim_check", "shape": "verify", "answer": true,
+     "claim": "South's units grew by more than 60% from Q1 to Q2."},
+    {"id": "c07_north_price", "type": "claim_check", "shape": "verify", "answer": false,
+     "claim": "North raised its price in Q2."},
+    {"id": "c08_east_revenue", "type": "claim_check", "shape": "verify", "answer": true,
+     "claim": "East's revenue was higher in Q2 than in Q1."},
+    {"id": "c09_average_price", "type": "claim_check", "shape": "verify", "answer": false,
+     "claim": "The average price over all six rows of sales.csv is above 10.5."},
+    {"id": "c10_q2_units_gain", "type": "claim_check", "shape": "verify", "answer": true,
+     "claim": "Total units sold in Q2 exceed total units sold in Q1 by more than 70."}
+  ],
+  "prompt_template": "Check this claim against sales.csv in the working directory: \"{claim}\" Compute the numbers from the data, have the result independently verified, and end your answer with one line that reads VERDICT: TRUE or VERDICT: FALSE."
+}

@@ -1,0 +1,10 @@
+What runs (local_magentic) exposes (10 runs). !! = read before trusting a result.
+
+  ok  110 tool calls over 4 distinct tools
+  ok  tool calls attributed to Recalculator (43), FileSurfer (20), Analyst (19), DataChecker (18), Coder (10)
+  --  arguments on 91/110 tool calls, results on 110/110
+  --  reasoning text on 22 events (kept as an attribute, never an activity)
+  --  1 turns hold several tool calls issued together (largest 21, in 1 runs). They share a timestamp; flat logs and pm4py serialise them anyway.
+  --  no business objects in the OCEL log, only run, agent and tool. Give --objects rules.json if the tool arguments name things (a ticket, a file, a reservation).
+  !!  7 variants over 10 runs, 6 of them once. Expect spaghetti; the pictures are frequency-filtered.
+  ok  OCEL log built twice: byte-identical

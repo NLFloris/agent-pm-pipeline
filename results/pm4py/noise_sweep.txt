@@ -1,0 +1,27 @@
+pm4py 2.7.23.8, PYTHONHASHSEED=0; mined from 135 compliant runs, replayed on 172; positive = protocol violation (37 of 172)
+
+noise 0.0: 38 places, 53 transitions, 13/13 activities labelled; missing none
+  token replay  fitness compliant 1.000 violating 0.987 | flags   9/172 | prec 1.00 rec 0.24 F1 0.39 kappa 0.34
+  alignments    fitness compliant 1.000 violating 0.959 | flags   9/172 | prec 1.00 rec 0.24 F1 0.39 kappa 0.34
+  task 29 trial 0: token replay 1.000, alignment 1.000; the alignment's log moves: none
+  runs the noise-0 net flags (9), with the per-task declarative verdict:
+    task  12 trial 2: fitness 0.833, truth violation, per-task declarative violation
+    task  21 trial 0: fitness 0.867, truth violation, per-task declarative compliant
+    task  29 trial 1: fitness 0.857, truth violation, per-task declarative violation
+    task  23 trial 0: fitness 0.727, truth violation, per-task declarative compliant
+    task  37 trial 3: fitness 0.900, truth violation, per-task declarative violation
+    task  23 trial 2: fitness 0.905, truth violation, per-task declarative compliant
+    task  23 trial 1: fitness 0.800, truth violation, per-task declarative compliant
+    task  33 trial 0: fitness 0.857, truth violation, per-task declarative compliant
+    task  23 trial 3: fitness 0.727, truth violation, per-task declarative compliant
+
+noise 0.1: 25 places, 40 transitions, 12/13 activities labelled; missing ['update_reservation_passengers']
+  token replay  fitness compliant 0.961 violating 0.933 | flags 113/172 | prec 0.26 rec 0.78 F1 0.39 kappa 0.09
+  alignments    fitness compliant 0.841 violating 0.815 | flags 117/172 | prec 0.25 rec 0.78 F1 0.38 kappa 0.07
+  task 29 trial 0: token replay 0.944, alignment 0.800; the alignment's log moves: ['get_user_details']
+
+noise 0.2: 17 places, 27 transitions, 9/13 activities labelled; missing ['calculate', 'cancel_reservation', 'update_reservation_flights', 'update_reservation_passengers']
+  token replay  fitness compliant 0.916 violating 0.911 | flags 144/172 | prec 0.24 rec 0.95 F1 0.39 kappa 0.07
+  alignments    fitness compliant 0.690 violating 0.578 | flags 156/172 | prec 0.22 rec 0.95 F1 0.36 kappa 0.02
+  task 29 trial 0: token replay 0.933, alignment 0.600; the alignment's log moves: ['get_reservation_details', 'get_user_details']
+

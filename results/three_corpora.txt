@@ -1,0 +1,165 @@
+
+==============================================================================
+CORPUS 1  tau2-bench airline (public, carries its own reference model)
+==============================================================================
+
+[ingestion]
+  runs 200   events 3990   mean 19.9/run
+  activity alphabet 15
+  top activities   assistant_message(1438), user_message(976), get_reservation_details(583), search_direct_flight(312), get_user_details(191), search_onestop_flight(100), get_flight_status(94), update_reservation_flights(69)
+  resources        {'assistant': 3014, 'user': 976}
+
+  harness labels: 168 pass / 32 fail (base rate 84%)
+
+  conformance vs hand-transcribed policy reference (authored by us)
+    constraints 13   fully compliant 0/200
+    mean fitness | reward=0.0: 0.9231  (n=32)
+    mean fitness | reward=1.0: 0.9231  (n=168)
+    constraints that ever fire: {'end_activities': 200}
+    separation between labels: 0.0000  <- the signal this reference carries
+
+  conformance vs per-task gold-action reference (derived from the data)
+    runs with gold actions 172/200
+    mean fitness | reward=0.0: 0.8486  (n=30)
+    mean fitness | reward=1.0: 0.9730  (n=142)
+    as a failure predictor: precision 64%  recall 53%  (base rate 17%)
+
+  discovery
+    111 distinct tool-call variants over 200 runs; 68 occur once
+    most frequent: get_user_details -> get_reservation_details -> transfer_to_human_agents  (10 runs)
+
+  performance proxy, split by harness label
+    reward=0.0             n=  32  calls  11.7  rework  53.0%  self-loop  52.2%
+    reward=1.0             n= 161  calls   7.4  rework  33.6%  self-loop  36.3%
+
+==============================================================================
+BASELINES  conformance against trivial features
+==============================================================================
+  n=172, failures=30 (base rate 17%)
+
+    gold-action reference not satisfied          P 64%  R 53%  F1 0.58   flags  25
+    more tool calls than the median (7)          P 29%  R 80%  F1 0.42   flags  84
+    any tool returned an error                   P 75%  R 10%  F1 0.18   flags   4
+    rework above the median (38%)                P 26%  R 73%  F1 0.38   flags  85
+    always predict failure                       P 17%  R 100%  F1 0.30   flags 172
+
+  violations by constraint kind: {'required': 28, 'precedence': 11}
+  ordering constraints account for 28% of them, so the signal is not only a presence check
+
+==============================================================================
+CONCURRENCY  parallel tool calls and what flattening them costs
+==============================================================================
+  tool calls per turn: {1: 441, 2: 134, 3: 43, 4: 54, 5: 24, 6: 11, 7: 18, 8: 3, 9: 6, 10: 4, 11: 4, 12: 4}
+  turns with more than one call: 305/746
+  runs containing a parallel turn: 170/200
+
+  directly-follows relations: 547 across turns (40%), 830 within a turn (60%)
+  distinct edges 81, of which 6 exist only because of within-turn serialisation
+  verdicts that change when within-turn order is reshuffled: 0/172
+  R4: three full repetitions give one distinct verdict hash(es) -> deterministic: True
+
+==============================================================================
+CORPUS 2  TraceElephant (peer-reviewed, expert step-level ground truth)
+==============================================================================
+
+[magentic-runs-gaia]
+  runs 74   events 2288   mean 30.9/run
+  activity alphabet 15
+  top activities   report(853), orchestrate(577), web_search(368), click(186), scroll_down(100), visit_url(68), summarize_page(41), open_path(39)
+  resources        {'WebSurfer': 1240, 'Orchestrator': 772, 'FileSurfer': 193, 'Coder': 73, 'MagenticOneOrchestrator': 8, 'ComputerTerminal': 1, 'Verification_Expert': 1}
+
+[captain-runs-gaia]
+  runs 73   events 1559   mean 21.4/run
+  activity alphabet 3
+  top activities   orchestrate(842), report(675), seek_experts_help(42)
+  resources        {'Orchestrator': 884, 'WebServing_Expert': 290, 'InformationExtraction_Expert': 279, 'Verification_Expert': 61, 'DataVerification_Expert': 27, 'CSVHandling_Expert': 18}
+
+[swe-agent-runs-swe-bench]
+  runs 44   events 1599   mean 36.3/run
+  activity alphabet 5
+  top activities   str_replace_editor(1111), bash(373), submit(76), report(34), orchestrate(5)
+  resources        {'str_replace_editor': 1114, 'bash': 443, 'submit': 32, 'Orchestrator': 7, 'Code': 1, 'str_replace': 1, 'Sphinx': 1}
+
+  multi-agent runs: 191/191
+
+  handover of work (top edges, multi-agent runs)
+      289  Orchestrator -> WebServing_Expert
+      289  WebServing_Expert -> Orchestrator
+      279  Orchestrator -> InformationExtraction_Expert
+      279  InformationExtraction_Expert -> Orchestrator
+      233  str_replace_editor -> bash
+      193  bash -> str_replace_editor
+
+==============================================================================
+LOCALIZATION  first structural divergence vs the expert mistake step
+==============================================================================
+  Reference is mined from the corpus itself: a directly-follows edge seen
+  in fewer than 2% of runs counts as structurally rare. The first such
+  edge is the predicted decisive step. No LLM is involved.
+
+  [captain-runs-gaia]  n=73
+    first-divergence   step exact  0.0%   within +/-1  0.0%   agent  0.0%
+    baselines          random step 11.0%   always-last  0.0%   always-WebServing_Expert 37.0%
+  [magentic-runs-gaia]  n=74
+    first-divergence   step exact  0.0%   within +/-1  1.4%   agent  9.5%
+    baselines          random step  4.1%   always-last  5.4%   always-WebSurfer 56.8%
+  [swe-agent-runs-swe-bench]  n=44
+    first-divergence   step exact  2.3%   within +/-1  2.3%   agent  2.3%
+    baselines          random step  2.3%   always-last  0.0%   always-str_replace_editor 79.5%
+
+  published LLM baselines on this dataset (Chen et al. 2026, best method):
+    agent-level 65.9%   step-level 30.3%
+
+==============================================================================
+CORPUS 3  AgentHallu (public, multi-agent delegation and reporting back)
+==============================================================================
+
+[Magentic_One]
+  runs 94   events 975   mean 10.4/run
+  activity alphabet 12
+  top activities   delegate(386), orchestrate(197), report(144), click(60), PythonInterpreterTool(45), scroll_down(43), input_text(31), web_search(28)
+  resources        {'MagenticOneOrchestrator': 583, 'WebSurfer': 215, 'Coder': 132, 'ComputerTerminal': 45}
+  handover of work
+      215  MagenticOneOrchestrator -> WebSurfer
+      215  WebSurfer -> MagenticOneOrchestrator
+      132  MagenticOneOrchestrator -> Coder
+      132  Coder -> MagenticOneOrchestrator
+       45  MagenticOneOrchestrator -> ComputerTerminal
+       45  ComputerTerminal -> MagenticOneOrchestrator
+    reciprocated edges (every handover answered): 6/6
+  performance proxy, split by the human hallucination label
+    hallucination=False    n=  25  calls   4.2  rework  19.4%  self-loop  21.8%
+    hallucination=True     n=  25  calls   4.6  rework  26.4%  self-loop  34.8%
+  hallucination label: 54 of 94 runs
+    runs with a tool call:  78, hallucinated 44 (56.4%)
+    runs without a tool call:  16, hallucinated 10 (62.5%)
+
+[Camel]
+  runs 93   events 825   mean 8.9/run
+  activity alphabet 20
+  top activities   orchestrate(190), append_note(149), report(140), read_note(71), search_google(68), ask_human_via_console(57), browser_visit_page(49), shell_exec(42)
+  resources        {'Search Agent': 468, 'Developer Agent': 152, 'Planner': 97, 'Coordinator': 95, 'unknown': 7, 'Multi-Modal Processing Agent': 6}
+  handover of work
+       95  Planner -> Coordinator
+       58  Coordinator -> Search Agent
+       35  Coordinator -> Developer Agent
+       11  Search Agent -> Developer Agent
+        2  Coordinator -> unknown
+        1  Search Agent -> Multi-Modal Processing Agent
+    reciprocated edges (every handover answered): 0/10
+  performance proxy, split by the human hallucination label
+    hallucination=False    n=  26  calls   6.1  rework  30.9%  self-loop  32.4%
+    hallucination=True     n=  43  calls   7.4  rework  34.4%  self-loop  29.0%
+  hallucination label: 57 of 93 runs
+    runs with a tool call:  86, hallucinated 52 (60.5%)
+    runs without a tool call:   7, hallucinated 5 (71.4%)
+
+==============================================================================
+SUMMARY  one canonical schema, three sources (R1)
+==============================================================================
+  corpus                  runs  events  reference              labels
+  tau2-bench airline       200    3990  policy + gold actions  reward 0/1
+  TraceElephant            191    5446  none shipped           expert agent + step
+  AgentHallu               187    1800  none shipped           human hallucination step
+
+  wrote results/three_corpora_summary.json

@@ -1,0 +1,398 @@
+{
+ "demo-001": [
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "list_files",
+     "arguments": {}
+    },
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "calc.py"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Analyst",
+   "calls": [
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nprint(sum(int(r['units']) * float(r['price']) for r in rows if r['region'] == 'north'))"
+     }
+    },
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "exec(open('calc.py').read()); print(revenue(120, 9.5), growth(120, 140))"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "calc.py"
+     }
+    },
+    {
+     "tool": "list_files",
+     "arguments": {}
+    }
+   ]
+  }
+ ],
+ "demo-002": [
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "notes.md"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "answer.txt",
+      "content": "north Q1 revenue 1140.0"
+     }
+    },
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "answer.txt",
+      "content": "north Q1 revenue 1140.0"
+     }
+    },
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    },
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "calc.py"
+     }
+    },
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "calc.py"
+     }
+    }
+   ]
+  }
+ ],
+ "demo-003": [
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    },
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nprint(sum(int(r['units']) * float(r['price']) for r in rows if r['region'] == 'north'))"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "notes.md"
+     }
+    },
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    },
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    },
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})"
+     }
+    }
+   ]
+  }
+ ],
+ "demo-004": [
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Analyst",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "calc.py"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})"
+     }
+    }
+   ]
+  }
+ ],
+ "demo-005": [
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nprint(sum(int(r['units']) * float(r['price']) for r in rows if r['region'] == 'north'))"
+     }
+    },
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    },
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "list_files",
+     "arguments": {}
+    }
+   ]
+  },
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "import csv\nrows = list(csv.DictReader(open('sales.csv')))\nq = {(r['region'], r['quarter']): int(r['units']) for r in rows}\nprint({r: (q[(r, 'Q2')] - q[(r, 'Q1')]) / q[(r, 'Q1')] for r in ['north', 'south', 'east']})"
+     }
+    },
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    },
+    {
+     "tool": "list_files",
+     "arguments": {}
+    },
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Analyst",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    },
+    {
+     "tool": "run_python",
+     "arguments": {
+      "code": "exec(open('calc.py').read()); print(revenue(120, 9.5), growth(120, 140))"
+     }
+    }
+   ]
+  }
+ ],
+ "demo-006": [
+  {
+   "agent": "Analyst",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    },
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "Coder",
+   "calls": [
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "growth.txt",
+      "content": "north +16.7%, south +68.4%, east -6.2%"
+     }
+    },
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "answer.txt",
+      "content": "north Q1 revenue 1140.0"
+     }
+    },
+    {
+     "tool": "write_file",
+     "arguments": {
+      "path": "answer.txt",
+      "content": "north Q1 revenue 1140.0"
+     }
+    }
+   ]
+  },
+  {
+   "agent": "FileSurfer",
+   "calls": [
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "calc.py"
+     }
+    },
+    {
+     "tool": "read_file",
+     "arguments": {
+      "path": "sales.csv"
+     }
+    }
+   ]
+  }
+ ]
+}

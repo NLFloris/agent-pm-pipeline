@@ -1,0 +1,270 @@
+[
+ {
+  "case_id": "654165dc-e7c7-44ef-9c2e-6ec69ed2d38f",
+  "task_id": "36",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify/cancel requires that 'the user must provide their user id'; the agent never asked for it and proceeded using only the reservation ID",
+     "'If any portion of the flight has already been flown, the agent cannot help and transfer is needed'; the agent offered to cancel reservation EUJUY6 for a full refund even though it had noted the May 14 outbound flights had already been flown"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 249.7281852500746,
+    "cache_hit": false,
+    "prompt_tokens": 2851,
+    "completion_tokens": 9985
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Offered to cancel the reservation with a full refund even though a portion of the flights (the May 14 outbound segments) had already been flown \u2014 policy states if any portion of the flight has already been flown, the agent cannot help with cancellation and transfer is needed",
+     "Transferred the user to a human agent implying an exception might be possible for a basic economy modification, instead of denying a request that is against policy"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 66.18523495900445,
+    "cache_hit": false,
+    "prompt_tokens": 2851,
+    "completion_tokens": 2744
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user id from the user ('The user must provide their user id') \u2014 the agent never asked for it and proceeded using only the reservation ID (step 3).",
+     "'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 in step 5 the agent offered to cancel reservation EUJUY6 and process a full refund even though the May 14 outbound flights had already been flown.",
+     "The agent asserted in step 5 that travel insurance 'should cover' this bereavement cancellation, but insurance only enables refunds 'given health or weather reasons' \u2014 an assurance not supported by policy.",
+     "The transfer procedure requires first making a transfer_to_human_agents tool call and then sending 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' \u2014 the agent promised the transfer but made no such tool call or message before the conversation ended.",
+     "The agent should deny requests that are against policy; it instead suggested a human agent 'may be able to make an exception' to the basic-economy no-modification rule."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 438.62968529202044,
+    "cache_hit": false,
+    "prompt_tokens": 2851,
+    "completion_tokens": 7843
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Modify flight requires that 'the user must provide their user id' before the agent acts \u2014 the agent pulled reservation details without ever asking the user for their user id (it extracted it from the tool result instead).",
+     "'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 the outbound flights on 2024-05-14 had already flown, yet in step 5 the agent offered to cancel the reservation with a full refund.",
+     "The agent asserted the travel insurance covers the situation, but insurance only enables refund 'given health or weather reasons,' and the agent offered this cancellation option without a valid policy basis (and regardless of the flown-segment prohibition)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 298.4647147079231,
+    "cache_hit": false,
+    "prompt_tokens": 2851,
+    "completion_tokens": 3560
+   },
+   {
+    "repeat": 4,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 225.44003262498882,
+    "cache_hit": false,
+    "prompt_tokens": 2851,
+    "completion_tokens": 3505
+   }
+  ]
+ },
+ {
+  "case_id": "860a2a06-ba08-4589-a570-917477522428",
+  "task_id": "3",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 301.8582550409483,
+    "cache_hit": false,
+    "prompt_tokens": 3007,
+    "completion_tokens": 6399
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 66.55071125004906,
+    "cache_hit": false,
+    "prompt_tokens": 3007,
+    "completion_tokens": 1351
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 135.3282057499746,
+    "cache_hit": false,
+    "prompt_tokens": 3007,
+    "completion_tokens": 2833
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 45.68853591696825,
+    "cache_hit": false,
+    "prompt_tokens": 3007,
+    "completion_tokens": 948
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 99.9317086659139,
+    "cache_hit": false,
+    "prompt_tokens": 3007,
+    "completion_tokens": 2349
+   }
+  ]
+ },
+ {
+  "case_id": "871f33ef-fa83-42e7-8d9a-da8474280864",
+  "task_id": "40",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.301411084015854,
+    "cache_hit": false,
+    "prompt_tokens": 2879,
+    "completion_tokens": 440
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.933996082982048,
+    "cache_hit": false,
+    "prompt_tokens": 2879,
+    "completion_tokens": 571
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.21809237508569,
+    "cache_hit": false,
+    "prompt_tokens": 2879,
+    "completion_tokens": 613
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.683272541034967,
+    "cache_hit": false,
+    "prompt_tokens": 2879,
+    "completion_tokens": 480
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.271557249943726,
+    "cache_hit": false,
+    "prompt_tokens": 2879,
+    "completion_tokens": 579
+   }
+  ]
+ }
+]

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "agent-pm-pipeline: From Agent Telemetry to Event Logs for Process Mining"
+abstract: >-
+  A pipeline that turns the execution traces of LLM-based agents into
+  OCEL 2.0 event logs and checks them against reference models with
+  conformance checking, with the experiments and results of the master's
+  thesis "From Agent Traces to Event Logs: A Process-Mining Pipeline for
+  Trajectory-Level Evaluation of LLM-Based Agents" (University of Twente and
+  Bern University of Applied Sciences, 2026).
+authors:
+  - family-names: Kuijpers
+    given-names: Floris
+type: software
+license: MIT
+repository-code: "https://github.com/NLFloris/agent-pm-pipeline"
+keywords:
+  - process mining
+  - conformance checking
+  - OCEL 2.0
+  - OpenTelemetry
+  - LLM-based agents
+  - agent evaluation

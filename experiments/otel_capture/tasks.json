@@ -1,0 +1,66 @@
+{
+  "_comment": [
+    "Task suite for the Claude Code OpenTelemetry capture.",
+    "Every task runs against the sandbox workspace that run_suite.py creates, never",
+    "against a real project, so the capture contains no private content and the suite",
+    "is reproducible by anyone with the repository.",
+    "'shape' records the control-flow structure the task is designed to elicit, so a",
+    "claim about concurrency in the resulting log can be checked against intent:",
+    "  linear  one agent, a sequence of tool calls",
+    "  chain   sub-agents spawned one after another, each using the previous result",
+    "  fanout  several sub-agents spawned in one turn, running concurrently",
+    "  mixed   a fan-out followed by a dependent step"
+  ],
+  "tasks": [
+    {
+      "id": "t01_inventory",
+      "shape": "linear",
+      "prompt": "List every file in the current directory with its line count, then write the result as a markdown table to inventory.md. Do not use sub-agents."
+    },
+    {
+      "id": "t02_fix_bug",
+      "shape": "linear",
+      "prompt": "Run `python calc.py` in the current directory. It fails. Find the bug, fix it, and run it again to confirm. Do not use sub-agents."
+    },
+    {
+      "id": "t03_add_tests",
+      "shape": "linear",
+      "prompt": "Write a pytest file test_calc.py covering the add and divide functions in calc.py, including division by zero, then run it. Do not use sub-agents."
+    },
+    {
+      "id": "t04_fanout_review",
+      "shape": "fanout",
+      "prompt": "Review calc.py, strings.py and dates.py for bugs. Launch one sub-agent per file in a single message so they run at the same time, then summarise what they found."
+    },
+    {
+      "id": "t05_fanout_docs",
+      "shape": "fanout",
+      "prompt": "Write a one-paragraph docstring for each of calc.py, strings.py and dates.py. Use three sub-agents launched together, one per file, then report which ones changed."
+    },
+    {
+      "id": "t06_chain_research",
+      "shape": "chain",
+      "prompt": "First use a sub-agent to list which functions in this directory lack tests. When it reports back, use a second sub-agent to write tests for the first function it named. Then run the tests yourself."
+    },
+    {
+      "id": "t07_chain_refactor",
+      "shape": "chain",
+      "prompt": "Use a sub-agent to find duplicated logic across the python files here. When it answers, use another sub-agent to extract the duplication into a shared helper module. Then check the files still import cleanly."
+    },
+    {
+      "id": "t08_mixed_audit",
+      "shape": "mixed",
+      "prompt": "Launch two sub-agents at once, one to list all TODO comments and one to list all functions longer than 15 lines. When both have reported, use a third sub-agent to write findings.md combining their results."
+    },
+    {
+      "id": "t09_mixed_build",
+      "shape": "mixed",
+      "prompt": "Launch sub-agents in parallel to summarise calc.py and strings.py. Then, using both summaries, write a README.md for the directory yourself."
+    },
+    {
+      "id": "t10_fanout_rename",
+      "shape": "fanout",
+      "prompt": "Three sub-agents at the same time: one renames the variable `x` in calc.py to something meaningful, one does the same in strings.py, one in dates.py. Report what each renamed."
+    }
+  ]
+}

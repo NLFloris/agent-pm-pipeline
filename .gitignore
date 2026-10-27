@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# environments
+.venv/
+venv/
+.env
+
+# editors and the OS
+.DS_Store
+.vscode/
+.idea/
+
+# local working notes, not part of the published repository
+notes/
+
+# output of the README and USAGE examples when run from the repository root
+/report*/
+/*.ocel.json
+/verdicts.json
+
+# scratch files of the experiment scripts
+results/**/*.tmp

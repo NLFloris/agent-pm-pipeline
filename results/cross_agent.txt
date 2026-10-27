@@ -1,0 +1,122 @@
+
+=== airline, confirmation rule frozen, 15 agents ===
+  agent                                       n    action: viol prec  rec kappa  action-or-db: viol prec  rec kappa     reward: viol prec  rec kappa
+  claude-3-7-sonnet_anthropic_2024-06-20    172             60 0.45 0.45  0.16              97 0.93 0.58  0.50              91 0.87 0.57  0.46
+  claude-opus-4-5_sierra_2026-02-26         172             37 0.94 0.41  0.50              39 1.00 0.41  0.52              30 0.94 0.50  0.60
+  claude-sonnet-4-5_sierra_2026-02-26       172             54 0.72 0.54  0.48              64 0.93 0.58  0.60              56 0.93 0.66  0.69
+  gemini-3-flash_sierra_2026-03-02          172             61 0.93 0.70  0.72              68 1.00 0.68  0.72              63 0.98 0.71  0.75
+  gemini-3-pro_sierra_2026-03-02            169             40 0.77 0.25  0.30              45 1.00 0.29  0.37              34 0.85 0.32  0.40
+  glm-5-think_sierra_2026-03-02             172             36 0.85 0.47  0.54              40 0.95 0.47  0.57              33 0.85 0.52  0.58
+  gpt-4-1-mini_openai_2024-06-20            172             67 0.51 0.34  0.14              93 0.91 0.44  0.37              88 0.84 0.43  0.34
+  gpt-4-1_openai_2024-06-20                 172             71 0.62 0.48  0.28              92 0.89 0.53  0.44              86 0.87 0.56  0.48
+  gpt-5-2-none_sierra_2026-02-26            172             41 0.75 0.44  0.46              44 0.83 0.45  0.50              37 0.75 0.49  0.51
+  gpt-5-2_sierra_2026-02-26                 172             36 0.71 0.33  0.37              43 0.88 0.35  0.42              33 0.94 0.48  0.59
+  gpt-5_sierra_2025-08-09                   172             72 0.89 0.57  0.55              81 0.98 0.56  0.56              71 0.96 0.62  0.63
+  o4-mini_openai_2024-06-20                 172             93 0.86 0.52  0.40             101 0.96 0.53  0.46              80 0.91 0.64  0.59
+  qwen3-max_qwen_2025-10-30                 171            104 0.85 0.27  0.16             112 1.00 0.29  0.22              56 0.94 0.55  0.60
+  qwen3-max_qwen_2026-01-23                 172             81 0.89 0.49  0.45              92 1.00 0.49  0.47              62 0.89 0.65  0.64
+  qwen3.5-397b-a17b-think_sierra_2026-03-02  172             56 0.52 0.23  0.15              65 0.76 0.29  0.27              36 0.80 0.56  0.58
+  POOLED, all agents
+    action        n  2576  viol   909  flags   541  prec 0.74 [0.70, 0.77]  rec 0.44  kappa 0.39 [0.35, 0.43]
+    action-or-db  n  2576  viol  1076  flags   541  prec 0.94 [0.92, 0.96]  rec 0.47  kappa 0.48 [0.45, 0.52]
+    reward        n  2576  viol   856  flags   541  prec 0.89 [0.86, 0.92]  rec 0.56  kappa 0.58 [0.55, 0.62]
+  POOLED, without claude-opus-4-5
+    action        n  2404  viol   872  flags   525  prec 0.73 [0.69, 0.77]  rec 0.44  kappa 0.38 [0.34, 0.42]
+    action-or-db  n  2404  viol  1037  flags   525  prec 0.94 [0.92, 0.96]  rec 0.47  kappa 0.48 [0.45, 0.51]
+    reward        n  2404  viol   826  flags   525  prec 0.89 [0.87, 0.92]  rec 0.57  kappa 0.58 [0.54, 0.62]
+  false alarms against 'action', by constraint kind: {'allowed': 107, 'directly_before': 36}
+  false alarms against 'action-or-db', by constraint kind: {'directly_before': 32, 'allowed': 1}
+  missed against 'action' (511 runs), failing gold actions: {'write wrong arguments': 375, 'read wrong arguments': 104, 'read missing': 84, 'transfer wrong arguments': 13}; arguments only: 427
+  missed against 'action-or-db' (568 runs), failing gold actions: {'write wrong arguments': 375, 'read wrong arguments': 104, 'read missing': 84, 'db only': 57, 'transfer wrong arguments': 13}; arguments only: 427
+
+=== airline, confirmation rule reads transparent, 15 agents ===
+  agent                                       n    action: viol prec  rec kappa  action-or-db: viol prec  rec kappa     reward: viol prec  rec kappa
+  claude-3-7-sonnet_anthropic_2024-06-20    172             60 0.45 0.37  0.13              97 1.00 0.51  0.47              91 0.96 0.52  0.48
+  claude-opus-4-5_sierra_2026-02-26         172             37 0.94 0.41  0.50              39 1.00 0.41  0.52              30 0.94 0.50  0.60
+  claude-sonnet-4-5_sierra_2026-02-26       172             54 0.76 0.52  0.48              64 0.97 0.56  0.61              56 0.97 0.64  0.70
+  gemini-3-flash_sierra_2026-03-02          172             61 0.93 0.69  0.70              68 1.00 0.66  0.70              63 1.00 0.71  0.76
+  gemini-3-pro_sierra_2026-03-02            169             40 0.80 0.20  0.25              45 1.00 0.22  0.30              34 1.00 0.29  0.40
+  glm-5-think_sierra_2026-03-02             172             36 0.89 0.44  0.53              40 1.00 0.45  0.56              33 0.94 0.52  0.61
+  gpt-4-1-mini_openai_2024-06-20            172             67 0.55 0.31  0.16              93 1.00 0.41  0.39              88 0.92 0.40  0.36
+  gpt-4-1_openai_2024-06-20                 172             71 0.68 0.45  0.32              92 1.00 0.51  0.49              86 0.94 0.51  0.48
+  gpt-5-2-none_sierra_2026-02-26            172             41 0.89 0.41  0.49              44 1.00 0.43  0.53              37 0.95 0.49  0.58
+  gpt-5-2_sierra_2026-02-26                 172             36 0.80 0.33  0.40              43 1.00 0.35  0.45              33 1.00 0.45  0.57
+  gpt-5_sierra_2025-08-09                   172             72 0.91 0.56  0.55              81 1.00 0.54  0.56              71 0.98 0.61  0.63
+  o4-mini_openai_2024-06-20                 172             93 0.88 0.47  0.38             101 1.00 0.50  0.45              80 0.98 0.61  0.62
+  qwen3-max_qwen_2025-10-30                 171            104 0.84 0.26  0.16             112 1.00 0.29  0.22              56 0.97 0.55  0.61
+  qwen3-max_qwen_2026-01-23                 172             81 0.88 0.47  0.43              92 1.00 0.47  0.45              62 0.93 0.65  0.66
+  qwen3.5-397b-a17b-think_sierra_2026-03-02  172             56 0.60 0.16  0.13              65 1.00 0.23  0.27              36 1.00 0.42  0.53
+  POOLED, all agents
+    action        n  2576  viol   909  flags   478  prec 0.78 [0.74, 0.81]  rec 0.41  kappa 0.39 [0.35, 0.42]
+    action-or-db  n  2576  viol  1076  flags   478  prec 1.00 [0.99, 1.00]  rec 0.44  kappa 0.48 [0.45, 0.52]
+    reward        n  2576  viol   856  flags   478  prec 0.96 [0.95, 0.98]  rec 0.54  kappa 0.59 [0.56, 0.63]
+  POOLED, without claude-opus-4-5
+    action        n  2404  viol   872  flags   462  prec 0.77 [0.73, 0.81]  rec 0.41  kappa 0.38 [0.34, 0.42]
+    action-or-db  n  2404  viol  1037  flags   462  prec 1.00 [0.99, 1.00]  rec 0.44  kappa 0.48 [0.44, 0.51]
+    reward        n  2404  viol   826  flags   462  prec 0.96 [0.95, 0.98]  rec 0.54  kappa 0.59 [0.55, 0.63]
+  false alarms against 'action', by constraint kind: {'allowed': 107}
+  false alarms against 'action-or-db', by constraint kind: {'allowed': 1}
+  missed against 'action' (538 runs), failing gold actions: {'write wrong arguments': 394, 'read wrong arguments': 116, 'read missing': 85, 'transfer wrong arguments': 13}; arguments only: 453
+  missed against 'action-or-db' (599 runs), failing gold actions: {'write wrong arguments': 394, 'read wrong arguments': 116, 'read missing': 85, 'db only': 61, 'transfer wrong arguments': 13}; arguments only: 453
+
+=== retail, confirmation rule frozen, 15 agents ===
+  agent                                       n    action: viol prec  rec kappa  action-or-db: viol prec  rec kappa     reward: viol prec  rec kappa
+  claude-3-7-sonnet_anthropic_2024-06-20    448            163 0.68 0.21  0.18             177 0.74 0.21  0.18              95 0.50 0.26  0.23
+  claude-opus-4-5_sierra_2026-02-26         448            158 0.92 0.39  0.43             167 0.98 0.39  0.44              93 0.82 0.58  0.61
+  claude-sonnet-4-5_sierra_2026-02-26       448            212 0.98 0.47  0.48             215 0.99 0.47  0.48             125 0.82 0.67  0.65
+  gemini-3-flash_sierra_2026-03-02          448            179 0.96 0.37  0.40             183 0.96 0.37  0.39             106 0.91 0.60  0.66
+  gemini-3-pro_sierra_2026-03-02            428            154 0.91 0.27  0.30             158 0.91 0.27  0.29              90 0.87 0.44  0.52
+  glm-5-think_sierra_2026-03-02             444            188 0.98 0.47  0.49             190 0.98 0.46  0.49             115 0.86 0.67  0.68
+  gpt-4-1-mini_openai_2024-06-20            448            222 0.83 0.26  0.21             228 0.83 0.25  0.20             153 0.79 0.36  0.35
+  gpt-4-1_openai_2024-06-20                 448            196 0.75 0.26  0.21             205 0.76 0.25  0.20             117 0.60 0.35  0.31
+  gpt-5-2-none_sierra_2026-02-26            397            169 0.94 0.34  0.35             175 0.97 0.34  0.36              97 0.87 0.56  0.60
+  gpt-5-2_sierra_2026-02-26                 448            158 0.93 0.27  0.31             165 0.96 0.26  0.30              84 0.87 0.46  0.55
+  gpt-5_sierra_2025-08-09                   448            169 0.78 0.21  0.21             182 0.87 0.22  0.22              84 0.65 0.36  0.38
+  o4-mini_openai_2024-06-20                 448            238 0.85 0.26  0.20             242 0.85 0.26  0.19             130 0.71 0.40  0.38
+  qwen3-max_qwen_2025-10-30                 448            210 0.91 0.30  0.29             214 0.93 0.30  0.29             112 0.74 0.46  0.46
+  qwen3-max_qwen_2026-01-23                 448            193 0.92 0.31  0.32             196 0.95 0.32  0.33              94 0.60 0.41  0.39
+  qwen3.5-397b-a17b-think_sierra_2026-03-02  448            176 0.93 0.30  0.33             181 0.98 0.31  0.34              70 0.77 0.63  0.64
+  POOLED, all agents
+    action        n  6645  viol  2785  flags   979  prec 0.89 [0.87, 0.91]  rec 0.31  kappa 0.32 [0.30, 0.33]
+    action-or-db  n  6645  viol  2878  flags   979  prec 0.92 [0.90, 0.93]  rec 0.31  kappa 0.31 [0.30, 0.33]
+    reward        n  6645  viol  1565  flags   979  prec 0.77 [0.74, 0.79]  rec 0.48  kappa 0.50 [0.47, 0.52]
+  POOLED, without claude-opus-4-5
+    action        n  6197  viol  2627  flags   913  prec 0.89 [0.87, 0.91]  rec 0.31  kappa 0.31 [0.29, 0.33]
+    action-or-db  n  6197  viol  2711  flags   913  prec 0.91 [0.89, 0.93]  rec 0.31  kappa 0.31 [0.29, 0.33]
+    reward        n  6197  viol  1472  flags   913  prec 0.76 [0.73, 0.79]  rec 0.47  kappa 0.49 [0.46, 0.52]
+  false alarms against 'action', by constraint kind: {'directly_before': 70, 'allowed': 32, 'precedence+required': 2}
+  false alarms against 'action-or-db', by constraint kind: {'directly_before': 68, 'allowed': 12, 'precedence+required': 2}
+  missed against 'action' (1910 runs), failing gold actions: {'write wrong arguments': 858, 'read wrong arguments': 685, 'read missing': 620, 'transfer wrong arguments': 50, 'transfer missing': 50}; arguments only: 1240
+  missed against 'action-or-db' (1981 runs), failing gold actions: {'write wrong arguments': 858, 'read wrong arguments': 685, 'read missing': 620, 'db only': 71, 'transfer wrong arguments': 50, 'transfer missing': 50}; arguments only: 1240
+
+=== retail, confirmation rule reads transparent, 15 agents ===
+  agent                                       n    action: viol prec  rec kappa  action-or-db: viol prec  rec kappa     reward: viol prec  rec kappa
+  claude-3-7-sonnet_anthropic_2024-06-20    448            163 0.90 0.17  0.19             177 0.97 0.16  0.19              95 0.60 0.19  0.21
+  claude-opus-4-5_sierra_2026-02-26         448            158 0.94 0.37  0.41             167 1.00 0.37  0.43              93 0.87 0.58  0.64
+  claude-sonnet-4-5_sierra_2026-02-26       448            212 0.98 0.47  0.48             215 0.99 0.47  0.48             125 0.82 0.67  0.65
+  gemini-3-flash_sierra_2026-03-02          448            179 0.98 0.36  0.40             183 0.98 0.35  0.38             106 0.97 0.59  0.68
+  gemini-3-pro_sierra_2026-03-02            428            154 0.98 0.27  0.32             158 0.98 0.27  0.31              90 0.93 0.44  0.54
+  glm-5-think_sierra_2026-03-02             444            188 0.99 0.47  0.50             190 0.99 0.46  0.49             115 0.87 0.67  0.68
+  gpt-4-1-mini_openai_2024-06-20            448            222 0.92 0.25  0.23             228 0.92 0.24  0.22             153 0.87 0.34  0.37
+  gpt-4-1_openai_2024-06-20                 448            196 0.93 0.20  0.21             205 0.95 0.20  0.20             117 0.77 0.28  0.32
+  gpt-5-2-none_sierra_2026-02-26            397            169 0.97 0.34  0.36             175 1.00 0.34  0.36              97 0.92 0.56  0.62
+  gpt-5-2_sierra_2026-02-26                 448            158 1.00 0.25  0.30             165 1.00 0.24  0.28              84 0.95 0.44  0.55
+  gpt-5_sierra_2025-08-09                   448            169 0.89 0.20  0.22             182 1.00 0.21  0.24              84 0.74 0.33  0.39
+  o4-mini_openai_2024-06-20                 448            238 1.00 0.25  0.24             242 1.00 0.24  0.23             130 0.83 0.38  0.41
+  qwen3-max_qwen_2025-10-30                 448            210 0.98 0.30  0.30             214 1.00 0.29  0.30             112 0.81 0.46  0.49
+  qwen3-max_qwen_2026-01-23                 448            193 0.95 0.30  0.31             196 0.98 0.31  0.33              94 0.62 0.40  0.39
+  qwen3.5-397b-a17b-think_sierra_2026-03-02  448            176 0.92 0.27  0.29             181 0.98 0.28  0.31              70 0.81 0.60  0.64
+  POOLED, all agents
+    action        n  6645  viol  2785  flags   865  prec 0.96 [0.94, 0.97]  rec 0.30  kappa 0.32 [0.30, 0.34]
+    action-or-db  n  6645  viol  2878  flags   865  prec 0.98 [0.97, 0.99]  rec 0.30  kappa 0.32 [0.30, 0.34]
+    reward        n  6645  viol  1565  flags   865  prec 0.83 [0.81, 0.86]  rec 0.46  kappa 0.51 [0.48, 0.54]
+  POOLED, without claude-opus-4-5
+    action        n  6197  viol  2627  flags   803  prec 0.96 [0.95, 0.98]  rec 0.29  kappa 0.31 [0.30, 0.33]
+    action-or-db  n  6197  viol  2711  flags   803  prec 0.98 [0.97, 0.99]  rec 0.29  kappa 0.31 [0.29, 0.33]
+    reward        n  6197  viol  1472  flags   803  prec 0.83 [0.80, 0.85]  rec 0.45  kappa 0.50 [0.47, 0.53]
+  false alarms against 'action', by constraint kind: {'allowed': 32, 'precedence+required': 2}
+  false alarms against 'action-or-db', by constraint kind: {'allowed': 12, 'precedence+required': 2}
+  missed against 'action' (1954 runs), failing gold actions: {'write wrong arguments': 886, 'read wrong arguments': 704, 'read missing': 625, 'transfer wrong arguments': 50, 'transfer missing': 50}; arguments only: 1279
+  missed against 'action-or-db' (2027 runs), failing gold actions: {'write wrong arguments': 886, 'read wrong arguments': 704, 'read missing': 625, 'db only': 73, 'transfer wrong arguments': 50, 'transfer missing': 50}; arguments only: 1279
+
+wrote results/cross_agent.json

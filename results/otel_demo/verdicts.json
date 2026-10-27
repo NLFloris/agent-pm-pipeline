@@ -1,0 +1,91 @@
+[
+ {
+  "case_id": "demo-001",
+  "reference": "demo-team-policy",
+  "compliant": true,
+  "fitness": 1.0,
+  "violations": []
+ },
+ {
+  "case_id": "demo-002",
+  "reference": "demo-team-policy",
+  "compliant": false,
+  "fitness": 0.8,
+  "violations": [
+   {
+    "constraint": "precedence(run_python,write_file)",
+    "at": 14,
+    "at_label": "14",
+    "description": "'run_python' must occur before 'write_file'"
+   }
+  ]
+ },
+ {
+  "case_id": "demo-003",
+  "reference": "demo-team-policy",
+  "compliant": false,
+  "fitness": 0.6,
+  "violations": [
+   {
+    "constraint": "precedence(read_file,run_python)",
+    "at": 10,
+    "at_label": "10",
+    "description": "'read_file' must occur before 'run_python'"
+   },
+   {
+    "constraint": "precedence(run_python,write_file)",
+    "at": 8,
+    "at_label": "8",
+    "description": "'run_python' must occur before 'write_file'"
+   }
+  ]
+ },
+ {
+  "case_id": "demo-004",
+  "reference": "demo-team-policy",
+  "compliant": false,
+  "fitness": 0.8,
+  "violations": [
+   {
+    "constraint": "precedence(run_python,write_file)",
+    "at": 8,
+    "at_label": "8",
+    "description": "'run_python' must occur before 'write_file'"
+   }
+  ]
+ },
+ {
+  "case_id": "demo-005",
+  "reference": "demo-team-policy",
+  "compliant": false,
+  "fitness": 0.8,
+  "violations": [
+   {
+    "constraint": "precedence(read_file,run_python)",
+    "at": 8,
+    "at_label": "8",
+    "description": "'read_file' must occur before 'run_python'"
+   }
+  ]
+ },
+ {
+  "case_id": "demo-006",
+  "reference": "demo-team-policy",
+  "compliant": false,
+  "fitness": 0.6,
+  "violations": [
+   {
+    "constraint": "required(run_python)",
+    "at": null,
+    "at_label": null,
+    "description": "required activity 'run_python' is missing"
+   },
+   {
+    "constraint": "precedence(run_python,write_file)",
+    "at": 16,
+    "at_label": "16",
+    "description": "'run_python' must occur before 'write_file'"
+   }
+  ]
+ }
+]

@@ -1,0 +1,5 @@
+{
+  "name": "demo-team-policy",
+  "required": ["read_file", "run_python", "write_file"],
+  "precedence": [["read_file", "run_python"], ["run_python", "write_file"]]
+}

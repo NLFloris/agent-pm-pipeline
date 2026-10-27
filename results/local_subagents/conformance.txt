@@ -1,0 +1,24 @@
+10 runs from results/local_subagents/runs, task type ['claim_check']
+reference experiments/local_agents/claim_check_reference.json  sha256 ccb0a38aadd9d564...
+  required    ['Coder.run_python', 'Analyst.spawn:DataChecker', 'DataChecker.read_file', 'Analyst.spawn:Recalculator', 'Recalculator.run_python']
+  precedence  [['Coder.run_python', 'Analyst.spawn:DataChecker'], ['Coder.run_python', 'Analyst.spawn:Recalculator']]
+
+run                      answer team   ok  events  sub-agents started (by Analyst)    conform  violations
+c01_east_units           True   True   yes     24  DataChecker x1, Recalculator x1    yes      
+c02_north_revenue        True   True   yes     23  DataChecker x1, Recalculator x1    yes      
+c03_south_top_q2         True   True   yes     23  DataChecker x1, Recalculator x1    yes      
+c04_east_top_units_q1    False  False  yes     12  none                               NO       required(Analyst.spawn:DataChecker); required(DataChecker.read_file); required(Analyst.spawn:Recalculator); required(Recalculator.run_python)
+c05_q1_total_revenue     False  False  yes     23  DataChecker x1, Recalculator x1    yes      
+c06_south_growth         True   True   yes     25  DataChecker x2, Recalculator x1    yes      
+c07_north_price          False  False  yes     23  DataChecker x1, Recalculator x1    yes      
+c08_east_revenue         True   True   yes     43  DataChecker x1, Recalculator x1    yes      
+c09_average_price        False  False  yes     22  DataChecker x1, Recalculator x1    yes      
+c10_q2_units_gain        True   True   yes     21  DataChecker x1, Recalculator x1    yes      
+
+correct verdicts       10/10
+conforming runs        9/10
+conforming and correct 9, conforming and wrong 0, violating and correct 1, violating and wrong 0
+sub-agent tool calls   {'DataChecker.list_files': 9, 'DataChecker.read_file': 9, 'Recalculator.run_python': 43}
+violations by constraint {'required(Analyst.spawn:DataChecker)': 1, 'required(DataChecker.read_file)': 1, 'required(Analyst.spawn:Recalculator)': 1, 'required(Recalculator.run_python)': 1}
+
+wrote results/local_subagents/conformance.json

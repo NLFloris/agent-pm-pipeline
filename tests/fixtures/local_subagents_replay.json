@@ -1,0 +1,289 @@
+{
+ "task_id": "c01_replay",
+ "shape": "verify",
+ "task_type": "claim_check",
+ "prompt": "Check this claim against sales.csv: \"East sold fewer units in Q2 than in Q1.\"",
+ "model": "replay",
+ "started_at": null,
+ "seconds": 0,
+ "error": null,
+ "messages": [
+  {
+   "type": "TextMessage",
+   "source": "user",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "Check this claim against sales.csv: \"East sold fewer units in Q2 than in Q1.\""
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "Coder",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "c1",
+      "name": "run_python",
+      "arguments": "{\"code\": \"print(80, 75)\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "Coder",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "c1",
+      "name": "run_python",
+      "is_error": false,
+      "content": "80 75\n"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallSummaryMessage",
+   "source": "Coder",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "80 75\n"
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "Analyst",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "a1",
+      "name": "DataChecker",
+      "arguments": "{\"task\": \"Quote the east rows of sales.csv\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "TextMessage",
+   "source": "user",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "Quote the east rows of sales.csv"
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "DataChecker",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "d1",
+      "name": "read_file",
+      "arguments": "{\"path\": \"sales.csv\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "DataChecker",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "d1",
+      "name": "read_file",
+      "is_error": false,
+      "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+     }
+    ]
+   }
+  },
+  {
+   "type": "TextMessage",
+   "source": "DataChecker",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 24,
+   "completion_tokens": 4,
+   "payload": {
+    "text": "DataChecker: east,Q1,80 and east,Q2,75."
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "Analyst",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "a1",
+      "name": "DataChecker",
+      "is_error": false,
+      "content": "DataChecker: DataChecker: east,Q1,80 and east,Q2,75."
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "Analyst",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "a2",
+      "name": "Recalculator",
+      "arguments": "{\"task\": \"Recompute east units Q1 and Q2\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "TextMessage",
+   "source": "user",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "Recompute east units Q1 and Q2"
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "Recalculator",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "r1",
+      "name": "run_python",
+      "arguments": "{\"code\": \"import csv;print([r['units'] for r in csv.DictReader(open('sales.csv')) if r['region']=='east'])\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "Recalculator",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "r1",
+      "name": "run_python",
+      "is_error": false,
+      "content": "['80', '75']\n"
+     }
+    ]
+   }
+  },
+  {
+   "type": "TextMessage",
+   "source": "Recalculator",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 23,
+   "completion_tokens": 3,
+   "payload": {
+    "text": "Recalculator: ['80', '75']."
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "Analyst",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "a2",
+      "name": "Recalculator",
+      "is_error": false,
+      "content": "Recalculator: Recalculator: ['80', '75']."
+     }
+    ]
+   }
+  },
+  {
+   "type": "TextMessage",
+   "source": "Analyst",
+   "created_at": null,
+   "received_at": null,
+   "prompt_tokens": 44,
+   "completion_tokens": 10,
+   "payload": {
+    "text": "Analyst: verified, east fell from 80 to 75. VERDICT: TRUE"
+   }
+  }
+ ],
+ "subagents": {
+  "DataChecker": {
+   "parent": "Analyst",
+   "tools": [
+    "list_files",
+    "read_file"
+   ]
+  },
+  "Recalculator": {
+   "parent": "Analyst",
+   "tools": [
+    "run_python"
+   ]
+  }
+ }
+}

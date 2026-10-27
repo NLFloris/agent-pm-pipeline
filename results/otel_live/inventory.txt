@@ -1,0 +1,12 @@
+8 runs, 92 events, 7 activities, 3 agents
+activities: invoke_agent(32), create_agent(24), read_file(13), invoke_workflow(8), list_files(8), run_python(6), write_file(1)
+agents:     root(64), FileSurfer(21), Coder(7)
+
+l01_read_csv: FileSurfer:list_files > FileSurfer:read_file
+l02_revenue: FileSurfer:list_files > FileSurfer:read_file > Coder:run_python > Coder:run_python
+l03_growth: FileSurfer:list_files > FileSurfer:read_file > FileSurfer:read_file > Coder:run_python
+l04_cross_check: FileSurfer:list_files > FileSurfer:read_file > FileSurfer:read_file
+l05_fix_bug: FileSurfer:list_files > FileSurfer:read_file > Coder:write_file > Coder:run_python > FileSurfer:read_file
+l06_summarise_all: FileSurfer:list_files > FileSurfer:read_file > FileSurfer:read_file > FileSurfer:read_file
+l07_best_quarter: FileSurfer:list_files > FileSurfer:read_file > Coder:run_python
+l08_price_effect: FileSurfer:list_files > FileSurfer:read_file > Coder:run_python

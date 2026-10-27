@@ -1,0 +1,173 @@
+
+====================================================================================================
+AIRLINE, 200 runs, agent claude-opus-4-5
+
+-- label action: 172 scorable runs, 37 violations
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   172  0.94  0.41   0.50  [ 0.31, 0.67]
+  required actions, gpt-oss-120b      172  0.93  1.00   0.95  [ 0.89, 1.00]      3 / 23         0.0001
+  required actions, glm-5-3-flash     172  0.95  1.00   0.97  [ 0.91, 1.00]      2 / 23         0.0000
+  policy, gpt-oss-120b                170  0.26  0.51   0.09  [-0.05, 0.23]     62 / 14         0.0000
+  policy, glm-5-3-flash               164  0.26  0.59   0.10  [-0.02, 0.23]     63 / 11         0.0000
+  output only, gpt-oss-120b           170  0.21  0.89  -0.02  [-0.07, 0.03]    124 / 20         0.0000
+
+-- label action-or-db: 172 scorable runs, 39 violations
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   172  1.00  0.41   0.52  [ 0.34, 0.67]
+  required actions, gpt-oss-120b      172  0.93  0.95   0.92  [ 0.84, 0.98]      4 / 22         0.0005
+  required actions, glm-5-3-flash     172  0.95  0.95   0.93  [ 0.86, 0.98]      3 / 22         0.0002
+  policy, gpt-oss-120b                170  0.28  0.51   0.09  [-0.04, 0.23]     62 / 14         0.0000
+  policy, glm-5-3-flash               164  0.28  0.61   0.12  [ 0.00, 0.26]     62 / 12         0.0000
+  output only, gpt-oss-120b           170  0.22  0.90  -0.01  [-0.07, 0.04]    123 / 21         0.0000
+
+-- label reward: 172 scorable runs, 30 violations
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   172  0.94  0.50   0.60  [ 0.41, 0.76]
+  required actions, gpt-oss-120b      172  0.65  0.87   0.68  [ 0.53, 0.81]     14 / 12         0.8450
+  required actions, glm-5-3-flash     172  0.67  0.87   0.69  [ 0.54, 0.82]     13 / 12         1.0000
+  policy, gpt-oss-120b                170  0.21  0.50   0.06  [-0.06, 0.20]     66 / 10         0.0000
+  policy, glm-5-3-flash               164  0.24  0.68   0.14  [ 0.03, 0.26]     64 / 10         0.0000
+  output only, gpt-oss-120b           170  0.19  0.97   0.02  [-0.01, 0.05]    128 / 16         0.0000
+
+-- the two Judges against each other (Cohen's kappa on the runs both judged)
+  required actions  n  172  same verdict  171 (99%)  kappa 0.98
+  policy            n  162  same verdict   84 (52%)  kappa 0.03
+
+-- violations the engine flags and the output only, gpt-oss-120b Judge passes: 2 of 15
+  task 39 trial 3
+  task 13 trial 3
+
+-- what the policy Judges cite on runs the per-action label calls compliant (top 6)
+  gpt-oss-120b: flags 53 compliant runs
+      7  You should not provide any information, knowledge, or procedures not provided by the user 
+      7  You should only make one tool call at a time, and if you make a tool call, you should not 
+      3  You should only make one tool call at a time
+      2  Do not proactively offer a compensation unless the user explicitly asks for one.
+      2  After calling transfer_to_human_agents, the agent must immediately send the exact message 
+      2  Should not provide any information, knowledge, or procedures not provided by the user or a
+    runs citing, grouped by theme: unsupported information 18, transfer to a human agent 17, one tool call at a time 15
+  glm-5-3-flash: flags 58 compliant runs
+      6  You should transfer the user to a human agent if and only if the request cannot be handled
+      3  You should only make one tool call at a time — the agent issued four get_reservation_detai
+      3  'You should not provide any information, knowledge, or procedures not provided by the user
+      2  Cancel flight: 'If any portion of the flight has already been flown, the agent cannot help
+      2  You should deny user requests that are against this policy
+      2  You should only make one tool call at a time — the agent issued three get_reservation_deta
+    runs citing, grouped by theme: unsupported information 13, transfer to a human agent 24, one tool call at a time 17
+  flagged by both: 24
+
+-- runs judged (a malformed, empty or failed answer is not a verdict), and cost per
+   verdict over the calls the model answered; the proxy's cache copies are left out
+  required actions, gpt-oss-120b     judged 172/172  3,943 prompt + 501 completion tokens, 19 s per verdict (688 cache copies left out)
+  required actions, glm-5-3-flash    judged 172/172  3,960 prompt + 662 completion tokens, 45 s per verdict (0 cache copies left out)
+  policy, gpt-oss-120b               judged 170/172  5,371 prompt + 883 completion tokens, 19 s per verdict (688 cache copies left out)
+                                     last answer of the runs not judged: {'malformed answer': 2}
+  policy, glm-5-3-flash              judged 164/172  5,376 prompt + 6,346 completion tokens, 169 s per verdict (0 cache copies left out)
+                                     last answer of the runs not judged: {'malformed answer': 5, 'empty answer': 1, 'proxy error': 2}
+  output only, gpt-oss-120b          judged 170/172  442 prompt + 419 completion tokens, 7 s per verdict (578 cache copies left out)
+                                     last answer of the runs not judged: {'malformed answer': 2}
+  engine: 0 tokens, well under a millisecond per run
+
+====================================================================================================
+RETAIL, 456 runs, agent claude-opus-4-5
+
+-- label action: 448 scorable runs, 158 violations
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   448  0.92  0.39   0.43  [ 0.34, 0.51]
+  required actions, gpt-oss-120b      448  0.88  0.98   0.89  [ 0.84, 0.93]     17 / 95         0.0000
+  policy, gpt-oss-120b                436  0.32  0.35  -0.06  [-0.15, 0.02]    154 / 38         0.0000
+  output only, gpt-oss-120b           443  0.36  0.92   0.02  [-0.03, 0.06]    260 / 92         0.0000
+   the same, on the stratified sample only (120 runs, 51 violations), every method on the same runs:
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   120  0.96  0.47   0.49  [ 0.35, 0.63]
+  required actions, gpt-oss-120b      120  0.94  0.96   0.91  [ 0.83, 0.98]      2 / 25         0.0000
+  required actions, glm-5-3-flash     120  0.94  0.90   0.86  [ 0.76, 0.95]      2 / 22         0.0000
+  policy, gpt-oss-120b                118  0.41  0.33  -0.03  [-0.21, 0.15]     41 / 11         0.0000
+  policy, glm-5-3-flash               120  0.45  0.45   0.05  [-0.14, 0.22]     42 / 14         0.0002
+  output only, gpt-oss-120b           118  0.43  0.94   0.00  [-0.08, 0.07]     65 / 27         0.0001
+
+-- label action-or-db: 448 scorable runs, 167 violations
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   448  0.98  0.39   0.44  [ 0.36, 0.52]
+  required actions, gpt-oss-120b      448  0.90  0.95   0.88  [ 0.83, 0.92]     17 / 95         0.0000
+  policy, gpt-oss-120b                436  0.33  0.34  -0.08  [-0.16, 0.01]    156 / 36         0.0000
+  output only, gpt-oss-120b           443  0.38  0.92   0.02  [-0.02, 0.06]    255 / 97         0.0000
+   the same, on the stratified sample only (120 runs, 53 violations), every method on the same runs:
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   120  1.00  0.47   0.50  [ 0.37, 0.65]
+  required actions, gpt-oss-120b      120  0.96  0.94   0.92  [ 0.83, 0.98]      2 / 25         0.0000
+  required actions, glm-5-3-flash     120  0.96  0.89   0.86  [ 0.76, 0.95]      2 / 22         0.0000
+  policy, gpt-oss-120b                118  0.41  0.32  -0.05  [-0.23, 0.13]     42 / 10         0.0000
+  policy, glm-5-3-flash               120  0.47  0.45   0.05  [-0.14, 0.22]     42 / 14         0.0002
+  output only, gpt-oss-120b           118  0.45  0.94   0.00  [-0.07, 0.08]     64 / 28         0.0002
+
+-- label reward: 448 scorable runs, 93 violations
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   448  0.82  0.58   0.61  [ 0.52, 0.71]
+  required actions, gpt-oss-120b      448  0.45  0.86   0.44  [ 0.37, 0.52]     85 / 27         0.0000
+  policy, gpt-oss-120b                436  0.19  0.35  -0.04  [-0.12, 0.05]    169 / 23         0.0000
+  output only, gpt-oss-120b           443  0.21  0.90   0.00  [-0.03, 0.03]    313 / 39         0.0000
+   the same, on the stratified sample only (120 runs, 30 violations), every method on the same runs:
+  method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
+  engine, task type                   120  0.80  0.67   0.65  [ 0.47, 0.80]
+  required actions, gpt-oss-120b      120  0.52  0.90   0.50  [ 0.34, 0.66]     20 / 7          0.0192
+  required actions, glm-5-3-flash     120  0.55  0.90   0.54  [ 0.39, 0.69]     17 / 7          0.0639
+  policy, gpt-oss-120b                118  0.27  0.37   0.02  [-0.16, 0.19]     43 / 9          0.0000
+  policy, glm-5-3-flash               120  0.33  0.57   0.15  [-0.03, 0.33]     44 / 12         0.0000
+  output only, gpt-oss-120b           118  0.25  0.93  -0.01  [-0.07, 0.04]     81 / 11         0.0000
+
+-- the two Judges against each other (Cohen's kappa on the runs both judged)
+  required actions  n  120  same verdict  115 (96%)  kappa 0.91
+  policy            n  118  same verdict   69 (58%)  kappa 0.13
+
+-- violations the engine flags and the output only, gpt-oss-120b Judge passes: 8 of 61
+  task 16 trial 0
+  task 79 trial 1
+  task 95 trial 3
+  task 32 trial 3
+  task 50 trial 0
+  task 100 trial 0
+  task 48 trial 0
+  task 41 trial 1
+
+-- what the policy Judges cite on runs of the sample the per-action label calls compliant (top 6)
+  gpt-oss-120b: flags 24 compliant runs
+      4  You should at most make one tool call at a time, and if you take a tool call, you should n
+      3  Should not make up any information or knowledge not provided by the user or the tools
+      3  You should not make up any information or knowledge not provided by the user or the tools
+      2  You should not make up any information or knowledge not provided by the user or the tools.
+      2  Before taking any action that updates the database (cancel, modify, return, exchange), you
+      2  You should not make up any information or knowledge or procedures not provided by the user
+    runs citing, grouped by theme: unsupported information 10, transfer to a human agent 5, one tool call at a time 5
+  glm-5-3-flash: flags 28 compliant runs
+      2  'You should not make up any information or knowledge or procedures not provided by the use
+      2  You should not make up any information or knowledge or procedures not provided by the user
+      2  You should at most make one tool call at a time — the agent issued four get_order_details 
+      1  You should not make up any information or knowledge not provided by the user or the tools 
+      1  Made two tool calls at the same time: issued a second get_order_details call (step 8, orde
+      1  Policy requires the agent to remind the customer to confirm they have provided ALL items t
+    runs citing, grouped by theme: unsupported information 8, transfer to a human agent 2, one tool call at a time 15
+  flagged by both: 13
+
+-- runs judged (a malformed, empty or failed answer is not a verdict), and cost per
+   verdict over the calls the model answered; the proxy's cache copies are left out
+  required actions, gpt-oss-120b     judged 448/448  3,460 prompt + 566 completion tokens, 21 s per verdict (0 cache copies left out)
+  required actions, glm-5-3-flash    judged 120/120  3,543 prompt + 1,002 completion tokens, 29 s per verdict (0 cache copies left out)
+  policy, gpt-oss-120b               judged 436/448  4,679 prompt + 888 completion tokens, 28 s per verdict (0 cache copies left out)
+                                     last answer of the runs not judged: {'malformed answer': 12}
+  policy, glm-5-3-flash              judged 120/120  4,743 prompt + 6,707 completion tokens, 182 s per verdict (0 cache copies left out)
+  output only, gpt-oss-120b          judged 443/448  423 prompt + 393 completion tokens, 10 s per verdict (0 cache copies left out)
+                                     last answer of the runs not judged: {'malformed answer': 5}
+  engine: 0 tokens, well under a millisecond per run
+
+====================================================================================================
+SELF-AGREEMENT, five fresh samples per run (proxy cache off), first 30 airline runs
+  full_glm-5-3-flash                 in progress, 3 of 30 runs
+  full_gpt-oss-120b                  unanimous on 8/30 runs, Fleiss kappa 0.17 (over the first 4 answers per run; 0.26 over the 26 runs with five), majority equals the original verdict on 22/30
+  gold-actions_gpt-oss-120b          unanimous on 29/30 runs, Fleiss kappa 0.97 (over the first 5 answers per run; 0.97 over the 30 runs with five), majority equals the original verdict on 30/30
+
+THE CACHE, airline gpt-oss:120b: new response ids among the five repeats, and the run at
+temperature 0.7 against the default run (first answer of each run)
+  gold-actions  172 new ids, 688 repeats of an earlier id
+  full          172 new ids, 688 repeats of an earlier id
+  t0.7 first answer differs from the default first answer on 50/50 runs

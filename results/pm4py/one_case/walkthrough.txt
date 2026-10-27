@@ -1,0 +1,38 @@
+CASE 2922cd65-1265-4557-b5c1-2f4752958a96   task 29 trial 0
+ground truth: PROTOCOL VIOLATION   reward 0.0
+gold actions: get_reservation_details -> cancel_reservation -> book_reservation
+
+1. THE ROWS PM4PY RECEIVES (tool calls only, messages dropped)
+    0  00:00:00  assistant  get_reservation_details
+    1  00:00:01  assistant  get_user_details
+    2  00:00:02  assistant  search_direct_flight
+    3  00:00:03  assistant  search_direct_flight
+    4  00:00:04  assistant  search_direct_flight
+
+2. MODEL OF THIS RUN ALONE   dfg 3 edges, petri net 5 places / 5 transitions -> results/pm4py/one_case/this_run_*.png
+
+3. REFERENCE NET mined from 135 compliant runs, labelled transitions:
+   book_reservation, get_flight_status, get_reservation_details, get_user_details, list_all_airports, search_direct_flight, search_onestop_flight, transfer_to_human_agents, update_reservation_baggages
+   NOTE: gold actions absent from the mined net: ['cancel_reservation']
+
+4. TOKEN-BASED REPLAY of this run against the reference net
+   trace fitness 0.9333   is fit: False
+   tokens  produced 15  consumed 15  missing 1  remaining 1
+   labelled transitions fired: ['get_reservation_details', 'get_user_details', 'search_direct_flight', 'search_direct_flight', 'search_direct_flight']
+
+5. ALIGNMENT of this run against the reference net
+   fitness 0.6000   cost 20010
+   log side                     model side                   move type
+   get_reservation_details      >>                           LOG MOVE    (log did this, model did not allow it here)
+   get_user_details             >>                           LOG MOVE    (log did this, model did not allow it here)
+   search_direct_flight         search_direct_flight         sync
+   search_direct_flight         search_direct_flight         sync
+   search_direct_flight         search_direct_flight         sync
+
+6. OUR DECLARATIVE ENGINE on the same run
+   fitness 0.6000   compliant False   5 constraints
+   X required(book_reservation): required activity 'book_reservation' is missing
+   X required(cancel_reservation): required activity 'cancel_reservation' is missing
+
+7. SIDE BY SIDE
+   truth: violation  |  token replay fit=0.93  |  alignment fit=0.60  |  declarative fit=0.60 (violation)

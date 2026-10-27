@@ -1,0 +1,193 @@
+{
+ "reference_sha256": "ccb0a38aadd9d5645cb03c81f7d65013347d66c620d7de5ab77d94ca0d24820e",
+ "runs": [
+  {
+   "case_id": "c01_east_units",
+   "answer": true,
+   "verdict": true,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 24,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 4
+   },
+   "error": null
+  },
+  {
+   "case_id": "c02_north_revenue",
+   "answer": true,
+   "verdict": true,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 23,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 3
+   },
+   "error": null
+  },
+  {
+   "case_id": "c03_south_top_q2",
+   "answer": true,
+   "verdict": true,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 23,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 3
+   },
+   "error": null
+  },
+  {
+   "case_id": "c04_east_top_units_q1",
+   "answer": false,
+   "verdict": false,
+   "correct": true,
+   "compliant": false,
+   "violations": [
+    "required(Analyst.spawn:DataChecker)",
+    "required(DataChecker.read_file)",
+    "required(Analyst.spawn:Recalculator)",
+    "required(Recalculator.run_python)"
+   ],
+   "events": 12,
+   "spawns": {},
+   "subagent_tool_calls": {},
+   "error": null
+  },
+  {
+   "case_id": "c05_q1_total_revenue",
+   "answer": false,
+   "verdict": false,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 23,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 3
+   },
+   "error": null
+  },
+  {
+   "case_id": "c06_south_growth",
+   "answer": true,
+   "verdict": true,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 25,
+   "spawns": {
+    "DataChecker": 2,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 1
+   },
+   "error": null
+  },
+  {
+   "case_id": "c07_north_price",
+   "answer": false,
+   "verdict": false,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 23,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 3
+   },
+   "error": null
+  },
+  {
+   "case_id": "c08_east_revenue",
+   "answer": true,
+   "verdict": true,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 43,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 23
+   },
+   "error": null
+  },
+  {
+   "case_id": "c09_average_price",
+   "answer": false,
+   "verdict": false,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 22,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 2
+   },
+   "error": null
+  },
+  {
+   "case_id": "c10_q2_units_gain",
+   "answer": true,
+   "verdict": true,
+   "correct": true,
+   "compliant": true,
+   "violations": [],
+   "events": 21,
+   "spawns": {
+    "DataChecker": 1,
+    "Recalculator": 1
+   },
+   "subagent_tool_calls": {
+    "DataChecker.list_files": 1,
+    "DataChecker.read_file": 1,
+    "Recalculator.run_python": 1
+   },
+   "error": null
+  }
+ ]
+}

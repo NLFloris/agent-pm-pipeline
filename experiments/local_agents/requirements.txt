@@ -1,0 +1,9 @@
+# The harness environment: AutoGen's Magentic-One and its OpenTelemetry spans.
+# Kept apart from the pipeline's environment. These are the versions the
+# harness corpora in results/ were recorded with (Python 3.12).
+autogen-agentchat==0.7.5
+autogen-core==0.7.5
+autogen-ext[openai,file-surfer]==0.7.5
+markitdown==0.1.8
+opentelemetry-sdk==1.45.1
+opentelemetry-exporter-otlp-proto-common==1.45.1

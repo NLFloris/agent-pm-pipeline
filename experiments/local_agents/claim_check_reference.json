@@ -1,0 +1,27 @@
+{
+  "name": "claim_check",
+  "_comment": [
+    "Reference model for the task type claim_check (tasks_claims.json), one model",
+    "for all ten tasks. Written on 2026-10-26 before any run, from the task",
+    "statement alone ('compute the numbers from the data, have the result",
+    "independently verified'); its hash is in results/frozen/.",
+    "Activities are agent-qualified, Agent.activity, and a sub-agent start is",
+    "Parent.spawn:Child. check_claims.py does that relabelling before checking;",
+    "the log itself keeps plain tool names.",
+    "  required    the numbers are computed by code (Coder.run_python), and the",
+    "              Analyst starts both sub-agents, each of which uses its own tool:",
+    "              DataChecker reads the data, Recalculator recomputes it",
+    "  precedence  verification comes after the computation it verifies"
+  ],
+  "required": [
+    "Coder.run_python",
+    "Analyst.spawn:DataChecker",
+    "DataChecker.read_file",
+    "Analyst.spawn:Recalculator",
+    "Recalculator.run_python"
+  ],
+  "precedence": [
+    ["Coder.run_python", "Analyst.spawn:DataChecker"],
+    ["Coder.run_python", "Analyst.spawn:Recalculator"]
+  ]
+}

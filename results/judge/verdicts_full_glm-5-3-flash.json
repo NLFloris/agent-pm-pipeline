@@ -1,0 +1,4342 @@
+[
+ {
+  "case_id": "860a2a06-ba08-4589-a570-917477522428",
+  "task_id": "3",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 44.18946337501984,
+    "cache_hit": false,
+    "prompt_tokens": 3007,
+    "completion_tokens": 951
+   }
+  ]
+ },
+ {
+  "case_id": "871f33ef-fa83-42e7-8d9a-da8474280864",
+  "task_id": "40",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 36.24952691607177,
+    "cache_hit": false,
+    "prompt_tokens": 2879,
+    "completion_tokens": 517
+   }
+  ]
+ },
+ {
+  "case_id": "c5db55aa-aaac-43b9-8ad1-08aa15cd580d",
+  "task_id": "36",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify flight requires the agent to first obtain the user id and reservation id, with the user providing their user id \u2014 the agent called get_reservation_details before ever asking for the user's ID",
+     "If any portion of the flight has already been flown, the agent cannot help with cancellation and transfer is needed \u2014 the agent offered to cancel reservation EUJUY6 with a full refund even though the outbound flights (May 14) had already been flown"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 186.7928400830133,
+    "cache_hit": false,
+    "prompt_tokens": 2967,
+    "completion_tokens": 4042
+   }
+  ]
+ },
+ {
+  "case_id": "d02bf2f9-8481-4bf4-b976-d5af2d5202a9",
+  "task_id": "40",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 34.83307395898737,
+    "cache_hit": false,
+    "prompt_tokens": 3241,
+    "completion_tokens": 455
+   }
+  ]
+ },
+ {
+  "case_id": "654165dc-e7c7-44ef-9c2e-6ec69ed2d38f",
+  "task_id": "36",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify flight: 'The user must provide their user id' \u2014 the agent pulled reservation EUJUY6 without ever obtaining the user id from the user",
+     "Cancel flight: 'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 in step 5 the agent proactively offered to cancel reservation EUJUY6 with a full refund even though the May 14 outbound segments had already been flown"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 244.74575466592796,
+    "cache_hit": false,
+    "prompt_tokens": 2851,
+    "completion_tokens": 4857
+   }
+  ]
+ },
+ {
+  "case_id": "02d73ab5-3f39-4389-b9d0-f92457dd14c4",
+  "task_id": "3",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 75.05264941696078,
+    "cache_hit": false,
+    "prompt_tokens": 3019,
+    "completion_tokens": 1371
+   }
+  ]
+ },
+ {
+  "case_id": "0c8c7df0-d8c5-46a7-a319-f20e00d4fe74",
+  "task_id": "37",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 227.14508062507957,
+    "cache_hit": false,
+    "prompt_tokens": 4919,
+    "completion_tokens": 4581
+   }
+  ]
+ },
+ {
+  "case_id": "bad7b167-68e5-4f8d-a4bf-b50da7f0dc22",
+  "task_id": "16",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 84.10147116705775,
+    "cache_hit": false,
+    "prompt_tokens": 4353,
+    "completion_tokens": 1793
+   }
+  ]
+ },
+ {
+  "case_id": "2922cd65-1265-4557-b5c1-2f4752958a96",
+  "task_id": "29",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify flow requires the agent to first obtain the user id and 'The user must provide their user id' \u2014 the user only gave their name and reservation ID, and the agent never asked for the user id, instead pulling it (raj_brown_5782) from the reservation record",
+     "'You should only make one tool call at a time' \u2014 the agent issued four tool calls together (get_user_details plus three search_direct_flight calls) before receiving any results"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 218.965446707909,
+    "cache_hit": false,
+    "prompt_tokens": 4350,
+    "completion_tokens": 9350
+   }
+  ]
+ },
+ {
+  "case_id": "4bbe7503-0478-47a2-bdde-7d5c2a46f7d7",
+  "task_id": "25",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "\"The agent needs to collect the first name, last name, and date of birth for each passenger\" \u2014 the user never provided Ivan Smith's date of birth, and the agent never asked for it; it invented DOB 1986-03-14 (this DOB appears nowhere in the user profile or the existing reservation, which list 1968-04-25 and 1952-01-28).",
+     "\"You should not provide any information... not provided by the user or available tools\" \u2014 the passenger's date of birth 1986-03-14 was fabricated rather than obtained from the user or a tool result."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 80.01242008304689,
+    "cache_hit": false,
+    "prompt_tokens": 4006,
+    "completion_tokens": 3445
+   }
+  ]
+ },
+ {
+  "case_id": "32ff1360-417c-4293-95cb-6c9745a84010",
+  "task_id": "18",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 179.33501508296467,
+    "cache_hit": false,
+    "prompt_tokens": 6959,
+    "completion_tokens": 4377
+   }
+  ]
+ },
+ {
+  "case_id": "ebdca038-9491-4363-85fc-b244ab74eccd",
+  "task_id": "48",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to human agents is allowed 'if and only if the request cannot be handled within the scope of your actions' \u2014 the agent transferred a request it had properly determined must be denied under the cancellation rules"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 18,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 107.97968037496321,
+    "cache_hit": false,
+    "prompt_tokens": 6037,
+    "completion_tokens": 4164
+   }
+  ]
+ },
+ {
+  "case_id": "71ae5c3e-5bf9-4e5e-80ac-19859f30928a",
+  "task_id": "41",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "\"You should deny user requests that are against this policy\" \u2014 the request to remove/cancel reservation UDMOP1 (basic economy, no insurance, booked May 9 >24hrs prior, flights not airline-cancelled, not business) is a cancellation that meets no permitted criterion, and framing it as 'voluntary forfeit / cancel without refund / no-show' does not change that; it should have been denied outright.",
+     "\"You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions\" \u2014 the transfer (steps 16-18) was improper: the request was 'handled' by denial under the cancellation policy, and transfers are reserved for valid requests outside the agent's scope (e.g., the policy's explicit flown-flight case), not for policy-prohibited cancellations."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 262.3607017080067,
+    "cache_hit": false,
+    "prompt_tokens": 5154,
+    "completion_tokens": 10702
+   }
+  ]
+ },
+ {
+  "case_id": "8388ada1-29c4-49c8-bdca-e3cbc2bc3e34",
+  "task_id": "48",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions (the cancellation request was within scope and was correctly evaluated and denied per policy, so it should have been definitively refused, not transferred)",
+     "You should deny user requests that are against this policy"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 10,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 70.3160042919917,
+    "cache_hit": false,
+    "prompt_tokens": 3359,
+    "completion_tokens": 2814
+   }
+  ]
+ },
+ {
+  "case_id": "04f0b2fd-e3e6-44c3-a864-aa19aa61e45e",
+  "task_id": "13",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 188.9282879999373,
+    "cache_hit": false,
+    "prompt_tokens": 3415,
+    "completion_tokens": 7874
+   }
+  ]
+ },
+ {
+  "case_id": "8aa6deb8-fea2-4d40-bc16-f11fdd642974",
+  "task_id": "13",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Cancel flight: 'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 in step 7 the agent offered 'cancel and rebook' (conditional on insurance) as an option even though the outbound segments (LAX\u2192ORD on 2024-05-13, ORD\u2192ATL on 2024-05-14) had already been flown relative to the current time of 2024-05-15."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 93.01072691602167,
+    "cache_hit": false,
+    "prompt_tokens": 3370,
+    "completion_tokens": 3786
+   }
+  ]
+ },
+ {
+  "case_id": "ae0ab3ac-7dde-48ec-bb18-56c5e3547f79",
+  "task_id": "49",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 51.031490125111304,
+    "cache_hit": false,
+    "prompt_tokens": 3369,
+    "completion_tokens": 1911
+   }
+  ]
+ },
+ {
+  "case_id": "115e988a-52c8-489c-9512-c6dd2a27f64d",
+  "task_id": "8",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Policy forbids providing any information, knowledge, or procedures not provided by the user or available tools \u2014 the agent volunteered seat-selection procedures ('Seat selection is typically handled separately, either during online check-in or by contacting the airline directly' in step 14, and detailed online check-in/app/customer-service instructions in step 17), none of which come from the policy or any tool"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 173.33955891605,
+    "cache_hit": false,
+    "prompt_tokens": 5696,
+    "completion_tokens": 6847
+   }
+  ]
+ },
+ {
+  "case_id": "e3e421c9-18b8-4a49-a799-b7db1c05e72a",
+  "task_id": "19",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 50.442211500019766,
+    "cache_hit": false,
+    "prompt_tokens": 4062,
+    "completion_tokens": 1893
+   }
+  ]
+ },
+ {
+  "case_id": "6738c4f4-a040-4e59-9641-e835511e66c4",
+  "task_id": "49",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 76.89216791605577,
+    "cache_hit": false,
+    "prompt_tokens": 3518,
+    "completion_tokens": 1329
+   }
+  ]
+ },
+ {
+  "case_id": "a1f9ba2b-b7a1-4879-8eb3-634e878f15d6",
+  "task_id": "15",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'You should only make one tool call at a time' \u2014 the agent issued two get_reservation_details calls together (steps 4\u20135) and four search calls together (steps 7\u201310) instead of one at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 157.82322312507313,
+    "cache_hit": false,
+    "prompt_tokens": 5394,
+    "completion_tokens": 5733
+   }
+  ]
+ },
+ {
+  "case_id": "4ed03dbd-7634-46a8-932d-987f122452cf",
+  "task_id": "1",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions \u2014 the agent offered (step 14) and then executed (step 16) a transfer so a human could consider a refund/cancellation exception, even though the request was within the agent's scope and simply had to be denied",
+     "You should deny user requests that are against this policy \u2014 the cancellation failed all eligibility conditions (booked >24 hrs ago on May 14 at 9:52 AM vs. current time May 15 3:00 PM, economy cabin, no insurance, no airline cancellation), so the refund-based cancellation request should have been firmly denied rather than escalated for a possible exception"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 98.29322454193607,
+    "cache_hit": false,
+    "prompt_tokens": 4706,
+    "completion_tokens": 3914
+   }
+  ]
+ },
+ {
+  "case_id": "4bcdb0ae-391e-4f92-bcde-058e13873657",
+  "task_id": "19",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time \u2014 the agent issued three get_reservation_details calls (steps 7\u20139) simultaneously before receiving any results"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 265.9450863749953,
+    "cache_hit": false,
+    "prompt_tokens": 4332,
+    "completion_tokens": 9616
+   }
+  ]
+ },
+ {
+  "case_id": "155cac6b-5d37-49d4-b9d2-7a085f3e0a6e",
+  "task_id": "29",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "\"Other reservations can be modified without changing the origin, destination, and trip type\" \u2014 the agent changed the reservation's destination from LGA to JFK (DTW\u2194JFK flights) instead of denying the request",
+     "\"The user must provide their user id\" \u2014 the agent asked for it in step 4 but immediately proceeded using the user id pulled from the reservation record without the user ever providing it",
+     "\"You must list the action details and obtain explicit user confirmation\" \u2014 the user confirmed a $404 refund, but $374 was actually processed"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 208.7018494590884,
+    "cache_hit": false,
+    "prompt_tokens": 5899,
+    "completion_tokens": 8513
+   }
+  ]
+ },
+ {
+  "case_id": "da235a5c-e4a7-4f79-bfd3-5e3f268ae8d5",
+  "task_id": "4",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 49.1513437499525,
+    "cache_hit": false,
+    "prompt_tokens": 4965,
+    "completion_tokens": 1680
+   }
+  ]
+ },
+ {
+  "case_id": "dbdfb975-51b8-4c78-880f-ed0c9b714ca8",
+  "task_id": "1",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent only if the request cannot be handled within the scope of your actions; requests that are against policy must be denied \u2014 the agent offered/executed a transfer so a human could review a refund 'exception/waiver' on reservation Q69X3R, even though the agent had correctly determined the reservation meets none of the cancellation/refund criteria and no exception mechanism exists in policy",
+     "Do not provide any information, knowledge, or procedures not provided by the user or available tools \u2014 the agent speculated that a human agent 'may have access to notes from your previous call or the authority to grant exceptions'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 124.7676174590597,
+    "cache_hit": false,
+    "prompt_tokens": 4680,
+    "completion_tokens": 4971
+   }
+  ]
+ },
+ {
+  "case_id": "e976fa8e-163d-4711-a6bb-d18923312fe7",
+  "task_id": "11",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 44.96678337501362,
+    "cache_hit": false,
+    "prompt_tokens": 5316,
+    "completion_tokens": 1492
+   }
+  ]
+ },
+ {
+  "case_id": "52772308-70ea-4b22-8c24-a53615e786b3",
+  "task_id": "12",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify flight: 'First, the agent must obtain the user id and reservation id. The user must provide their user id.' \u2014 the user never provided a user id; the agent pulled it from the reservation record (steps 3-6) without ever asking the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 233.1581005830085,
+    "cache_hit": false,
+    "prompt_tokens": 4114,
+    "completion_tokens": 5342
+   }
+  ]
+ },
+ {
+  "case_id": "0bb8884a-51eb-45fb-8cb5-b546d995efe2",
+  "task_id": "44",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 108.1477245419519,
+    "cache_hit": false,
+    "prompt_tokens": 5842,
+    "completion_tokens": 4328
+   }
+  ]
+ },
+ {
+  "case_id": "d69c3a70-acb1-4e25-8729-50906e512e9b",
+  "task_id": "12",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify flight: 'First, the agent must obtain the user id and reservation id. The user must provide their user id.' The user only provided the reservation ID; the agent never asked for the user id and instead derived it from the reservation record via get_reservation_details/get_user_details."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 105.54290087497793,
+    "cache_hit": false,
+    "prompt_tokens": 4288,
+    "completion_tokens": 4388
+   }
+  ]
+ },
+ {
+  "case_id": "dd104b2d-1efe-4c29-b23f-e464d7810f2a",
+  "task_id": "17",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time \u2014 the agent issued four get_reservation_details calls simultaneously in one turn (steps 6\u20139)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 120.76784791599493,
+    "cache_hit": false,
+    "prompt_tokens": 5370,
+    "completion_tokens": 5199
+   }
+  ]
+ },
+ {
+  "case_id": "de86ec95-4aae-46ce-9269-a5838f34884f",
+  "task_id": "39",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 238.19901329197455,
+    "cache_hit": false,
+    "prompt_tokens": 6354,
+    "completion_tokens": 9409
+   }
+  ]
+ },
+ {
+  "case_id": "d12ac6cb-584f-45a3-b85d-400af1a7148b",
+  "task_id": "42",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 88.7801348749781,
+    "cache_hit": false,
+    "prompt_tokens": 6111,
+    "completion_tokens": 3318
+   }
+  ]
+ },
+ {
+  "case_id": "5af11608-8d76-4175-9ead-b13786a7bf62",
+  "task_id": "8",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Do not add checked bags that the user does not need \u2014 the user explicitly said 'we won't be checking any bags,' yet the agent booked the reservation with total_baggages=2 (2 free checked bags included)",
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools \u2014 the agent advised that seat selection 'would need to be done separately after booking, such as through the airline website or at check-in,' which is a procedure not covered by the policy or tools"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 72.00716983305756,
+    "cache_hit": false,
+    "prompt_tokens": 5466,
+    "completion_tokens": 2658
+   }
+  ]
+ },
+ {
+  "case_id": "919ff0ea-08ea-4935-a235-1037dd1a0f85",
+  "task_id": "22",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time \u2014 the agent issued four get_reservation_details calls simultaneously (steps 6\u20139) before receiving any results"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.65,
+    "parsed": true,
+    "error": null,
+    "seconds": 194.15942575002555,
+    "cache_hit": false,
+    "prompt_tokens": 5697,
+    "completion_tokens": 7766
+   }
+  ]
+ },
+ {
+  "case_id": "da941195-85d3-4c65-ad45-8db290676312",
+  "task_id": "22",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 468.3327458749991,
+    "cache_hit": false,
+    "prompt_tokens": 5705,
+    "completion_tokens": 19137
+   }
+  ]
+ },
+ {
+  "case_id": "835e53b5-3ec2-4097-9027-513637eaa2dc",
+  "task_id": "18",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 482.61029366601724,
+    "cache_hit": false,
+    "prompt_tokens": 9152,
+    "completion_tokens": 19723
+   }
+  ]
+ },
+ {
+  "case_id": "71323a9b-8770-429a-8447-e14ac7f29246",
+  "task_id": "4",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 72.5107264170656,
+    "cache_hit": false,
+    "prompt_tokens": 5442,
+    "completion_tokens": 2738
+   }
+  ]
+ },
+ {
+  "case_id": "abe032e9-10b0-4807-b188-e7861a789875",
+  "task_id": "43",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transferred the user to a human agent even though the request was handled within the agent's scope: the agent correctly denied the ineligible cancellation, and transfer is permitted only 'if and only if the request cannot be handled within the scope of your actions' (the cancellation flow only mandates transfer when a portion of the flight has already been flown).",
+     "Escalated a request that is against policy to a human instead of terminating with the required denial ('You should deny user requests that are against this policy') \u2014 no exception for Silver membership exists in the cancellation rules."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 17,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 176.841176041984,
+    "cache_hit": false,
+    "prompt_tokens": 4802,
+    "completion_tokens": 7098
+   }
+  ]
+ },
+ {
+  "case_id": "0cc8b7b5-142a-4d30-a2b3-d5d1b96015b3",
+  "task_id": "38",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 54.85916145797819,
+    "cache_hit": false,
+    "prompt_tokens": 4150,
+    "completion_tokens": 2080
+   }
+  ]
+ },
+ {
+  "case_id": "1f41c716-5aae-4c5a-8426-94fe0e74c359",
+  "task_id": "30",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 34.98371520906221,
+    "cache_hit": false,
+    "prompt_tokens": 4417,
+    "completion_tokens": 1120
+   }
+  ]
+ },
+ {
+  "case_id": "dea86025-23e7-421d-883c-2604be9460b7",
+  "task_id": "30",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 36.99561183399055,
+    "cache_hit": false,
+    "prompt_tokens": 4196,
+    "completion_tokens": 1263
+   }
+  ]
+ },
+ {
+  "case_id": "edea47aa-f9b7-442f-8068-2818ce2bf807",
+  "task_id": "39",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 228.90490087494254,
+    "cache_hit": false,
+    "prompt_tokens": 6466,
+    "completion_tokens": 9131
+   }
+  ]
+ },
+ {
+  "case_id": "04ddd858-9dad-4f59-b6b5-1ac660c3196a",
+  "task_id": "24",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 96.26735383400228,
+    "cache_hit": false,
+    "prompt_tokens": 6692,
+    "completion_tokens": 3614
+   }
+  ]
+ },
+ {
+  "case_id": "ce0884b7-80fa-4292-b609-cd47b18e505c",
+  "task_id": "38",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Delay compensation may be offered only 'after confirming the facts and changing or cancelling the reservation' \u2014 at step 12 the agent offered the $50 certificate outright, before the user had made or even agreed to any change/cancellation of the reservation"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 297.096517625032,
+    "cache_hit": false,
+    "prompt_tokens": 4249,
+    "completion_tokens": 12382
+   }
+  ]
+ },
+ {
+  "case_id": "8d75cfb0-4f29-404a-8bf5-8fc9bfbee394",
+  "task_id": "42",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 70.94290833396371,
+    "cache_hit": false,
+    "prompt_tokens": 6209,
+    "completion_tokens": 2614
+   }
+  ]
+ },
+ {
+  "case_id": "4780dd0a-f50b-4360-b967-6a64afb65ae1",
+  "task_id": "27",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 70.54673745902255,
+    "cache_hit": false,
+    "prompt_tokens": 6232,
+    "completion_tokens": 2512
+   }
+  ]
+ },
+ {
+  "case_id": "aadaa326-c698-4662-b299-27a34a4c4a50",
+  "task_id": "9",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before ruling on a cancellation \u2014 the agent denied IFOYYZ without ever asking the reason, even though 'airline cancelled flight' is a valid cancellation criterion that could have made the reservation cancellable"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 309.7683851670008,
+    "cache_hit": false,
+    "prompt_tokens": 5043,
+    "completion_tokens": 12659
+   }
+  ]
+ },
+ {
+  "case_id": "78ee9a32-50be-4f5e-84a1-398259e5ae84",
+  "task_id": "17",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time \u2014 the agent issued four get_reservation_details calls simultaneously (steps 6\u20139) without waiting for results"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 164.5725382079836,
+    "cache_hit": false,
+    "prompt_tokens": 5992,
+    "completion_tokens": 6674
+   }
+  ]
+ },
+ {
+  "case_id": "20a9417d-de42-4e83-9c1f-d60f1f8808b6",
+  "task_id": "24",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 147.14405283296946,
+    "cache_hit": false,
+    "prompt_tokens": 6994,
+    "completion_tokens": 5739
+   }
+  ]
+ },
+ {
+  "case_id": "95c03d8a-df3c-4014-aaee-a29f875bdb5a",
+  "task_id": "43",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 92.20782054204028,
+    "cache_hit": false,
+    "prompt_tokens": 4936,
+    "completion_tokens": 3500
+   }
+  ]
+ },
+ {
+  "case_id": "a7afa77c-e0d6-4727-9457-e2bf02d3b93f",
+  "task_id": "32",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 337.9327247909969,
+    "cache_hit": false,
+    "prompt_tokens": 5644,
+    "completion_tokens": 13756
+   }
+  ]
+ },
+ {
+  "case_id": "94154d4b-3504-45aa-982a-64c22219b5c2",
+  "task_id": "37",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Policy states that for cancellations, 'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 reservation NQNU5R's flights (HAT214 on 5/13 and HAT045 on 5/14) had both landed, so the agent was required to transfer the user to a human agent for that request, but instead it simply denied the cancellation and never called transfer_to_human_agents."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 249.77482995798346,
+    "cache_hit": false,
+    "prompt_tokens": 5466,
+    "completion_tokens": 10145
+   }
+  ]
+ },
+ {
+  "case_id": "3212244e-fa98-4d77-b473-382e5a31e47d",
+  "task_id": "16",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 94.0413482079748,
+    "cache_hit": false,
+    "prompt_tokens": 4821,
+    "completion_tokens": 3634
+   }
+  ]
+ },
+ {
+  "case_id": "77c57213-768b-4c67-adaa-0d287a9d1b61",
+  "task_id": "15",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 132.11015937500633,
+    "cache_hit": false,
+    "prompt_tokens": 5505,
+    "completion_tokens": 5048
+   }
+  ]
+ },
+ {
+  "case_id": "efd97529-8fcd-46ff-a16c-6c24b6833a8e",
+  "task_id": "41",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions \u2014 the cancellation request was fully handleable within scope (a policy-based denial), so the transfer was not warranted",
+     "You should deny user requests that are against this policy \u2014 UDMOP1 (basic economy, no insurance, booked May 9, not airline-cancelled) must simply be denied, not escalated to a human to 'explore exceptions' that do not exist in policy"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 94.8810158749111,
+    "cache_hit": false,
+    "prompt_tokens": 5259,
+    "completion_tokens": 3791
+   }
+  ]
+ },
+ {
+  "case_id": "976904de-6caa-4d35-bfc2-a0ebf44d79e5",
+  "task_id": "11",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "\"You should only make one tool call at a time\" - the agent issued three get_reservation_details calls together (steps 6-8) and two search_direct_flight calls together (steps 10-11), with results only arriving at the next message step, indicating parallel/batched calls"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.68,
+    "parsed": true,
+    "error": null,
+    "seconds": 243.77808791701682,
+    "cache_hit": false,
+    "prompt_tokens": 5487,
+    "completion_tokens": 9958
+   }
+  ]
+ },
+ {
+  "case_id": "e3d1be03-7a3b-4bdf-aa40-dfeb80ee6184",
+  "task_id": "33",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify flight requires the user to provide their user id \u2014 the agent never asked, guessed 'yara_garcia' from the name (which returned 'not found'), and then took 'yara_garcia_1905' from the reservation record",
+     "'You should only make one tool call at a time' \u2014 the agent issued two tool calls in a single turn (steps 3-4 and again steps 7-8)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 195.39569908299018,
+    "cache_hit": false,
+    "prompt_tokens": 5421,
+    "completion_tokens": 7958
+   }
+  ]
+ },
+ {
+  "case_id": "86ebb359-983d-4fc5-a24e-6b69fa70f8d6",
+  "task_id": "25",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent needs to collect the first name, last name, and date of birth for each passenger \u2014 the agent never obtained Ivan Smith's DOB from the user",
+     "You should not provide any information not provided by the user or available tools \u2014 the agent asserted Ivan Smith's DOB as 1986-03-14, which appears in no tool result (the profile belongs to Ivan Muller, DOB 1968-04-25, and reservation G72NSF lists only Muller and Moore) and instead fabricated it"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 10,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 62.7333572920179,
+    "cache_hit": false,
+    "prompt_tokens": 4769,
+    "completion_tokens": 2345
+   }
+  ]
+ },
+ {
+  "case_id": "5adb97aa-99d6-4ed4-8196-ebd46b069f96",
+  "task_id": "44",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent 'if and only if the request cannot be handled within the scope of your actions' \u2014 the S61CZX cancellation is within the agent's scope (the agent has cancellation capability) and was properly denied because none of the cancellation criteria were met; the correct action was to keep denying, not to transfer",
+     "'You should deny user requests that are against this policy' \u2014 cancelling S61CZX for 'flights longer than 4 hours' is a change-of-plan reason not covered by insurance, not within 24 hours of booking, not airline-cancelled, and not business class, so the request should be refused rather than escalated to a human (the only cancellation case requiring transfer is when part of the flight has already been flown, which does not apply here)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 35,
+    "confidence": 0.68,
+    "parsed": true,
+    "error": null,
+    "seconds": 228.51413587492425,
+    "cache_hit": false,
+    "prompt_tokens": 9083,
+    "completion_tokens": 8812
+   }
+  ]
+ },
+ {
+  "case_id": "d3bcfc70-1914-446c-ab60-ee19e18fc1f0",
+  "task_id": "32",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'You should only make one tool call at a time' \u2014 the agent issued four get_reservation_details calls simultaneously (steps 6-9, with all four results returned only afterward at step 10) and later issued two search_direct_flight calls simultaneously (steps 13-14, results returned together at step 15)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 510.3480528339278,
+    "cache_hit": false,
+    "prompt_tokens": 5702,
+    "completion_tokens": 19912
+   }
+  ]
+ },
+ {
+  "case_id": "b967c8fb-f054-4279-8582-64139bccfd48",
+  "task_id": "20",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 77.93226441601291,
+    "cache_hit": false,
+    "prompt_tokens": 4616,
+    "completion_tokens": 2984
+   }
+  ]
+ },
+ {
+  "case_id": "c9b164d8-586e-4e8a-8315-ea75fba3a793",
+  "task_id": "33",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.87,
+    "parsed": true,
+    "error": null,
+    "seconds": 138.47190979204606,
+    "cache_hit": false,
+    "prompt_tokens": 5555,
+    "completion_tokens": 5563
+   }
+  ]
+ },
+ {
+  "case_id": "77ad9e79-f7bb-4445-a21e-762503cab6bc",
+  "task_id": "14",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 230.5838772909483,
+    "cache_hit": false,
+    "prompt_tokens": 6742,
+    "completion_tokens": 9372
+   }
+  ]
+ },
+ {
+  "case_id": "30bd743a-2409-4120-a1db-d0d40cafb732",
+  "task_id": "9",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Cancel flight policy: 'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 the user requested cancellation of NQNU5R, whose flights (May 13-14) had already been flown, but the agent simply denied the request instead of transferring to a human agent (steps 9 and 17).",
+     "'You should not provide any information... or give subjective recommendations or comments' \u2014 the agent added unsupported subjective remarks such as 'appears to be your best option' (step 13) and 'fare rules are strict by design, which is why basic economy tickets are offered at a lower price point' (step 15)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 149.4656334159663,
+    "cache_hit": false,
+    "prompt_tokens": 4598,
+    "completion_tokens": 6135
+   }
+  ]
+ },
+ {
+  "case_id": "398a1958-be30-4b62-a1f5-814b176af7fa",
+  "task_id": "13",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 243.98602375003975,
+    "cache_hit": false,
+    "prompt_tokens": 2768,
+    "completion_tokens": 9952
+   }
+  ]
+ },
+ {
+  "case_id": "6afe1eaf-a0cc-465a-8270-e3475fe1eadc",
+  "task_id": "20",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 94.66702266701031,
+    "cache_hit": false,
+    "prompt_tokens": 5701,
+    "completion_tokens": 3552
+   }
+  ]
+ },
+ {
+  "case_id": "73fe8fe2-f8b3-4444-b90b-b962f799f706",
+  "task_id": "1",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must make sure cancellation eligibility rules apply before acting: it incorrectly assured the user the reservation was eligible for a refunded cancellation under the 24-hour rule when the booking (May 14, 9:52 AM vs. current time May 15, 3:00 PM) was already ~29 hours old, and the user agreed to cancel based on that false eligibility statement."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 10,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 446.62131170905195,
+    "cache_hit": false,
+    "prompt_tokens": 4693,
+    "completion_tokens": 17976
+   }
+  ]
+ },
+ {
+  "case_id": "d4702263-d733-41a6-9c86-1513ece3200a",
+  "task_id": "3",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 34.370650541968644,
+    "cache_hit": false,
+    "prompt_tokens": 3011,
+    "completion_tokens": 1254
+   }
+  ]
+ },
+ {
+  "case_id": "6bc4d868-affe-4772-b81c-e1e23492b635",
+  "task_id": "5",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 80.13427562499419,
+    "cache_hit": false,
+    "prompt_tokens": 5959,
+    "completion_tokens": 3032
+   }
+  ]
+ },
+ {
+  "case_id": "7e31490a-e817-409f-8870-62356539f7fe",
+  "task_id": "2",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 375.21024008397944,
+    "cache_hit": false,
+    "prompt_tokens": 4985,
+    "completion_tokens": 15630
+   }
+  ]
+ },
+ {
+  "case_id": "fa4b4d7b-b0bf-4f84-9a97-7e74e59888f3",
+  "task_id": "6",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 50.738913125009276,
+    "cache_hit": false,
+    "prompt_tokens": 4862,
+    "completion_tokens": 1767
+   }
+  ]
+ },
+ {
+  "case_id": "583f7685-c989-4ccf-b402-db322fcdd594",
+  "task_id": "45",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Offered 'cancel without a refund' as an executable option even though the reservation met none of the cancellation-qualifying conditions (booked >24 hrs ago, not airline-cancelled, basic economy, no insurance)",
+     "Provided procedures/information not in policy or tools by recommending external channels (check booking confirmation email, airline website 'Contact Us' pages, 'Request a Callback' options)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 8,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 46.47144925000612,
+    "cache_hit": false,
+    "prompt_tokens": 4951,
+    "completion_tokens": 1627
+   }
+  ]
+ },
+ {
+  "case_id": "3c75be02-f990-4e07-a5fa-dfc627250dd9",
+  "task_id": "11",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 59.782779167057015,
+    "cache_hit": false,
+    "prompt_tokens": 4996,
+    "completion_tokens": 2196
+   }
+  ]
+ },
+ {
+  "case_id": "120aac8d-12f4-4402-b6af-22b5aa3d36c0",
+  "task_id": "21",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Payment for a flight change must be a single gift card or credit card: the agent proposed, got confirmation for, and attempted a split payment ($6 from gift_card_7480005 plus the remainder from gift_card_6276644) for the $59 flight difference, then unilaterally charged gift_card_6276644 instead of explaining the single-method rule and re-confirming.",
+     "Baggage allowance misapplied: a silver member flying economy gets 2 free checked bags, but the agent stated only 1 free bag and charged $50 (update_reservation_baggages with nonfree_baggages=1) for a second bag that was within the free allowance.",
+     "Requests that are against policy must be denied: instead of denying the user's request to reprocess the payment as a $6 + $103 split (an outcome the single-payment-method rule prohibits for flight changes), the agent offered and executed a transfer to a human agent."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 17,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 318.4915877499152,
+    "cache_hit": false,
+    "prompt_tokens": 7530,
+    "completion_tokens": 11183
+   }
+  ]
+ },
+ {
+  "case_id": "8c90a69d-ddc5-4463-b03c-0c185e72b2d9",
+  "task_id": "4",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 197.88414120906964,
+    "cache_hit": false,
+    "prompt_tokens": 5070,
+    "completion_tokens": 7863
+   }
+  ]
+ },
+ {
+  "case_id": "97b729da-9c64-4844-8743-c0371763c611",
+  "task_id": "5",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.87,
+    "parsed": true,
+    "error": null,
+    "seconds": 72.54967899993062,
+    "cache_hit": false,
+    "prompt_tokens": 5904,
+    "completion_tokens": 2683
+   }
+  ]
+ },
+ {
+  "case_id": "e6eb3a1e-c665-4a19-b22d-f2009d8a5cae",
+  "task_id": "7",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 176.5404337499058,
+    "cache_hit": false,
+    "prompt_tokens": 7443,
+    "completion_tokens": 7074
+   }
+  ]
+ },
+ {
+  "case_id": "31d2108c-5ca8-44e2-996f-5903a7b69dd1",
+  "task_id": "36",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modify policy requires the user to provide their user id first \u2014 the agent called get_reservation_details before the user had given their user id",
+     "Basic economy flights cannot be modified \u2014 the date-change request was against policy and should have been denied, but the agent transferred to a human agent instead (transfer is only for requests that cannot be handled within the agent's scope, not for policy-prohibited requests)",
+     "Agent told the user a human agent 'may have more flexibility' to move the basic economy flight and made a subjective recommendation to transfer, implying a policy exception that does not exist"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 154.85142820805777,
+    "cache_hit": false,
+    "prompt_tokens": 2907,
+    "completion_tokens": 6453
+   }
+  ]
+ },
+ {
+  "case_id": "46b8cdc4-7e59-4a92-bcca-33fb29e29403",
+  "task_id": "35",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Offered to 'cancel reservation M20IZO without a refund' (steps 17, 21, 23) even though the reservation meets none of the policy's cancellation conditions (booked more than 24 hrs ago, economy cabin, no travel insurance, not airline-cancelled, reason = change of plans) \u2014 policy permits cancellation only if at least one condition is true, so the agent claimed a capability it does not have."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 17,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 234.37816366599873,
+    "cache_hit": false,
+    "prompt_tokens": 7217,
+    "completion_tokens": 9135
+   }
+  ]
+ },
+ {
+  "case_id": "659c2cf2-da1f-431c-a480-45c9885264bc",
+  "task_id": "9",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 104.03142241598107,
+    "cache_hit": false,
+    "prompt_tokens": 4422,
+    "completion_tokens": 4191
+   }
+  ]
+ },
+ {
+  "case_id": "0e8e83b3-dd09-48df-a3aa-11c9d6c3e08b",
+  "task_id": "47",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 54.31093100004364,
+    "cache_hit": false,
+    "prompt_tokens": 4250,
+    "completion_tokens": 1183
+   }
+  ]
+ },
+ {
+  "case_id": "d7f75426-a86b-4978-a91d-e9836b2d5a88",
+  "task_id": "47",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 150.3195026249159,
+    "cache_hit": false,
+    "prompt_tokens": 4394,
+    "completion_tokens": 1198
+   }
+  ]
+ },
+ {
+  "case_id": "f9a3cac1-1726-4e7b-a5d5-a816e1414173",
+  "task_id": "16",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 296.9345473749563,
+    "cache_hit": false,
+    "prompt_tokens": 4831,
+    "completion_tokens": 2959
+   }
+  ]
+ },
+ {
+  "case_id": "40bb0230-d715-4aff-850b-0db6c7012fe5",
+  "task_id": "21",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Before taking any action that updates the booking database, the agent must list the action details and obtain explicit user confirmation (yes) to proceed: at step 19 the flight change was executed charging gift_card_6276644 ($113 balance) even though the user had explicitly instructed 'use my gift card with the smallest balance first' and expected any remainder charged to the credit card; since only a single payment method is allowed for flight changes, the agent should have explained this limitation and confirmed the substituted payment method (and the corrected $59 total vs. the quoted/confirmed $109) with the user before calling the update API."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 19,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 590.9960761250695,
+    "cache_hit": false,
+    "prompt_tokens": 7012,
+    "completion_tokens": 16159
+   }
+  ]
+ },
+ {
+  "case_id": "f306d956-5037-4550-bb46-decb49a78471",
+  "task_id": "17",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 119.84371337504126,
+    "cache_hit": false,
+    "prompt_tokens": 5670,
+    "completion_tokens": 4581
+   }
+  ]
+ },
+ {
+  "case_id": "fffa8661-1202-4737-bda9-715222296b6d",
+  "task_id": "2",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'Do not proactively offer a compensation unless the user explicitly asks for one' - at step 34 the agent offered a $50 delay certificate when the user had only complained about the delay and never asked for compensation",
+     "'Basic economy flights cannot be modified' - the agent offered to change the return flights of reservation 4OG6T3, which is basic economy (steps 34, 36, 38)",
+     "'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' - the agent offered to cancel reservation 4OG6T3 even though flight HAT006 on 2024-05-11 had already landed (steps 34 and 38), and wrongly claimed travel insurance made cancellation possible despite the delay not being a health/weather reason",
+     "'You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions' - at step 38 the agent offered a transfer for extra goodwill (credits/miles), a request that is against policy and should simply be denied"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 34,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 217.10098004096653,
+    "cache_hit": false,
+    "prompt_tokens": 5936,
+    "completion_tokens": 9137
+   }
+  ]
+ },
+ {
+  "case_id": "8388e4d5-f895-4e73-b41f-18482689fee9",
+  "task_id": "20",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 85.09607391594909,
+    "cache_hit": false,
+    "prompt_tokens": 5355,
+    "completion_tokens": 3233
+   }
+  ]
+ },
+ {
+  "case_id": "15b428d1-3bbf-4a5a-bc52-5b30a07ff25b",
+  "task_id": "40",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.38353966595605,
+    "cache_hit": false,
+    "prompt_tokens": 2904,
+    "completion_tokens": 457
+   }
+  ]
+ },
+ {
+  "case_id": "862baf52-b151-4a61-ac79-f34c22140187",
+  "task_id": "19",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 81.06922308309004,
+    "cache_hit": false,
+    "prompt_tokens": 4074,
+    "completion_tokens": 3237
+   }
+  ]
+ },
+ {
+  "case_id": "ac957b15-7ca3-4e67-af4e-95e8187683b1",
+  "task_id": "39",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Offered a transfer to a human agent to find a way to cancel MSJ4OA, XAZ3C0, and UDMOP1, which do not meet any cancellation criterion (not business, no insurance, 'change of plans', booked >24 hrs ago); policy requires denying requests that are against policy, and transfer is allowed 'if and only if the request cannot be handled within the scope of your actions' \u2014 the correct handling here was a denial, not escalation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 161.20095595892053,
+    "cache_hit": false,
+    "prompt_tokens": 5425,
+    "completion_tokens": 6501
+   }
+  ]
+ },
+ {
+  "case_id": "57dff4ce-8360-4bb5-b7d8-d08f2f9dca57",
+  "task_id": "8",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Policy states the agent should not provide any information, knowledge, or procedures not provided by the user or available tools \u2014 in step 19 the agent invented procedures for seat selection (visit the airline's website and manage booking with the reservation ID, use the mobile app, or contact customer service through another channel), none of which come from the policy or available tools"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 19,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 70.44765645905863,
+    "cache_hit": false,
+    "prompt_tokens": 5619,
+    "completion_tokens": 2676
+   }
+  ]
+ },
+ {
+  "case_id": "198dc188-2f27-4b6b-b461-6cb14af87aa3",
+  "task_id": "7",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 402.3990221670829,
+    "cache_hit": false,
+    "prompt_tokens": 8969,
+    "completion_tokens": 16453
+   }
+  ]
+ },
+ {
+  "case_id": "955cb857-57e2-45e8-b5b5-18ecfd63ddf7",
+  "task_id": "15",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.87,
+    "parsed": true,
+    "error": null,
+    "seconds": 97.2115878330078,
+    "cache_hit": false,
+    "prompt_tokens": 5499,
+    "completion_tokens": 3708
+   }
+  ]
+ },
+ {
+  "case_id": "d3a843b0-4945-47b7-99eb-feb769f52969",
+  "task_id": "23",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously': the agent batched multiple tool calls in single turns (four flight searches in steps 5\u20138, three booking calls in steps 18\u201320) and sent messages alongside tool calls (steps 9, 16\u201317, 21).",
+     "'Do not add checked bags that the user does not need': all three new reservations were booked with total_baggages=2 even though the user explicitly said 'I don't need bags or insurance' (steps 18\u201320), and the agent then told the user '2 free checked bags each' (step 22).",
+     "'Should not... give subjective recommendations or comments': e.g., 'Great strategy!' and the unsolicited tip to wait for the refund before booking (steps 12, 14)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 354.85493395791855,
+    "cache_hit": false,
+    "prompt_tokens": 7966,
+    "completion_tokens": 14586
+   }
+  ]
+ },
+ {
+  "case_id": "c8900e72-329b-4bd5-aa59-9e6bf5f2be52",
+  "task_id": "13",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 115.37583616597112,
+    "cache_hit": false,
+    "prompt_tokens": 2769,
+    "completion_tokens": 4711
+   }
+  ]
+ },
+ {
+  "case_id": "e972319d-0e85-46f6-83c9-49a1fde18021",
+  "task_id": "7",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transferred the user to a human agent for cancelling reservation XEHM4B even though that request is handled within the agent's scope by simply denying it (it meets no cancellation criterion), violating 'transfer... if and only if the request cannot be handled within the scope of your actions'",
+     "Told the user at step 8 that they 'would need to speak with a human agent to see if there are any other options available' for a reservation whose cancellation must be denied per policy"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 19,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 230.2528588330606,
+    "cache_hit": false,
+    "prompt_tokens": 5547,
+    "completion_tokens": 9382
+   }
+  ]
+ },
+ {
+  "case_id": "388398c6-26f9-4f4c-8ff2-4998df0c6b98",
+  "task_id": "45",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'You should not provide any information, knowledge, or procedures not provided by the user or available tools' - the agent asserted unverified facts: that a human agent 'may be able to... make an exception' (step 7), that human agents 'genuinely have more flexibility' (step 9), that 'Human agents have the authority to review cases individually and make judgment calls for exceptions. That is the only exception process that exists' (step 13), and told the user 'I can technically cancel the reservation' (step 13) even though no cancellation condition was met (later contradicted in step 15)",
+     "'...or give subjective recommendations or comments' - the agent said cancelling without a refund is 'which I don't recommend given your situation' (step 9) and 'I strongly advise against this' (step 13)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 227.07223399996292,
+    "cache_hit": false,
+    "prompt_tokens": 5130,
+    "completion_tokens": 9256
+   }
+  ]
+ },
+ {
+  "case_id": "debf1841-b55a-4ba0-85c5-e3b34e8391b1",
+  "task_id": "14",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 166.45615979202557,
+    "cache_hit": false,
+    "prompt_tokens": 7367,
+    "completion_tokens": 6402
+   }
+  ]
+ },
+ {
+  "case_id": "f9986fcb-5779-4a00-9c9e-08859cd3366d",
+  "task_id": "43",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time \u2014 the agent issued six get_reservation_details calls simultaneously in one batch (steps 6-11), with all results returning together at step 12.",
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions / You should deny user requests that are against this policy \u2014 the cancellation request was against policy (basic economy, booked May 4, no insurance, not business, not airline-cancelled) and was fully handled by a denial, which a human agent could not override; the agent should have maintained the denial rather than transferring for an 'exception' (steps 13, 15-17)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 136.1021622499684,
+    "cache_hit": false,
+    "prompt_tokens": 4685,
+    "completion_tokens": 5123
+   }
+  ]
+ },
+ {
+  "case_id": "19f37bb5-7fc2-4a8f-94e4-d5c22cd29e1f",
+  "task_id": "24",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 93.84140562498942,
+    "cache_hit": false,
+    "prompt_tokens": 6426,
+    "completion_tokens": 3511
+   }
+  ]
+ },
+ {
+  "case_id": "72414ad1-bc3e-4288-b1f8-1cf8e91f5075",
+  "task_id": "3",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.68,
+    "parsed": true,
+    "error": null,
+    "seconds": 266.1948573330883,
+    "cache_hit": false,
+    "prompt_tokens": 3030,
+    "completion_tokens": 10795
+   }
+  ]
+ },
+ {
+  "case_id": "d71878cb-9cef-4182-8f8d-ba58aa6d896a",
+  "task_id": "48",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions",
+     "You should deny user requests that are against this policy"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.686483875033446,
+    "cache_hit": false,
+    "prompt_tokens": 3463,
+    "completion_tokens": 1094
+   }
+  ]
+ },
+ {
+  "case_id": "c4b05394-1a99-4280-8334-db658fc36ad9",
+  "task_id": "25",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 48.83288454206195,
+    "cache_hit": false,
+    "prompt_tokens": 4404,
+    "completion_tokens": 1768
+   }
+  ]
+ },
+ {
+  "case_id": "3a489d35-a73d-4923-8c68-6acdcfbc8e6f",
+  "task_id": "49",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 155.53377162502147,
+    "cache_hit": false,
+    "prompt_tokens": 3432,
+    "completion_tokens": 6222
+   }
+  ]
+ },
+ {
+  "case_id": "55a5b417-af3c-42d2-88fc-d48487c9d986",
+  "task_id": "42",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Made multiple tool calls in a single turn - seven simultaneous get_reservation_details calls (steps 5-11) and two simultaneous cancel_reservation calls (steps 17-18), violating 'You should only make one tool call at a time'."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 546.5545315409545,
+    "cache_hit": false,
+    "prompt_tokens": 6476,
+    "completion_tokens": 22190
+   }
+  ]
+ },
+ {
+  "case_id": "7d0c1ea8-1b33-4fa5-a800-3ee9e35a4b3b",
+  "task_id": "4",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 134.44906458305195,
+    "cache_hit": false,
+    "prompt_tokens": 4635,
+    "completion_tokens": 5320
+   }
+  ]
+ },
+ {
+  "case_id": "991c3170-9891-4c2a-b3b3-bec7eaaf9aeb",
+  "task_id": "30",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 121.77448949997779,
+    "cache_hit": false,
+    "prompt_tokens": 4299,
+    "completion_tokens": 4771
+   }
+  ]
+ },
+ {
+  "case_id": "d8a094dd-ea3c-471f-b0e4-5b0a39b33e74",
+  "task_id": "11",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 59.56433341593947,
+    "cache_hit": false,
+    "prompt_tokens": 4887,
+    "completion_tokens": 2188
+   }
+  ]
+ },
+ {
+  "case_id": "dacf3e09-107f-4bd5-b193-74e29032d159",
+  "task_id": "41",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 310.7942935420433,
+    "cache_hit": false,
+    "prompt_tokens": 5234,
+    "completion_tokens": 12623
+   }
+  ]
+ },
+ {
+  "case_id": "e353c2ec-2f98-4bc2-8617-79e7ff408bab",
+  "task_id": "12",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 58.23322425002698,
+    "cache_hit": false,
+    "prompt_tokens": 4103,
+    "completion_tokens": 2171
+   }
+  ]
+ },
+ {
+  "case_id": "717e342d-2f42-4b7e-ad7e-970f727a5a08",
+  "task_id": "16",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "\"You should only make one tool call at a time\" - the agent issued two tool calls in a single turn: two get_reservation_details calls together (steps 6-7) and two flight-search calls together (steps 9-10)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.65,
+    "parsed": true,
+    "error": null,
+    "seconds": 105.73873045796063,
+    "cache_hit": false,
+    "prompt_tokens": 4484,
+    "completion_tokens": 4269
+   }
+  ]
+ },
+ {
+  "case_id": "f81d45e2-9b55-4149-916f-d6a9910edb8c",
+  "task_id": "21",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 167.1685262080282,
+    "cache_hit": false,
+    "prompt_tokens": 6978,
+    "completion_tokens": 6536
+   }
+  ]
+ },
+ {
+  "case_id": "6610ac15-be65-48d9-b8d9-e324e9422543",
+  "task_id": "14",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "\"Do not add checked bags that the user does not need\" \u2014 the user twice stated no baggage was needed, but the agent booked the new reservation with total_baggages: 6 (6 free bags listed)",
+     "\"The agent must also obtain the reason for cancellation\" \u2014 the agent cancelled reservation K1NW8N without ever asking for or confirming a cancellation reason"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 354.22914475004654,
+    "cache_hit": false,
+    "prompt_tokens": 6505,
+    "completion_tokens": 14554
+   }
+  ]
+ },
+ {
+  "case_id": "0b2d3089-fdff-40cd-a0db-2490e3a63605",
+  "task_id": "12",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 78.48880341707263,
+    "cache_hit": false,
+    "prompt_tokens": 5071,
+    "completion_tokens": 2927
+   }
+  ]
+ },
+ {
+  "case_id": "58109a9c-79ae-4fa4-9387-145ffedb1dbe",
+  "task_id": "22",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Made multiple tool calls at the same time (four get_reservation_details calls in steps 6-9 and three update calls in steps 17-19, with results returned only afterward as a batch), violating 'You should only make one tool call at a time'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 512.5540087079862,
+    "cache_hit": false,
+    "prompt_tokens": 5854,
+    "completion_tokens": 21156
+   }
+  ]
+ },
+ {
+  "case_id": "1b115a27-b057-4c28-b4da-4a3bd7fad734",
+  "task_id": "23",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 311.18290679191705,
+    "cache_hit": false,
+    "prompt_tokens": 9132,
+    "completion_tokens": 12440
+   }
+  ]
+ },
+ {
+  "case_id": "c451e970-6e46-479e-a7f5-14332e479a1b",
+  "task_id": "1",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transferred the user to a human agent for a request that should have been denied: the user sought an override/exception to the cancellation-refund rules, and transfer is allowed only 'if and only if the request cannot be handled within the scope of your actions' \u2014 a policy exception is handled by denial, not escalation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 192.34874970896635,
+    "cache_hit": false,
+    "prompt_tokens": 4879,
+    "completion_tokens": 7672
+   }
+  ]
+ },
+ {
+  "case_id": "3ce95c6c-d53b-4a0d-95b5-894ab6c21247",
+  "task_id": "27",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Agent provided procedures/recommendations not in policy or tools: in step [6] it advised the user to 'check the airline's website, app, or contacting airport staff directly' for the delay reason, violating the rule against providing information, knowledge, or procedures not provided by the user or available tools, or giving subjective recommendations."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 101.47400591697078,
+    "cache_hit": false,
+    "prompt_tokens": 3342,
+    "completion_tokens": 4066
+   }
+  ]
+ },
+ {
+  "case_id": "1eaf529a-d690-48e2-a19e-2a4057a2b94c",
+  "task_id": "44",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions \u2014 a cancellation request that fails all policy conditions must simply be denied by the agent (transfer is only required when a portion of the flight has already been flown), yet the agent offered a transfer 'to discuss further options'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 34,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 205.0397672909312,
+    "cache_hit": false,
+    "prompt_tokens": 8720,
+    "completion_tokens": 7976
+   }
+  ]
+ },
+ {
+  "case_id": "b920ef6c-2d46-4b08-93fb-d105e870bdc9",
+  "task_id": "37",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 133.4612614159705,
+    "cache_hit": false,
+    "prompt_tokens": 5093,
+    "completion_tokens": 5338
+   }
+  ]
+ },
+ {
+  "case_id": "56c4a122-2d6c-4819-a4d1-5cb6af2504cf",
+  "task_id": "2",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Do not proactively offer a compensation unless the user explicitly asks for one \u2014 the agent offered a $50 certificate at step 32 when the user had only complained about the delay and never requested compensation",
+     "Delayed-flight certificate may be offered only after confirming facts AND changing or cancelling the reservation \u2014 the agent dangled compensation to induce a change/cancel and suggested options that are not permitted: modifying a basic economy reservation ('Basic economy flights cannot be modified') and cancelling a reservation whose outbound segment had already been flown ('If any portion of the flight has already been flown, the agent cannot help')",
+     "Transfer only 'if and only if the request cannot be handled within the scope of your actions' and deny requests that are against policy \u2014 the agent transferred to a human agent (steps 36-37) to pursue goodwill compensation outside policy instead of denying it"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 32,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 199.35062091599684,
+    "cache_hit": false,
+    "prompt_tokens": 6228,
+    "completion_tokens": 8132
+   }
+  ]
+ },
+ {
+  "case_id": "25216489-f2ed-43ce-8458-20cf59b62110",
+  "task_id": "36",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'First, the agent must obtain the user id and reservation id. The user must provide their user id.' - The agent never asked for or obtained the user's user id before pulling up and acting on reservation EUJUY6.",
+     "'If any portion of the flight has already been flown, the agent cannot help and transfer is needed.' - The outbound flights were dated 2024-05-14 (the day before the current time) and had already passed, yet in step 5 the agent offered cancellation with a full refund under the travel insurance instead of stating that cancellation could not be processed."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 97.32084545807447,
+    "cache_hit": false,
+    "prompt_tokens": 2916,
+    "completion_tokens": 3967
+   }
+  ]
+ },
+ {
+  "case_id": "7e86db98-25b2-47f1-a8f6-323f52807f9c",
+  "task_id": "29",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modifications cannot change origin, destination, or trip type - at step 11 the agent proposed changing the reservation's destination from LGA to JFK and told the user 'the change is allowed' instead of denying it.",
+     "Agent provided incorrect policy information, claiming travel insurance waives change fees / permits changes, when insurance only enables a full refund for covered (health/weather) cancellations.",
+     "For a flight change the user must provide a single gift card or credit card for the refund method; the agent unilaterally set the refund to the 'original payment method' without asking."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.72,
+    "parsed": true,
+    "error": null,
+    "seconds": 187.15374858304858,
+    "cache_hit": false,
+    "prompt_tokens": 6169,
+    "completion_tokens": 7380
+   }
+  ]
+ },
+ {
+  "case_id": "6a47b4db-7be1-4d44-89f1-355c05bec14f",
+  "task_id": "18",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 189.1673382910667,
+    "cache_hit": false,
+    "prompt_tokens": 11511,
+    "completion_tokens": 6958
+   }
+  ]
+ },
+ {
+  "case_id": "9ce4bb27-fc2c-4178-a7cd-1103d5f1a1f0",
+  "task_id": "8",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 139.78131662495434,
+    "cache_hit": false,
+    "prompt_tokens": 5570,
+    "completion_tokens": 5338
+   }
+  ]
+ },
+ {
+  "case_id": "a56af93a-ef0d-4646-b192-31db5c69bd02",
+  "task_id": "19",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time \u2014 the agent issued three get_reservation_details calls simultaneously (steps 6-8) instead of one at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 98.57533625001088,
+    "cache_hit": false,
+    "prompt_tokens": 4022,
+    "completion_tokens": 3924
+   }
+  ]
+ },
+ {
+  "case_id": "75e7c56e-ecef-4b9e-807a-71e1d194e23c",
+  "task_id": "25",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 125.0284869580064,
+    "cache_hit": false,
+    "prompt_tokens": 4363,
+    "completion_tokens": 5039
+   }
+  ]
+ },
+ {
+  "case_id": "5f34478d-fedd-464c-9da6-44c36b9fff82",
+  "task_id": "5",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 49.00676570797805,
+    "cache_hit": false,
+    "prompt_tokens": 6267,
+    "completion_tokens": 1586
+   }
+  ]
+ },
+ {
+  "case_id": "397a11fb-d77a-422c-8262-b6865d7a9b5e",
+  "task_id": "22",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 96.45137054100633,
+    "cache_hit": false,
+    "prompt_tokens": 5327,
+    "completion_tokens": 3772
+   }
+  ]
+ },
+ {
+  "case_id": "f30f4f47-e692-4c37-a03c-177039b85205",
+  "task_id": "29",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Modifications are not allowed to change the origin, destination, or trip type of a reservation \u2014 the agent changed the destination from LGA to JFK",
+     "The agent should deny user requests that are against policy instead of processing them"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 47.38987429102417,
+    "cache_hit": false,
+    "prompt_tokens": 5240,
+    "completion_tokens": 1585
+   }
+  ]
+ },
+ {
+  "case_id": "17656624-0891-4340-9453-5a36b362a86f",
+  "task_id": "6",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'You should not provide any information, knowledge, or procedures not provided by the user or available tools' \u2014 in step 16 the agent asserted that purchasing third-party travel insurance is permitted and that 'purchasing it externally wouldn't affect your reservation in any way,' claims not supported by any policy text or tool output."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 138.1601119589759,
+    "cache_hit": false,
+    "prompt_tokens": 5366,
+    "completion_tokens": 5552
+   }
+  ]
+ },
+ {
+  "case_id": "f488933b-7bb8-463a-8451-5f5964ff3700",
+  "task_id": "40",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.80257000005804,
+    "cache_hit": false,
+    "prompt_tokens": 2884,
+    "completion_tokens": 546
+   }
+  ]
+ },
+ {
+  "case_id": "163750bc-4c9e-4eab-865c-301a55c69f96",
+  "task_id": "18",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 283.59165570896585,
+    "cache_hit": false,
+    "prompt_tokens": 7447,
+    "completion_tokens": 11421
+   }
+  ]
+ },
+ {
+  "case_id": "e03943c4-6bf8-4098-a57c-3216f9adda1d",
+  "task_id": "35",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 160.26280008303002,
+    "cache_hit": false,
+    "prompt_tokens": 7862,
+    "completion_tokens": 6073
+   }
+  ]
+ },
+ {
+  "case_id": "ad89a32e-31b7-4a92-a0a5-ba4268a4abe6",
+  "task_id": "9",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "For NQNU5R, whose flights (May 13\u201314) had already been flown, the policy requires 'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 the agent denied the cancellation outright and never called transfer_to_human_agents or sent the transfer message.",
+     "The agent did not 'obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons)' as required before ruling on the cancellation requests for IFOYYZ and NQNU5R."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 128.54647362499963,
+    "cache_hit": false,
+    "prompt_tokens": 6156,
+    "completion_tokens": 5071
+   }
+  ]
+ },
+ {
+  "case_id": "d0976b62-5289-4765-ad39-2eaa80cdd2d8",
+  "task_id": "7",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time \u2014 the agent issued three calls simultaneously (steps 5\u20137: get_user_details + two get_reservation_details) and seven calls simultaneously (steps 10\u201316: cancel_reservation, two search_direct_flight, four get_reservation_details).",
+     "If you make a tool call, you should not respond to the user simultaneously \u2014 the agent sent a user message alongside a pending calculate() call (steps 17\u201318) and the message 'The upgrade to business class is complete. Now let me cancel the reservation:' alongside the pending cancel_reservation() call (steps 22\u201323)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 320.17278954200447,
+    "cache_hit": false,
+    "prompt_tokens": 6786,
+    "completion_tokens": 13263
+   }
+  ]
+ },
+ {
+  "case_id": "6abdb100-84f6-4ed3-b984-ccac652020c6",
+  "task_id": "39",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.75,
+    "parsed": true,
+    "error": null,
+    "seconds": 330.7113045420265,
+    "cache_hit": false,
+    "prompt_tokens": 5212,
+    "completion_tokens": 13584
+   }
+  ]
+ },
+ {
+  "case_id": "8702b25f-3ba1-4a90-91e8-351561729b93",
+  "task_id": "30",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 39.61063437501434,
+    "cache_hit": false,
+    "prompt_tokens": 4367,
+    "completion_tokens": 1332
+   }
+  ]
+ },
+ {
+  "case_id": "47d2030d-3122-4bec-bd94-674fad923c3e",
+  "task_id": "24",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Made multiple tool calls at the same time (steps 3-4, 6-15, 17-19) despite the policy 'You should only make one tool call at a time'",
+     "Offered a transfer to a human agent (step 25) for a cancellation request that was within the agent's scope and was properly handled by denial, contrary to 'transfer if and only if the request cannot be handled within the scope of your actions'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 584.7164538750658,
+    "cache_hit": false,
+    "prompt_tokens": 7134,
+    "completion_tokens": 23588
+   }
+  ]
+ },
+ {
+  "case_id": "8a6599eb-37f3-4630-9533-6a15a039fac0",
+  "task_id": "41",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 245.87042408401612,
+    "cache_hit": false,
+    "prompt_tokens": null,
+    "completion_tokens": null
+   }
+  ]
+ },
+ {
+  "case_id": "f107df32-b638-42aa-9032-b8961f51827a",
+  "task_id": "21",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": "HTTPError: HTTP Error 502: Bad Gateway: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.28.3</center>\r\n</body>\r\n</html>\r\n",
+    "seconds": null,
+    "cache_hit": null,
+    "prompt_tokens": null,
+    "completion_tokens": null
+   }
+  ]
+ },
+ {
+  "case_id": "923ffdd5-f327-45f4-8584-ef4ea37a213d",
+  "task_id": "49",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": "HTTPError: HTTP Error 502: Bad Gateway: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.28.3</center>\r\n</body>\r\n</html>\r\n",
+    "seconds": null,
+    "cache_hit": null,
+    "prompt_tokens": null,
+    "completion_tokens": null
+   }
+  ]
+ },
+ {
+  "case_id": "0ff13097-4e4d-4270-8693-8b7bc0fed32f",
+  "task_id": "5",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 169.51083270891104,
+    "cache_hit": false,
+    "prompt_tokens": 5664,
+    "completion_tokens": 6822
+   }
+  ]
+ },
+ {
+  "case_id": "e9b6088c-8701-4a4a-a5fc-a4c6608de8ae",
+  "task_id": "15",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.87,
+    "parsed": true,
+    "error": null,
+    "seconds": 71.1945903339656,
+    "cache_hit": false,
+    "prompt_tokens": 5843,
+    "completion_tokens": 2568
+   }
+  ]
+ },
+ {
+  "case_id": "fe8b9242-c9d9-42f8-a666-84398cdd591e",
+  "task_id": "42",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 122.01641245896462,
+    "cache_hit": false,
+    "prompt_tokens": 6223,
+    "completion_tokens": 4701
+   }
+  ]
+ },
+ {
+  "case_id": "14933655-84b4-4aa6-a720-19bdc1877b62",
+  "task_id": "48",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions \u2014 the cancellation request was fully within the agent's scope and the policy-based answer (denial) had already been determined.",
+     "You should deny user requests that are against this policy \u2014 after correctly determining the cancellation was not allowed (booked May 2, basic economy, no insurance, not within 24 hours), the agent escalated for a 'potential exception' instead of maintaining the denial."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 47.79192700004205,
+    "cache_hit": false,
+    "prompt_tokens": 3523,
+    "completion_tokens": 1750
+   }
+  ]
+ },
+ {
+  "case_id": "161eb7b4-6fe8-4c70-9f51-fb625e7b2373",
+  "task_id": "20",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 43.49901354208123,
+    "cache_hit": false,
+    "prompt_tokens": 5485,
+    "completion_tokens": 1403
+   }
+  ]
+ },
+ {
+  "case_id": "7115d62b-65a5-44dc-a19c-a3e6c267f224",
+  "task_id": "14",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Only one tool call at a time \u2014 the agent issued four flight-search calls simultaneously (steps 7\u201310) and executed the cancellation and the new booking as simultaneous calls (steps 16\u201317)",
+     "The agent must obtain the reason for cancellation before cancelling \u2014 reservation K1NW8N was cancelled at step 16 without the reason ever being asked for or obtained"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 445.8783558749128,
+    "cache_hit": false,
+    "prompt_tokens": 6522,
+    "completion_tokens": 18088
+   }
+  ]
+ },
+ {
+  "case_id": "bc05af5c-142a-4cf1-be02-b12718857b24",
+  "task_id": "38",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Delay compensation ($50 x passengers) may only be offered after confirming the facts AND changing or cancelling the reservation; at step 12 (and again at step 14) the agent offered a $50 certificate while the user explicitly wanted to keep the return flights as scheduled \u2014 compensation for a reason not listed in policy ('Do not offer compensation for any other reason than the ones listed above').",
+     "The agent should deny requests that are against policy; instead, at step 20 the agent transferred the user to a human agent to seek 'goodwill compensation outside of the standard policy,' a request that is against policy and should have been refused."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 48.333462208043784,
+    "cache_hit": false,
+    "prompt_tokens": 4600,
+    "completion_tokens": 1753
+   }
+  ]
+ },
+ {
+  "case_id": "2479399d-5b48-4f3b-96d3-d478a6b39b6b",
+  "task_id": "33",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.87,
+    "parsed": true,
+    "error": null,
+    "seconds": 137.19046391698066,
+    "cache_hit": false,
+    "prompt_tokens": 6941,
+    "completion_tokens": 5299
+   }
+  ]
+ },
+ {
+  "case_id": "b0d51acd-c159-4602-97b7-9d0f223e9bbd",
+  "task_id": "32",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 71.45268558396492,
+    "cache_hit": false,
+    "prompt_tokens": 7353,
+    "completion_tokens": 2485
+   }
+  ]
+ },
+ {
+  "case_id": "73bcff25-d848-4faf-bf01-e951a10b7619",
+  "task_id": "6",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'You should not provide any information, knowledge, or procedures not provided by the user or available tools, or give subjective recommendations or comments.' \u2014 At step 10 the agent proactively suggested the user 'look into purchasing travel insurance from an external provider,' which is outside knowledge from the policy or tools; at step 16 it further speculated about procedures ('check your email from May 5, 2024' / online account) not derived from tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 10,
+    "confidence": 0.62,
+    "parsed": true,
+    "error": null,
+    "seconds": 96.90094554203097,
+    "cache_hit": false,
+    "prompt_tokens": 5143,
+    "completion_tokens": 3795
+   }
+  ]
+ },
+ {
+  "case_id": "850fb456-d255-495a-b4f2-136970152d47",
+  "task_id": "47",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 41.08089370804373,
+    "cache_hit": false,
+    "prompt_tokens": 4250,
+    "completion_tokens": 1441
+   }
+  ]
+ },
+ {
+  "case_id": "ad4419f1-bdfd-439a-99f4-cbb0044cf5c6",
+  "task_id": "38",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Offered delay-flight compensation without the required precondition: policy allows a delay certificate only if the user wants to change or cancel the reservation and only after the agent has actually changed or cancelled it \u2014 the user explicitly declined to change or cancel (step 13), yet the agent offered the $50 certificate at step 12 and again at steps 14 and 16"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 232.26184066594578,
+    "cache_hit": false,
+    "prompt_tokens": 4234,
+    "completion_tokens": 9578
+   }
+  ]
+ },
+ {
+  "case_id": "c3dc1036-17ba-4d48-9a60-f04f7effe1f7",
+  "task_id": "45",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Policy permits cancellation only if a condition is met (booked within 24 hrs, airline cancelled, business class, or covered insurance); in step 19 the agent offered to 'cancel the reservation without a refund' for PEP4E0, which is basic economy, has no insurance, was booked May 5 (outside 24 hrs), and was not airline-cancelled \u2014 the request should have been denied outright, not offered as an option"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 19,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 91.99430091690738,
+    "cache_hit": false,
+    "prompt_tokens": 5654,
+    "completion_tokens": 3439
+   }
+  ]
+ },
+ {
+  "case_id": "1c00fef8-21c3-4304-babf-335e4460f91c",
+  "task_id": "2",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Delayed-flight compensation may only be offered 'after confirming the facts and changing or cancelling the reservation' when the user 'wants to change or cancel the reservation' \u2014 the agent offered a $50 certificate at step 33 although the user never requested a change or cancellation",
+     "'Do not proactively offer a compensation unless the user explicitly asks for one' \u2014 the user only asked what could be done about the delay, and the agent volunteered the certificate"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 33,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 56.5679743749788,
+    "cache_hit": false,
+    "prompt_tokens": 5483,
+    "completion_tokens": 1994
+   }
+  ]
+ },
+ {
+  "case_id": "5c80c5cf-4b69-465b-80d1-35f215becd66",
+  "task_id": "32",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 450.4130645409459,
+    "cache_hit": false,
+    "prompt_tokens": 5265,
+    "completion_tokens": 17849
+   }
+  ]
+ },
+ {
+  "case_id": "9eee9493-9091-42d3-ac47-9743dc10d9d4",
+  "task_id": "43",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 100.80154699995182,
+    "cache_hit": false,
+    "prompt_tokens": 5067,
+    "completion_tokens": 3912
+   }
+  ]
+ },
+ {
+  "case_id": "769d0468-c5aa-40ba-ae86-deb9afa6a5b7",
+  "task_id": "17",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time - the agent issued four get_reservation_details calls together in steps 6-9 before any results returned",
+     "Before taking actions that update the booking database you must list the action details and obtain explicit confirmation - the agent quoted $179 for the cabin upgrade (incorrectly subtracting the $30 insurance from the original payment) and took the user's 'yes' for $179, but the correct flight-price difference was $209 ($340 - $131), and $209 was then charged without the user confirming that amount"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 235.5465574589325,
+    "cache_hit": false,
+    "prompt_tokens": 6509,
+    "completion_tokens": 9487
+   }
+  ]
+ },
+ {
+  "case_id": "8936ab0c-0fd4-46d3-aadb-392e3c139bd9",
+  "task_id": "27",
+  "trial": 0,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 77.92317279195413,
+    "cache_hit": false,
+    "prompt_tokens": 6025,
+    "completion_tokens": 2834
+   }
+  ]
+ },
+ {
+  "case_id": "96aaefde-2b7e-4d8a-a264-92b310edc17c",
+  "task_id": "27",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent only if and only if the request cannot be handled within the scope of your actions \u2014 the agent transferred a compensation request that policy required it to deny, since delay compensation is only allowed when the customer changes or cancels the reservation ('You should deny user requests that are against this policy')",
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools \u2014 the agent told the user to get the delay reason from gate agents, text/email alerts, the app/website, and airport monitors"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 19,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 71.445773708052,
+    "cache_hit": false,
+    "prompt_tokens": 6155,
+    "completion_tokens": 2596
+   }
+  ]
+ },
+ {
+  "case_id": "53d3f0a5-5903-4769-9c29-3060262a97e7",
+  "task_id": "37",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Cancel flight: 'If any portion of the flight has already been flown, the agent cannot help and transfer is needed' \u2014 for NQNU5R (flights on May 13\u201314 already landed), the agent simply refused the cancellation and never called transfer_to_human_agents",
+     "Provided information/procedures not in the policy: told the user a 'significantly changed the flight' waiver path could allow cancelling IFOYYZ, which is not a cancellation condition in the policy"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 10,
+    "confidence": 0.8,
+    "parsed": true,
+    "error": null,
+    "seconds": 123.5644275000086,
+    "cache_hit": false,
+    "prompt_tokens": 5903,
+    "completion_tokens": 4951
+   }
+  ]
+ },
+ {
+  "case_id": "1278a49c-1a10-438b-8b48-b82862816001",
+  "task_id": "45",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 47.81063537497539,
+    "cache_hit": false,
+    "prompt_tokens": 4368,
+    "completion_tokens": 1694
+   }
+  ]
+ },
+ {
+  "case_id": "b993fa5a-8000-4ca0-9948-7488353acf9c",
+  "task_id": "44",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Step 33: The agent told the user S61CZX was 'eligible for cancellation' with a 'full refund (has insurance)' and asked for confirmation to cancel, but insurance only covers health or weather reasons and the user's reason (flights longer than 4 hours) is a change of plans, so the cancellation should have been denied from the start.",
+     "Step 38: The agent transferred the user to a human agent to seek a waiver/credit/alternative for cancelling S61CZX; requests that are against policy must be denied, and transfer is only permitted 'if and only if the request cannot be handled within the scope of your actions' \u2014 the correct handling was a denial, not an escalation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 33,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 84.16881658392958,
+    "cache_hit": false,
+    "prompt_tokens": 9529,
+    "completion_tokens": 2792
+   }
+  ]
+ },
+ {
+  "case_id": "c8f11f12-a810-4577-af54-8e28cb671aa0",
+  "task_id": "35",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Cancellation is only allowed if the booking was made within 24 hrs, the airline cancelled the flight, it is a business flight, or insurance covers the reason \u2014 none of these applied to M20IZO (economy, booked 2024-05-12, no insurance), so the agent must make sure the rules apply before calling the cancel API",
+     "Agent offered 'cancel without a refund' as an option (steps 13 and 17) and then executed it; when no cancellation condition is met the cancellation request must be denied outright \u2014 a no-refund cancellation is not a permitted alternative",
+     "Agent made multiple tool calls at once (e.g., cancel_reservation and book_reservation together at steps 24\u201325), contrary to 'only make one tool call at a time'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 123.47254320897628,
+    "cache_hit": false,
+    "prompt_tokens": 7110,
+    "completion_tokens": 4666
+   }
+  ]
+ },
+ {
+  "case_id": "f644e53e-c40b-47a5-aed4-29ed244b06d4",
+  "task_id": "33",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must first obtain the user id and reservation id, with the user providing their user id \u2014 the agent called get_reservation_details (step 3) and disclosed reservation details before the user had provided/confirmed their user ID (only confirmed at step 6).",
+     "The agent should only make one tool call at a time \u2014 the agent issued two search_direct_flight calls simultaneously (steps 7-8), with both results returned together after both calls."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.6,
+    "parsed": true,
+    "error": null,
+    "seconds": 531.4839143339777,
+    "cache_hit": false,
+    "prompt_tokens": 5724,
+    "completion_tokens": 21571
+   }
+  ]
+ },
+ {
+  "case_id": "3bf5eea5-4224-4178-86d7-81c1923bf0b7",
+  "task_id": "47",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Policy allows cancellation only if booked within 24 hrs, airline-cancelled, business class, or insurance-covered reason \u2014 none applied to H8Q05L (booked May 3, basic economy, not airline-cancelled, birthday conflict not covered), yet the agent offered 'Cancel without a refund' as an option in steps 11 and 17",
+     "Agent provided a procedure/option ('cancel without a refund') that does not exist under the policy"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.65,
+    "parsed": true,
+    "error": null,
+    "seconds": 137.08364662504755,
+    "cache_hit": false,
+    "prompt_tokens": 4118,
+    "completion_tokens": 5496
+   }
+  ]
+ },
+ {
+  "case_id": "5dc73ea1-06ee-4113-9742-8a469e12d8d0",
+  "task_id": "6",
+  "trial": 1,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Issued two tool calls simultaneously (two search_direct_flight calls in one turn at steps 18-19), violating the rule 'You should only make one tool call at a time'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 18,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 362.52737258409616,
+    "cache_hit": false,
+    "prompt_tokens": 9054,
+    "completion_tokens": 14559
+   }
+  ]
+ },
+ {
+  "case_id": "8a456bae-c0aa-4ce9-91a1-bd04b4d23da3",
+  "task_id": "35",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 137.63808479206637,
+    "cache_hit": false,
+    "prompt_tokens": 7265,
+    "completion_tokens": 5315
+   }
+  ]
+ },
+ {
+  "case_id": "bd974bc7-31b2-45a7-90e2-98bdfd6a51d6",
+  "task_id": "23",
+  "trial": 2,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'You should not provide any information... not provided by the user or available tools' \u2014 at step 25 the agent wrongly told the user the booking was more than 24 hours old and the $567 would be forfeited, contradicting the reservation's created time (2024-05-14 16:03 vs. current 2024-05-15 15:00), only correcting itself at step 27.",
+     "'The agent should ask if the user wants to buy the travel insurance' \u2014 the agent never asked about insurance for the new bookings, merely asserting 'No travel insurance (same as original)' and booking all three reservations with insurance 'no'.",
+     "'Do not add checked bags that the user does not need' \u2014 the agent added 2 checked bags to each of the three new reservations (total_baggages: 2) even though the user never requested or said they needed bags."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 25,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 412.3550922089489,
+    "cache_hit": false,
+    "prompt_tokens": 10452,
+    "completion_tokens": 16411
+   }
+  ]
+ },
+ {
+  "case_id": "e96d12bf-ff36-4646-b597-30f7028912ca",
+  "task_id": "23",
+  "trial": 3,
+  "mode": "full",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "'The refund will go to original payment methods within 5 to 7 business days' \u2013 the agent treated the pending $567 refund as immediately available funds, quoting gift_card_6136092 as $696 and executing bookings against it, which caused two bookings to fail with 'Not enough balance' and made the quoted $719 Mastercard total wrong",
+     "'The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons)' \u2013 the agent cancelled K1NW8N without ever asking the user for a cancellation reason"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 286.26680416602176,
+    "cache_hit": false,
+    "prompt_tokens": 10138,
+    "completion_tokens": 11227
+   }
+  ]
+ }
+]

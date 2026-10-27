@@ -1,0 +1,10 @@
+# The pipeline (agentpm/) needs nothing beyond the Python standard library.
+#
+# The experiments, the pictures and the pm4py models need the `pm` extra:
+#   pip install -e ".[pm,dev]"
+# These are the versions the results in results/ were produced with
+# (Python 3.12.3, Graphviz 16.1.0):
+pm4py==2.7.23.8
+pandas==3.0.6
+graphviz==0.21
+pytest==9.1.1

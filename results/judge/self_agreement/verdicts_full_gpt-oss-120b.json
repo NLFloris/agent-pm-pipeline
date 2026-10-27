@@ -1,0 +1,2660 @@
+[
+ {
+  "case_id": "871f33ef-fa83-42e7-8d9a-da8474280864",
+  "task_id": "40",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.774782791966572,
+    "cache_hit": false,
+    "prompt_tokens": 2917,
+    "completion_tokens": 347
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.361691042082384,
+    "cache_hit": false,
+    "prompt_tokens": 2917,
+    "completion_tokens": 293
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.73425041709561,
+    "cache_hit": false,
+    "prompt_tokens": 2917,
+    "completion_tokens": 509
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 9.231607916997746,
+    "cache_hit": false,
+    "prompt_tokens": 2917,
+    "completion_tokens": 340
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.344517042045482,
+    "cache_hit": false,
+    "prompt_tokens": 2917,
+    "completion_tokens": 411
+   }
+  ]
+ },
+ {
+  "case_id": "c5db55aa-aaac-43b9-8ad1-08aa15cd580d",
+  "task_id": "36",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.009181916015223,
+    "cache_hit": false,
+    "prompt_tokens": 3001,
+    "completion_tokens": 855
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.295907209045254,
+    "cache_hit": false,
+    "prompt_tokens": 3001,
+    "completion_tokens": 579
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 7.311638041050173,
+    "cache_hit": false,
+    "prompt_tokens": 3001,
+    "completion_tokens": 462
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 9.228617625078186,
+    "cache_hit": false,
+    "prompt_tokens": 3001,
+    "completion_tokens": 337
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.470581499976106,
+    "cache_hit": false,
+    "prompt_tokens": 3001,
+    "completion_tokens": 546
+   }
+  ]
+ },
+ {
+  "case_id": "654165dc-e7c7-44ef-9c2e-6ec69ed2d38f",
+  "task_id": "36",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer the user, the agent must first make a tool call to transfer_to_human_agents and then send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' before any other text."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.998567916918546,
+    "cache_hit": false,
+    "prompt_tokens": 2888,
+    "completion_tokens": 511
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user id from the user before taking any actions (e.g., before calling get_reservation_details).",
+     "To transfer to a human agent, the agent must first make a transfer_to_human_agents tool call, then send the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.753462416003458,
+    "cache_hit": false,
+    "prompt_tokens": 2888,
+    "completion_tokens": 749
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user id before taking actions related to a reservation (Modify flight policy).",
+     "To transfer the user to a human agent, the agent must first make a tool call to transfer_to_human_agents and then send the transfer message (Transfer policy)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.460147708072327,
+    "cache_hit": false,
+    "prompt_tokens": 2888,
+    "completion_tokens": 635
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Must obtain user ID before accessing reservation details (policy requires user ID first for modify flight)",
+     "Must use transfer_to_human_agents tool before transferring the user (policy requires tool call then message)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.284293167060241,
+    "cache_hit": false,
+    "prompt_tokens": 2888,
+    "completion_tokens": 476
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "For modify flight, the agent must first obtain the user id and reservation id from the user before taking any action.",
+     "To transfer the user to a human agent, the agent must first make a tool call to transfer_to_human_agents before sending the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.038254542043433,
+    "cache_hit": false,
+    "prompt_tokens": 2888,
+    "completion_tokens": 579
+   }
+  ]
+ },
+ {
+  "case_id": "860a2a06-ba08-4589-a570-917477522428",
+  "task_id": "3",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 4,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 32.66001587500796,
+    "cache_hit": false,
+    "prompt_tokens": 3036,
+    "completion_tokens": 708
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.252500457921997,
+    "cache_hit": false,
+    "prompt_tokens": 3036,
+    "completion_tokens": 586
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 4,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.641417332924902,
+    "cache_hit": false,
+    "prompt_tokens": 3036,
+    "completion_tokens": 676
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.621412290958688,
+    "cache_hit": false,
+    "prompt_tokens": 3036,
+    "completion_tokens": 536
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.94,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.008986708009616,
+    "cache_hit": false,
+    "prompt_tokens": 3036,
+    "completion_tokens": 561
+   }
+  ]
+ },
+ {
+  "case_id": "d02bf2f9-8481-4bf4-b976-d5af2d5202a9",
+  "task_id": "40",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.528324958053418,
+    "cache_hit": false,
+    "prompt_tokens": 3255,
+    "completion_tokens": 374
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.143164374982007,
+    "cache_hit": false,
+    "prompt_tokens": 3255,
+    "completion_tokens": 302
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.439656083006412,
+    "cache_hit": false,
+    "prompt_tokens": 3255,
+    "completion_tokens": 446
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.876086374977604,
+    "cache_hit": false,
+    "prompt_tokens": 3255,
+    "completion_tokens": 390
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.74936500005424,
+    "cache_hit": false,
+    "prompt_tokens": 3255,
+    "completion_tokens": 395
+   }
+  ]
+ },
+ {
+  "case_id": "bad7b167-68e5-4f8d-a4bf-b50da7f0dc22",
+  "task_id": "16",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 32.21000304201152,
+    "cache_hit": false,
+    "prompt_tokens": 4337,
+    "completion_tokens": 820
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.650212250067852,
+    "cache_hit": false,
+    "prompt_tokens": 4337,
+    "completion_tokens": 937
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.865164458053187,
+    "cache_hit": false,
+    "prompt_tokens": 4337,
+    "completion_tokens": 742
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 28.196105291019194,
+    "cache_hit": false,
+    "prompt_tokens": 4337,
+    "completion_tokens": 968
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 25.540070959017612,
+    "cache_hit": false,
+    "prompt_tokens": 4337,
+    "completion_tokens": 834
+   }
+  ]
+ },
+ {
+  "case_id": "02d73ab5-3f39-4389-b9d0-f92457dd14c4",
+  "task_id": "3",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.906407083035447,
+    "cache_hit": false,
+    "prompt_tokens": 3043,
+    "completion_tokens": 427
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer the user to a human agent only if the request cannot be handled within the scope of your actions"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.82858683296945,
+    "cache_hit": false,
+    "prompt_tokens": 3043,
+    "completion_tokens": 716
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer the user to a human agent only if the request cannot be handled within the scope of your actions."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.560977124958299,
+    "cache_hit": false,
+    "prompt_tokens": 3043,
+    "completion_tokens": 755
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to human agents only if the request cannot be handled within the scope of your actions"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 28.12813541700598,
+    "cache_hit": false,
+    "prompt_tokens": 3043,
+    "completion_tokens": 797
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent only if the request cannot be handled within the scope of your actions"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.06782666698564,
+    "cache_hit": false,
+    "prompt_tokens": 3043,
+    "completion_tokens": 814
+   }
+  ]
+ },
+ {
+  "case_id": "52772308-70ea-4b22-8c24-a53615e786b3",
+  "task_id": "12",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must obtain the user id (and reservation id) before modifying a reservation.",
+     "Only one tool call may be made at a time; the assistant made back\u2011to\u2011back calls to search_direct_flight."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.977240500040352,
+    "cache_hit": false,
+    "prompt_tokens": 4110,
+    "completion_tokens": 1047
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring, the agent must first call the tool transfer_to_human_agents and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.38018145901151,
+    "cache_hit": false,
+    "prompt_tokens": 4110,
+    "completion_tokens": 648
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must obtain the user ID from the user before modifying a reservation (the user must provide their user id).",
+     "When transferring, the agent must first make a tool call to transfer_to_human_agents before sending the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 24.578587541007437,
+    "cache_hit": false,
+    "prompt_tokens": 4110,
+    "completion_tokens": 842
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 29.135863541974686,
+    "cache_hit": false,
+    "prompt_tokens": 4110,
+    "completion_tokens": 1005
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring, must first make a tool call to transfer_to_human_agents before sending the transfer message"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.146697500022128,
+    "cache_hit": false,
+    "prompt_tokens": 4110,
+    "completion_tokens": 607
+   }
+  ]
+ },
+ {
+  "case_id": "0c8c7df0-d8c5-46a7-a319-f20e00d4fe74",
+  "task_id": "37",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.83126679097768,
+    "cache_hit": false,
+    "prompt_tokens": 4885,
+    "completion_tokens": 876
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Should not provide information or procedures not supplied by the user or available tools (step 9 gave policy\u2011based reasons for cancellation denial)",
+     "When transferring, must only send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' (step 14 added extra text)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 40.85594904096797,
+    "cache_hit": false,
+    "prompt_tokens": 4885,
+    "completion_tokens": 1156
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.784136500093155,
+    "cache_hit": false,
+    "prompt_tokens": 4885,
+    "completion_tokens": 825
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the reason for cancellation before processing or responding to a cancellation request.",
+     "The agent must ask for cancellation reason prior to stating inability to cancel."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.125226084026508,
+    "cache_hit": false,
+    "prompt_tokens": 4885,
+    "completion_tokens": 624
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.456828458001837,
+    "cache_hit": false,
+    "prompt_tokens": 4885,
+    "completion_tokens": 1010
+   }
+  ]
+ },
+ {
+  "case_id": "2922cd65-1265-4557-b5c1-2f4752958a96",
+  "task_id": "29",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.47313104197383,
+    "cache_hit": false,
+    "prompt_tokens": 4374,
+    "completion_tokens": 465
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring, the agent must first call the transfer_to_human_agents tool and then send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.'",
+     "The assistant responded with a transfer request without making the required tool call and without sending the required transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.192559791030362,
+    "cache_hit": false,
+    "prompt_tokens": 4374,
+    "completion_tokens": 637
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time; the assistant made multiple consecutive tool calls (steps 5\u20118) without an intervening assistant response.",
+     "To transfer to a human agent, the assistant must first call transfer_to_human_agents and then send the exact transfer message; the assistant did not perform this when the user requested a transfer."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.860541499918327,
+    "cache_hit": false,
+    "prompt_tokens": 4374,
+    "completion_tokens": 938
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.94,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.428120916942134,
+    "cache_hit": false,
+    "prompt_tokens": 4374,
+    "completion_tokens": 826
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must first obtain the user id (and reservation id) before any actions that update the booking database.",
+     "To transfer, first make a tool call to transfer_to_human_agents, then send the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.825702875037678,
+    "cache_hit": false,
+    "prompt_tokens": 4374,
+    "completion_tokens": 613
+   }
+  ]
+ },
+ {
+  "case_id": "0bb8884a-51eb-45fb-8cb5-b546d995efe2",
+  "task_id": "44",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously.",
+     "If you respond to the user, you should not make a tool call at the same time."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 29.75634458300192,
+    "cache_hit": false,
+    "prompt_tokens": 5814,
+    "completion_tokens": 1117
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 28.90419162507169,
+    "cache_hit": false,
+    "prompt_tokens": 5814,
+    "completion_tokens": 626
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.291218667058274,
+    "cache_hit": false,
+    "prompt_tokens": 5814,
+    "completion_tokens": 801
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.812870166962966,
+    "cache_hit": false,
+    "prompt_tokens": 5814,
+    "completion_tokens": 443
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.114081832929514,
+    "cache_hit": false,
+    "prompt_tokens": 5814,
+    "completion_tokens": 507
+   }
+  ]
+ },
+ {
+  "case_id": "4bbe7503-0478-47a2-bdde-7d5c2a46f7d7",
+  "task_id": "25",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must ensure the rules apply before calling the API (e.g., verify flight availability) and should use data returned by the search tool",
+     "The agent should not assume membership level or provide details not confirmed from user/profile"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.73,
+    "parsed": true,
+    "error": null,
+    "seconds": 32.268107834039256,
+    "cache_hit": false,
+    "prompt_tokens": 3975,
+    "completion_tokens": 1236
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Did not ask for trip type, origin, and destination as required before proceeding with booking"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 2,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 38.45135829097126,
+    "cache_hit": false,
+    "prompt_tokens": 3975,
+    "completion_tokens": 982
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.560657499940135,
+    "cache_hit": false,
+    "prompt_tokens": 3975,
+    "completion_tokens": 853
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.402054958976805,
+    "cache_hit": false,
+    "prompt_tokens": 3975,
+    "completion_tokens": 685
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools (step 9 where flight times and membership level were stated without source)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 34.774077875074,
+    "cache_hit": false,
+    "prompt_tokens": 3975,
+    "completion_tokens": 1123
+   }
+  ]
+ },
+ {
+  "case_id": "32ff1360-417c-4293-95cb-6c9745a84010",
+  "task_id": "18",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 29.480128374998458,
+    "cache_hit": false,
+    "prompt_tokens": 6861,
+    "completion_tokens": 738
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.03492937493138,
+    "cache_hit": false,
+    "prompt_tokens": 6861,
+    "completion_tokens": 728
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.696473166928627,
+    "cache_hit": false,
+    "prompt_tokens": 6861,
+    "completion_tokens": 700
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.334852625033818,
+    "cache_hit": false,
+    "prompt_tokens": 6861,
+    "completion_tokens": 840
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.547304083011113,
+    "cache_hit": false,
+    "prompt_tokens": 6861,
+    "completion_tokens": 653
+   }
+  ]
+ },
+ {
+  "case_id": "ebdca038-9491-4363-85fc-b244ab74eccd",
+  "task_id": "48",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.172948916908354,
+    "cache_hit": false,
+    "prompt_tokens": 6009,
+    "completion_tokens": 1069
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Only make one tool call at a time; the assistant made two tool calls in the same turn (steps 5 and 6)"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 25.40261387510691,
+    "cache_hit": false,
+    "prompt_tokens": 6009,
+    "completion_tokens": 707
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.66769962501712,
+    "cache_hit": false,
+    "prompt_tokens": 6009,
+    "completion_tokens": 1200
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer protocol: after calling transfer_to_human_agents, the assistant must immediately send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' without interleaving other responses."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 19,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.674249000032432,
+    "cache_hit": false,
+    "prompt_tokens": 6009,
+    "completion_tokens": 1302
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.168198125087656,
+    "cache_hit": false,
+    "prompt_tokens": 6009,
+    "completion_tokens": 711
+   }
+  ]
+ },
+ {
+  "case_id": "8388ada1-29c4-49c8-bdca-e3cbc2bc3e34",
+  "task_id": "48",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation before proceeding with a cancellation request."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.87,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.389878666959703,
+    "cache_hit": false,
+    "prompt_tokens": 3372,
+    "completion_tokens": 1080
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.366303500020877,
+    "cache_hit": false,
+    "prompt_tokens": 3372,
+    "completion_tokens": 830
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.745117999962531,
+    "cache_hit": false,
+    "prompt_tokens": 3372,
+    "completion_tokens": 639
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.84768166707363,
+    "cache_hit": false,
+    "prompt_tokens": 3372,
+    "completion_tokens": 484
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.900301542016678,
+    "cache_hit": false,
+    "prompt_tokens": 3372,
+    "completion_tokens": 650
+   }
+  ]
+ },
+ {
+  "case_id": "04f0b2fd-e3e6-44c3-a864-aa19aa61e45e",
+  "task_id": "13",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.51483450003434,
+    "cache_hit": false,
+    "prompt_tokens": 3414,
+    "completion_tokens": 541
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 25.164165000081994,
+    "cache_hit": false,
+    "prompt_tokens": 3414,
+    "completion_tokens": 724
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring, the assistant must first call transfer_to_human_agents and then send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' without additional intervening text."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 10,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.76172379194759,
+    "cache_hit": false,
+    "prompt_tokens": 3414,
+    "completion_tokens": 801
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.099893999984488,
+    "cache_hit": false,
+    "prompt_tokens": 3414,
+    "completion_tokens": 611
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.166581792058423,
+    "cache_hit": false,
+    "prompt_tokens": 3414,
+    "completion_tokens": 691
+   }
+  ]
+ },
+ {
+  "case_id": "71ae5c3e-5bf9-4e5e-80ac-19859f30928a",
+  "task_id": "41",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The policy requires obtaining the reason for cancellation before proceeding with a cancel action.",
+     "When transferring to a human agent, the assistant must make the transfer_to_human_agents tool call and then immediately send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' without interleaving other replies."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 32.05251862492878,
+    "cache_hit": false,
+    "prompt_tokens": 5138,
+    "completion_tokens": 873
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.55696333409287,
+    "cache_hit": false,
+    "prompt_tokens": 5138,
+    "completion_tokens": 678
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.68558612500783,
+    "cache_hit": false,
+    "prompt_tokens": 5138,
+    "completion_tokens": 589
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.9044506669743,
+    "cache_hit": false,
+    "prompt_tokens": 5138,
+    "completion_tokens": 1017
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "After calling transfer_to_human_agents, the assistant must send only the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user. The assistant sent additional explanatory text in step 17 before sending the required message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 17,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.970199582981877,
+    "cache_hit": false,
+    "prompt_tokens": 5138,
+    "completion_tokens": 1181
+   }
+  ]
+ },
+ {
+  "case_id": "8aa6deb8-fea2-4d40-bc16-f11fdd642974",
+  "task_id": "13",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.48960904101841,
+    "cache_hit": false,
+    "prompt_tokens": 3376,
+    "completion_tokens": 885
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 8.005695541971363,
+    "cache_hit": false,
+    "prompt_tokens": 3376,
+    "completion_tokens": 455
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.96809670899529,
+    "cache_hit": false,
+    "prompt_tokens": 3376,
+    "completion_tokens": 835
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 24.17129675007891,
+    "cache_hit": false,
+    "prompt_tokens": 3376,
+    "completion_tokens": 736
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring, the agent must first call transfer_to_human_agents and then immediately send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' without intervening responses."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 10,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.788267291034572,
+    "cache_hit": false,
+    "prompt_tokens": 3376,
+    "completion_tokens": 878
+   }
+  ]
+ },
+ {
+  "case_id": "ae0ab3ac-7dde-48ec-bb18-56c5e3547f79",
+  "task_id": "49",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring, the agent must first make the transfer_to_human_agents tool call and then immediately send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' without any other intervening responses."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.605716665973887,
+    "cache_hit": false,
+    "prompt_tokens": 3384,
+    "completion_tokens": 650
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.156935459002852,
+    "cache_hit": false,
+    "prompt_tokens": 3384,
+    "completion_tokens": 877
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.16705320798792,
+    "cache_hit": false,
+    "prompt_tokens": 3384,
+    "completion_tokens": 903
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.78519750002306,
+    "cache_hit": false,
+    "prompt_tokens": 3384,
+    "completion_tokens": 950
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.724004290997982,
+    "cache_hit": false,
+    "prompt_tokens": 3384,
+    "completion_tokens": 457
+   }
+  ]
+ },
+ {
+  "case_id": "115e988a-52c8-489c-9512-c6dd2a27f64d",
+  "task_id": "8",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.607229916960932,
+    "cache_hit": false,
+    "prompt_tokens": 5648,
+    "completion_tokens": 605
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools",
+     "Provide user\u2011specific details (e.g., membership level) only from fetched data; the assistant assumed the user was a regular member without confirming from the user profile"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.334042500006035,
+    "cache_hit": false,
+    "prompt_tokens": 5648,
+    "completion_tokens": 1030
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided flight pricing (Basic Economy $83, Economy $174, Business $338) that was not sourced from the user or the tool output, violating the rule: \"You should not provide any information, knowledge, or procedures not provided by the user or available tools\"."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.87,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.006379291065969,
+    "cache_hit": false,
+    "prompt_tokens": 5648,
+    "completion_tokens": 1000
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 4,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.657918874989264,
+    "cache_hit": false,
+    "prompt_tokens": 5648,
+    "completion_tokens": 705
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.208252292010002,
+    "cache_hit": false,
+    "prompt_tokens": 5648,
+    "completion_tokens": 817
+   }
+  ]
+ },
+ {
+  "case_id": "e3e421c9-18b8-4a49-a799-b7db1c05e72a",
+  "task_id": "19",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.08497950003948,
+    "cache_hit": false,
+    "prompt_tokens": 4065,
+    "completion_tokens": 783
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously.",
+     "Before taking any actions that update the booking database (e.g., canceling a reservation), you must list the action details and obtain explicit user confirmation. The agent assumed travel insurance existed without verifying it in the reservation data."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 39.72842658299487,
+    "cache_hit": false,
+    "prompt_tokens": 4065,
+    "completion_tokens": 1317
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.598366208025254,
+    "cache_hit": false,
+    "prompt_tokens": 4065,
+    "completion_tokens": 883
+   },
+   {
+    "repeat": 3,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 29.564384500030428,
+    "cache_hit": false,
+    "prompt_tokens": 4065,
+    "completion_tokens": 812
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.71216649992857,
+    "cache_hit": false,
+    "prompt_tokens": 4065,
+    "completion_tokens": 641
+   }
+  ]
+ },
+ {
+  "case_id": "d69c3a70-acb1-4e25-8729-50906e512e9b",
+  "task_id": "12",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously.",
+     "First, the agent must obtain the user id and reservation id before modifying a reservation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.954010833986104,
+    "cache_hit": false,
+    "prompt_tokens": 4279,
+    "completion_tokens": 951
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Must transfer to a human agent if request cannot be handled within scope; requires calling transfer_to_human_agents tool before informing user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.788998999982141,
+    "cache_hit": false,
+    "prompt_tokens": 4279,
+    "completion_tokens": 696
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.804194665979594,
+    "cache_hit": false,
+    "prompt_tokens": 4279,
+    "completion_tokens": 637
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "If a request cannot be handled within the agent's scope, the agent must transfer to a human agent by first calling the transfer_to_human_agents tool and then sending the transfer message. The agent offered to transfer for splitting the reservation but never made the required tool call."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.977242042077705,
+    "cache_hit": false,
+    "prompt_tokens": 4279,
+    "completion_tokens": 1332
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must first obtain the user id from the user before taking actions that modify a reservation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.418194250087254,
+    "cache_hit": false,
+    "prompt_tokens": 4279,
+    "completion_tokens": 745
+   }
+  ]
+ },
+ {
+  "case_id": "6738c4f4-a040-4e59-9641-e835511e66c4",
+  "task_id": "49",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.057988457963802,
+    "cache_hit": false,
+    "prompt_tokens": 3533,
+    "completion_tokens": 768
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.192512625013478,
+    "cache_hit": false,
+    "prompt_tokens": 3533,
+    "completion_tokens": 573
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.605043458053842,
+    "cache_hit": false,
+    "prompt_tokens": 3533,
+    "completion_tokens": 658
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.140571249998175,
+    "cache_hit": false,
+    "prompt_tokens": 3533,
+    "completion_tokens": 749
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.230802582926117,
+    "cache_hit": false,
+    "prompt_tokens": 3533,
+    "completion_tokens": 537
+   }
+  ]
+ },
+ {
+  "case_id": "a1f9ba2b-b7a1-4879-8eb3-634e878f15d6",
+  "task_id": "15",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.48454804206267,
+    "cache_hit": false,
+    "prompt_tokens": 5365,
+    "completion_tokens": 582
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.29984379198868,
+    "cache_hit": false,
+    "prompt_tokens": 5365,
+    "completion_tokens": 736
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided policy information (that origin/destination cannot be changed) which was not supplied by the user or obtained via a tool, violating the rule against providing information not from the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.78,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.60055970796384,
+    "cache_hit": false,
+    "prompt_tokens": 5365,
+    "completion_tokens": 686
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.576063166954555,
+    "cache_hit": false,
+    "prompt_tokens": 5365,
+    "completion_tokens": 821
+   },
+   {
+    "repeat": 4,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 16.338676832965575,
+    "cache_hit": false,
+    "prompt_tokens": 5365,
+    "completion_tokens": 1013
+   }
+  ]
+ },
+ {
+  "case_id": "4ed03dbd-7634-46a8-932d-987f122452cf",
+  "task_id": "1",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user.",
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 17,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 33.244888375047594,
+    "cache_hit": false,
+    "prompt_tokens": 4693,
+    "completion_tokens": 1261
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 29.684467375045642,
+    "cache_hit": false,
+    "prompt_tokens": 4693,
+    "completion_tokens": 660
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 32.6054779170081,
+    "cache_hit": false,
+    "prompt_tokens": 4693,
+    "completion_tokens": 840
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.757185916998424,
+    "cache_hit": false,
+    "prompt_tokens": 4693,
+    "completion_tokens": 795
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 29.875143250101246,
+    "cache_hit": false,
+    "prompt_tokens": 4693,
+    "completion_tokens": 1053
+   }
+  ]
+ },
+ {
+  "case_id": "da235a5c-e4a7-4f79-bfd3-5e3f268ae8d5",
+  "task_id": "4",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.28415225003846,
+    "cache_hit": false,
+    "prompt_tokens": 4941,
+    "completion_tokens": 1003
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 29.94078479206655,
+    "cache_hit": false,
+    "prompt_tokens": 4941,
+    "completion_tokens": 782
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.67283741699066,
+    "cache_hit": false,
+    "prompt_tokens": 4941,
+    "completion_tokens": 769
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.631747333100066,
+    "cache_hit": false,
+    "prompt_tokens": 4941,
+    "completion_tokens": 642
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.53710320801474,
+    "cache_hit": false,
+    "prompt_tokens": 4941,
+    "completion_tokens": 861
+   }
+  ]
+ },
+ {
+  "case_id": "155cac6b-5d37-49d4-b9d2-7a085f3e0a6e",
+  "task_id": "29",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user ID from the user before taking any actions that update the booking database; the agent proceeded with update_reservation_flights without the user explicitly providing their user ID.",
+     "The agent performed a database-modifying action (update_reservation_flights) without first explicitly confirming the action details after obtaining the user ID."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.721943959011696,
+    "cache_hit": false,
+    "prompt_tokens": 5845,
+    "completion_tokens": 689
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must first obtain the user ID from the user before accessing reservation details or performing any booking modifications."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 42.49453458294738,
+    "cache_hit": false,
+    "prompt_tokens": 5845,
+    "completion_tokens": 1040
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must first obtain the user id from the user before taking actions that update the booking database (modify flight)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.175185750005767,
+    "cache_hit": false,
+    "prompt_tokens": 5845,
+    "completion_tokens": 685
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must first obtain the user id from the user before using it or performing actions that affect the reservation.",
+     "The agent must obtain explicit user confirmation before taking any action that updates the booking database."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 4,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 35.66006087500136,
+    "cache_hit": false,
+    "prompt_tokens": 5845,
+    "completion_tokens": 1216
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user ID from the user before performing any actions that modify a reservation (policy for modifying flights).",
+     "The agent performed a reservation lookup and later updates without first receiving the user ID from the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.654399582999758,
+    "cache_hit": false,
+    "prompt_tokens": 5845,
+    "completion_tokens": 763
+   }
+  ]
+ },
+ {
+  "case_id": "4bcdb0ae-391e-4f92-bcde-058e13873657",
+  "task_id": "19",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.406223916099407,
+    "cache_hit": false,
+    "prompt_tokens": 4343,
+    "completion_tokens": 740
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring, after calling transfer_to_human_agents the agent must send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' without additional content beforehand."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 17,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 44.74506291595753,
+    "cache_hit": false,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1105
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.140892833005637,
+    "cache_hit": false,
+    "prompt_tokens": 4343,
+    "completion_tokens": 884
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.096540999948047,
+    "cache_hit": false,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1014
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.593348250025883,
+    "cache_hit": false,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1410
+   }
+  ]
+ },
+ {
+  "case_id": "dbdfb975-51b8-4c78-880f-ed0c9b714ca8",
+  "task_id": "1",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.38247275003232,
+    "cache_hit": false,
+    "prompt_tokens": 4675,
+    "completion_tokens": 778
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring to a human agent, the assistant must first make a tool call to transfer_to_human_agents before sending the transfer message.",
+     "Only one tool call should be made at a time; multiple reservation lookups were performed without awaiting each result."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 16,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.482223500031978,
+    "cache_hit": false,
+    "prompt_tokens": 4675,
+    "completion_tokens": 1021
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.934540790971369,
+    "cache_hit": false,
+    "prompt_tokens": 4675,
+    "completion_tokens": 1060
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "When transferring to a human agent, the assistant must first make a tool call to transfer_to_human_agents and then send the exact message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' (Policy: Transfer procedure)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 17,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.865011500078253,
+    "cache_hit": false,
+    "prompt_tokens": 4675,
+    "completion_tokens": 977
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.088283292017877,
+    "cache_hit": false,
+    "prompt_tokens": 4675,
+    "completion_tokens": 936
+   }
+  ]
+ },
+ {
+  "case_id": "e976fa8e-163d-4711-a6bb-d18923312fe7",
+  "task_id": "11",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.191454291925766,
+    "cache_hit": false,
+    "prompt_tokens": 5307,
+    "completion_tokens": 638
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.5066615419928,
+    "cache_hit": false,
+    "prompt_tokens": 5307,
+    "completion_tokens": 820
+   },
+   {
+    "repeat": 2,
+    "compliant": null,
+    "violated_rules": null,
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": null,
+    "parsed": false,
+    "error": null,
+    "seconds": 15.552327541983686,
+    "cache_hit": false,
+    "prompt_tokens": 5307,
+    "completion_tokens": 1030
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided a basic economy price ($99) for the return flight that was not present in the tool's search results (which showed $95), violating the rule that the assistant must not provide information not supplied by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 25.202369541977532,
+    "cache_hit": false,
+    "prompt_tokens": 5307,
+    "completion_tokens": 1038
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.163305541034788,
+    "cache_hit": false,
+    "prompt_tokens": 5307,
+    "completion_tokens": 991
+   }
+  ]
+ }
+]

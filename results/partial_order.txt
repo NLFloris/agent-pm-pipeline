@@ -1,0 +1,18 @@
+tau2-bench airline, 200 runs, tool events only
+  runs with at least one turn of several calls: 170
+  steps 746, of which 305 hold more than one event (largest 12)
+  flat succession relations 1377, of which 830 are within-turn pairs (60%)
+  partial-order succession relations 3133
+  distinct edges: flat 81, partial 84, 5 exist only because of serialisation: [('book_reservation', 'book_reservation'), ('cancel_reservation', 'cancel_reservation'), ('cancel_reservation', 'get_reservation_details'), ('get_reservation_details', 'list_all_airports'), ('get_user_details', 'list_all_airports')]
+
+four directly-follows graphs from the same runs
+  flat (pipeline)         81 distinct edges,  1377 relations   serialises (equals the flat DFG); 830 relations are within-turn pairs
+  partial (pipeline)      84 distinct edges,  3133 relations   respects the partial order (equals the pipeline's)
+  pm4py discover_dfg      81 distinct edges,  1377 relations   serialises (equals the flat DFG); 830 relations are within-turn pairs
+  pm4py discover_ocdfg    81 distinct edges,  1377 relations   serialises (equals the flat DFG); 830 relations are within-turn pairs
+
+Reading: OCEL 2.0 can hold events with an identical time, and the log written here does.
+Neither pm4py algorithm uses that: both sort by time and count consecutive pairs, so a
+shared timestamp changes nothing. Respecting the partial order needs the discovery to read
+steps, which the pipeline's own DFG does. The verdicts that flip under reshuffling
+(experiments/run_three_corpora.py) are the conformance-side cost of the same serialisation.

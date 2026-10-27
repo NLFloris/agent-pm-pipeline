@@ -1,0 +1,32 @@
+pm4py 2.7.23.8  (regenerate: python experiments/discover.py --data ~/Downloads --out results/pm4py)
+
+[tau2_airline]  200 traces, 1576 tool events, 13 activities
+  pm4py.discover_dfg                 81 edges
+  discover_petri_net_inductive       29 places, 43 transitions, noise 0.2
+  discover_ocdfg / discover_oc_petri_net on tau2_airline.ocel.json: 1576 events, object types [flight, payment, reservation, route, run, user]
+
+[te_magentic]  74 traces, 2288 tool events, 15 activities
+  pm4py.discover_dfg                 66 edges
+  discover_petri_net_inductive       22 places, 27 transitions, noise 0.2
+  discover_ocdfg / discover_oc_petri_net: 2288 events, object types [agent, run]
+
+[local_magentic]  8 traces, 109 tool events, 6 activities
+  pm4py.discover_dfg                 11 edges
+  discover_petri_net_inductive       9 places, 14 transitions, noise 0.0
+  discover_ocdfg / discover_oc_petri_net: 109 events, object types [agent, run]
+
+[discover-then-check on tau2]  mine from 135 compliant runs, replay 172
+  model: 17 places, 27 transitions
+
+  mean fitness by ground truth
+    tbr_fitness            compliant 0.9163   violating 0.9114   gap +0.0049
+    alignment_fitness      compliant 0.6900   violating 0.5775   gap +0.1125
+    declarative_fitness    compliant 0.9842   violating 0.7900   gap +0.1942
+
+  as a violation detector (positive = protocol violation)
+    method                                    prec   rec    F1  kappa
+    pm4py token replay, fitness < 1           0.24  0.95  0.39   0.07
+    pm4py alignments, fitness < 1             0.22  0.95  0.36   0.02
+    declarative engine (ours), any violation  0.73  0.59  0.66   0.57
+
+  pm4py alignments and our engine give the same verdict on 42/172 runs

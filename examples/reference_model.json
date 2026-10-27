@@ -1,0 +1,7 @@
+{
+  "name": "retrieval-qa-protocol",
+  "required": ["retrieve", "answer"],
+  "precedence": [["retrieve", "answer"]],
+  "forbidden_after": [["answer", "retrieve"]],
+  "end_activities": ["answer"]
+}

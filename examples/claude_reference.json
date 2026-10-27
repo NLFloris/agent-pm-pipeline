@@ -1,0 +1,6 @@
+{
+  "name": "claude-code-editing-protocol",
+  "required": ["Read", "Edit"],
+  "precedence": [["Read", "Edit"], ["Read", "Write"]],
+  "end_activities": ["Bash", "Read", "Write", "Edit", "TodoWrite", "Workflow", "AskUserQuestion", "WebSearch", "WebFetch", "Agent", "ToolSearch"]
+}

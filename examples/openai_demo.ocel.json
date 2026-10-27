@@ -1,0 +1,529 @@
+{
+ "eventTypes": [
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "type": "string"
+    },
+    {
+     "name": "input",
+     "type": "string"
+    },
+    {
+     "name": "output",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "span_type",
+     "type": "string"
+    }
+   ],
+   "name": "answer"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "type": "string"
+    },
+    {
+     "name": "from_agent",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "span_type",
+     "type": "string"
+    },
+    {
+     "name": "to_agent",
+     "type": "string"
+    }
+   ],
+   "name": "handoff"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "type": "string"
+    },
+    {
+     "name": "input",
+     "type": "string"
+    },
+    {
+     "name": "model",
+     "type": "string"
+    },
+    {
+     "name": "output",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "span_type",
+     "type": "string"
+    },
+    {
+     "name": "usage",
+     "type": "string"
+    }
+   ],
+   "name": "llm_call"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "type": "string"
+    },
+    {
+     "name": "input",
+     "type": "string"
+    },
+    {
+     "name": "output",
+     "type": "string"
+    },
+    {
+     "name": "span_id",
+     "type": "string"
+    },
+    {
+     "name": "span_type",
+     "type": "string"
+    }
+   ],
+   "name": "retrieve"
+  }
+ ],
+ "events": [
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "value": "2026-07-08T09:00:01.000000+00:00"
+    },
+    {
+     "name": "input",
+     "value": "[{\"content\": \"What does the EU AI Act require from providers?\", \"role\": \"user\"}]"
+    },
+    {
+     "name": "model",
+     "value": "gpt-4o-mini"
+    },
+    {
+     "name": "output",
+     "value": "[{\"content\": \"Routing to Research.\", \"role\": \"assistant\"}]"
+    },
+    {
+     "name": "span_id",
+     "value": "span_002_gen"
+    },
+    {
+     "name": "span_type",
+     "value": "generation"
+    },
+    {
+     "name": "usage",
+     "value": "{\"input_tokens\": 41, \"output_tokens\": 9}"
+    }
+   ],
+   "id": "trace_demo_retrieval_001:000000",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Triage",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:llm_call",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2026-07-08T09:00:00.200000+00:00",
+   "type": "llm_call"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "value": "2026-07-08T09:00:01.250000+00:00"
+    },
+    {
+     "name": "from_agent",
+     "value": "Triage"
+    },
+    {
+     "name": "span_id",
+     "value": "span_003_handoff"
+    },
+    {
+     "name": "span_type",
+     "value": "handoff"
+    },
+    {
+     "name": "to_agent",
+     "value": "Research"
+    }
+   ],
+   "id": "trace_demo_retrieval_001:000001",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Triage",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:handoff",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2026-07-08T09:00:01.200000+00:00",
+   "type": "handoff"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "value": "2026-07-08T09:00:02.600000+00:00"
+    },
+    {
+     "name": "input",
+     "value": "[{\"content\": \"What does the EU AI Act require from providers?\", \"role\": \"user\"}]"
+    },
+    {
+     "name": "model",
+     "value": "gpt-4o-mini"
+    },
+    {
+     "name": "output",
+     "value": "[{\"content\": \"I will consult the corpus first.\", \"role\": \"assistant\"}]"
+    },
+    {
+     "name": "span_id",
+     "value": "span_005_gen"
+    },
+    {
+     "name": "span_type",
+     "value": "generation"
+    },
+    {
+     "name": "usage",
+     "value": "{\"input_tokens\": 58, \"output_tokens\": 12}"
+    }
+   ],
+   "id": "trace_demo_retrieval_001:000002",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Research",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:llm_call",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2026-07-08T09:00:01.400000+00:00",
+   "type": "llm_call"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "value": "2026-07-08T09:00:03.900000+00:00"
+    },
+    {
+     "name": "input",
+     "value": "{\"query\": \"EU AI Act provider obligations\"}"
+    },
+    {
+     "name": "output",
+     "value": "3 passages retrieved"
+    },
+    {
+     "name": "span_id",
+     "value": "span_006_func_retrieve"
+    },
+    {
+     "name": "span_type",
+     "value": "function"
+    }
+   ],
+   "id": "trace_demo_retrieval_001:000003",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Research",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:retrieve",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2026-07-08T09:00:02.700000+00:00",
+   "type": "retrieve"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "value": "2026-07-08T09:00:05.400000+00:00"
+    },
+    {
+     "name": "input",
+     "value": "[{\"content\": \"retrieved context attached\", \"role\": \"system\"}]"
+    },
+    {
+     "name": "model",
+     "value": "gpt-4o-mini"
+    },
+    {
+     "name": "output",
+     "value": "[{\"content\": \"Drafting a grounded answer.\", \"role\": \"assistant\"}]"
+    },
+    {
+     "name": "span_id",
+     "value": "span_007_gen"
+    },
+    {
+     "name": "span_type",
+     "value": "generation"
+    },
+    {
+     "name": "usage",
+     "value": "{\"input_tokens\": 512, \"output_tokens\": 74}"
+    }
+   ],
+   "id": "trace_demo_retrieval_001:000004",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Research",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:llm_call",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2026-07-08T09:00:04+00:00",
+   "type": "llm_call"
+  },
+  {
+   "attributes": [
+    {
+     "name": "ended_at",
+     "value": "2026-07-08T09:00:05.600000+00:00"
+    },
+    {
+     "name": "input",
+     "value": "{\"summary\": \"documentation, monitoring, and risk-management obligations\"}"
+    },
+    {
+     "name": "output",
+     "value": "final answer delivered"
+    },
+    {
+     "name": "span_id",
+     "value": "span_008_func_answer"
+    },
+    {
+     "name": "span_type",
+     "value": "function"
+    }
+   ],
+   "id": "trace_demo_retrieval_001:000005",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:Research",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:answer",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2026-07-08T09:00:05.500000+00:00",
+   "type": "answer"
+  }
+ ],
+ "objectTypes": [
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "type": "string"
+    }
+   ],
+   "name": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "workflow_name",
+     "type": "string"
+    }
+   ],
+   "name": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "type": "string"
+    }
+   ],
+   "name": "tool"
+  }
+ ],
+ "objects": [
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2026-07-08T09:00:01.400000+00:00",
+     "value": "Research"
+    }
+   ],
+   "id": "agent:Research",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "participates_in"
+    }
+   ],
+   "type": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2026-07-08T09:00:00.200000+00:00",
+     "value": "Triage"
+    }
+   ],
+   "id": "agent:Triage",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "participates_in"
+    }
+   ],
+   "type": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2026-07-08T09:00:05.500000+00:00",
+     "value": "answer"
+    }
+   ],
+   "id": "tool:answer",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2026-07-08T09:00:01.200000+00:00",
+     "value": "handoff"
+    }
+   ],
+   "id": "tool:handoff",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2026-07-08T09:00:00.200000+00:00",
+     "value": "llm_call"
+    }
+   ],
+   "id": "tool:llm_call",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2026-07-08T09:00:02.700000+00:00",
+     "value": "retrieve"
+    }
+   ],
+   "id": "tool:retrieve",
+   "relationships": [
+    {
+     "objectId": "trace_demo_retrieval_001",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "workflow_name",
+     "time": "2026-07-08T09:00:00.200000+00:00",
+     "value": "retrieval-qa-demo"
+    }
+   ],
+   "id": "trace_demo_retrieval_001",
+   "relationships": [],
+   "type": "run"
+  }
+ ]
+}

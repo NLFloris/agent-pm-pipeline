@@ -1,0 +1,230 @@
+{
+ "task_id": "smoke-001",
+ "messages": [
+  {
+   "type": "TextMessage",
+   "source": "user",
+   "created_at": "2026-10-19T09:45:43.387463+00:00",
+   "received_at": "2026-10-19T09:45:43.402972+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "Compute Q1 revenue for the north region."
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "FileSurfer",
+   "created_at": "2026-10-19T09:45:43.398252+00:00",
+   "received_at": "2026-10-19T09:45:43.404033+00:00",
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "call_1",
+      "name": "list_files",
+      "arguments": "{}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "FileSurfer",
+   "created_at": "2026-10-19T09:45:43.404120+00:00",
+   "received_at": "2026-10-19T09:45:43.410506+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "call_1",
+      "name": "list_files",
+      "is_error": false,
+      "content": "calc.py  136 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallSummaryMessage",
+   "source": "FileSurfer",
+   "created_at": "2026-10-19T09:45:43.405012+00:00",
+   "received_at": "2026-10-19T09:45:43.412782+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "calc.py  136 bytes\nnotes.md  137 bytes\nsales.csv  128 bytes"
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "Coder",
+   "created_at": "2026-10-19T09:45:43.415104+00:00",
+   "received_at": "2026-10-19T09:45:43.420251+00:00",
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "call_3",
+      "name": "run_python",
+      "arguments": "{\"code\": \"print(120*9.5)\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "Coder",
+   "created_at": "2026-10-19T09:45:43.438963+00:00",
+   "received_at": "2026-10-19T09:45:43.446072+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "call_3",
+      "name": "run_python",
+      "is_error": false,
+      "content": "1140.0\n"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallSummaryMessage",
+   "source": "Coder",
+   "created_at": "2026-10-19T09:45:43.439932+00:00",
+   "received_at": "2026-10-19T09:45:43.449158+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "1140.0\n"
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "FileSurfer",
+   "created_at": "2026-10-19T09:45:43.452690+00:00",
+   "received_at": "2026-10-19T09:45:43.455480+00:00",
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "call_2",
+      "name": "read_file",
+      "arguments": "{\"path\": \"sales.csv\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "FileSurfer",
+   "created_at": "2026-10-19T09:45:43.456109+00:00",
+   "received_at": "2026-10-19T09:45:43.465697+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "call_2",
+      "name": "read_file",
+      "is_error": false,
+      "content": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallSummaryMessage",
+   "source": "FileSurfer",
+   "created_at": "2026-10-19T09:45:43.456935+00:00",
+   "received_at": "2026-10-19T09:45:43.468103+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "region,quarter,units,price\nnorth,Q1,120,9.5\nnorth,Q2,140,9.5\nsouth,Q1,95,11.0\nsouth,Q2,160,11.0\neast,Q1,80,9.5\neast,Q2,75,12.25\n"
+   }
+  },
+  {
+   "type": "ToolCallRequestEvent",
+   "source": "Coder",
+   "created_at": "2026-10-19T09:45:43.470847+00:00",
+   "received_at": "2026-10-19T09:45:43.474348+00:00",
+   "prompt_tokens": 10,
+   "completion_tokens": 5,
+   "payload": {
+    "items": [
+     {
+      "kind": "call",
+      "id": "call_4",
+      "name": "write_file",
+      "arguments": "{\"path\": \"answer.txt\", \"content\": \"1140.0\"}"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallExecutionEvent",
+   "source": "Coder",
+   "created_at": "2026-10-19T09:45:43.475270+00:00",
+   "received_at": "2026-10-19T09:45:43.481123+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "items": [
+     {
+      "kind": "result",
+      "call_id": "call_4",
+      "name": "write_file",
+      "is_error": false,
+      "content": "wrote 6 characters to answer.txt"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ToolCallSummaryMessage",
+   "source": "Coder",
+   "created_at": "2026-10-19T09:45:43.475996+00:00",
+   "received_at": "2026-10-19T09:45:43.483072+00:00",
+   "prompt_tokens": null,
+   "completion_tokens": null,
+   "payload": {
+    "text": "wrote 6 characters to answer.txt"
+   }
+  },
+  {
+   "type": "TextMessage",
+   "source": "FileSurfer",
+   "created_at": "2026-10-19T09:45:43.486238+00:00",
+   "received_at": "2026-10-19T09:45:43.492466+00:00",
+   "prompt_tokens": 33,
+   "completion_tokens": 5,
+   "payload": {
+    "text": "FileSurfer: sales.csv has six rows."
+   }
+  },
+  {
+   "type": "TextMessage",
+   "source": "Coder",
+   "created_at": "2026-10-19T09:45:43.495596+00:00",
+   "received_at": "2026-10-19T09:45:43.504111+00:00",
+   "prompt_tokens": 48,
+   "completion_tokens": 4,
+   "payload": {
+    "text": "Coder: wrote the answer."
+   }
+  }
+ ]
+}

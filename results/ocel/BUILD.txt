@@ -1,0 +1,57 @@
+pm4py 2.7.23.8
+
+[tau2_airline]  -> results/ocel/tau2_airline.ocel.json  (5.5 MB)
+  events   1576   objects   1777   E2O relations   6627
+  object types: agent(1), flight(295), payment(139), reservation(615), route(325), run(200), tool(13), user(189)
+  events touching a business object (beyond run, agent, tool): 1454/1576  (92%)
+  steps with more than one event (shared timestamp): 305
+  reload in pm4py.read_ocel2_json: ok (1576 events, 6627 relations)
+
+[tau2_airline_with_messages]  -> results/ocel/tau2_airline_with_messages.ocel.json  (9.3 MB)
+  events   3990   objects   1780   E2O relations  13869
+  object types: agent(2), flight(295), payment(139), reservation(615), route(325), run(200), tool(15), user(189)
+  events touching a business object (beyond run, agent, tool): 1454/3990  (36%)
+  steps with more than one event (shared timestamp): 532
+  reload in pm4py.read_ocel2_json: ok (3990 events, 13869 relations)
+
+[te_magentic]  -> results/ocel/te_magentic.ocel.json  (8.3 MB)
+  events   2288   objects     96   E2O relations   6864
+  object types: agent(7), run(74), tool(15)
+  events touching a business object (beyond run, agent, tool): 0/2288  (0%)
+  steps with more than one event (shared timestamp): 0
+  reload in pm4py.read_ocel2_json: ok (2288 events, 6864 relations)
+
+[te_swe]  -> results/ocel/te_swe.ocel.json  (4.4 MB)
+  events   1599   objects     56   E2O relations   4797
+  object types: agent(7), run(44), tool(5)
+  events touching a business object (beyond run, agent, tool): 0/1599  (0%)
+  steps with more than one event (shared timestamp): 0
+  reload in pm4py.read_ocel2_json: ok (1599 events, 4797 relations)
+
+[agenthallu_magentic]  -> results/ocel/agenthallu_magentic.ocel.json  (1.1 MB)
+  events    975   objects    110   E2O relations   2925
+  object types: agent(4), run(94), tool(12)
+  events touching a business object (beyond run, agent, tool): 0/975  (0%)
+  steps with more than one event (shared timestamp): 0
+  reload in pm4py.read_ocel2_json: ok (975 events, 2925 relations)
+
+[local_magentic]  -> results/ocel/local_magentic.ocel.json  (0.2 MB)
+  events    109   objects     19   E2O relations    327
+  object types: agent(5), run(8), tool(6)
+  events touching a business object (beyond run, agent, tool): 0/109  (0%)
+  steps with more than one event (shared timestamp): 0
+  reload in pm4py.read_ocel2_json: ok (109 events, 327 relations)
+
+[otel_live]  -> results/ocel/otel_live.ocel.json  (0.1 MB)
+  events     92   objects     18   E2O relations    276
+  object types: agent(3), run(8), tool(7)
+  events touching a business object (beyond run, agent, tool): 0/92  (0%)
+  steps with more than one event (shared timestamp): 0
+  reload in pm4py.read_ocel2_json: ok (92 events, 276 relations)
+
+[local_subagents]  -> results/ocel/local_subagents.ocel.json  (0.3 MB)
+  events    239   objects     23   E2O relations    736
+  object types: agent(7), run(10), tool(6)
+  events touching a business object (beyond run, agent, tool): 0/239  (0%)
+  steps with more than one event (shared timestamp): 1
+  reload in pm4py.read_ocel2_json: ok (239 events, 736 relations)

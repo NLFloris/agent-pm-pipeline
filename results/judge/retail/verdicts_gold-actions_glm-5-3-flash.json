@@ -1,0 +1,3023 @@
+[
+ {
+  "case_id": "b2f33a65-92c9-44b7-846d-22f000f65202",
+  "task_id": "11",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.85882512491662,
+    "cache_hit": false,
+    "prompt_tokens": 2794,
+    "completion_tokens": 542
+   }
+  ]
+ },
+ {
+  "case_id": "1bc5fbf8-c248-4e23-8f3a-9df4feedbd85",
+  "task_id": "40",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.419107125024311,
+    "cache_hit": false,
+    "prompt_tokens": 1902,
+    "completion_tokens": 323
+   }
+  ]
+ },
+ {
+  "case_id": "83c85330-b3bb-4db0-b67a-41f20d22f813",
+  "task_id": "50",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "transfer_to_human_agents"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 12,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 184.3575135000283,
+    "cache_hit": false,
+    "prompt_tokens": 1728,
+    "completion_tokens": 7757
+   }
+  ]
+ },
+ {
+  "case_id": "984b3c1f-6868-4494-b046-9aa4e742b6e9",
+  "task_id": "55",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 25.27160720899701,
+    "cache_hit": false,
+    "prompt_tokens": 5854,
+    "completion_tokens": 639
+   }
+  ]
+ },
+ {
+  "case_id": "e7c2688e-2daf-4402-b1b2-5dde31d8f0dc",
+  "task_id": "13",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.885313707985915,
+    "cache_hit": false,
+    "prompt_tokens": 2711,
+    "completion_tokens": 447
+   }
+  ]
+ },
+ {
+  "case_id": "9eecb84d-fefe-4d1b-8b1a-2a6e3f11dfb7",
+  "task_id": "88",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 9.835593999945559,
+    "cache_hit": false,
+    "prompt_tokens": 2393,
+    "completion_tokens": 224
+   }
+  ]
+ },
+ {
+  "case_id": "158a43a1-3b89-4bd0-a890-deaca3617ec4",
+  "task_id": "16",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "calculate (3131.1 + 4777.75 + 367.38)",
+     "cancel_pending_order (#W5199551, reason: no longer needed)",
+     "cancel_pending_order (#W8665881, reason: no longer needed)",
+     "return_delivered_order_items (#W9389413, item 2554056026, paypal_5364164)"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 12,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.130934458924457,
+    "cache_hit": false,
+    "prompt_tokens": 2893,
+    "completion_tokens": 1180
+   }
+  ]
+ },
+ {
+  "case_id": "7ff7c513-e558-43a1-866b-68e96720c25f",
+  "task_id": "10",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [
+     "transfer_to_human_agents"
+    ],
+    "first_violation_step": 17,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.003948917030357,
+    "cache_hit": false,
+    "prompt_tokens": 3073,
+    "completion_tokens": 461
+   }
+  ]
+ },
+ {
+  "case_id": "89a1d57f-ed8d-4235-9480-960b3bcd145d",
+  "task_id": "69",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.693745875032619,
+    "cache_hit": false,
+    "prompt_tokens": 2636,
+    "completion_tokens": 355
+   }
+  ]
+ },
+ {
+  "case_id": "8d5b118a-8337-4f36-98a3-a63f02003810",
+  "task_id": "2",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_product_details"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 35.0036283750087,
+    "cache_hit": false,
+    "prompt_tokens": 4275,
+    "completion_tokens": 1201
+   }
+  ]
+ },
+ {
+  "case_id": "81d66148-c22a-43b8-8e90-2b70791972e6",
+  "task_id": "23",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 27.62524070800282,
+    "cache_hit": false,
+    "prompt_tokens": 5241,
+    "completion_tokens": 823
+   }
+  ]
+ },
+ {
+  "case_id": "c9e7979c-c823-49cc-b5f5-235b303de129",
+  "task_id": "65",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.971792167052627,
+    "cache_hit": false,
+    "prompt_tokens": 2206,
+    "completion_tokens": 300
+   }
+  ]
+ },
+ {
+  "case_id": "6f93640c-d094-495f-a634-c9479bb16030",
+  "task_id": "59",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.60299920802936,
+    "cache_hit": false,
+    "prompt_tokens": 3181,
+    "completion_tokens": 363
+   }
+  ]
+ },
+ {
+  "case_id": "d192ae09-32e9-4513-970b-bee1659d7795",
+  "task_id": "7",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.88843162509147,
+    "cache_hit": false,
+    "prompt_tokens": 3809,
+    "completion_tokens": 618
+   }
+  ]
+ },
+ {
+  "case_id": "535f7a0a-b5fc-4e4e-a9ce-481a97a72249",
+  "task_id": "8",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.425598166999407,
+    "cache_hit": false,
+    "prompt_tokens": 3307,
+    "completion_tokens": 920
+   }
+  ]
+ },
+ {
+  "case_id": "65c87d6f-6b08-4404-99bd-9ca87fece231",
+  "task_id": "94",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.650389333022758,
+    "cache_hit": false,
+    "prompt_tokens": 3332,
+    "completion_tokens": 376
+   }
+  ]
+ },
+ {
+  "case_id": "809b5aa9-17ad-49cf-a335-1ad37cc09af3",
+  "task_id": "72",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_pending_order_address"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 22,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 44.6924395840615,
+    "cache_hit": false,
+    "prompt_tokens": 4093,
+    "completion_tokens": 1595
+   }
+  ]
+ },
+ {
+  "case_id": "928ccbbf-f77b-4708-ae96-30ff6357ba62",
+  "task_id": "84",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.801355083938688,
+    "cache_hit": false,
+    "prompt_tokens": 3170,
+    "completion_tokens": 326
+   }
+  ]
+ },
+ {
+  "case_id": "1baf5bf1-f349-4a0a-b7d8-547ca2759f98",
+  "task_id": "49",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "calculate"
+    ],
+    "wrong_arguments": [
+     "exchange_delivered_order_items"
+    ],
+    "first_violation_step": 18,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 39.24141395802144,
+    "cache_hit": false,
+    "prompt_tokens": 4363,
+    "completion_tokens": 1414
+   }
+  ]
+ },
+ {
+  "case_id": "5b5b7b03-b9e5-4fde-9b58-7ad49a419c27",
+  "task_id": "19",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.25890920800157,
+    "cache_hit": false,
+    "prompt_tokens": 3968,
+    "completion_tokens": 454
+   }
+  ]
+ },
+ {
+  "case_id": "28ca61a3-f427-43cb-9588-2939a5f806c7",
+  "task_id": "47",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_order_details (order_id #9502126)",
+     "get_order_details (order_id #9502127)",
+     "calculate (622.12 + 473.43)",
+     "calculate (2623.69 - 1095.55)"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 8,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 64.67715904209763,
+    "cache_hit": false,
+    "prompt_tokens": 3285,
+    "completion_tokens": 2597
+   }
+  ]
+ },
+ {
+  "case_id": "9fc7fbc5-e450-476c-86be-0588cad19c3a",
+  "task_id": "2",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_product_details"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 6,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 37.213186209090054,
+    "cache_hit": false,
+    "prompt_tokens": 3947,
+    "completion_tokens": 1352
+   }
+  ]
+ },
+ {
+  "case_id": "a614f967-50e8-4ffe-a16d-e040bcf89b1c",
+  "task_id": "100",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_pending_order_items",
+     "return_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 20,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 28.795642749988474,
+    "cache_hit": false,
+    "prompt_tokens": 4534,
+    "completion_tokens": 919
+   }
+  ]
+ },
+ {
+  "case_id": "3477f9ee-8058-4bc1-b2f0-8c63a9d88501",
+  "task_id": "32",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_order_details({\"order_id\": \"#W9373487\"}) (second call before cancellation)",
+     "get_order_details({\"order_id\": \"#W5481803\"}) (second call before cancellation)",
+     "get_order_details({\"order_id\": \"#W7449508\"}) (second call before return)",
+     "return_delivered_order_items({\"order_id\": \"#W7449508\", \"item_ids\": [\"6477915553\"], \"payment_method_id\": \"gift_card_7711863\"})"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 18,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 59.98647720797453,
+    "cache_hit": false,
+    "prompt_tokens": 4355,
+    "completion_tokens": 2298
+   }
+  ]
+ },
+ {
+  "case_id": "8c1ade3f-659a-426e-b86b-dbb0e883ab12",
+  "task_id": "10",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.026585833984427,
+    "cache_hit": false,
+    "prompt_tokens": 2039,
+    "completion_tokens": 678
+   }
+  ]
+ },
+ {
+  "case_id": "286c3835-cc68-4eaa-ab0a-4e61b0f18707",
+  "task_id": "25",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.254255541949533,
+    "cache_hit": false,
+    "prompt_tokens": 2732,
+    "completion_tokens": 315
+   }
+  ]
+ },
+ {
+  "case_id": "b9fe6507-a61f-44f4-83a2-b8fbe67ff8d5",
+  "task_id": "113",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.891430375049822,
+    "cache_hit": false,
+    "prompt_tokens": 3066,
+    "completion_tokens": 225
+   }
+  ]
+ },
+ {
+  "case_id": "a88de1a0-684f-4c71-8a77-a9ad70ddd351",
+  "task_id": "107",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [
+     "exchange_delivered_order_items"
+    ],
+    "first_violation_step": 18,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.223832249990664,
+    "cache_hit": false,
+    "prompt_tokens": 4303,
+    "completion_tokens": 605
+   }
+  ]
+ },
+ {
+  "case_id": "5f2a25a1-1d8f-4950-8377-8f209e1071b5",
+  "task_id": "11",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.555297625018284,
+    "cache_hit": false,
+    "prompt_tokens": 3009,
+    "completion_tokens": 608
+   }
+  ]
+ },
+ {
+  "case_id": "b931b846-326f-47bd-9329-5bb497a95d1f",
+  "task_id": "3",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_product_details"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 57.07795329205692,
+    "cache_hit": false,
+    "prompt_tokens": 4646,
+    "completion_tokens": 2144
+   }
+  ]
+ },
+ {
+  "case_id": "f64e5049-17bd-40f9-99a1-ef8354e6e846",
+  "task_id": "1",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.31785345892422,
+    "cache_hit": false,
+    "prompt_tokens": 3827,
+    "completion_tokens": 426
+   }
+  ]
+ },
+ {
+  "case_id": "ee3dc3a2-3bd4-4d3e-974c-bf5bcf4530a4",
+  "task_id": "44",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [
+     "calculate"
+    ],
+    "first_violation_step": 12,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.597082583000883,
+    "cache_hit": false,
+    "prompt_tokens": 2083,
+    "completion_tokens": 1211
+   }
+  ]
+ },
+ {
+  "case_id": "69ad22ca-5a20-4d07-a894-2e14d13b8595",
+  "task_id": "106",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.38537870789878,
+    "cache_hit": false,
+    "prompt_tokens": 3242,
+    "completion_tokens": 393
+   }
+  ]
+ },
+ {
+  "case_id": "ee438bc5-0617-432a-bee5-32ba6c15f02b",
+  "task_id": "18",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.393557084025815,
+    "cache_hit": false,
+    "prompt_tokens": 3115,
+    "completion_tokens": 624
+   }
+  ]
+ },
+ {
+  "case_id": "6b0476fd-65c4-4869-8969-3f68de466210",
+  "task_id": "8",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.494113708031364,
+    "cache_hit": false,
+    "prompt_tokens": 3846,
+    "completion_tokens": 486
+   }
+  ]
+ },
+ {
+  "case_id": "906118df-4907-47e6-af3e-c81ef64bed6b",
+  "task_id": "35",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.464137875009328,
+    "cache_hit": false,
+    "prompt_tokens": 3804,
+    "completion_tokens": 691
+   }
+  ]
+ },
+ {
+  "case_id": "999a2ee3-54bb-4359-8597-88547167dd57",
+  "task_id": "60",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.166096625034697,
+    "cache_hit": false,
+    "prompt_tokens": 2433,
+    "completion_tokens": 482
+   }
+  ]
+ },
+ {
+  "case_id": "7b89262f-92df-4f56-b44c-63622f136752",
+  "task_id": "87",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_user_address"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 14,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.246329915942624,
+    "cache_hit": false,
+    "prompt_tokens": 2860,
+    "completion_tokens": 550
+   }
+  ]
+ },
+ {
+  "case_id": "eca88195-2d9f-4442-a0b9-5fcdf21465b6",
+  "task_id": "112",
+  "trial": 0,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.87347424996551,
+    "cache_hit": false,
+    "prompt_tokens": 5678,
+    "completion_tokens": 654
+   }
+  ]
+ },
+ {
+  "case_id": "214fcce9-42c3-4aca-a317-4208fd7ad38d",
+  "task_id": "69",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.18138879199978,
+    "cache_hit": false,
+    "prompt_tokens": 2648,
+    "completion_tokens": 328
+   }
+  ]
+ },
+ {
+  "case_id": "8515b090-69ba-4439-91f1-72910b4e2b10",
+  "task_id": "74",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "cancel_pending_order",
+     "modify_pending_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.496582250110805,
+    "cache_hit": false,
+    "prompt_tokens": 3467,
+    "completion_tokens": 472
+   }
+  ]
+ },
+ {
+  "case_id": "b2cd4013-1592-40be-8985-3a11a9a85d88",
+  "task_id": "56",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.64909695798997,
+    "cache_hit": false,
+    "prompt_tokens": 3559,
+    "completion_tokens": 505
+   }
+  ]
+ },
+ {
+  "case_id": "d2d916b9-d376-4e59-a3d8-6b40ff5740c9",
+  "task_id": "22",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_user_address (Denver revert with address1 '667 Highland Drive', address2 'Suite 865', city 'Denver', state 'CO', country 'USA', zip '80280')"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 17,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.725545041030273,
+    "cache_hit": false,
+    "prompt_tokens": 3438,
+    "completion_tokens": 1159
+   }
+  ]
+ },
+ {
+  "case_id": "b7c5602d-bb07-4ad6-a255-12e7be57f379",
+  "task_id": "77",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.126614957931451,
+    "cache_hit": false,
+    "prompt_tokens": 2256,
+    "completion_tokens": 332
+   }
+  ]
+ },
+ {
+  "case_id": "145c41da-62e5-410c-b31c-201dc4a5a30b",
+  "task_id": "66",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.80728012509644,
+    "cache_hit": false,
+    "prompt_tokens": 2349,
+    "completion_tokens": 365
+   }
+  ]
+ },
+ {
+  "case_id": "78643030-fb52-47cf-a2ad-63befbedd70f",
+  "task_id": "28",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_order_details (second required call for #W2575533, expected after the #W5565470 return)",
+     "calculate"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 23,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 58.956329333013855,
+    "cache_hit": false,
+    "prompt_tokens": 4488,
+    "completion_tokens": 2275
+   }
+  ]
+ },
+ {
+  "case_id": "02de5583-b0cd-4c28-bac7-ac51a4563a1a",
+  "task_id": "68",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.3887095421087,
+    "cache_hit": false,
+    "prompt_tokens": 2543,
+    "completion_tokens": 348
+   }
+  ]
+ },
+ {
+  "case_id": "5d83f4cb-b11e-4cd3-b625-0dc370adfb01",
+  "task_id": "63",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [
+     "calculate"
+    ],
+    "first_violation_step": 21,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.216345750028268,
+    "cache_hit": false,
+    "prompt_tokens": 3422,
+    "completion_tokens": 938
+   }
+  ]
+ },
+ {
+  "case_id": "84b2d2f2-b389-4272-aa21-7e0e79d0ecf6",
+  "task_id": "97",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.46045595803298,
+    "cache_hit": false,
+    "prompt_tokens": 3463,
+    "completion_tokens": 470
+   }
+  ]
+ },
+ {
+  "case_id": "5347f4f1-7452-41d7-8754-3daf85674777",
+  "task_id": "72",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_pending_order_address"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 20,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 32.586804750026204,
+    "cache_hit": false,
+    "prompt_tokens": 4161,
+    "completion_tokens": 1144
+   }
+  ]
+ },
+ {
+  "case_id": "1aaba9c5-9646-4a8e-b63c-e869e9d7f13c",
+  "task_id": "93",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.701748125022277,
+    "cache_hit": false,
+    "prompt_tokens": 3140,
+    "completion_tokens": 538
+   }
+  ]
+ },
+ {
+  "case_id": "b129644c-f168-454c-b4d8-9b9e1b37bc2c",
+  "task_id": "17",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_user_details({\"user_id\": \"fatima_johnson_7581\"})",
+     "get_order_details({\"order_id\": \"#W5199551\"})",
+     "get_order_details({\"order_id\": \"#W9389413\"})"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 6,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.977170582977124,
+    "cache_hit": false,
+    "prompt_tokens": 1487,
+    "completion_tokens": 822
+   }
+  ]
+ },
+ {
+  "case_id": "8b396883-bc73-4e25-80fc-b3984d83c84a",
+  "task_id": "111",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.32191770907957,
+    "cache_hit": false,
+    "prompt_tokens": 4975,
+    "completion_tokens": 620
+   }
+  ]
+ },
+ {
+  "case_id": "4d7524ad-3125-4e8c-841f-8f8a576d09cc",
+  "task_id": "45",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "calculate",
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 14,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 49.75414812506642,
+    "cache_hit": false,
+    "prompt_tokens": 3681,
+    "completion_tokens": 1890
+   }
+  ]
+ },
+ {
+  "case_id": "2519895a-81f6-4d12-9e8d-0573a7712953",
+  "task_id": "6",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 40.65471954108216,
+    "cache_hit": false,
+    "prompt_tokens": 3380,
+    "completion_tokens": 1523
+   }
+  ]
+ },
+ {
+  "case_id": "234f03f6-c34e-4f34-93c4-95b2d717a47a",
+  "task_id": "16",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "calculate"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 11,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.080657957936637,
+    "cache_hit": false,
+    "prompt_tokens": 3893,
+    "completion_tokens": 831
+   }
+  ]
+ },
+ {
+  "case_id": "b0652f9a-b691-4d50-813b-5b2829544262",
+  "task_id": "0",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.828963082982227,
+    "cache_hit": false,
+    "prompt_tokens": 3732,
+    "completion_tokens": 462
+   }
+  ]
+ },
+ {
+  "case_id": "6f85ed74-4c5c-4970-8b10-e67eba948bf4",
+  "task_id": "11",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.30316499993205,
+    "cache_hit": false,
+    "prompt_tokens": 3062,
+    "completion_tokens": 462
+   }
+  ]
+ },
+ {
+  "case_id": "9e6b2940-4811-4fec-b333-17a08896f1ff",
+  "task_id": "96",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.188322041067295,
+    "cache_hit": false,
+    "prompt_tokens": 3889,
+    "completion_tokens": 488
+   }
+  ]
+ },
+ {
+  "case_id": "95e4850d-ea36-4120-ab82-d68b13144a14",
+  "task_id": "110",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_user_address"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 14,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 48.62940524995793,
+    "cache_hit": false,
+    "prompt_tokens": 3787,
+    "completion_tokens": 1919
+   }
+  ]
+ },
+ {
+  "case_id": "3550467f-4e1b-4f35-bb59-417e40fe270e",
+  "task_id": "32",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "cancel_pending_order({\"order_id\": \"#W9373487\", \"reason\": \"no longer needed\"})",
+     "cancel_pending_order({\"order_id\": \"#W5481803\", \"reason\": \"no longer needed\"})",
+     "return_delivered_order_items({\"order_id\": \"#W7449508\", \"item_ids\": [\"6477915553\"], \"payment_method_id\": \"gift_card_7711863\"})"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 14,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 40.556855499977246,
+    "cache_hit": false,
+    "prompt_tokens": 3088,
+    "completion_tokens": 1520
+   }
+  ]
+ },
+ {
+  "case_id": "6b51e2e6-a91d-4c13-aa56-464f0837890a",
+  "task_id": "29",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 19,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 33.80017979093827,
+    "cache_hit": false,
+    "prompt_tokens": 3812,
+    "completion_tokens": 1193
+   }
+  ]
+ },
+ {
+  "case_id": "35725cbc-2810-42a0-99a3-ed07f29fbe17",
+  "task_id": "44",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [
+     "calculate"
+    ],
+    "first_violation_step": 12,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.226338542066514,
+    "cache_hit": false,
+    "prompt_tokens": 2297,
+    "completion_tokens": 1156
+   }
+  ]
+ },
+ {
+  "case_id": "2d9823a1-2234-4bef-bef2-48e647bf594f",
+  "task_id": "95",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.224837083020248,
+    "cache_hit": false,
+    "prompt_tokens": 4694,
+    "completion_tokens": 557
+   }
+  ]
+ },
+ {
+  "case_id": "09102ca3-e2bd-49f6-a037-76954215c8c1",
+  "task_id": "39",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "find_user_id_by_name_zip"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.104687207960524,
+    "cache_hit": false,
+    "prompt_tokens": 3341,
+    "completion_tokens": 1115
+   }
+  ]
+ },
+ {
+  "case_id": "4f042a23-b781-4050-aa65-802a6d48b4c6",
+  "task_id": "58",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.140558833954856,
+    "cache_hit": false,
+    "prompt_tokens": 4063,
+    "completion_tokens": 497
+   }
+  ]
+ },
+ {
+  "case_id": "726ab945-9bf5-4094-8e4b-8c998402976c",
+  "task_id": "56",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [
+     "modify_pending_order_items"
+    ],
+    "first_violation_step": 16,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 28.785625708987936,
+    "cache_hit": false,
+    "prompt_tokens": 3507,
+    "completion_tokens": 1061
+   }
+  ]
+ },
+ {
+  "case_id": "e2c0d5cd-7668-4032-aa12-404b01dc639c",
+  "task_id": "45",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "calculate"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 14,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.73323045799043,
+    "cache_hit": false,
+    "prompt_tokens": 3202,
+    "completion_tokens": 629
+   }
+  ]
+ },
+ {
+  "case_id": "5bbc10ca-302f-44c1-9f7e-cf3aeb0ba3d8",
+  "task_id": "43",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.01665954105556,
+    "cache_hit": false,
+    "prompt_tokens": 2917,
+    "completion_tokens": 456
+   }
+  ]
+ },
+ {
+  "case_id": "6905e5e5-b6a3-441e-95d5-dba1948841b2",
+  "task_id": "38",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "cancel_pending_order"
+    ],
+    "wrong_arguments": [
+     "calculate"
+    ],
+    "first_violation_step": 15,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 27.266103415982798,
+    "cache_hit": false,
+    "prompt_tokens": 2051,
+    "completion_tokens": 1121
+   }
+  ]
+ },
+ {
+  "case_id": "2b195caa-64cc-49fa-9d9b-da9b908b3d3e",
+  "task_id": "78",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.812937874929048,
+    "cache_hit": false,
+    "prompt_tokens": 3814,
+    "completion_tokens": 573
+   }
+  ]
+ },
+ {
+  "case_id": "fa800b0e-ebef-4a7c-92bb-07818eb6f2ba",
+  "task_id": "4",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_product_details"
+    ],
+    "wrong_arguments": [
+     "modify_pending_order_items"
+    ],
+    "first_violation_step": 23,
+    "confidence": 0.82,
+    "parsed": true,
+    "error": null,
+    "seconds": 237.8471924168989,
+    "cache_hit": false,
+    "prompt_tokens": 5743,
+    "completion_tokens": 9843
+   }
+  ]
+ },
+ {
+  "case_id": "f2c7ad77-1164-48d4-b199-3629fd6357ff",
+  "task_id": "88",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 8.63999470800627,
+    "cache_hit": false,
+    "prompt_tokens": 2360,
+    "completion_tokens": 158
+   }
+  ]
+ },
+ {
+  "case_id": "14d78db4-73df-4df4-9a75-a397f570fceb",
+  "task_id": "65",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.875915082986467,
+    "cache_hit": false,
+    "prompt_tokens": 3853,
+    "completion_tokens": 294
+   }
+  ]
+ },
+ {
+  "case_id": "d96afe20-388e-4517-a878-f693665d5ab1",
+  "task_id": "83",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.727433415944688,
+    "cache_hit": false,
+    "prompt_tokens": 3261,
+    "completion_tokens": 517
+   }
+  ]
+ },
+ {
+  "case_id": "6125ba5a-ac6c-41cf-9b23-8d9026e7837b",
+  "task_id": "89",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.950561499921605,
+    "cache_hit": false,
+    "prompt_tokens": 3266,
+    "completion_tokens": 276
+   }
+  ]
+ },
+ {
+  "case_id": "fadcb4da-d35a-46ad-ae3c-41da7f146912",
+  "task_id": "96",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.34777699992992,
+    "cache_hit": false,
+    "prompt_tokens": 3369,
+    "completion_tokens": 506
+   }
+  ]
+ },
+ {
+  "case_id": "e2d48910-5ec2-4f06-bdfb-faf6ade40125",
+  "task_id": "31",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_order_details (order_id #W9373487, second occurrence before cancellation)",
+     "get_order_details (order_id #W5481803, second occurrence)",
+     "get_order_details (order_id #W7449508, second occurrence before return)"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 18,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 43.75179733405821,
+    "cache_hit": false,
+    "prompt_tokens": 4411,
+    "completion_tokens": 1547
+   }
+  ]
+ },
+ {
+  "case_id": "7c0d1984-5d3d-471e-8602-0615f16e5c33",
+  "task_id": "17",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_user_details({\"user_id\": \"fatima_johnson_7581\"})",
+     "get_order_details({\"order_id\": \"#W5199551\"})",
+     "get_order_details({\"order_id\": \"#W9389413\"})"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 6,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.38820020807907,
+    "cache_hit": false,
+    "prompt_tokens": 1483,
+    "completion_tokens": 719
+   }
+  ]
+ },
+ {
+  "case_id": "199cb4fa-1667-4dcf-8426-c4d3efa2d08b",
+  "task_id": "101",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.918070000014268,
+    "cache_hit": false,
+    "prompt_tokens": 4328,
+    "completion_tokens": 711
+   }
+  ]
+ },
+ {
+  "case_id": "4ff0454e-965c-4c26-8f96-f9e6cf95a182",
+  "task_id": "99",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 18,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 56.55434012506157,
+    "cache_hit": false,
+    "prompt_tokens": 5102,
+    "completion_tokens": 2057
+   }
+  ]
+ },
+ {
+  "case_id": "16c69be3-e1c1-4813-b4f6-4e6011f58cc3",
+  "task_id": "14",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.072253125021234,
+    "cache_hit": false,
+    "prompt_tokens": 2673,
+    "completion_tokens": 463
+   }
+  ]
+ },
+ {
+  "case_id": "eb2fbc1b-1faa-416e-8c39-8dac396bffba",
+  "task_id": "108",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.899401624919847,
+    "cache_hit": false,
+    "prompt_tokens": 2795,
+    "completion_tokens": 559
+   }
+  ]
+ },
+ {
+  "case_id": "dbb89122-45f8-460d-8f9a-4db04cac493b",
+  "task_id": "91",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "return_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 27.959838000009768,
+    "cache_hit": false,
+    "prompt_tokens": 3417,
+    "completion_tokens": 981
+   }
+  ]
+ },
+ {
+  "case_id": "7f8a1590-8c61-4672-9412-e967f934772e",
+  "task_id": "84",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.508078083046712,
+    "cache_hit": false,
+    "prompt_tokens": 3286,
+    "completion_tokens": 445
+   }
+  ]
+ },
+ {
+  "case_id": "87af212a-73cc-4443-aacf-a7eff62fb10d",
+  "task_id": "15",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.004066208959557,
+    "cache_hit": false,
+    "prompt_tokens": 3149,
+    "completion_tokens": 468
+   }
+  ]
+ },
+ {
+  "case_id": "8f5aa181-d9da-4d54-9493-b9125d40da1a",
+  "task_id": "103",
+  "trial": 1,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.140738249989226,
+    "cache_hit": false,
+    "prompt_tokens": 5667,
+    "completion_tokens": 561
+   }
+  ]
+ },
+ {
+  "case_id": "3a050758-8746-4afd-97f8-492801629abc",
+  "task_id": "3",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_product_details(product_id=6086499569)"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 74.2690016659908,
+    "cache_hit": false,
+    "prompt_tokens": 4616,
+    "completion_tokens": 2899
+   }
+  ]
+ },
+ {
+  "case_id": "d342a8e8-388d-4760-aed5-0e9f4ec4737f",
+  "task_id": "1",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 13,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 26.218883082969114,
+    "cache_hit": false,
+    "prompt_tokens": 3157,
+    "completion_tokens": 890
+   }
+  ]
+ },
+ {
+  "case_id": "1d9028fd-6e2b-48cd-85be-3d7c231b875a",
+  "task_id": "20",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.362110499991104,
+    "cache_hit": false,
+    "prompt_tokens": 4518,
+    "completion_tokens": 588
+   }
+  ]
+ },
+ {
+  "case_id": "b151e4aa-9646-423c-8193-37a7d529a6f5",
+  "task_id": "109",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.87693945900537,
+    "cache_hit": false,
+    "prompt_tokens": 3681,
+    "completion_tokens": 728
+   }
+  ]
+ },
+ {
+  "case_id": "a7934f48-6337-469a-928a-1a6627d1b075",
+  "task_id": "23",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.489657792029902,
+    "cache_hit": false,
+    "prompt_tokens": 5334,
+    "completion_tokens": 627
+   }
+  ]
+ },
+ {
+  "case_id": "bd6823c3-25fa-4e23-b086-140afba59af0",
+  "task_id": "6",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 19.45798399997875,
+    "cache_hit": false,
+    "prompt_tokens": 3865,
+    "completion_tokens": 561
+   }
+  ]
+ },
+ {
+  "case_id": "04193386-02ab-47c5-955e-318cddadad9d",
+  "task_id": "9",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.951058457954787,
+    "cache_hit": false,
+    "prompt_tokens": 3936,
+    "completion_tokens": 460
+   }
+  ]
+ },
+ {
+  "case_id": "56e9df45-3aee-4717-83e5-d0825f138c92",
+  "task_id": "33",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_user_address"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 16,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 23.70445674995426,
+    "cache_hit": false,
+    "prompt_tokens": 2757,
+    "completion_tokens": 849
+   }
+  ]
+ },
+ {
+  "case_id": "b909bc2b-3976-4331-84ac-4d18ae2118f3",
+  "task_id": "110",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "modify_user_address"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 15,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 24.85356800002046,
+    "cache_hit": false,
+    "prompt_tokens": 4080,
+    "completion_tokens": 798
+   }
+  ]
+ },
+ {
+  "case_id": "963c1efc-cc43-4b87-9d04-c92b321354fb",
+  "task_id": "49",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "calculate"
+    ],
+    "wrong_arguments": [
+     "exchange_delivered_order_items"
+    ],
+    "first_violation_step": 16,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 55.90749354206491,
+    "cache_hit": false,
+    "prompt_tokens": 3940,
+    "completion_tokens": 2226
+   }
+  ]
+ },
+ {
+  "case_id": "fbe02f3c-3d56-49a7-9d72-165633f560fe",
+  "task_id": "55",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 24.877451375010423,
+    "cache_hit": false,
+    "prompt_tokens": 5722,
+    "completion_tokens": 652
+   }
+  ]
+ },
+ {
+  "case_id": "87095637-0af7-4a5f-9f1b-504da7e616b8",
+  "task_id": "19",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.953235208056867,
+    "cache_hit": false,
+    "prompt_tokens": 3629,
+    "completion_tokens": 421
+   }
+  ]
+ },
+ {
+  "case_id": "20edd91a-5ff5-4df0-97a9-67333279a15f",
+  "task_id": "105",
+  "trial": 2,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 12,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 38.39196445804555,
+    "cache_hit": false,
+    "prompt_tokens": 3383,
+    "completion_tokens": 1385
+   }
+  ]
+ },
+ {
+  "case_id": "3acb3e11-94bc-4321-968b-5dfca448e342",
+  "task_id": "5",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "return_delivered_order_items"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 23,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.31590954097919,
+    "cache_hit": false,
+    "prompt_tokens": 4272,
+    "completion_tokens": 558
+   }
+  ]
+ },
+ {
+  "case_id": "b1be2b44-830d-48cf-821d-50257bbd1aa5",
+  "task_id": "60",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.811669207992963,
+    "cache_hit": false,
+    "prompt_tokens": 2392,
+    "completion_tokens": 561
+   }
+  ]
+ },
+ {
+  "case_id": "e4d7658a-28c3-43b8-8a8f-9b34f6e33030",
+  "task_id": "73",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.408485790947452,
+    "cache_hit": false,
+    "prompt_tokens": 1896,
+    "completion_tokens": 563
+   }
+  ]
+ },
+ {
+  "case_id": "4c45d1ec-321a-49b7-bc11-b690266cec7d",
+  "task_id": "53",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.450501332990825,
+    "cache_hit": false,
+    "prompt_tokens": 3064,
+    "completion_tokens": 439
+   }
+  ]
+ },
+ {
+  "case_id": "ae817cac-f8f9-4f2f-a7a9-61b8167ff0cb",
+  "task_id": "45",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "calculate"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 16,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 28.41082016704604,
+    "cache_hit": false,
+    "prompt_tokens": 3051,
+    "completion_tokens": 1001
+   }
+  ]
+ },
+ {
+  "case_id": "b6f78f67-fbe5-41a0-858c-14013f657489",
+  "task_id": "21",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_product_details (product_id 1656367028)",
+     "get_product_details (product_id 6938111410)",
+     "calculate"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 18,
+    "confidence": 0.88,
+    "parsed": true,
+    "error": null,
+    "seconds": 82.0183048750041,
+    "cache_hit": false,
+    "prompt_tokens": 3777,
+    "completion_tokens": 3366
+   }
+  ]
+ },
+ {
+  "case_id": "0dd2481e-070e-4cd6-bd8f-d95e4bf6f32f",
+  "task_id": "46",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_order_details({\"order_id\": \"#9502126\"})",
+     "get_order_details({\"order_id\": \"#9502127\"})",
+     "calculate({\"expression\": \"652.61 + 473.43\"})"
+    ],
+    "wrong_arguments": [
+     "calculate({\"expression\": \"2623.69 - 1126.04\"})"
+    ],
+    "first_violation_step": 9,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 101.78796766593587,
+    "cache_hit": false,
+    "prompt_tokens": 3056,
+    "completion_tokens": 4302
+   }
+  ]
+ },
+ {
+  "case_id": "437bd373-1408-41df-9c38-215f5ef2227c",
+  "task_id": "42",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "get_order_details"
+    ],
+    "wrong_arguments": [],
+    "first_violation_step": 13,
+    "confidence": 0.7,
+    "parsed": true,
+    "error": null,
+    "seconds": 104.58402704203036,
+    "cache_hit": false,
+    "prompt_tokens": 4788,
+    "completion_tokens": 4164
+   }
+  ]
+ },
+ {
+  "case_id": "362a717b-1eef-4c05-beb9-9cee028c3618",
+  "task_id": "38",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 27.247995667043142,
+    "cache_hit": false,
+    "prompt_tokens": 4132,
+    "completion_tokens": 872
+   }
+  ]
+ },
+ {
+  "case_id": "3a5248ef-be26-4e4e-9eee-d9c648c696cc",
+  "task_id": "86",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.429319042013958,
+    "cache_hit": false,
+    "prompt_tokens": 3905,
+    "completion_tokens": 494
+   }
+  ]
+ },
+ {
+  "case_id": "50ec4a59-d888-4b99-8e2e-b7a6cbca6831",
+  "task_id": "37",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.701903749955818,
+    "cache_hit": false,
+    "prompt_tokens": 4358,
+    "completion_tokens": 470
+   }
+  ]
+ },
+ {
+  "case_id": "8f35b305-4e77-4cdc-accc-84523d3da3c3",
+  "task_id": "69",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.323593124980107,
+    "cache_hit": false,
+    "prompt_tokens": 3188,
+    "completion_tokens": 426
+   }
+  ]
+ },
+ {
+  "case_id": "8bfb37b1-b093-4e5d-9b5c-5cfb39fdc2cc",
+  "task_id": "65",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.12909854191821,
+    "cache_hit": false,
+    "prompt_tokens": 2227,
+    "completion_tokens": 311
+   }
+  ]
+ },
+ {
+  "case_id": "fbc5c8fb-7935-440a-a16b-aba7cd46f297",
+  "task_id": "85",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 1.0,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.549091791035607,
+    "cache_hit": false,
+    "prompt_tokens": 3555,
+    "completion_tokens": 382
+   }
+  ]
+ },
+ {
+  "case_id": "355be89e-568e-4714-b17e-8d8a2c2d73ae",
+  "task_id": "82",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.373933917027898,
+    "cache_hit": false,
+    "prompt_tokens": 3398,
+    "completion_tokens": 557
+   }
+  ]
+ },
+ {
+  "case_id": "bb9315f3-0f45-4fee-bec3-2cd81752fce7",
+  "task_id": "108",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.021676582982764,
+    "cache_hit": false,
+    "prompt_tokens": 2896,
+    "completion_tokens": 488
+   }
+  ]
+ },
+ {
+  "case_id": "9969d411-bdfe-4170-a415-22418c4983b4",
+  "task_id": "98",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": null,
+    "missing_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "wrong_arguments": [
+     "exchange_delivered_order_items"
+    ],
+    "first_violation_step": 18,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 32.03484166704584,
+    "cache_hit": false,
+    "prompt_tokens": 4992,
+    "completion_tokens": 1051
+   }
+  ]
+ },
+ {
+  "case_id": "9fe86ccb-cd2b-4880-97f3-083ed0ff8d59",
+  "task_id": "93",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.858412333996966,
+    "cache_hit": false,
+    "prompt_tokens": 3618,
+    "completion_tokens": 348
+   }
+  ]
+ },
+ {
+  "case_id": "5b2f3216-5a8f-4666-bda5-bc27f55edf63",
+  "task_id": "102",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.92149125004653,
+    "cache_hit": false,
+    "prompt_tokens": 5081,
+    "completion_tokens": 690
+   }
+  ]
+ },
+ {
+  "case_id": "d6c433a3-db83-46d6-b894-543bca4fd098",
+  "task_id": "103",
+  "trial": 3,
+  "mode": "gold-actions",
+  "model": "glm-5.3-flash",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": null,
+    "missing_actions": [],
+    "wrong_arguments": [],
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.97123499994632,
+    "cache_hit": false,
+    "prompt_tokens": 5434,
+    "completion_tokens": 631
+   }
+  ]
+ }
+]

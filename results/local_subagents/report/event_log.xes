@@ -1,0 +1,1710 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Organizational" prefix="org" uri="http://www.xes-standard.org/org.xesext" />
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="c01_east_units" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="0" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="1" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="2" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="3" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="4" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="5" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="6" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="7" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="8" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="9" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="10" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="11" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="12" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="13" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="14" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="15" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="16" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="17" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="18" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="19" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="20" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="21" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:22+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="22" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:23+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="23" />
+			<int key="@@case_index" value="0" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c02_north_revenue" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="24" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="25" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="26" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="27" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="28" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="29" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="30" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="31" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="32" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="33" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="34" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="35" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="36" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="37" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="38" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="39" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="40" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="41" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="42" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="43" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="44" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="45" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:22+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="46" />
+			<int key="@@case_index" value="1" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c03_south_top_q2" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="47" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="48" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="49" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="50" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="51" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="52" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="53" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="54" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="55" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="56" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="57" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="58" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="59" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="60" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="61" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="62" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="63" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="64" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="65" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="66" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="67" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="68" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:22+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="69" />
+			<int key="@@case_index" value="2" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c04_east_top_units_q1" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="70" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="71" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="72" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="73" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="74" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="75" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="76" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="77" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="78" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="79" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="80" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="81" />
+			<int key="@@case_index" value="3" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c05_q1_total_revenue" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="82" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="83" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="84" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="85" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="86" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="87" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="88" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="89" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="90" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="91" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="92" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="93" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="94" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="95" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="96" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="97" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="98" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="99" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="100" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="101" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="102" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="103" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:22+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="104" />
+			<int key="@@case_index" value="4" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c06_south_growth" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="105" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="106" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="107" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="108" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="109" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="110" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="111" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="112" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="113" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="114" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="115" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="116" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="117" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="118" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="119" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="120" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="121" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="122" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="123" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="124" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="125" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="126" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:22+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="127" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:23+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="128" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:24+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="129" />
+			<int key="@@case_index" value="5" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c07_north_price" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="130" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="131" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="132" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="133" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="134" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="135" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="136" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="137" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="138" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="139" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="140" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="141" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="142" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="143" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="144" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="145" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="146" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="147" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="148" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="149" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="150" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="151" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:22+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="152" />
+			<int key="@@case_index" value="6" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c08_east_revenue" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="153" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="154" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="155" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="156" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="157" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="158" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="159" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="160" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="161" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="162" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="163" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="164" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="165" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="166" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="167" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="168" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="169" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="170" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="171" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="172" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="173" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="174" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:22+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="175" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:23+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="176" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:24+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="177" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:25+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="178" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:26+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="179" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:27+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="180" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:28+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="181" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:29+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="182" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:30+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="183" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:31+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="184" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:32+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="185" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:33+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="186" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:34+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="187" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:35+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="188" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:36+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="189" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:37+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="190" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:38+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="191" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:39+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="192" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:40+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="193" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:41+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="194" />
+			<int key="@@case_index" value="7" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:42+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="195" />
+			<int key="@@case_index" value="7" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c09_average_price" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="196" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="197" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="198" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="199" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="200" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="201" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="202" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="203" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="204" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="205" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="206" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="207" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="208" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="209" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="210" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="211" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="212" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="213" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="214" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="215" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="216" />
+			<int key="@@case_index" value="8" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:21+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="217" />
+			<int key="@@case_index" value="8" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="c10_q2_units_gain" />
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:00+00:00" />
+			<string key="org:resource" value="user" />
+			<int key="@@index" value="218" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:01+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="219" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:02+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="220" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:03+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="221" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:04+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="222" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:05+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="223" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:06+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="224" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:07+00:00" />
+			<string key="org:resource" value="FileSurfer" />
+			<int key="@@index" value="225" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:08+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="226" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:09+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="227" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:10+00:00" />
+			<string key="org:resource" value="Coder" />
+			<int key="@@index" value="228" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:11+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="229" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:12+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="230" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="list_files" />
+			<date key="time:timestamp" value="2000-01-01T00:00:13+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="231" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="read_file" />
+			<date key="time:timestamp" value="2000-01-01T00:00:14+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="232" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:15+00:00" />
+			<string key="org:resource" value="DataChecker" />
+			<int key="@@index" value="233" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="spawn" />
+			<date key="time:timestamp" value="2000-01-01T00:00:16+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="234" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="run_python" />
+			<date key="time:timestamp" value="2000-01-01T00:00:17+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="235" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:18+00:00" />
+			<string key="org:resource" value="Recalculator" />
+			<int key="@@index" value="236" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="report" />
+			<date key="time:timestamp" value="2000-01-01T00:00:19+00:00" />
+			<string key="org:resource" value="Analyst" />
+			<int key="@@index" value="237" />
+			<int key="@@case_index" value="9" />
+		</event>
+		<event>
+			<string key="concept:name" value="orchestrate" />
+			<date key="time:timestamp" value="2000-01-01T00:00:20+00:00" />
+			<string key="org:resource" value="MagenticOneOrchestrator" />
+			<int key="@@index" value="238" />
+			<int key="@@case_index" value="9" />
+		</event>
+	</trace>
+</log>

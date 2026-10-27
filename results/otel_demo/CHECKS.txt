@@ -1,0 +1,10 @@
+What capture.jsonl (otel) exposes (6 runs). !! = read before trusting a result.
+
+  ok  90 tool calls over 8 distinct tools
+  ok  tool calls attributed to Coder (30), FileSurfer (26), Orchestrator (23), Analyst (11)
+  !!  no tool arguments. The log says which tools ran, by whom and in what order, but not what they were called with, so a call with a wrong argument looks correct. (OpenTelemetry makes arguments opt-in, and many frameworks leave them out.)
+  --  reasoning text on 0 events (kept as an attribute, never an activity)
+  ok  strictly sequential: no calls issued together, no overlap in real time
+  --  no business objects in the OCEL log, only run, agent and tool. Give --objects rules.json if the tool arguments name things (a ticket, a file, a reservation).
+  --  6 variants over 6 runs, 6 of them once
+  ok  OCEL log built twice: byte-identical

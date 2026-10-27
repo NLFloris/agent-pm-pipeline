@@ -1,0 +1,45 @@
+1. CONFIRMATION RULE, claude-opus-4-5, airline, against the per-action label
+   172 scorable runs, 37 violations
+
+   strict: a user message immediately before every write
+     runs flagged  49  precision 0.47  recall 0.62  | runs with a confirmation alarm  33 (25 of them compliant by the label)
+   looks through the other writes of a batch
+     runs flagged  30  precision 0.60  recall 0.49  | runs with a confirmation alarm  14 (11 of them compliant by the label)
+   also looks through the agent's own messages (the model used)
+     runs flagged  16  precision 0.94  recall 0.41  | runs with a confirmation alarm   0 (0 of them compliant by the label)
+
+2. WHEN A VIOLATION BECOMES VISIBLE, claude-opus-4-5, frozen models
+   airline: 16 runs flagged
+     a violation located at a write       1  (0 of them violations by the per-action label)
+     only a missing action (run end)     15  (15 of them violations by the per-action label)
+     first violation at a write, as a share of the run: median 80%, earliest 80%, latest 80%
+   retail: 66 runs flagged
+     a violation located at a write       8  (3 of them violations by the per-action label)
+     only a missing action (run end)     58  (58 of them violations by the per-action label)
+     first violation at a write, as a share of the run: median 79%, earliest 65%, latest 86%
+
+   the same over fifteen agents, frozen models, all scorable runs pooled
+   airline: 541 runs flagged
+     a violation located at a write     198  (55 of them violations by the per-action label, 165 by the label that also counts the database)
+     only a missing action (run end)    343  (343 of them violations by the per-action label, 343 by the label that also counts the database)
+     first violation at a write, as a share of the run: median 80%, earliest 29%, latest 94%
+     kind of the first violation at a write, on the runs the database-aware label confirms: allowed 126, directly_before 35, precedence 4
+   retail: 979 runs flagged
+     a violation located at a write     191  (87 of them violations by the per-action label, 109 by the label that also counts the database)
+     only a missing action (run end)    788  (788 of them violations by the per-action label, 788 by the label that also counts the database)
+     first violation at a write, as a share of the run: median 74%, earliest 37%, latest 97%
+     kind of the first violation at a write, on the runs the database-aware label confirms: directly_before 55, allowed 33, precedence 21
+
+3. TRANSFERS TO A HUMAN AGENT, claude-opus-4-5, all runs
+   airline: 63 of 200 runs transfer to a human agent; the gold list asks for it in 3; 7 of the 63 have reward below 1
+   retail: 35 of 456 runs transfer to a human agent; the gold list asks for it in 12; 10 of the 35 have reward below 1
+
+4. LISTING DEPENDENCE, 20 seeded shuffles of the events within each step
+   airline, claude-opus-4-5, frozen confirmation rule: verdict changes in 5 of 172 runs
+   airline, claude-opus-4-5, variant that also looks through lookups: verdict changes in 0 of 172 runs
+   airline, fifteen agents, frozen confirmation rule: verdict changes in 17 of 2576 runs
+   airline, fifteen agents, variant that also looks through lookups: verdict changes in 0 of 2576 runs
+   retail, claude-opus-4-5, frozen confirmation rule: verdict changes in 3 of 448 runs
+   retail, claude-opus-4-5, variant that also looks through lookups: verdict changes in 0 of 448 runs
+   retail, fifteen agents, frozen confirmation rule: verdict changes in 26 of 6645 runs
+   retail, fifteen agents, variant that also looks through lookups: verdict changes in 1 of 6645 runs

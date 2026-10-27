@@ -1,0 +1,4182 @@
+[
+ {
+  "case_id": "654165dc-e7c7-44ef-9c2e-6ec69ed2d38f",
+  "task_id": "36",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user ID from the user before proceeding (policy requires user ID be collected from the user).",
+     "To transfer, the agent must first call the transfer_to_human_agents tool and then send the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.496479124994949,
+    "prompt_tokens": 2888,
+    "completion_tokens": 764
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user ID from the user before proceeding (policy requires user ID be collected from the user).",
+     "To transfer, the agent must first call the transfer_to_human_agents tool and then send the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.291590584005462,
+    "prompt_tokens": 2888,
+    "completion_tokens": 764
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user ID from the user before proceeding (policy requires user ID be collected from the user).",
+     "To transfer, the agent must first call the transfer_to_human_agents tool and then send the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9356383749982342,
+    "prompt_tokens": 2888,
+    "completion_tokens": 764
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user ID from the user before proceeding (policy requires user ID be collected from the user).",
+     "To transfer, the agent must first call the transfer_to_human_agents tool and then send the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.6886590410140343,
+    "prompt_tokens": 2888,
+    "completion_tokens": 764
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must obtain the user ID from the user before proceeding (policy requires user ID be collected from the user).",
+     "To transfer, the agent must first call the transfer_to_human_agents tool and then send the transfer message."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8998155409935862,
+    "prompt_tokens": 2888,
+    "completion_tokens": 764
+   }
+  ]
+ },
+ {
+  "case_id": "860a2a06-ba08-4589-a570-917477522428",
+  "task_id": "3",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership level information (Silver) that was not present in the tool output, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.836116666992893,
+    "prompt_tokens": 3036,
+    "completion_tokens": 629
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership level information (Silver) that was not present in the tool output, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8778911249828525,
+    "prompt_tokens": 3036,
+    "completion_tokens": 629
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership level information (Silver) that was not present in the tool output, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9112526249955408,
+    "prompt_tokens": 3036,
+    "completion_tokens": 629
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership level information (Silver) that was not present in the tool output, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.1811317499959841,
+    "prompt_tokens": 3036,
+    "completion_tokens": 629
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership level information (Silver) that was not present in the tool output, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8695068329980131,
+    "prompt_tokens": 3036,
+    "completion_tokens": 629
+   }
+  ]
+ },
+ {
+  "case_id": "871f33ef-fa83-42e7-8d9a-da8474280864",
+  "task_id": "40",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 5.683166041999357,
+    "prompt_tokens": 2917,
+    "completion_tokens": 263
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9488015419919975,
+    "prompt_tokens": 2917,
+    "completion_tokens": 263
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8802295420027804,
+    "prompt_tokens": 2917,
+    "completion_tokens": 263
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.885186875006184,
+    "prompt_tokens": 2917,
+    "completion_tokens": 263
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2061754579772241,
+    "prompt_tokens": 2917,
+    "completion_tokens": 263
+   }
+  ]
+ },
+ {
+  "case_id": "c5db55aa-aaac-43b9-8ad1-08aa15cd580d",
+  "task_id": "36",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 10.73568112499197,
+    "prompt_tokens": 3001,
+    "completion_tokens": 566
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.956148207973456,
+    "prompt_tokens": 3001,
+    "completion_tokens": 566
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8900178750045598,
+    "prompt_tokens": 3001,
+    "completion_tokens": 566
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8947453329747077,
+    "prompt_tokens": 3001,
+    "completion_tokens": 566
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3627376669901423,
+    "prompt_tokens": 3001,
+    "completion_tokens": 566
+   }
+  ]
+ },
+ {
+  "case_id": "d02bf2f9-8481-4bf4-b976-d5af2d5202a9",
+  "task_id": "40",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.064178915985394,
+    "prompt_tokens": 3255,
+    "completion_tokens": 567
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0455051669850945,
+    "prompt_tokens": 3255,
+    "completion_tokens": 567
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8619980409857817,
+    "prompt_tokens": 3255,
+    "completion_tokens": 567
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8530128749844152,
+    "prompt_tokens": 3255,
+    "completion_tokens": 567
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2156944579910487,
+    "prompt_tokens": 3255,
+    "completion_tokens": 567
+   }
+  ]
+ },
+ {
+  "case_id": "bad7b167-68e5-4f8d-a4bf-b50da7f0dc22",
+  "task_id": "16",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 15.041859207995003,
+    "prompt_tokens": 4337,
+    "completion_tokens": 912
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.192500667006243,
+    "prompt_tokens": 4337,
+    "completion_tokens": 912
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8336914170067757,
+    "prompt_tokens": 4337,
+    "completion_tokens": 912
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2441154999833088,
+    "prompt_tokens": 4337,
+    "completion_tokens": 912
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8807094999938272,
+    "prompt_tokens": 4337,
+    "completion_tokens": 912
+   }
+  ]
+ },
+ {
+  "case_id": "52772308-70ea-4b22-8c24-a53615e786b3",
+  "task_id": "12",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.89754879201064,
+    "prompt_tokens": 4110,
+    "completion_tokens": 1133
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9875267909956165,
+    "prompt_tokens": 4110,
+    "completion_tokens": 1133
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9925484170089476,
+    "prompt_tokens": 4110,
+    "completion_tokens": 1133
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8681945419812109,
+    "prompt_tokens": 4110,
+    "completion_tokens": 1133
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8551110840053298,
+    "prompt_tokens": 4110,
+    "completion_tokens": 1133
+   }
+  ]
+ },
+ {
+  "case_id": "02d73ab5-3f39-4389-b9d0-f92457dd14c4",
+  "task_id": "3",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent is only allowed if the request cannot be handled within the scope of the agent's actions."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.48472591600148,
+    "prompt_tokens": 3043,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent is only allowed if the request cannot be handled within the scope of the agent's actions."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9033283339813352,
+    "prompt_tokens": 3043,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent is only allowed if the request cannot be handled within the scope of the agent's actions."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.883530166989658,
+    "prompt_tokens": 3043,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent is only allowed if the request cannot be handled within the scope of the agent's actions."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2416352090076543,
+    "prompt_tokens": 3043,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "Transfer to a human agent is only allowed if the request cannot be handled within the scope of the agent's actions."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9035085839859676,
+    "prompt_tokens": 3043,
+    "completion_tokens": 875
+   }
+  ]
+ },
+ {
+  "case_id": "0c8c7df0-d8c5-46a7-a319-f20e00d4fe74",
+  "task_id": "37",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 12.170634333015187,
+    "prompt_tokens": 4885,
+    "completion_tokens": 467
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8883202919969335,
+    "prompt_tokens": 4885,
+    "completion_tokens": 467
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.6010849159792997,
+    "prompt_tokens": 4885,
+    "completion_tokens": 467
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.9217760000028647,
+    "prompt_tokens": 4885,
+    "completion_tokens": 467
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9973743750015274,
+    "prompt_tokens": 4885,
+    "completion_tokens": 467
+   }
+  ]
+ },
+ {
+  "case_id": "2922cd65-1265-4557-b5c1-2f4752958a96",
+  "task_id": "29",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer, first make a tool call to transfer_to_human_agents, then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 8.943269374984084,
+    "prompt_tokens": 4374,
+    "completion_tokens": 355
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer, first make a tool call to transfer_to_human_agents, then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8597490829997696,
+    "prompt_tokens": 4374,
+    "completion_tokens": 355
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer, first make a tool call to transfer_to_human_agents, then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0253417920030188,
+    "prompt_tokens": 4374,
+    "completion_tokens": 355
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer, first make a tool call to transfer_to_human_agents, then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9047762919799425,
+    "prompt_tokens": 4374,
+    "completion_tokens": 355
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "To transfer, first make a tool call to transfer_to_human_agents, then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.'"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.186801125004422,
+    "prompt_tokens": 4374,
+    "completion_tokens": 355
+   }
+  ]
+ },
+ {
+  "case_id": "4bbe7503-0478-47a2-bdde-7d5c2a46f7d7",
+  "task_id": "25",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.241682499996386,
+    "prompt_tokens": 3975,
+    "completion_tokens": 867
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.939068874984514,
+    "prompt_tokens": 3975,
+    "completion_tokens": 867
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.6900644580018707,
+    "prompt_tokens": 3975,
+    "completion_tokens": 867
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8707895000115968,
+    "prompt_tokens": 3975,
+    "completion_tokens": 867
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 9,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3654839580121916,
+    "prompt_tokens": 3975,
+    "completion_tokens": 867
+   }
+  ]
+ },
+ {
+  "case_id": "0bb8884a-51eb-45fb-8cb5-b546d995efe2",
+  "task_id": "44",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 9.849770333006745,
+    "prompt_tokens": 5814,
+    "completion_tokens": 557
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9894740839954466,
+    "prompt_tokens": 5814,
+    "completion_tokens": 557
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8740662920172326,
+    "prompt_tokens": 5814,
+    "completion_tokens": 557
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3635025419935118,
+    "prompt_tokens": 5814,
+    "completion_tokens": 557
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8992675830086228,
+    "prompt_tokens": 5814,
+    "completion_tokens": 557
+   }
+  ]
+ },
+ {
+  "case_id": "32ff1360-417c-4293-95cb-6c9745a84010",
+  "task_id": "18",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.815836333000334,
+    "prompt_tokens": 6861,
+    "completion_tokens": 773
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9037826670100912,
+    "prompt_tokens": 6861,
+    "completion_tokens": 773
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2853292499785312,
+    "prompt_tokens": 6861,
+    "completion_tokens": 773
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.995304624986602,
+    "prompt_tokens": 6861,
+    "completion_tokens": 773
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0007988330035005,
+    "prompt_tokens": 6861,
+    "completion_tokens": 773
+   }
+  ]
+ },
+ {
+  "case_id": "ebdca038-9491-4363-85fc-b244ab74eccd",
+  "task_id": "48",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.663399915996706,
+    "prompt_tokens": 6009,
+    "completion_tokens": 824
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2653052499808837,
+    "prompt_tokens": 6009,
+    "completion_tokens": 824
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9878308750048745,
+    "prompt_tokens": 6009,
+    "completion_tokens": 824
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0518832080124412,
+    "prompt_tokens": 6009,
+    "completion_tokens": 824
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.882072332984535,
+    "prompt_tokens": 6009,
+    "completion_tokens": 824
+   }
+  ]
+ },
+ {
+  "case_id": "71ae5c3e-5bf9-4e5e-80ac-19859f30928a",
+  "task_id": "41",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 21.207880125002703,
+    "prompt_tokens": 5138,
+    "completion_tokens": 1292
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9690900830028113,
+    "prompt_tokens": 5138,
+    "completion_tokens": 1292
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8984226660104468,
+    "prompt_tokens": 5138,
+    "completion_tokens": 1292
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.9417051670025103,
+    "prompt_tokens": 5138,
+    "completion_tokens": 1292
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.064526999980444,
+    "prompt_tokens": 5138,
+    "completion_tokens": 1292
+   }
+  ]
+ },
+ {
+  "case_id": "8388ada1-29c4-49c8-bdca-e3cbc2bc3e34",
+  "task_id": "48",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.909014333010418,
+    "prompt_tokens": 3372,
+    "completion_tokens": 750
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.923894042003667,
+    "prompt_tokens": 3372,
+    "completion_tokens": 750
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.9122751250106376,
+    "prompt_tokens": 3372,
+    "completion_tokens": 750
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8974104170047212,
+    "prompt_tokens": 3372,
+    "completion_tokens": 750
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.974871999991592,
+    "prompt_tokens": 3372,
+    "completion_tokens": 750
+   }
+  ]
+ },
+ {
+  "case_id": "04f0b2fd-e3e6-44c3-a864-aa19aa61e45e",
+  "task_id": "13",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.321091499994509,
+    "prompt_tokens": 3414,
+    "completion_tokens": 777
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8950767499918584,
+    "prompt_tokens": 3414,
+    "completion_tokens": 777
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8980244169943035,
+    "prompt_tokens": 3414,
+    "completion_tokens": 777
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.7507564580009785,
+    "prompt_tokens": 3414,
+    "completion_tokens": 777
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8908687080256641,
+    "prompt_tokens": 3414,
+    "completion_tokens": 777
+   }
+  ]
+ },
+ {
+  "case_id": "8aa6deb8-fea2-4d40-bc16-f11fdd642974",
+  "task_id": "13",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.599056999984896,
+    "prompt_tokens": 3376,
+    "completion_tokens": 743
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2439294169889763,
+    "prompt_tokens": 3376,
+    "completion_tokens": 743
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8738853329850826,
+    "prompt_tokens": 3376,
+    "completion_tokens": 743
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2100004579988308,
+    "prompt_tokens": 3376,
+    "completion_tokens": 743
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8713236670009792,
+    "prompt_tokens": 3376,
+    "completion_tokens": 743
+   }
+  ]
+ },
+ {
+  "case_id": "ae0ab3ac-7dde-48ec-bb18-56c5e3547f79",
+  "task_id": "49",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "After initiating a transfer, the assistant must immediately send the exact transfer notice message and should not send other explanatory messages before it."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.84,
+    "parsed": true,
+    "error": null,
+    "seconds": 16.05476745800115,
+    "prompt_tokens": 3384,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "After initiating a transfer, the assistant must immediately send the exact transfer notice message and should not send other explanatory messages before it."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.84,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.915388166991761,
+    "prompt_tokens": 3384,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "After initiating a transfer, the assistant must immediately send the exact transfer notice message and should not send other explanatory messages before it."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.84,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8755307079991326,
+    "prompt_tokens": 3384,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "After initiating a transfer, the assistant must immediately send the exact transfer notice message and should not send other explanatory messages before it."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.84,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.1788522920105606,
+    "prompt_tokens": 3384,
+    "completion_tokens": 875
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "After initiating a transfer, the assistant must immediately send the exact transfer notice message and should not send other explanatory messages before it."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.84,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8793288749875501,
+    "prompt_tokens": 3384,
+    "completion_tokens": 875
+   }
+  ]
+ },
+ {
+  "case_id": "115e988a-52c8-489c-9512-c6dd2a27f64d",
+  "task_id": "8",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 17.32313212499139,
+    "prompt_tokens": 5648,
+    "completion_tokens": 801
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.8759899169963319,
+    "prompt_tokens": 5648,
+    "completion_tokens": 801
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9010624160000589,
+    "prompt_tokens": 5648,
+    "completion_tokens": 801
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8758077080128714,
+    "prompt_tokens": 5648,
+    "completion_tokens": 801
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.6049357909942046,
+    "prompt_tokens": 5648,
+    "completion_tokens": 801
+   }
+  ]
+ },
+ {
+  "case_id": "e3e421c9-18b8-4a49-a799-b7db1c05e72a",
+  "task_id": "19",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.036448750004638,
+    "prompt_tokens": 4065,
+    "completion_tokens": 797
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8798304160009138,
+    "prompt_tokens": 4065,
+    "completion_tokens": 797
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3854780830151867,
+    "prompt_tokens": 4065,
+    "completion_tokens": 797
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8776547500165179,
+    "prompt_tokens": 4065,
+    "completion_tokens": 797
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.913049583992688,
+    "prompt_tokens": 4065,
+    "completion_tokens": 797
+   }
+  ]
+ },
+ {
+  "case_id": "d69c3a70-acb1-4e25-8729-50906e512e9b",
+  "task_id": "12",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.895326166995801,
+    "prompt_tokens": 4279,
+    "completion_tokens": 735
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9599173750029877,
+    "prompt_tokens": 4279,
+    "completion_tokens": 735
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9089922499842942,
+    "prompt_tokens": 4279,
+    "completion_tokens": 735
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.1781309169891756,
+    "prompt_tokens": 4279,
+    "completion_tokens": 735
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.96,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9067598340043332,
+    "prompt_tokens": 4279,
+    "completion_tokens": 735
+   }
+  ]
+ },
+ {
+  "case_id": "6738c4f4-a040-4e59-9641-e835511e66c4",
+  "task_id": "49",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 14.077068374986993,
+    "prompt_tokens": 3533,
+    "completion_tokens": 459
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9317875409906264,
+    "prompt_tokens": 3533,
+    "completion_tokens": 459
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8911425000114832,
+    "prompt_tokens": 3533,
+    "completion_tokens": 459
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.008618916006526,
+    "prompt_tokens": 3533,
+    "completion_tokens": 459
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.924730124999769,
+    "prompt_tokens": 3533,
+    "completion_tokens": 459
+   }
+  ]
+ },
+ {
+  "case_id": "a1f9ba2b-b7a1-4879-8eb3-634e878f15d6",
+  "task_id": "15",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 37.325244875013595,
+    "prompt_tokens": 5365,
+    "completion_tokens": 821
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8892111250024755,
+    "prompt_tokens": 5365,
+    "completion_tokens": 821
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3827133330050856,
+    "prompt_tokens": 5365,
+    "completion_tokens": 821
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9241308750060853,
+    "prompt_tokens": 5365,
+    "completion_tokens": 821
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8903480420121923,
+    "prompt_tokens": 5365,
+    "completion_tokens": 821
+   }
+  ]
+ },
+ {
+  "case_id": "4ed03dbd-7634-46a8-932d-987f122452cf",
+  "task_id": "1",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.266372042009607,
+    "prompt_tokens": 4693,
+    "completion_tokens": 638
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0059710419736803,
+    "prompt_tokens": 4693,
+    "completion_tokens": 638
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0302485420252196,
+    "prompt_tokens": 4693,
+    "completion_tokens": 638
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9147161250002682,
+    "prompt_tokens": 4693,
+    "completion_tokens": 638
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.274624000012409,
+    "prompt_tokens": 4693,
+    "completion_tokens": 638
+   }
+  ]
+ },
+ {
+  "case_id": "4bcdb0ae-391e-4f92-bcde-058e13873657",
+  "task_id": "19",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 28.018194958014647,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1066
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8419892499805428,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1066
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9683616250113118,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1066
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8494267080095597,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1066
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9957532089902088,
+    "prompt_tokens": 4343,
+    "completion_tokens": 1066
+   }
+  ]
+ },
+ {
+  "case_id": "155cac6b-5d37-49d4-b9d2-7a085f3e0a6e",
+  "task_id": "29",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must obtain the user ID before accessing reservation details (Modify flight policy).",
+     "Only one tool call may be made at a time; the assistant made consecutive tool calls without an intervening response."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 40.175877458998,
+    "prompt_tokens": 5845,
+    "completion_tokens": 1063
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must obtain the user ID before accessing reservation details (Modify flight policy).",
+     "Only one tool call may be made at a time; the assistant made consecutive tool calls without an intervening response."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.307504708005581,
+    "prompt_tokens": 5845,
+    "completion_tokens": 1063
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must obtain the user ID before accessing reservation details (Modify flight policy).",
+     "Only one tool call may be made at a time; the assistant made consecutive tool calls without an intervening response."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9739596660074312,
+    "prompt_tokens": 5845,
+    "completion_tokens": 1063
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must obtain the user ID before accessing reservation details (Modify flight policy).",
+     "Only one tool call may be made at a time; the assistant made consecutive tool calls without an intervening response."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9448114580009133,
+    "prompt_tokens": 5845,
+    "completion_tokens": 1063
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "Agent must obtain the user ID before accessing reservation details (Modify flight policy).",
+     "Only one tool call may be made at a time; the assistant made consecutive tool calls without an intervening response."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 3,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.9340574170055334,
+    "prompt_tokens": 5845,
+    "completion_tokens": 1063
+   }
+  ]
+ },
+ {
+  "case_id": "da235a5c-e4a7-4f79-bfd3-5e3f268ae8d5",
+  "task_id": "4",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 33.953710665984545,
+    "prompt_tokens": 4941,
+    "completion_tokens": 820
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9251464170229156,
+    "prompt_tokens": 4941,
+    "completion_tokens": 820
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9105452079966199,
+    "prompt_tokens": 4941,
+    "completion_tokens": 820
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.8843495420005638,
+    "prompt_tokens": 4941,
+    "completion_tokens": 820
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9025219999894034,
+    "prompt_tokens": 4941,
+    "completion_tokens": 820
+   }
+  ]
+ },
+ {
+  "case_id": "dbdfb975-51b8-4c78-880f-ed0c9b714ca8",
+  "task_id": "1",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Only make one tool call at a time; the assistant made multiple consecutive get_reservation_details calls without awaiting results (steps 5\u201110, first violation at step 6).",
+     "When transferring to a human agent, the policy requires calling the transfer_to_human_agents tool first and then sending the exact transfer message. The assistant asked for confirmation instead of invoking the transfer tool (step 16)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 25.363464042020496,
+    "prompt_tokens": 4675,
+    "completion_tokens": 1024
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Only make one tool call at a time; the assistant made multiple consecutive get_reservation_details calls without awaiting results (steps 5\u201110, first violation at step 6).",
+     "When transferring to a human agent, the policy requires calling the transfer_to_human_agents tool first and then sending the exact transfer message. The assistant asked for confirmation instead of invoking the transfer tool (step 16)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9929076659900602,
+    "prompt_tokens": 4675,
+    "completion_tokens": 1024
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "Only make one tool call at a time; the assistant made multiple consecutive get_reservation_details calls without awaiting results (steps 5\u201110, first violation at step 6).",
+     "When transferring to a human agent, the policy requires calling the transfer_to_human_agents tool first and then sending the exact transfer message. The assistant asked for confirmation instead of invoking the transfer tool (step 16)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8856376670009922,
+    "prompt_tokens": 4675,
+    "completion_tokens": 1024
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Only make one tool call at a time; the assistant made multiple consecutive get_reservation_details calls without awaiting results (steps 5\u201110, first violation at step 6).",
+     "When transferring to a human agent, the policy requires calling the transfer_to_human_agents tool first and then sending the exact transfer message. The assistant asked for confirmation instead of invoking the transfer tool (step 16)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9950577919953503,
+    "prompt_tokens": 4675,
+    "completion_tokens": 1024
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "Only make one tool call at a time; the assistant made multiple consecutive get_reservation_details calls without awaiting results (steps 5\u201110, first violation at step 6).",
+     "When transferring to a human agent, the policy requires calling the transfer_to_human_agents tool first and then sending the exact transfer message. The assistant asked for confirmation instead of invoking the transfer tool (step 16)."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 6,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9301909159985371,
+    "prompt_tokens": 4675,
+    "completion_tokens": 1024
+   }
+  ]
+ },
+ {
+  "case_id": "e976fa8e-163d-4711-a6bb-d18923312fe7",
+  "task_id": "11",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 54.13929362499039,
+    "prompt_tokens": 5307,
+    "completion_tokens": 1061
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0071299579867627,
+    "prompt_tokens": 5307,
+    "completion_tokens": 1061
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8955349999887403,
+    "prompt_tokens": 5307,
+    "completion_tokens": 1061
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.5532816250051837,
+    "prompt_tokens": 5307,
+    "completion_tokens": 1061
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 7,
+    "confidence": 0.95,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3712579169950914,
+    "prompt_tokens": 5307,
+    "completion_tokens": 1061
+   }
+  ]
+ },
+ {
+  "case_id": "dd104b2d-1efe-4c29-b23f-e464d7810f2a",
+  "task_id": "17",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership\u2011level information (gold member) that was not supplied by the user nor retrieved from any tool, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 42.02353079101886,
+    "prompt_tokens": 5305,
+    "completion_tokens": 1175
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership\u2011level information (gold member) that was not supplied by the user nor retrieved from any tool, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0186246249941178,
+    "prompt_tokens": 5305,
+    "completion_tokens": 1175
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership\u2011level information (gold member) that was not supplied by the user nor retrieved from any tool, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8849384999775793,
+    "prompt_tokens": 5305,
+    "completion_tokens": 1175
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership\u2011level information (gold member) that was not supplied by the user nor retrieved from any tool, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9923976249992847,
+    "prompt_tokens": 5305,
+    "completion_tokens": 1175
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant provided membership\u2011level information (gold member) that was not supplied by the user nor retrieved from any tool, violating the rule against giving information not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 11,
+    "confidence": 0.85,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8980658749933355,
+    "prompt_tokens": 5305,
+    "completion_tokens": 1175
+   }
+  ]
+ },
+ {
+  "case_id": "de86ec95-4aae-46ce-9269-a5838f34884f",
+  "task_id": "39",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant gave a subjective comment ('I appreciate your thoughtful gesture...'), which violates the rule against providing subjective recommendations or comments."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 37.03284395800438,
+    "prompt_tokens": 6313,
+    "completion_tokens": 951
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant gave a subjective comment ('I appreciate your thoughtful gesture...'), which violates the rule against providing subjective recommendations or comments."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0840263749996666,
+    "prompt_tokens": 6313,
+    "completion_tokens": 951
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant gave a subjective comment ('I appreciate your thoughtful gesture...'), which violates the rule against providing subjective recommendations or comments."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.975129124999512,
+    "prompt_tokens": 6313,
+    "completion_tokens": 951
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant gave a subjective comment ('I appreciate your thoughtful gesture...'), which violates the rule against providing subjective recommendations or comments."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.938884874980431,
+    "prompt_tokens": 6313,
+    "completion_tokens": 951
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The assistant gave a subjective comment ('I appreciate your thoughtful gesture...'), which violates the rule against providing subjective recommendations or comments."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 14,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.974434708012268,
+    "prompt_tokens": 6313,
+    "completion_tokens": 951
+   }
+  ]
+ },
+ {
+  "case_id": "d12ac6cb-584f-45a3-b85d-400af1a7148b",
+  "task_id": "42",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons).",
+     "The agent must ensure that no portion of the flight has already been flown before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 15,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 66.7141959159926,
+    "prompt_tokens": 6061,
+    "completion_tokens": 694
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons).",
+     "The agent must ensure that no portion of the flight has already been flown before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 15,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9317811670189258,
+    "prompt_tokens": 6061,
+    "completion_tokens": 694
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons).",
+     "The agent must ensure that no portion of the flight has already been flown before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 15,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8725334169866983,
+    "prompt_tokens": 6061,
+    "completion_tokens": 694
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons).",
+     "The agent must ensure that no portion of the flight has already been flown before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 15,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3725780829845462,
+    "prompt_tokens": 6061,
+    "completion_tokens": 694
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons).",
+     "The agent must ensure that no portion of the flight has already been flown before proceeding with cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 15,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8876064579817466,
+    "prompt_tokens": 6061,
+    "completion_tokens": 694
+   }
+  ]
+ },
+ {
+  "case_id": "5af11608-8d76-4175-9ead-b13786a7bf62",
+  "task_id": "8",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 57.858183834003285,
+    "prompt_tokens": 5423,
+    "completion_tokens": 1314
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0310422079928685,
+    "prompt_tokens": 5423,
+    "completion_tokens": 1314
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8961647499818355,
+    "prompt_tokens": 5423,
+    "completion_tokens": 1314
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8940357500105165,
+    "prompt_tokens": 5423,
+    "completion_tokens": 1314
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.92,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.932768708007643,
+    "prompt_tokens": 5423,
+    "completion_tokens": 1314
+   }
+  ]
+ },
+ {
+  "case_id": "919ff0ea-08ea-4935-a235-1037dd1a0f85",
+  "task_id": "22",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 30.389107541006524,
+    "prompt_tokens": 5643,
+    "completion_tokens": 1311
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8577550839981996,
+    "prompt_tokens": 5643,
+    "completion_tokens": 1311
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9766887500009034,
+    "prompt_tokens": 5643,
+    "completion_tokens": 1311
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8546114999917336,
+    "prompt_tokens": 5643,
+    "completion_tokens": 1311
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "You should not provide any information, knowledge, or procedures not provided by the user or available tools."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 13,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9180627499881666,
+    "prompt_tokens": 5643,
+    "completion_tokens": 1311
+   }
+  ]
+ },
+ {
+  "case_id": "da941195-85d3-4c65-ad45-8db290676312",
+  "task_id": "22",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The agent provided membership\u2011level information (gold member) that was not supplied by the user or shown in the tool output, violating the rule against giving information not provided by the user or available tools.",
+     "The agent assumed free baggage based on that unverified membership level, potentially giving incorrect policy guidance."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.62,
+    "parsed": true,
+    "error": null,
+    "seconds": 36.51188825001009,
+    "prompt_tokens": 5639,
+    "completion_tokens": 1076
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The agent provided membership\u2011level information (gold member) that was not supplied by the user or shown in the tool output, violating the rule against giving information not provided by the user or available tools.",
+     "The agent assumed free baggage based on that unverified membership level, potentially giving incorrect policy guidance."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.62,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9302978749910835,
+    "prompt_tokens": 5639,
+    "completion_tokens": 1076
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The agent provided membership\u2011level information (gold member) that was not supplied by the user or shown in the tool output, violating the rule against giving information not provided by the user or available tools.",
+     "The agent assumed free baggage based on that unverified membership level, potentially giving incorrect policy guidance."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.62,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.8758235419809353,
+    "prompt_tokens": 5639,
+    "completion_tokens": 1076
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The agent provided membership\u2011level information (gold member) that was not supplied by the user or shown in the tool output, violating the rule against giving information not provided by the user or available tools.",
+     "The agent assumed free baggage based on that unverified membership level, potentially giving incorrect policy guidance."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.62,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0292194999929052,
+    "prompt_tokens": 5639,
+    "completion_tokens": 1076
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The agent provided membership\u2011level information (gold member) that was not supplied by the user or shown in the tool output, violating the rule against giving information not provided by the user or available tools.",
+     "The agent assumed free baggage based on that unverified membership level, potentially giving incorrect policy guidance."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.62,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8849157080112491,
+    "prompt_tokens": 5639,
+    "completion_tokens": 1076
+   }
+  ]
+ },
+ {
+  "case_id": "835e53b5-3ec2-4097-9027-513637eaa2dc",
+  "task_id": "18",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 57.26406958300504,
+    "prompt_tokens": 9037,
+    "completion_tokens": 1160
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0613459160085768,
+    "prompt_tokens": 9037,
+    "completion_tokens": 1160
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8692245410056785,
+    "prompt_tokens": 9037,
+    "completion_tokens": 1160
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0508261249924544,
+    "prompt_tokens": 9037,
+    "completion_tokens": 1160
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8979174169944599,
+    "prompt_tokens": 9037,
+    "completion_tokens": 1160
+   }
+  ]
+ },
+ {
+  "case_id": "71323a9b-8770-429a-8447-e14ac7f29246",
+  "task_id": "4",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 49.68520816700766,
+    "prompt_tokens": 5413,
+    "completion_tokens": 721
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.498426375008421,
+    "prompt_tokens": 5413,
+    "completion_tokens": 721
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.008937375008827,
+    "prompt_tokens": 5413,
+    "completion_tokens": 721
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0630447090079542,
+    "prompt_tokens": 5413,
+    "completion_tokens": 721
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "You should only make one tool call at a time"
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 5,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0542775420180988,
+    "prompt_tokens": 5413,
+    "completion_tokens": 721
+   }
+  ]
+ },
+ {
+  "case_id": "abe032e9-10b0-4807-b188-e7861a789875",
+  "task_id": "43",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 33.49757033298374,
+    "prompt_tokens": 4779,
+    "completion_tokens": 836
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9448752499883994,
+    "prompt_tokens": 4779,
+    "completion_tokens": 836
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0039738329942338,
+    "prompt_tokens": 4779,
+    "completion_tokens": 836
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0504057910002302,
+    "prompt_tokens": 4779,
+    "completion_tokens": 836
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.9,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0459317920031026,
+    "prompt_tokens": 4779,
+    "completion_tokens": 836
+   }
+  ]
+ },
+ {
+  "case_id": "0cc8b7b5-142a-4d30-a2b3-d5d1b96015b3",
+  "task_id": "38",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.326283749978757,
+    "prompt_tokens": 4137,
+    "completion_tokens": 594
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0422984999895561,
+    "prompt_tokens": 4137,
+    "completion_tokens": 594
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.4233248330128845,
+    "prompt_tokens": 4137,
+    "completion_tokens": 594
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9143912499712314,
+    "prompt_tokens": 4137,
+    "completion_tokens": 594
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8652805829769932,
+    "prompt_tokens": 4137,
+    "completion_tokens": 594
+   }
+  ]
+ },
+ {
+  "case_id": "1f41c716-5aae-4c5a-8426-94fe0e74c359",
+  "task_id": "30",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 38.63749583301251,
+    "prompt_tokens": 4397,
+    "completion_tokens": 701
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0600567500223406,
+    "prompt_tokens": 4397,
+    "completion_tokens": 701
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0042085830064025,
+    "prompt_tokens": 4397,
+    "completion_tokens": 701
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8989612500008661,
+    "prompt_tokens": 4397,
+    "completion_tokens": 701
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8771051250223536,
+    "prompt_tokens": 4397,
+    "completion_tokens": 701
+   }
+  ]
+ },
+ {
+  "case_id": "dea86025-23e7-421d-883c-2604be9460b7",
+  "task_id": "30",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 11.685821791994385,
+    "prompt_tokens": 4187,
+    "completion_tokens": 633
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8992349999898579,
+    "prompt_tokens": 4187,
+    "completion_tokens": 633
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.8328042500070296,
+    "prompt_tokens": 4187,
+    "completion_tokens": 633
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9004274170147255,
+    "prompt_tokens": 4187,
+    "completion_tokens": 633
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.99,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0279982089996338,
+    "prompt_tokens": 4187,
+    "completion_tokens": 633
+   }
+  ]
+ },
+ {
+  "case_id": "edea47aa-f9b7-442f-8068-2818ce2bf807",
+  "task_id": "39",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 20.493135875003645,
+    "prompt_tokens": 6419,
+    "completion_tokens": 976
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9964020829938818,
+    "prompt_tokens": 6419,
+    "completion_tokens": 976
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9024849589914083,
+    "prompt_tokens": 6419,
+    "completion_tokens": 976
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2683236250013579,
+    "prompt_tokens": 6419,
+    "completion_tokens": 976
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.975239874998806,
+    "prompt_tokens": 6419,
+    "completion_tokens": 976
+   }
+  ]
+ },
+ {
+  "case_id": "04ddd858-9dad-4f59-b6b5-1ac660c3196a",
+  "task_id": "24",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "The policy requires the agent to obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with any cancellation discussion or action."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 18,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 34.660654166014865,
+    "prompt_tokens": 6617,
+    "completion_tokens": 1148
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "The policy requires the agent to obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with any cancellation discussion or action."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 18,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9653014579962473,
+    "prompt_tokens": 6617,
+    "completion_tokens": 1148
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "The policy requires the agent to obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with any cancellation discussion or action."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 18,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9357802910089958,
+    "prompt_tokens": 6617,
+    "completion_tokens": 1148
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "The policy requires the agent to obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with any cancellation discussion or action."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 18,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.895790707989363,
+    "prompt_tokens": 6617,
+    "completion_tokens": 1148
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "The policy requires the agent to obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) before proceeding with any cancellation discussion or action."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 18,
+    "confidence": 0.93,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0813798340095673,
+    "prompt_tokens": 6617,
+    "completion_tokens": 1148
+   }
+  ]
+ },
+ {
+  "case_id": "ce0884b7-80fa-4292-b609-cd47b18e505c",
+  "task_id": "38",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": false,
+    "violated_rules": [
+     "Compensation for delayed flights can only be offered after the user changes or cancels the reservation (policy requires delay compensation to be tied to a change/cancel).",
+     "Agent offered a $50 compensation certificate without the user indicating a change or cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 24.70219983300194,
+    "prompt_tokens": 4232,
+    "completion_tokens": 1275
+   },
+   {
+    "repeat": 1,
+    "compliant": false,
+    "violated_rules": [
+     "Compensation for delayed flights can only be offered after the user changes or cancels the reservation (policy requires delay compensation to be tied to a change/cancel).",
+     "Agent offered a $50 compensation certificate without the user indicating a change or cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.3169904589885846,
+    "prompt_tokens": 4232,
+    "completion_tokens": 1275
+   },
+   {
+    "repeat": 2,
+    "compliant": false,
+    "violated_rules": [
+     "Compensation for delayed flights can only be offered after the user changes or cancels the reservation (policy requires delay compensation to be tied to a change/cancel).",
+     "Agent offered a $50 compensation certificate without the user indicating a change or cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9974492500186898,
+    "prompt_tokens": 4232,
+    "completion_tokens": 1275
+   },
+   {
+    "repeat": 3,
+    "compliant": false,
+    "violated_rules": [
+     "Compensation for delayed flights can only be offered after the user changes or cancels the reservation (policy requires delay compensation to be tied to a change/cancel).",
+     "Agent offered a $50 compensation certificate without the user indicating a change or cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0275124170002528,
+    "prompt_tokens": 4232,
+    "completion_tokens": 1275
+   },
+   {
+    "repeat": 4,
+    "compliant": false,
+    "violated_rules": [
+     "Compensation for delayed flights can only be offered after the user changes or cancels the reservation (policy requires delay compensation to be tied to a change/cancel).",
+     "Agent offered a $50 compensation certificate without the user indicating a change or cancellation."
+    ],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": 12,
+    "confidence": 0.86,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8731735420005862,
+    "prompt_tokens": 4232,
+    "completion_tokens": 1275
+   }
+  ]
+ },
+ {
+  "case_id": "8d75cfb0-4f29-404a-8bf5-8fc9bfbee394",
+  "task_id": "42",
+  "trial": 0,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 18.003723166009877,
+    "prompt_tokens": 6159,
+    "completion_tokens": 767
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.913198916008696,
+    "prompt_tokens": 6159,
+    "completion_tokens": 767
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.8531401249929331,
+    "prompt_tokens": 6159,
+    "completion_tokens": 767
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9249264170066454,
+    "prompt_tokens": 6159,
+    "completion_tokens": 767
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9932123339967802,
+    "prompt_tokens": 6159,
+    "completion_tokens": 767
+   }
+  ]
+ },
+ {
+  "case_id": "4780dd0a-f50b-4360-b967-6a64afb65ae1",
+  "task_id": "27",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 31.335415999987163,
+    "prompt_tokens": 6190,
+    "completion_tokens": 610
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.0333093749941327,
+    "prompt_tokens": 6190,
+    "completion_tokens": 610
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.8746656250150409,
+    "prompt_tokens": 6190,
+    "completion_tokens": 610
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9269189590122551,
+    "prompt_tokens": 6190,
+    "completion_tokens": 610
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9877876669925172,
+    "prompt_tokens": 6190,
+    "completion_tokens": 610
+   }
+  ]
+ },
+ {
+  "case_id": "aadaa326-c698-4662-b299-27a34a4c4a50",
+  "task_id": "9",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 40.98034683399601,
+    "prompt_tokens": 5008,
+    "completion_tokens": 606
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9400134169845842,
+    "prompt_tokens": 5008,
+    "completion_tokens": 606
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8985957500117365,
+    "prompt_tokens": 5008,
+    "completion_tokens": 606
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.2656757919758093,
+    "prompt_tokens": 5008,
+    "completion_tokens": 606
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.98,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9732183330052067,
+    "prompt_tokens": 5008,
+    "completion_tokens": 606
+   }
+  ]
+ },
+ {
+  "case_id": "78ee9a32-50be-4f5e-84a1-398259e5ae84",
+  "task_id": "17",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 13.829586374980863,
+    "prompt_tokens": 5918,
+    "completion_tokens": 812
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9159145000157878,
+    "prompt_tokens": 5918,
+    "completion_tokens": 812
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8486639999900945,
+    "prompt_tokens": 5918,
+    "completion_tokens": 812
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.8660096249950584,
+    "prompt_tokens": 5918,
+    "completion_tokens": 812
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9080708750116173,
+    "prompt_tokens": 5918,
+    "completion_tokens": 812
+   }
+  ]
+ },
+ {
+  "case_id": "20a9417d-de42-4e83-9c1f-d60f1f8808b6",
+  "task_id": "24",
+  "trial": 1,
+  "mode": "full",
+  "model": "gpt-oss:120b",
+  "repeats": [
+   {
+    "repeat": 0,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 22.12622150001698,
+    "prompt_tokens": 6921,
+    "completion_tokens": 1039
+   },
+   {
+    "repeat": 1,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9159589579794556,
+    "prompt_tokens": 6921,
+    "completion_tokens": 1039
+   },
+   {
+    "repeat": 2,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.8949897499987856,
+    "prompt_tokens": 6921,
+    "completion_tokens": 1039
+   },
+   {
+    "repeat": 3,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 1.9383410000009462,
+    "prompt_tokens": 6921,
+    "completion_tokens": 1039
+   },
+   {
+    "repeat": 4,
+    "compliant": true,
+    "violated_rules": [],
+    "missing_actions": null,
+    "wrong_arguments": null,
+    "first_violation_step": null,
+    "confidence": 0.97,
+    "parsed": true,
+    "error": null,
+    "seconds": 0.9212387090083212,
+    "prompt_tokens": 6921,
+    "completion_tokens": 1039
+   }
+  ]
+ }
+]

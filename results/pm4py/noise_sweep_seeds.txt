@@ -1,0 +1,37 @@
+Discover-then-check under ten values of PYTHONHASHSEED (0 to 9), tau2 airline, 172 runs
+
+noise 0.0
+  10 seeds [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: 38 places, 53 transitions, missing none
+  token replay  10 seeds: fitness compliant 1.000 violating 0.987 | flags 9 | prec 1.00 rec 0.24 kappa 0.34
+  alignments    10 seeds: fitness compliant 1.000 violating 0.959 | flags 9 | prec 1.00 rec 0.24 kappa 0.34
+  task 29 trial 0 10 seeds: token replay 1.000, alignment 1.000, log moves none
+
+noise 0.1
+  10 seeds [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: 25 places, 40 transitions, missing ['update_reservation_passengers']
+  token replay  10 seeds: fitness compliant 0.961 violating 0.933 | flags 113 | prec 0.26 rec 0.78 kappa 0.09
+  alignments    10 seeds: fitness compliant 0.841 violating 0.815 | flags 117 | prec 0.25 rec 0.78 kappa 0.07
+  task 29 trial 0 10 seeds: token replay 0.944, alignment 0.800, log moves ['get_user_details']
+
+noise 0.2
+   4 seeds [0, 3, 6, 9]: 17 places, 27 transitions, missing ['calculate', 'cancel_reservation', 'update_reservation_flights', 'update_reservation_passengers']
+   2 seeds [1, 4]: 15 places, 23 transitions, missing ['calculate', 'cancel_reservation', 'update_reservation_flights', 'update_reservation_passengers']
+   2 seeds [7, 8]: 17 places, 27 transitions, missing ['update_reservation_passengers']
+   1 seeds [2]: 19 places, 31 transitions, missing ['update_reservation_passengers']
+   1 seeds [5]: 27 places, 42 transitions, missing none
+  token replay   4 seeds: fitness compliant 0.916 violating 0.911 | flags 144 | prec 0.24 rec 0.95 kappa 0.07
+  token replay   2 seeds: fitness compliant 0.910 violating 0.879 | flags 144 | prec 0.24 rec 0.95 kappa 0.07
+  token replay   2 seeds: fitness compliant 0.866 violating 0.842 | flags 155 | prec 0.23 rec 0.95 kappa 0.03
+  token replay   1 seeds: fitness compliant 0.873 violating 0.875 | flags 155 | prec 0.23 rec 0.95 kappa 0.03
+  token replay   1 seeds: fitness compliant 0.892 violating 0.889 | flags 156 | prec 0.22 rec 0.95 kappa 0.02
+  alignments     4 seeds: fitness compliant 0.690 violating 0.578 | flags 156 | prec 0.22 rec 0.95 kappa 0.02
+  alignments     2 seeds: fitness compliant 0.675 violating 0.562 | flags 156 | prec 0.22 rec 0.95 kappa 0.02
+  alignments     2 seeds: fitness compliant 0.733 violating 0.626 | flags 156 | prec 0.22 rec 0.95 kappa 0.02
+  alignments     1 seeds: fitness compliant 0.743 violating 0.641 | flags 156 | prec 0.22 rec 0.95 kappa 0.02
+  alignments     1 seeds: fitness compliant 0.762 violating 0.681 | flags 156 | prec 0.22 rec 0.95 kappa 0.02
+  task 29 trial 0  6 seeds: token replay 0.933, alignment 0.600, log moves ['get_reservation_details', 'get_user_details']
+  task 29 trial 0  3 seeds: token replay 0.929, alignment 0.667, log moves ['get_reservation_details', 'get_user_details']
+  task 29 trial 0  1 seeds: token replay 0.923, alignment 0.667, log moves ['get_reservation_details', 'get_user_details']
+
+Declarative engine, per-task-type models, verdict hash per seed
+  airline: 1 distinct hash(es) over 10 seeds: {'fabcb783d233a982': 10}
+  retail: 1 distinct hash(es) over 10 seeds: {'8fc2a1de004981cf': 10}
