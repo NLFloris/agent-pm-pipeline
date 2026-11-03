@@ -165,22 +165,22 @@ matter more than anything else measured in this document.**
 
 ### 3.1 Hand-transcribed policy reference — null result
 
-Thirteen constraints transcribed by hand from
+Twelve constraints transcribed by hand from
 `data/tau2/domains/airline/policy.md` into the DECLARE-style `Reference`
-vocabulary (`allowed`, `required`, `precedence`, `forbidden_after`,
-`end_activities`).
+vocabulary (`allowed`, `precedence`, `forbidden_after`).
 
 | | mean fitness |
 |---|---|
-| reward = 1 (n=168) | 0.9231 |
-| reward = 0 (n=32) | 0.9231 |
+| reward = 1 (n=168) | 1.0000 |
+| reward = 0 (n=32) | 1.0000 |
 | **separation** | **0.0000** |
 
-Fully compliant: 0 / 200. The only constraint that ever fires is
-`end_activities`, and it fires on all 200 runs, because every simulation
-terminates with `termination_reason: user_stop` so the user simulator always has
-the last word. That constraint was simply wrong, and with it removed every run
-scores 1.0.
+Fully compliant: 200 / 200; no constraint ever fires. Until 2026-10-30 the
+reference had a thirteenth constraint, `end_activities` (the conversation ends
+with the agent), which the policy does not state. It fired on all 200 runs,
+because every simulation terminates with `termination_reason: user_stop` so the
+user simulator always has the last word, and it only lowered every run to
+0.9231. It was removed; the separation is 0 either way.
 
 Two things follow. The transcription carries no signal whatsoever, and nothing
 in the output warns you: a wrongly chosen constraint produces a *constant*,

@@ -98,6 +98,9 @@ WRITES = ["book_reservation", "update_reservation_flights", "update_reservation_
 # Hand-transcribed from data/tau2/domains/airline/policy.md (accessed 2026-09-22).
 # Kept in the experiment because its failure is itself a reported result: see
 # the policy-vs-gold comparison below.
+# 2026-10-30: dropped end_activities=["assistant_message"]. The policy has no
+# such rule, and every tau2-bench conversation ends with the simulated customer,
+# so it failed on all 200 runs alike and only lowered every fitness to 0.9231.
 POLICY_REFERENCE = Reference(
     name="airline_policy",
     allowed=AIRLINE_TOOLS + ["assistant_message", "user_message"],
@@ -106,7 +109,6 @@ POLICY_REFERENCE = Reference(
                    ["update_reservation_flights", "update_reservation_baggages",
                     "update_reservation_passengers", "cancel_reservation"]]),
     forbidden_after=[["transfer_to_human_agents", w] for w in WRITES],
-    end_activities=["assistant_message"],
 )
 
 

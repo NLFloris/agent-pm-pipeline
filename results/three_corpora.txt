@@ -12,10 +12,10 @@ CORPUS 1  tau2-bench airline (public, carries its own reference model)
   harness labels: 168 pass / 32 fail (base rate 84%)
 
   conformance vs hand-transcribed policy reference (authored by us)
-    constraints 13   fully compliant 0/200
-    mean fitness | reward=0.0: 0.9231  (n=32)
-    mean fitness | reward=1.0: 0.9231  (n=168)
-    constraints that ever fire: {'end_activities': 200}
+    constraints 12   fully compliant 200/200
+    mean fitness | reward=0.0: 1.0000  (n=32)
+    mean fitness | reward=1.0: 1.0000  (n=168)
+    constraints that ever fire: none
     separation between labels: 0.0000  <- the signal this reference carries
 
   conformance vs per-task gold-action reference (derived from the data)
