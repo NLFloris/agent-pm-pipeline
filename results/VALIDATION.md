@@ -13,7 +13,7 @@ of each section.
    pooled precision 0.89 on retail against the per-action label, and 0.94 on
    airline once that label also counts writes not on the gold list (0.74 without).
    Its recall against the process labels stays between 0.3 and 0.5, and its
-   misses are mostly actions with the wrong arguments.
+   misses are mostly listed actions that occur but do not match.
 2. **The second Judge confirms the first where the first was good.** The Judge
    handed the required actions reaches κ 0.95 (gpt-oss:120b) and 0.97
    (glm-5.3-flash) on airline, 0.91 and 0.86 on a retail sample, and the two
@@ -142,10 +142,11 @@ these alarms: pooled precision against *action-or-db* becomes 1.00 [0.99, 1.00]
 on airline and 0.98 [0.97, 0.99] on retail, at a recall of 0.44 and 0.30.
 
 **What the engine misses.** Of the 511 airline violations against *action*
-that the frozen engine misses, 427 fail only on arguments: the right action
-with a wrong value. In retail the figure is 1,240 of 1,910, and 620 of the
-missed runs lack a read-only gold action such as `calculate`, which the type
-models do not require.
+that the frozen engine misses, 427 contain every failed action by name: 333
+with a wrong value and 94 with too few repetitions. In retail the figure is
+1,240 of 1,910, 712 and 528. The other 84 and 670 lack a gold action that the
+type models do not require, such as `calculate`. Source:
+`results/miss_reasons.txt`.
 
 ## 4. Retail as a second domain
 
