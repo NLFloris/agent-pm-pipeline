@@ -1,0 +1,10 @@
+{
+ "task_id": "l05_fix_bug",
+ "shape": "loop",
+ "prompt": "The growth function in calc.py divides by a without guarding against a being zero. Fix it, then run a quick check that growth(0, 5) no longer raises.",
+ "started_at": "2026-11-03T11:23:38.417511+00:00",
+ "seconds": 43.7,
+ "error": null,
+ "final": "The `growth` function in **calc.py** now checks for a zero divisor before performing the division, preventing a `ZeroDivisionError`.\n\n### Updated `calc.py`\n```python\ndef revenue(units, price):\n    return units * price\n\n\ndef growth(a, b):\n    \"\"\"Return percent change from a to b.\n    Handles the case where a is zero by returning 0 (or could return\n    appropriate value such as float('inf')). Here we return 0 to avoid\n    division by zero.\n    \"\"\"\n    if a == 0:\n        # If both a and b are zero, change is zero; otherwise define as 0\n        return 0\n    return (b - a) / a\n```\n\n### Quick verification\n```python\nimport calc\nprint(calc.growth(0, 5))   # Output: 0\n```\n\nThe call `growth(0, 5)` now executes without raising an exception and returns `0`, confirming the fix is successful.",
+ "model": "gpt-oss:120b"
+}

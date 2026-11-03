@@ -1,0 +1,10 @@
+{
+ "task_id": "l04_cross_check",
+ "shape": "verify",
+ "prompt": "notes.md claims east sales fell in Q2 after a price rise. Check that against sales.csv and say whether the note is accurate.",
+ "started_at": "2026-11-03T11:22:37.295721+00:00",
+ "seconds": 61.1,
+ "error": null,
+ "final": "The note is **accurate**.\n\n**Why:**\n\n| Quarter | East units sold | East price |\n|---------|----------------|------------|\n| Q1 | 80 | $9.50 |\n| Q2 | 75 | $12.25 |\n\n- **Sales change:** Units fell from 80 in Q1 to 75 in Q2, a decrease of 5 units (\u20116.25%).\n- **Price change:** The unit price rose from $9.50 in Q1 to $12.25 in Q2.\n\nSince sales declined in Q2 and the price increased from Q1 to Q2, the claim that \u201cEast sales fell in Q2 after the price rise\u201d is supported by the data.",
+ "model": "gpt-oss:120b"
+}

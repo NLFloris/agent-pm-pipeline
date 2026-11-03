@@ -1,0 +1,10 @@
+{
+ "task_id": "l06_summarise_all",
+ "shape": "verify",
+ "prompt": "Summarise all three files in the working directory in one paragraph each, then state one thing the files disagree about or leave unclear.",
+ "started_at": "2026-11-03T11:24:22.148402+00:00",
+ "seconds": 60.0,
+ "error": null,
+ "final": "**calc.py \u2013 Summary**  \n`calc.py` defines two straightforward utility functions for business calculations. The `revenue` function multiplies a number of units by a unit price to produce total sales revenue, while the `growth` function computes the fractional percent change from an initial value\u202f`a` to a later value\u202f`b`. Both functions are generic and can be applied to any numeric data set.\n\n**notes.md \u2013 Summary**  \n`notes.md` contains field notes that describe qualitative observations about pricing and sales trends across three regions. It records that the south region changed its price in the first quarter, the east region saw a sales decline in the second quarter after a price increase, and the north region kept its price steady throughout the year.\n\n**sales.csv \u2013 Summary**  \n`sales.csv` provides the quantitative sales data underlying those observations. For each region (north, south, east) and quarter (Q1, Q2) it lists the number of units sold and the unit price used. The north region sold 120 units at\u202f$9.50 in Q1 and 140 units at\u202f$9.50 in Q2; the south region sold 95 units at\u202f$11.00 in Q1 and 160 units at\u202f$11.00 in Q2; the east region sold 80 units at\u202f$9.50 in Q1 and 75 units at\u202f$12.25 in Q2.\n\n**Disagreement / Unclear Point**  \nThe notes state that the **south region \u201cchanged price in Q1,\u201d** suggesting a price shift between quarters, but the CSV data shows the south region\u2019s price remaining constant at **$11.00** in both Q1 and Q2. This inconsistency leaves it unclear whether the price actually changed as described in the notes or whether the note is inaccurate.",
+ "model": "gpt-oss:120b"
+}

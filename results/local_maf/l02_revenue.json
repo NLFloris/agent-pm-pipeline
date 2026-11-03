@@ -1,0 +1,10 @@
+{
+ "task_id": "l02_revenue",
+ "shape": "relay",
+ "prompt": "Using sales.csv, compute total revenue per region as units times price. Write the answer as a markdown table.",
+ "started_at": "2026-11-03T10:55:11.161508+00:00",
+ "seconds": 40.9,
+ "error": null,
+ "final": "Here\u2019s the total revenue for each region, calculated as\u202f*units\u202f\u00d7\u202fprice* and summed across all rows in **sales.csv**:\n\n| Region | Total Revenue |\n|--------|---------------|\n| north  | **2,470.00** |\n| south  | **2,805.00** |\n| east   | **1,678.75** |\n\nThese figures represent the aggregated revenue per region.",
+ "model": "gpt-oss:120b"
+}

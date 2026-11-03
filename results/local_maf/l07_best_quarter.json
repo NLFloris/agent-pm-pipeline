@@ -1,0 +1,10 @@
+{
+ "task_id": "l07_best_quarter",
+ "shape": "relay",
+ "prompt": "Which single region and quarter produced the highest revenue in sales.csv? Show the calculation you used.",
+ "started_at": "2026-11-03T11:25:22.148026+00:00",
+ "seconds": 59.9,
+ "error": null,
+ "final": "**Answer**\n\nThe region\u2011quarter combination that generated the highest total revenue in **sales.csv** is:\n\n**Region:** `south`  \n**Quarter:** `Q2`  \n\n**Total revenue:** **$1,760.00**\n\n---\n\n### How the calculation was done\n\n1. **Load the data**  \n   ```python\n   df = pd.read_csv('sales.csv')\n   ```\n\n2. **Compute revenue for each row** (Revenue = units \u00d7 price)  \n   ```python\n   df['Revenue'] = df['units'] * df['price']\n   ```\n\n   The relevant rows after this step are:\n\n   | region | quarter | units | price | Revenue |\n   |--------|---------|-------|-------|---------|\n   | north  | Q1      | 120   | 9.5   | 1,140.0 |\n   | north  | Q2      | 140   | 9.5   | 1,330.0 |\n   | south  | Q1      | 95    | 11.0  | 1,045.0 |\n   | **south** | **Q2** | **160** | **11.0** | **1,760.0** |\n   | east   | Q1      | 80    | 9.5   | 760.0   |\n   | east   | Q2      | 75    | 12.25 | 918.75  |\n\n3. **Group by region and quarter and sum the revenue**  \n   ```python\n   grouped = df.groupby(['region','quarter'])['Revenue'].sum()\n   ```\n\n   The summed revenues are:\n\n   - north\u2011Q1: 1,140.00  \n   - north\u2011Q2: 1,330.00  \n   - south\u2011Q1: 1,045.00  \n   - **south\u2011Q2: 1,760.00** \u2190 highest  \n   - east\u2011Q1: 760.00  \n   - east\u2011Q2: 918.75  \n\n4. **Identify the maximum** \u2013 the `south, Q2` group has the greatest total revenue (1,760.00).\n\n5. **Show the detailed calculation for that group**  \n   - Only one row belongs to `south\u2011Q2`:\n     - `units = 160`, `price = 11.0` \u2192 `Revenue = 160 \u00d7 11.0 = 1,760.0`\n\n   Therefore, the total revenue for the `south\u2011Q2` group is **1,760.00**.\n\n---\n\n**Result:** The single region and quarter that produced the highest revenue is **South, Q2**, with a total revenue of **$1,760.00**.",
+ "model": "gpt-oss:120b"
+}

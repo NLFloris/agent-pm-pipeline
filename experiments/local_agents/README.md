@@ -148,6 +148,26 @@ python -m agentpm.cli report results/local_subagents/runs --format local_magenti
 request from its cache. A sub-agent's start becomes `spawn` by the parent with
 the sub-agent on `spawns`; its own events carry `spawned_by`.
 
+## Microsoft Agent Framework
+
+`run_maf.py` runs the same tasks, agents, tools and model on AutoGen's successor,
+and records only its OpenTelemetry spans, with the option for sensitive data on.
+It has its own environment, and `compare_maf.py` needs the pipeline's.
+
+```bash
+python3 -m venv ~/venvs/maf
+~/venvs/maf/bin/pip install -r experiments/local_agents/requirements-maf.txt
+~/venvs/maf/bin/python experiments/local_agents/run_maf.py --no-cache
+python experiments/local_agents/compare_maf.py > results/local_maf/comparison.txt
+```
+
+Unlike AutoGen's spans these hold the arguments, the results, the orchestrator and
+the model calls, but not the reasoning text with the default client. This is the
+route to start from for new work. Its known weaknesses: the content needs an option
+that the documentation advises against in production, the ingester cannot tell which
+agent handed over work, the orchestrator's JSON can fail and trigger a reset, and
+sub-agents are untested.
+
 ## Ingesting
 
 ```python

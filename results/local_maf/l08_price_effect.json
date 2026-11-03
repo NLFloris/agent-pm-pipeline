@@ -1,0 +1,10 @@
+{
+ "task_id": "l08_price_effect",
+ "shape": "loop",
+ "prompt": "Did raising the price in a region reduce its units sold? Answer using only sales.csv, and state how confident the data lets you be.",
+ "started_at": "2026-11-03T11:26:22.087293+00:00",
+ "seconds": 70.5,
+ "error": null,
+ "final": "Based on the data in **sales.csv**, only one instance of a price increase can be observed: in the **East** region, the price rose from\u202f9.50 to\u202f12.25 between Q1 and Q2. In that same period, units sold fell from\u202f80 to\u202f75\u2014a drop of 5 units, or **\u20116.25\u202f%**.\n\nBecause the dataset contains just this single price\u2011increase event, there isn\u2019t enough evidence to draw a robust, general conclusion about the effect of price changes on sales. With such a limited sample, the confidence in any inference is **low**. \n\n**Bottom line:** In the only case where a price was raised, sales did decline, but the data are too sparse to be confident that raising prices will reliably reduce units sold across regions.",
+ "model": "gpt-oss:120b"
+}

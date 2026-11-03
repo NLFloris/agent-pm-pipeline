@@ -1,0 +1,10 @@
+{
+ "task_id": "l03_growth",
+ "shape": "relay",
+ "prompt": "Use the growth function in calc.py to compute the Q1 to Q2 change in units for every region in sales.csv. Report which region fell the most.",
+ "started_at": "2026-11-03T10:55:52.041032+00:00",
+ "seconds": 660.6,
+ "error": null,
+ "final": "Here\u2019s the unit change from Q1 to Q2 for each region, using the `growth` function from **calc.py**:\n\n| Region | Q1 Units | Q2 Units | Unit Change (Q2\u202f\u2013\u202fQ1) |\n|--------|----------|----------|----------------------|\n| north  | 120 | 140 | **+20** |\n| south  | 95  | 160 | **+65** |\n| east   | 80  | 75  | **\u20115** |\n\n**Region with the biggest decline:** **east**, which lost **5 units** between Q1 and Q2.",
+ "model": "gpt-oss:120b"
+}

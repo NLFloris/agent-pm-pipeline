@@ -1,0 +1,308 @@
+
+=== l01_read_csv
+  AutoGen, harness recording  2 tool calls, agents ['FileSurfer']: ['list_files', 'read_file']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file']
+    agents       ['FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.6
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer', 'Orchestrator']
+    with args    3
+    with result  3
+    model calls  11
+    conforms     False
+    fitness      0.8
+
+=== l02_revenue
+  AutoGen, harness recording  4 tool calls, agents ['Coder', 'FileSurfer']: ['list_files', 'read_file', 'run_python', 'run_python']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file', 'run_python', 'run_python']
+    agents       ['Coder', 'FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.8
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer', 'Orchestrator']
+    with args    3
+    with result  3
+    model calls  11
+    conforms     False
+    fitness      0.8
+
+=== l03_growth
+  AutoGen, harness recording  4 tool calls, agents ['Coder', 'FileSurfer']: ['list_files', 'read_file', 'read_file', 'run_python']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.8
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer', 'Orchestrator']
+    with args    4
+    with result  4
+    model calls  12
+    conforms     False
+    fitness      0.8
+
+=== l04_cross_check
+  AutoGen, harness recording  3 tool calls, agents ['FileSurfer']: ['list_files', 'read_file', 'read_file']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file', 'read_file']
+    agents       ['FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.6
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer', 'Orchestrator']
+    with args    4
+    with result  4
+    model calls  12
+    conforms     False
+    fitness      0.8
+
+=== l05_fix_bug
+  AutoGen, harness recording  5 tool calls, agents ['Coder', 'FileSurfer']: ['list_files', 'read_file', 'write_file', 'run_python', 'read_file']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file', 'write_file', 'run_python', 'read_file']
+    agents       ['Coder', 'FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.8
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'write_file', 'run_python']
+    agents       ['Coder', 'FileSurfer', 'Orchestrator']
+    with args    4
+    with result  4
+    model calls  12
+    conforms     False
+    fitness      0.8
+
+=== l06_summarise_all
+  AutoGen, harness recording  4 tool calls, agents ['FileSurfer']: ['list_files', 'read_file', 'read_file', 'read_file']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file', 'read_file', 'read_file']
+    agents       ['FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.6
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'read_file', 'read_file']
+    agents       ['Analyst', 'FileSurfer', 'Orchestrator']
+    with args    4
+    with result  4
+    model calls  11
+    conforms     False
+    fitness      0.6
+
+=== l07_best_quarter
+  AutoGen, harness recording  3 tool calls, agents ['Coder', 'FileSurfer']: ['list_files', 'read_file', 'run_python']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.8
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer', 'Orchestrator']
+    with args    3
+    with result  3
+    model calls  11
+    conforms     False
+    fitness      0.8
+
+=== l08_price_effect
+  AutoGen, harness recording  3 tool calls, agents ['Coder', 'FileSurfer']: ['list_files', 'read_file', 'run_python']
+  AutoGen, OpenTelemetry
+    tools        ['list_files', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer']
+    with args    0
+    with result  0
+    model calls  0
+    conforms     False
+    fitness      0.8
+  Agent Framework, OpenTelemetry
+    tools        ['list_files', 'read_file', 'run_python']
+    agents       ['Coder', 'FileSurfer', 'Orchestrator']
+    with args    3
+    with result  3
+    model calls  11
+    conforms     False
+    fitness      0.8
+
+--- l01_read_csv final answer, 34.2s, error None
+**sales.csv** contains **6 rows** of data (excluding the header) and has the following column names:
+
+- `region`
+- `quarter`
+- `units`
+- `price`
+
+--- l02_revenue final answer, 40.9s, error None
+Here’s the total revenue for each region, calculated as *units × price* and summed across all rows in **sales.csv**:
+
+| Region | Total Revenue |
+|--------|---------------|
+| north  | **2,470.00** |
+| south  | **2,805.00** |
+| east   | **1,678.75** |
+
+These figures represent the aggregated revenue per region.
+
+--- l03_growth final answer, 660.6s, error None
+Here’s the unit change from Q1 to Q2 for each region, using the `growth` function from **calc.py**:
+
+| Region | Q1 Units | Q2 Units | Unit Change (Q2 – Q1) |
+|--------|----------|----------|----------------------|
+| north  | 120 | 140 | **+20** |
+| south  | 95  | 160 | **+65** |
+| east   | 80  | 75  | **‑5** |
+
+**Region with the biggest decline:** **east**, which lost **5 units** between Q1 and Q2.
+
+--- l04_cross_check final answer, 61.1s, error None
+The note is **accurate**.
+
+**Why:**
+
+| Quarter | East units sold | East price |
+|---------|----------------|------------|
+| Q1 | 80 | $9.50 |
+| Q2 | 75 | $12.25 |
+
+- **Sales change:** Units fell from 80 in Q1 to 75 in Q2, a decrease of 5 units (‑6.25%).
+- **Price change:** The unit price rose from $9.50 in Q1 to $12.25 in Q2.
+
+Since sales declined in Q2 and the price increased from Q1 to Q2, the claim that “East sales fell in Q2 after the price rise” is supported by the data.
+
+--- l05_fix_bug final answer, 43.7s, error None
+The `growth` function in **calc.py** now checks for a zero divisor before performing the division, preventing a `ZeroDivisionError`.
+
+### Updated `calc.py`
+```python
+def revenue(units, price):
+    return units * price
+
+
+def growth(a, b):
+    """Return percent change from a to b.
+    Handles the case where a is zero by returning 0 (or could return
+    appropriate value such as float('inf')). Here we return 0 to avoid
+    division by zero.
+    """
+    if a == 0:
+        # If both a and b are zero, change is zero; otherwise define as 0
+        return 0
+    return (b - a) / a
+```
+
+### Quick verification
+```python
+import calc
+print(calc.growth(0, 5))   # Output: 0
+```
+
+The call `growth(0, 5)` now executes without raising an exception and returns `0`, confirming the fix is successful.
+
+--- l06_summarise_all final answer, 60.0s, error None
+**calc.py – Summary**  
+`calc.py` defines two straightforward utility functions for business calculations. The `revenue` function multiplies a number of units by a unit price to produce total sales revenue, while the `growth` function computes the fractional percent change from an initial value `a` to a later value `b`. Both functions are generic and can be applied to any numeric data set.
+
+**notes.md – Summary**  
+`notes.md` contains field notes that describe qualitative observations about pricing and sales trends across three regions. It records that the south region changed its price in the first quarter, the east region saw a sales decline in the second quarter after a price increase, and the north region kept its price steady throughout the year.
+
+**sales.csv – Summary**  
+`sales.csv` provides the quantitative sales data underlying those observations. For each region (north, south, east) and quarter (Q1, Q2) it lists the number of units sold and the unit price used. The north region sold 120 units at $9.50 in Q1 and 140 units at $9.50 in Q2; the south region sold 95 units at $11.00 in Q1 and 160 units at $11.00 in Q2; the east region sold 80 units at $9.50 in Q1 and 75 units at $12.25 in Q2.
+
+**Disagreement / Unclear Point**  
+The notes state that the **south region “changed price in Q1,”** suggesting a price shift between quarters, but the CSV data shows the south region’s price remaining constant at **$11.00** in both Q1 and Q2. This inconsistency leaves it unclear whether the price actually changed as described in the notes or whether the note is inaccurate.
+
+--- l07_best_quarter final answer, 59.9s, error None
+**Answer**
+
+The region‑quarter combination that generated the highest total revenue in **sales.csv** is:
+
+**Region:** `south`  
+**Quarter:** `Q2`  
+
+**Total revenue:** **$1,760.00**
+
+---
+
+### How the calculation was done
+
+1. **Load the data**  
+   ```python
+   df = pd.read_csv('sales.csv')
+   ```
+
+2. **Compute revenue for each row** (Revenue = units × price)  
+   ```python
+   df['Revenue'] = df['units'] * df['price']
+   ```
+
+   The relevant rows after this step are:
+
+   | region | quarter | units | price | Revenue |
+   |--------|---------|-------|-------|---------|
+   | north  | Q1      | 120   | 9.5   | 1,140.0 |
+   | north  | Q2      | 140   | 9.5   | 1,330.0 |
+   | south  | Q1      | 95    | 11.0  | 1,045.0 |
+   | **south** | **Q2** | **160** | **11.0** | **1,760.0** |
+   | east   | Q1      | 80    | 9.5   | 760.0   |
+   | east   | Q2      | 75    | 12.25 | 918.75  |
+
+3. **Group by region and quarter and sum the revenue**  
+   ```python
+   grouped = df.groupby(['region','quarter'])['Revenue'].sum()
+   ```
+
+   The summed revenues are:
+
+   - north‑Q1: 1,140.00  
+   - north‑Q2: 1,330.00  
+   - south‑Q1: 1,045.00  
+   - **south‑Q2: 1,760.00** ← highest  
+   - east‑Q1: 760.00  
+   - east‑Q2: 918.75  
+
+4. **Identify the maximum** – the `south, Q2` group has the greatest total revenue (1,760.00).
+
+5. **Show the detailed calculation for that group**  
+   - Only one row belongs to `south‑Q2`:
+     - `units = 160`, `price = 11.0` → `Revenue = 160 × 11.0 = 1,760.0`
+
+   Therefore, the total revenue for the `south‑Q2` group is **1,760.00**.
+
+---
+
+**Result:** The single region and quarter that produced the highest revenue is **South, Q2**, with a total revenue of **$1,760.00**.
+
+--- l08_price_effect final answer, 70.5s, error None
+Based on the data in **sales.csv**, only one instance of a price increase can be observed: in the **East** region, the price rose from 9.50 to 12.25 between Q1 and Q2. In that same period, units sold fell from 80 to 75—a drop of 5 units, or **‑6.25 %**.
+
+Because the dataset contains just this single price‑increase event, there isn’t enough evidence to draw a robust, general conclusion about the effect of price changes on sales. With such a limited sample, the confidence in any inference is **low**. 
+
+**Bottom line:** In the only case where a price was raised, sales did decline, but the data are too sparse to be confident that raising prices will reliably reduce units sold across regions.
+

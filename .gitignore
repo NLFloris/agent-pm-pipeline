@@ -26,3 +26,6 @@ notes/
 
 # scratch files of the experiment scripts
 results/**/*.tmp
+
+# the sandboxes that run_maf.py leaves behind
+results/local_maf/*/

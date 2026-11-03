@@ -1,0 +1,10 @@
+{
+ "task_id": "l01_read_csv",
+ "shape": "single",
+ "prompt": "Read sales.csv in the working directory and report how many rows it has and what the column names are.",
+ "started_at": "2026-11-03T10:54:36.908376+00:00",
+ "seconds": 34.2,
+ "error": null,
+ "final": "**sales.csv** contains **6 rows** of data (excluding the header) and has the following column names:\n\n- `region`\n- `quarter`\n- `units`\n- `price`",
+ "model": "gpt-oss:120b"
+}
