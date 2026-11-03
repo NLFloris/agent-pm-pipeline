@@ -11,7 +11,7 @@ of each section.
 1. **The engine's precision holds outside the runs it was written on.** Applied
    unchanged to fifteen agents per domain, it is precise when it flags a run:
    pooled precision 0.89 on retail against the per-action label, and 0.94 on
-   airline once that label also counts writes nobody asked for (0.74 without).
+   airline once that label also counts writes not on the gold list (0.74 without).
    Its recall against the process labels stays between 0.3 and 0.5, and its
    misses are mostly actions with the wrong arguments.
 2. **The second Judge confirms the first where the first was good.** The Judge
@@ -125,11 +125,11 @@ figures are practically the same: precision 0.73 (action) and 0.94
 **The label's blind spot.** On airline, 107 of the engine's 143 false alarms
 against *action* come from the rule that a task requiring no write may contain
 none. The per-action check only asks whether the listed actions occurred, so a
-write nobody asked for leaves it satisfied. Against *action-or-db*, 106 of those
-107 runs are violations, because the unrequested write changed the database.
+write not on the gold list leaves it satisfied. Against *action-or-db*, 106 of those
+107 runs are violations, because that write changed the database.
 This is why the second label exists. For claude-opus-4-5 alone it hardly
-matters (37 against 39 violations), because that agent made a write nobody
-asked for in one run only.
+matters (37 against 39 violations), because only two of its runs pass the
+per-action check with a wrong database.
 
 **The confirmation rule was fitted to one agent.** The other 36 false alarms
 come from the rule that a user message must precede every write. In every one of
