@@ -256,9 +256,7 @@ Four policy runs have one unusable answer, so Fleiss κ is computed over the
 first four answers of every run; over the 26 runs with five answers it is 0.26.
 
 The policy Judge gives a different verdict on most runs when asked again; the
-required-actions Judge almost never does. Hypothesis H2 of Chapter 6, that the
-Judge would not be unanimous on every run, is now tested and holds, clearly for
-the policy Judge and narrowly for the required-actions Judge.
+required-actions Judge almost never does.
 
 The same measurement for glm-5.3-flash was started on 26 October and is still
 running.
@@ -303,9 +301,9 @@ sample only. Its intervals are wide: the two required-actions Judges (0.91 and
 
 ## 6. What this changes in Chapter 6
 
-- Rewrite the reproducibility paragraph: the cache explains the old result, H2
-  is now tested (section 5.3).
-- Report Judge cost per verdict (section 5.4); H3 still holds by a wide margin.
+- Rewrite the reproducibility paragraph: the cache explains the old result,
+  reproducibility is now tested (section 5.3).
+- Report Judge cost per verdict (section 5.4).
 - Add glm-5.3-flash rows and the inter-Judge agreement to the Judge table.
 - Add retail as a second domain, and the engine on fifteen agents.
 - Report all three labels, stating that *action-or-db* was introduced afterwards

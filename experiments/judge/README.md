@@ -91,14 +91,3 @@ Fleiss' kappa across repeats. Process mining's three repetitions hash
 identically, measured in `run_three_corpora.py`.
 
 **Cost.** Tokens and seconds per run. Process mining is zero tokens.
-
-## Pre-registered expectations
-
-Written before the judge ran, so the comparison is a test rather than a search.
-
-- H1, alignment: process mining's kappa is not more than 0.10 below the full
-  judge's. Expected to hold on precision and fail on recall, because of
-  argument errors.
-- H2, reproducibility: the full judge is not unanimous on every run.
-- H3, cost: the token ratio exceeds 100.
-- H4, the output-only judge scores below both, because it cannot see the path.

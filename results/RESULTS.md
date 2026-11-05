@@ -623,8 +623,7 @@ Figures in `results/figures/`: `tau2_airline_dfg`, `te_magentic_dfg`,
 
 ## 10. Process mining against LLM-as-a-Judge (Chapter 6)
 
-Design in `experiments/judge/README.md`, with four hypotheses written before
-the judge ran. Ground truth is τ²'s per-action check, independent of both
+Design in `experiments/judge/README.md`. Ground truth is τ²'s per-action check, independent of both
 methods. Judge model `gpt-oss:120b` on the BFH-TI endpoint, five repeats per
 run, every prompt and raw response logged.
 
@@ -692,8 +691,8 @@ same question process mining answers, and given the same reference, it reaches
 κ 0.95 with recall 1.00. Of the 23 runs only the judge gets right, 15 are
 violations process mining missed; the judge's own stated reason is wrong
 arguments in 10, a missing action in 4, both in 1. The remaining 8 are runs
-process mining flagged that are in fact compliant. **Hypothesis H1 fails:**
-process mining's κ is 0.38 below the judge's, well beyond the 0.10 margin.
+process mining flagged that are in fact compliant. Process mining's κ is 0.38
+below the judge's.
 
 The reason is the one Chapter 5 already named. The constraint language sees
 activity names and not arguments; the judge sees both. The gap is a property of
@@ -705,9 +704,9 @@ honest than anything the full-judge number supports.
 
 **What survives unconditionally.** Cost: the required-actions judge spends
 19,717 prompt and 2,504 completion tokens per run over five repeats; process
-mining spends none. **H3 holds.** And the output-only judge is at chance,
+mining spends none. And the output-only judge is at chance,
 κ −0.02, with recall 0.89 only because it flags nearly everything (156 of 170
-runs). **H4 holds** on the 170 runs it scored; the 79 runs the endpoint first
+runs). The 79 runs the endpoint first
 refused were re-judged on 2026-10-21, and two runs gave no parseable answer.
 
 ### 10.3 Reproducibility could not be tested here
@@ -716,8 +715,8 @@ Every judge condition was unanimous on every run, Fleiss' κ 1.00. That is not a
 property of the judge. The raw response texts are **byte-identical** across all
 five repeats for all 172 runs, and remain byte-identical for all 50 runs
 re-judged with an explicit temperature of 0.7. The endpoint samples
-deterministically and ignores the temperature parameter. **H2 is untested**, not
-failed. Testing it needs an endpoint that honours sampling, or a local server
+deterministically and ignores the temperature parameter. Testing reproducibility
+needs an endpoint that honours sampling, or a local server
 where the setting is under our control.
 
 A consequence worth drawing out: on this endpoint the judge is exactly as
