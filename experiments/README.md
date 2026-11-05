@@ -39,6 +39,9 @@ helps to inspect the data.
 | `retail_task_types.py` | the retail task-type models, frozen before scoring (`results/frozen/retail_task_types.sha256`) | Ch. 6 |
 | `task_type_details.py` | `results/task_type_details.txt`: confirmation rule, when a violation becomes visible, transfers, listing dependence | Ch. 6 |
 | `cross_agent.py` | `results/cross_agent.txt` and `.json`: the task-type models on 15 agents per domain | Ch. 6 |
+| `task_versions.py` | `results/task_versions.txt`: which of the published runs used an older version of a task, and the engine's scores with and without them |
+| `path_sensitivity.py` | `results/path_sensitivity.txt`: whether the engine and the Judges separate runs with the same outcome and different paths | Ch. 6 |
+| `first_divergence.py` | `results/first_divergence.txt`: first divergence against the step labels of AgentHallu | Ch. 5 |
 | `discover.py` | `results/pm4py/`: pm4py's discovery and conformance next to the engine | supporting |
 | `noise_sweep.py` | `results/pm4py/noise_sweep.txt`: discover-then-check at three noise thresholds (fixes `PYTHONHASHSEED=0`) | Ch. 6 |
 | `noise_sweep_seeds.py` | `results/pm4py/noise_sweep_seeds.txt`: the same under ten hash seeds | Ch. 6 |
@@ -63,6 +66,9 @@ python experiments/task_type_conformance.py
 python experiments/task_type_conformance.py --domain retail
 python experiments/task_type_details.py > results/task_type_details.txt
 python experiments/cross_agent.py > results/cross_agent.txt
+python experiments/task_versions.py > results/task_versions.txt
+python experiments/path_sensitivity.py > results/path_sensitivity.txt
+python experiments/first_divergence.py > results/first_divergence.txt
 python experiments/discover.py --data ~/Downloads --out results/pm4py
 python experiments/noise_sweep.py --data ~/Downloads --out results/pm4py
 python experiments/noise_sweep_seeds.py > results/pm4py/noise_sweep_seeds.txt

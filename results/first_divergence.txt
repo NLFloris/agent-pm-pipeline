@@ -1,0 +1,17 @@
+AgentHallu Magentic-One: 94 runs, 54 with a hallucination, 40 without
+
+  transitions in the runs without a hallucination: 29
+  first transition not in the runs without one     exact  0 of 54 ( 0.0%)   within one step  6 (11.1%)   no prediction 45
+    predicted minus labeled step: [(-2, 1), (1, 6), (2, 1), (4, 1)]
+  first transition in no other run of the corpus   exact  0 of 54 ( 0.0%)   within one step  1 ( 1.9%)   no prediction 51
+    predicted minus labeled step: [(-1, 1), (2, 1), (4, 1)]
+  runs without a hallucination, each against the other 39: 3 of 40 diverge
+
+  baselines
+    random step, expected: exact 13.6%, within one step 35.5%
+    always step 3: exact 35.2%
+
+  the labeled steps
+    categories: [('Reasoning Hallucination', 26), ('Planning Hallucination', 20), ('Retrieval Hallucination', 8)]
+    activity: [('orchestrate', 21), ('report', 18), ('web_search', 4), ('delegate', 4), ('answer_question', 3), ('input_text', 3), ('scroll_down', 1)]
+    labeled steps without a tool call: 43 of 54

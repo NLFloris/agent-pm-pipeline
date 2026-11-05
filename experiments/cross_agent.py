@@ -5,7 +5,8 @@
 The airline models were written while looking at claude-opus-4-5's runs, so a
 result on those runs alone cannot separate the method from the fit. The public
 results bucket holds the same 50 airline tasks (and the same 114 retail tasks)
-run by other agent models, under the same harness and the same checks. This
+run by other agent models, under the same harness and the same checks. Not every
+agent ran the same version of each task; task_versions.py counts those runs. This
 script applies the models unchanged to each of them. No model is called; every
 agent's runs were produced by Sierra and are read from the mirror.
 

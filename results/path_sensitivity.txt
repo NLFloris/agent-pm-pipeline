@@ -1,0 +1,50 @@
+=== airline: 172 scored runs, 142 with reward 1 ===
+
+  pairs, same task, reward 1, other path (all activities): 167, of which the per-action label separates 6 in 2 tasks
+    engine, task type          separates    3 of  167 (  1.8%)   as the label   3   against it  0   label: both violations   0, both compliant   0
+    output-only, gpt-oss       separates   22 of  162 ( 13.6%)   as the label   3   against it  3   label: both violations   5, both compliant  11
+    policy, gpt-oss            separates   71 of  162 ( 43.8%)   as the label   3   against it  0   label: both violations   7, both compliant  61
+    policy, glm                separates   60 of  154 ( 39.0%)   as the label   0   against it  3   label: both violations   6, both compliant  51
+    required-actions, gpt-oss  separates    3 of  167 (  1.8%)   as the label   3   against it  0   label: both violations   0, both compliant   0
+    required-actions, glm      separates    5 of  167 (  3.0%)   as the label   4   against it  0   label: both violations   0, both compliant   1
+
+  pairs, same task, reward 1, other path (tools only): 116, of which the per-action label separates 6 in 2 tasks
+    engine, task type          separates    3 of  116 (  2.6%)   as the label   3   against it  0   label: both violations   0, both compliant   0
+    output-only, gpt-oss       separates   20 of  114 ( 17.5%)   as the label   3   against it  3   label: both violations   5, both compliant   9
+    policy, gpt-oss            separates   50 of  113 ( 44.2%)   as the label   3   against it  0   label: both violations   7, both compliant  40
+    policy, glm                separates   41 of  104 ( 39.4%)   as the label   0   against it  3   label: both violations   6, both compliant  32
+    required-actions, gpt-oss  separates    3 of  116 (  2.6%)   as the label   3   against it  0   label: both violations   0, both compliant   0
+    required-actions, glm      separates    5 of  116 (  4.3%)   as the label   4   against it  0   label: both violations   0, both compliant   1
+
+  reward 1: 11 per-action violations, 131 compliant runs
+    engine, task type          flags   1 of  11 violations,   0 of 131 compliant runs
+    output-only, gpt-oss       flags   8 of  11 violations, 119 of 129 compliant runs
+    policy, gpt-oss            flags   6 of  11 violations,  51 of 129 compliant runs
+    policy, glm                flags   4 of  10 violations,  55 of 126 compliant runs
+    required-actions, gpt-oss  flags  11 of  11 violations,   3 of 131 compliant runs
+    required-actions, glm      flags  11 of  11 violations,   2 of 131 compliant runs
+    actions the engine's misses fail on: [('search_direct_flight', 9), ('calculate', 4)]
+    violations the engine flags: [('13', ['required(transfer_to_human_agents)'])]
+
+=== retail: 448 scored runs, 355 with reward 1 ===
+
+  pairs, same task, reward 1, other path (all activities): 366, of which the per-action label separates 10 in 4 tasks
+    engine, task type          separates   10 of  366 (  2.7%)   as the label   4   against it  0   label: both violations   3, both compliant   3
+    output-only, gpt-oss       separates   52 of  359 ( 14.5%)   as the label   0   against it  6   label: both violations   3, both compliant  43
+    policy, gpt-oss            separates  161 of  345 ( 46.7%)   as the label   2   against it  2   label: both violations  28, both compliant 129
+    required-actions, gpt-oss  separates   15 of  366 (  4.1%)   as the label   7   against it  0   label: both violations   4, both compliant   4
+
+  pairs, same task, reward 1, other path (tools only): 160, of which the per-action label separates 10 in 4 tasks
+    engine, task type          separates    9 of  160 (  5.6%)   as the label   4   against it  0   label: both violations   2, both compliant   3
+    output-only, gpt-oss       separates   19 of  157 ( 12.1%)   as the label   0   against it  6   label: both violations   2, both compliant  11
+    policy, gpt-oss            separates   67 of  150 ( 44.7%)   as the label   2   against it  2   label: both violations  14, both compliant  49
+    required-actions, gpt-oss  separates   11 of  160 (  6.9%)   as the label   7   against it  0   label: both violations   0, both compliant   4
+
+  reward 1: 82 per-action violations, 273 compliant runs
+    engine, task type          flags  11 of  82 violations,   1 of 273 compliant runs
+    output-only, gpt-oss       flags  77 of  81 violations, 239 of 269 compliant runs
+    policy, gpt-oss            flags  27 of  81 violations, 111 of 264 compliant runs
+    required-actions, gpt-oss  flags  79 of  82 violations,  17 of 273 compliant runs
+    actions the engine's misses fail on: [('calculate', 33), ('return_delivered_order_items', 19), ('get_product_details', 18), ('get_order_details', 12), ('get_user_details', 4), ('transfer_to_human_agents', 3), ('find_user_id_by_name_zip', 3), ('find_user_id_by_email', 2)]
+    violations the engine flags: [('64', ['required(exchange_delivered_order_items)']), ('50', ['required(transfer_to_human_agents)']), ('44', ['directly_before(user_message,modify_pending_order_items)']), ('44', ['directly_before(user_message,modify_pending_order_items)']), ('110', ['required(modify_user_address)']), ('44', ['directly_before(user_message,modify_pending_order_items)']), ('64', ['required(exchange_delivered_order_items)']), ('110', ['required(modify_user_address)']), ('64', ['required(exchange_delivered_order_items)']), ('105', ['required(exchange_delivered_order_items)']), ('110', ['required(modify_user_address)'])]
+

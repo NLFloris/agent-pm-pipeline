@@ -1,0 +1,43 @@
+
+=== airline: 2576 scorable runs of 15 agents on 43 tasks
+agents on the older version: 8
+  claude-3-7-sonnet_anthropic_2024-06-20
+  gemini-3-flash_sierra_2026-03-02
+  gpt-4-1-mini_openai_2024-06-20
+  gpt-4-1_openai_2024-06-20
+  gpt-5_sierra_2025-08-09
+  o4-mini_openai_2024-06-20
+  qwen3-max_qwen_2025-10-30
+  qwen3-max_qwen_2026-01-23
+tasks affected: 26 of the scorable ones; solution differs between agents on 11
+runs on the older version: 832 of 2576; of these with another solution: 352
+  action        all runs            n  2576 violations   909 flags  541 prec 0.736 rec 0.438 kappa 0.388
+  action        without those runs  n  1744 violations   408 flags  241 prec 0.606 rec 0.358 kappa 0.334
+  action        those runs only     n   832 violations   501 flags  300 prec 0.840 rec 0.503 kappa 0.325
+  action-or-db  all runs            n  2576 violations  1076 flags  541 prec 0.939 rec 0.472 kappa 0.484
+  action-or-db  without those runs  n  1744 violations   507 flags  241 prec 0.905 rec 0.430 kappa 0.487
+  action-or-db  those runs only     n   832 violations   569 flags  300 prec 0.967 rec 0.510 kappa 0.370
+  reward        all runs            n  2576 violations   856 flags  541 prec 0.893 rec 0.564 kappa 0.585
+  reward        without those runs  n  1744 violations   391 flags  241 prec 0.876 rec 0.540 kappa 0.599
+  reward        those runs only     n   832 violations   465 flags  300 prec 0.907 rec 0.585 kappa 0.486
+
+=== retail: 6645 scorable runs of 15 agents on 112 tasks
+agents on the older version: 7
+  claude-3-7-sonnet_anthropic_2024-06-20
+  gpt-4-1-mini_openai_2024-06-20
+  gpt-4-1_openai_2024-06-20
+  gpt-5_sierra_2025-08-09
+  o4-mini_openai_2024-06-20
+  qwen3-max_qwen_2025-10-30
+  qwen3-max_qwen_2026-01-23
+tasks affected: 23 of the scorable ones; solution differs between agents on 5
+runs on the older version: 644 of 6645; of these with another solution: 140
+  action        all runs            n  6645 violations  2785 flags  979 prec 0.894 rec 0.314 kappa 0.316
+  action        without those runs  n  6001 violations  2399 flags  884 prec 0.905 rec 0.333 kappa 0.347
+  action        those runs only     n   644 violations   386 flags   95 prec 0.789 rec 0.194 kappa 0.098
+  action-or-db  all runs            n  6645 violations  2878 flags  979 prec 0.916 rec 0.312 kappa 0.314
+  action-or-db  without those runs  n  6001 violations  2473 flags  884 prec 0.921 rec 0.329 kappa 0.342
+  action-or-db  those runs only     n   644 violations   405 flags   95 prec 0.874 rec 0.205 kappa 0.122
+  reward        all runs            n  6645 violations  1565 flags  979 prec 0.765 rec 0.479 kappa 0.498
+  reward        without those runs  n  6001 violations  1314 flags  884 prec 0.782 rec 0.526 kappa 0.549
+  reward        those runs only     n   644 violations   251 flags   95 prec 0.611 rec 0.231 kappa 0.154
