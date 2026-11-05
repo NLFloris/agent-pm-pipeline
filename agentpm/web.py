@@ -565,7 +565,7 @@ def report_page(rid: str, d: str) -> bytes:
                        + "".join("<tr>" + "".join(f"<td>{cut(r[i])}</td>" for i in keep) + "</tr>" for r in body) + "</table></div>",
                        f"First {len(body)} of {len(rd) - 1} events."))
     downloads = [("event_log.csv", "event_log.csv"), ("event_log.xes", "event_log.xes"), ("runs.ocel.json", "runs.ocel.json"),
-                 ("verdicts.json", "verdicts.json"), ("CHECKS.txt", "CHECKS.txt"), ("inventory.txt", "inventory.txt"),
+                 ("verdicts.json", "verdicts.json"), ("CHECKS.txt", "CHECKS.txt"), ("inventory.txt", "inventory.txt"), ("lenses.txt", "lenses.txt"),
                  ("run.log", "run.log"), ("README.md", "README.md")]
     out.append(sec("Files", "<div class=files>" + "".join(f"<a href='/r/{q}/{a}' download>{b}</a>" for a, b in downloads if a in files)
                    + "</div>"))

@@ -17,6 +17,8 @@ import collections
 import os
 import re
 
+from .analysis.performance import handovers as handover
+
 try:
     from graphviz import Digraph
 except ImportError:  # pragma: no cover - optional
@@ -35,16 +37,6 @@ MESSAGES = {"assistant_message", "user_message"}
 def agent_colors(traces):
     agents = sorted({e.resource for t in traces for e in t.events})
     return {a: PALETTE[i % len(PALETTE)] for i, a in enumerate(agents)}
-
-
-def handover(traces):
-    edges = collections.Counter()
-    for t in traces:
-        res = [e.resource for e in t.ordered()]
-        for a, b in zip(res, res[1:]):
-            if a != b:
-                edges[(a, b)] += 1
-    return edges
 
 
 def _base(title):

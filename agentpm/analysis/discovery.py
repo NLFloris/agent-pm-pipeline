@@ -1,4 +1,4 @@
-"""Process discovery over canonical traces (R7).
+"""Process discovery over canonical traces (R8).
 
 Two directly-follows relations are offered, and the difference between them is
 a result of the thesis rather than an implementation detail.

@@ -1,15 +1,34 @@
-"""Performance analysis (secondary lens, R7).
+"""Secondary lenses on how a run went (R8). They describe runs and enter no verdict.
 
-Planned: bottlenecks, waiting times, redundant loops, rework, and localisation of
-the first divergence from a healthy path. As a first step this module reports a
-crude rework signal, namely the number of immediately repeated activities.
+Rework is the share of a run's tool calls that repeat a tool the run has already
+used. A handover is a transition at which the acting agent changes.
 """
 from __future__ import annotations
 
+import collections
+from typing import Optional
+
 from ..model import Trace
 
+# activities that are not an executed tool call: communication, coordination,
+# framework bookkeeping
+NON_ACTION = {"assistant_message", "user_message", "orchestrate", "report", "delegate",
+              "invoke_agent", "invoke_workflow", "create_agent", "llm_call", "user_prompt",
+              "subagent_completed", "handoff", "guardrail"}
 
-def repeat_count(trace: Trace) -> int:
-    """Number of immediately repeated activities (a simple rework signal)."""
-    acts = trace.activities
-    return sum(1 for a, b in zip(acts, acts[1:]) if a == b)
+
+def rework(trace: Trace) -> Optional[float]:
+    """The run's rework, or None for a run with fewer than two tool calls."""
+    calls = [a for a in trace.activities if a not in NON_ACTION]
+    return 1 - len(set(calls)) / len(calls) if len(calls) >= 2 else None
+
+
+def handovers(traces: list[Trace]) -> collections.Counter:
+    """(agent, next agent) -> how often the acting agent changed that way."""
+    edges: collections.Counter = collections.Counter()
+    for t in traces:
+        res = [e.resource for e in t.ordered()]
+        for a, b in zip(res, res[1:]):
+            if a != b:
+                edges[(a, b)] += 1
+    return edges

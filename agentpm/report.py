@@ -11,6 +11,7 @@ This is the whole pipeline in one call. It writes into the folder:
   event_log.csv       the flat event log, one row per event
   event_log.xes       the same in XES (needs pm4py)
   runs.ocel.json      the object-centric log, OCEL 2.0
+  lenses.txt          discovery over the listing and over the steps, handovers, rework
   conformance.txt     every run against the reference, with the event responsible
   verdicts.json       the same, machine-readable
   pm4py_*.png         DFG, Petri net, process tree, BPMN from the inductive miner
@@ -39,17 +40,13 @@ import os
 from typing import Any, Optional
 
 from .analysis.conformance import check
-from .analysis.discovery import concurrency_summary
+from .analysis.discovery import concurrency_summary, directly_follows, directly_follows_flat
+from .analysis.performance import NON_ACTION, handovers, rework
 from .logbuild.objects import ObjectRule
 from .logbuild.ocel import build_ocel_from_traces, object_sharing
 from .model import Event, Trace
 from .reference import Reference, TaskTypes
 
-# activities that are not an executed tool call: communication, coordination,
-# framework bookkeeping
-NON_ACTION = {"assistant_message", "user_message", "orchestrate", "report", "delegate",
-              "invoke_agent", "invoke_workflow", "create_agent", "llm_call", "user_prompt",
-              "subagent_completed", "handoff", "guardrail"}
 PICTURE_DROP = {"assistant_message", "user_message", "invoke_workflow", "create_agent",
                 "invoke_agent", "llm_call", "user_prompt"}
 _CELL = 2000
@@ -229,6 +226,24 @@ def _visible(traces: list[Trace]) -> list[Trace]:
     return [Trace(t.case_id, [e for e in t.ordered() if e.activity not in PICTURE_DROP], t.outcome) for t in traces]
 
 
+def lenses_text(traces: list[Trace]) -> str:
+    """The secondary lenses over the same runs as the pictures. They enter no verdict."""
+    vis = _visible(traces)
+    listed, steps = directly_follows_flat(vis), directly_follows(vis)
+    by_count = lambda edges: sorted(edges.items(), key=lambda kv: (-kv[1], kv[0]))
+    shares = [r for r in (rework(t) for t in traces) if r is not None]
+    lines = ["The secondary lenses. They describe the runs and enter no verdict.", "",
+             f"rework: mean {sum(shares) / len(shares):.1%} over the {len(shares)} runs with at least two tool calls"
+             if shares else "rework: no run has two tool calls", "",
+             "handovers (the acting agent changes):"]
+    lines += [f"  {a} -> {b}  {n}" for (a, b), n in by_count(handovers(traces))] or ["  none"]
+    lines += ["", f"directly-follows edges over the steps ({len(steps)}, events issued together never follow each other):"]
+    lines += [f"  {a} -> {b}  {n}" for (a, b), n in by_count(steps)]
+    lines += ["", f"directly-follows edges over the listed order ({len(listed)}):"]
+    lines += [f"  {a} -> {b}  {n}" for (a, b), n in by_count(listed)]
+    return "\n".join(lines)
+
+
 def pm4py_outputs(traces: list[Trace], out: str, noise: float, say=print) -> Optional[str]:
     say("pm4py: loading the library")
     try:
@@ -392,6 +407,7 @@ def report(traces: list[Trace], out: str, source: str = "", reference: Optional[
     for st, line in checks:
         say(f"[{ {'ok': 'ok', 'warn': '!!', 'info': '--'}[st] }] {line}")
     _w(os.path.join(out, "inventory.txt"), inventory_text(traces))
+    _w(os.path.join(out, "lenses.txt"), lenses_text(traces))
     n_rows = write_event_log(traces, os.path.join(out, "event_log.csv"))
     say(f"event_log.csv: {n_rows} rows")
     write_transcripts(traces, out)
@@ -429,7 +445,8 @@ def report(traces: list[Trace], out: str, source: str = "", reference: Optional[
     files = [("CHECKS.txt", "what the source exposes, checked automatically; read this first"),
              ("inventory.txt", "counts, and every run on one line as agent:activity"),
              ("event_log.csv", "the flat event log, one row per event, with arguments, results and reasoning"),
-             ("runs.ocel.json", "the object-centric log, OCEL 2.0")]
+             ("runs.ocel.json", "the object-centric log, OCEL 2.0"),
+             ("lenses.txt", "discovery over the listing and over the steps, handovers and rework")]
     if pm:
         files.append(("event_log.xes", "the flat log in XES, for ProM, Disco and pm4py"))
     if conf is not None:

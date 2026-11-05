@@ -26,7 +26,7 @@ git clone https://github.com/NLFloris/agent-pm-pipeline.git
 cd agent-pm-pipeline
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[pm,dev]"
-pytest -q                                   # 68 passed
+pytest -q                                   # 70 passed
 ```
 
 For the pictures, also install the Graphviz binary (`brew install graphviz` on
@@ -117,7 +117,9 @@ declarative constraints: `required`, `precedence`, `directly_before`,
 `forbidden_after`, `allowed` and `end_activities`. Fitness is the share of
 constraints that hold, and every violation names its constraint and the event
 responsible. `reference.py` also builds one model per task type from a template
-declared as data. `report.py`, `viz.py` and `web.py` build the report, the
+declared as data. `analysis/discovery.py` and `analysis/performance.py` hold the
+secondary lenses: the directly-follows graph over the listing and over the steps,
+handovers and rework. `report.py`, `viz.py` and `web.py` build the report, the
 pictures and the website on top.
 
 ## Repository layout

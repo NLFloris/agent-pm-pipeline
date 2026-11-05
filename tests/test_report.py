@@ -2,8 +2,10 @@
 import json
 import os
 
+from agentpm.analysis.performance import rework
 from agentpm.cli import main
 from agentpm.ingest import otel
+from agentpm.model import Event, Trace
 from agentpm.report import report
 
 FIX = os.path.join(os.path.dirname(__file__), "fixtures", "autogen_otel_roundrobin.jsonl")
@@ -38,3 +40,16 @@ def test_web_detects_the_format():
     assert fmt == "otel" and len(traces) == 1
     fmt, _ = load_any(os.path.join(os.path.dirname(__file__), "..", "examples", "claude_transcript_sample.jsonl"), "detect")
     assert fmt == "claude"
+
+
+def test_rework_counts_repeats_of_a_tool_the_run_has_used():
+    run = Trace("r", [Event("a", 0), Event("user_message", 1), Event("b", 2), Event("a", 3), Event("a", 4)])
+    assert rework(run) == 0.5                            # a, b, a, a: two distinct tools in four calls
+    assert rework(Trace("r", [Event("a", 0)])) is None
+
+
+def test_report_writes_the_secondary_lenses_without_optional_libraries(tmp_path):
+    report(otel.ingest(FIX), str(tmp_path), source="autogen", pictures=False)
+    text = (tmp_path / "lenses.txt").read_text()
+    assert "rework" in text and "handovers" in text
+    assert "over the steps" in text and "over the listed order" in text
