@@ -26,7 +26,7 @@ git clone https://github.com/NLFloris/agent-pm-pipeline.git
 cd agent-pm-pipeline
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[pm,dev]"
-pytest -q                                   # 63 passed
+pytest -q                                   # 68 passed
 ```
 
 For the pictures, also install the Graphviz binary (`brew install graphviz` on
@@ -59,7 +59,15 @@ python -m agentpm.cli report <file or folder> --format <format> -o <output folde
 runs the whole pipeline: it checks what the source exposes, writes the flat
 and the object-centric event log, runs conformance, and draws the pm4py models
 and the pipeline's own pictures. `CHECKS.txt` in the output folder is the
-place to start. For example, on the bundled examples:
+place to start.
+
+On a source that carries a solution list, such as τ²-bench, a report without
+`--reference` or `--task-types` checks every run against the list of its own task.
+That list is an answer key, so these verdicts show what the engine reaches when it is
+handed the solution, and this is not the reference model the thesis recommends. For
+one model per task type, add `--task-types examples/task_types_tau2_airline.json`.
+
+For example, on the bundled examples:
 
 ```bash
 python -m agentpm.cli run examples/sample_trace.json         --format generic --reference examples/reference_model.json
@@ -108,8 +116,9 @@ agent and its tool, plus the business objects that object rules
 declarative constraints: `required`, `precedence`, `directly_before`,
 `forbidden_after`, `allowed` and `end_activities`. Fitness is the share of
 constraints that hold, and every violation names its constraint and the event
-responsible. `report.py`, `viz.py` and `web.py` build the report, the pictures
-and the website on top.
+responsible. `reference.py` also builds one model per task type from a template
+declared as data. `report.py`, `viz.py` and `web.py` build the report, the
+pictures and the website on top.
 
 ## Repository layout
 

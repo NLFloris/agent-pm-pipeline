@@ -42,11 +42,12 @@ first. Lines marked `!!` there are the things to know before trusting a
 result: no tool calls, no agent attribution, no arguments, real-time overlap
 the order does not show, heavy variability.
 
-Four options cover almost everything else:
+Five options cover almost everything else:
 
 | option | when |
 |---|---|
-| `--reference ref.json` | to check against your own reference model (see §4). Without it, a source that carries gold actions (τ²) is checked per task, any other source is not checked. |
+| `--reference ref.json` | to check against your own reference model (see §4). Without it, a source that carries gold actions (τ²) is checked per task against that answer key, any other source is not checked. |
+| `--task-types template.json` | to check every run against the model of its task type (see §4) |
 | `--by-agent` | when the reference names agents: activities are checked as `Agent.activity`, and a sub-agent start as `Parent.spawn:Child`. The logs keep the plain tool names. |
 | `--objects rules.json` | when the tool arguments name business objects (see §3). τ² has its rules built in. |
 | `--no-pictures` | logs and checks only, fast, no pm4py or Graphviz needed |
@@ -180,6 +181,15 @@ python -m agentpm.cli run examples/demos/tau2_airline/claude-opus-4-5_high_airli
 ```
 
 Every violation names its constraint and, where it is localisable, the event.
+
+With one model per task type, all built from one template declared as data. A run
+that states `task_type` on its outcome needs nothing else; otherwise the type is read
+from the changes on the task's solution list. `examples/` holds the templates of the
+two τ² domains, and a new domain brings its own file:
+
+```bash
+python -m agentpm.cli run examples/demos/tau2_airline/claude-opus-4-5_high_airline_gpt-5.2_4trials.json --format tau2 --task-types examples/task_types_tau2_airline.json
+```
 
 ### Writing a reference model
 

@@ -1,0 +1,63 @@
+{
+ "name": "tau2-bench retail",
+ "changes": [
+  "cancel_pending_order",
+  "modify_pending_order_address",
+  "modify_pending_order_items",
+  "modify_pending_order_payment",
+  "modify_user_address",
+  "return_delivered_order_items",
+  "exchange_delivered_order_items"
+ ],
+ "lookups": [
+  [
+   "authenticate_user",
+   [
+    "cancel_pending_order",
+    "modify_pending_order_address",
+    "modify_pending_order_items",
+    "modify_pending_order_payment",
+    "modify_user_address",
+    "return_delivered_order_items",
+    "exchange_delivered_order_items"
+   ]
+  ],
+  [
+   "get_order_details",
+   [
+    "cancel_pending_order",
+    "modify_pending_order_address",
+    "modify_pending_order_items",
+    "modify_pending_order_payment",
+    "return_delivered_order_items",
+    "exchange_delivered_order_items"
+   ]
+  ]
+ ],
+ "no_change_allowed": [
+  "authenticate_user",
+  "calculate",
+  "get_item_details",
+  "get_order_details",
+  "get_product_details",
+  "get_user_details",
+  "list_all_product_types",
+  "transfer_to_human_agents",
+  "assistant_message",
+  "user_message"
+ ],
+ "look_through": [
+  "cancel_pending_order",
+  "modify_pending_order_address",
+  "modify_pending_order_items",
+  "modify_pending_order_payment",
+  "modify_user_address",
+  "return_delivered_order_items",
+  "exchange_delivered_order_items",
+  "assistant_message"
+ ],
+ "relabel": {
+  "find_user_id_by_email": "authenticate_user",
+  "find_user_id_by_name_zip": "authenticate_user"
+ }
+}

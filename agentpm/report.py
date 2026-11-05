@@ -20,9 +20,10 @@ This is the whole pipeline in one call. It writes into the folder:
   README.md           what each file is
 
 Conformance: with --reference the given model is used, and --by-agent checks it
-against Agent.activity names (agent_qualified below); without a reference, a
-source that carries gold actions (tau2) is checked per task against them, and
-any other source is not checked. Pictures and pm4py models leave out communication
+against Agent.activity names (agent_qualified below); with --task-types every run
+is checked against the model of its task type; without either, a source that
+carries gold actions (tau2) is checked per task against them, and any other
+source is not checked. Pictures and pm4py models leave out communication
 turns and framework bookkeeping (messages, agent creation, the group chat's
 turn-taking); the logs keep everything. The core of this module needs the
 standard library only; pm4py and graphviz are used when installed.
@@ -42,7 +43,7 @@ from .analysis.discovery import concurrency_summary
 from .logbuild.objects import ObjectRule
 from .logbuild.ocel import build_ocel_from_traces, object_sharing
 from .model import Event, Trace
-from .reference import Reference
+from .reference import Reference, TaskTypes
 
 # activities that are not an executed tool call: communication, coordination,
 # framework bookkeeping
@@ -369,7 +370,8 @@ def write_transcripts(traces: list[Trace], out: str) -> int:
 
 def report(traces: list[Trace], out: str, source: str = "", reference: Optional[Reference] = None,
            gold: bool = False, object_rules: Optional[list[ObjectRule]] = None,
-           pictures: bool = True, noise: float = 0.0, by_agent: bool = False, say=None) -> list[tuple[str, str]]:
+           pictures: bool = True, noise: float = 0.0, by_agent: bool = False, say=None,
+           task_types: Optional[TaskTypes] = None) -> list[tuple[str, str]]:
     say = say or (lambda *_: None)
     os.makedirs(out, exist_ok=True)
     rules = list(object_rules or [])
@@ -395,17 +397,22 @@ def report(traces: list[Trace], out: str, source: str = "", reference: Optional[
     write_transcripts(traces, out)
     say(f"transcripts/: one file per run, {len(traces)} runs")
 
-    conf = None
+    conf, answer_key = None, False
     if reference is not None:
         if by_agent:
             say("conformance reads activities as Agent.activity, and a sub-agent start as Parent.spawn:Child")
         checked = [agent_qualified(t) for t in traces] if by_agent else traces
         conf = conformance_text(checked, [reference] * len(traces), out)
+    elif task_types is not None:
+        pairs = task_types.pairs(traces)
+        if pairs:
+            conf = conformance_text([t for t, _ in pairs], [r for _, r in pairs], out)
     elif gold or any(t.outcome.get("gold_actions") for t in traces):
         pairs = [(t, gold_reference(t)) for t in traces]
         pairs = [(t, r) for t, r in pairs if r.required or r.precedence]
         if pairs:
             conf = conformance_text([t for t, _ in pairs], [r for _, r in pairs], out)
+            answer_key = True
     if conf is not None:
         _w(os.path.join(out, "conformance.txt"), conf)
         say("conformance: " + conf.splitlines()[1])
@@ -441,6 +448,10 @@ def report(traces: list[Trace], out: str, source: str = "", reference: Optional[
               "| file | what it is |", "|---|---|"] + [f"| `{a}` | {b} |" for a, b in files]
     readme += ["", "Pictures and pm4py models leave out messages and framework bookkeeping: "
                + ", ".join(sorted(PICTURE_DROP)) + ". The logs keep everything."]
+    if answer_key:
+        readme += ["", "Conformance used each task's own solution list, because no reference model was given. "
+                   "That list is an answer key, so these verdicts show what the engine reaches when it is handed "
+                   "the solution. `--task-types` checks every run against the model of its task type instead.", ""]
     if pictures and pm is None:
         readme.append("pm4py is not installed, so there is no XES file and no pm4py model.")
     if pictures and pics is None:

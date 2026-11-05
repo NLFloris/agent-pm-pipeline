@@ -1,0 +1,50 @@
+{
+ "name": "tau2-bench airline",
+ "changes": [
+  "book_reservation",
+  "update_reservation_flights",
+  "update_reservation_baggages",
+  "update_reservation_passengers",
+  "cancel_reservation",
+  "send_certificate"
+ ],
+ "lookups": [
+  [
+   "get_reservation_details",
+   [
+    "update_reservation_flights",
+    "update_reservation_baggages",
+    "update_reservation_passengers",
+    "cancel_reservation",
+    "send_certificate"
+   ]
+  ],
+  [
+   "get_user_details",
+   [
+    "book_reservation"
+   ]
+  ]
+ ],
+ "no_change_allowed": [
+  "get_user_details",
+  "get_reservation_details",
+  "search_direct_flight",
+  "search_onestop_flight",
+  "get_flight_status",
+  "list_all_airports",
+  "calculate",
+  "transfer_to_human_agents",
+  "assistant_message",
+  "user_message"
+ ],
+ "look_through": [
+  "book_reservation",
+  "update_reservation_flights",
+  "update_reservation_baggages",
+  "update_reservation_passengers",
+  "cancel_reservation",
+  "send_certificate",
+  "assistant_message"
+ ]
+}

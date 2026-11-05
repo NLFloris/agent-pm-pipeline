@@ -7,6 +7,7 @@
     python -m agentpm.cli ocel       <path> --format agenthallu -o out.ocel.json
     python -m agentpm.cli run        <path> --format tau2 --reference ref.json
     python -m agentpm.cli run        <path> --format tau2 --gold
+    python -m agentpm.cli run        <path> --format tau2 --task-types models.json
 
 <path> is a file for file-based formats and a directory for formats that store
 one run per file or per folder (traceelephant, agenthallu, local_magentic).
@@ -31,7 +32,7 @@ from .logbuild.objects import BUILTIN as BUILTIN_OBJECT_RULES, load_rules
 from .logbuild.ocel import build_ocel_from_traces, object_sharing
 from .model import Trace
 from .report import report as build_report
-from .reference import Reference, load_reference
+from .reference import Reference, load_reference, load_task_types
 
 # name -> (loader, accepts directory, one-line description)
 FORMATS: dict[str, tuple[Callable[[str], list[Trace]], bool, str]] = {
@@ -113,9 +114,13 @@ def cmd_ocel(a: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_run(a: argparse.Namespace) -> int:
-    traces = load(a.path, a.format)
-    if a.gold:
+def pairs_to_check(a: argparse.Namespace, traces: list[Trace]) -> list[tuple[Trace, Reference]]:
+    """(trace, reference) for every run the chosen reference model can check."""
+    if a.task_types:
+        pairs = load_task_types(a.task_types).pairs(traces)
+        if not pairs:
+            sys.exit("--task-types needs traces that state a task_type or carry gold_actions on their outcome")
+    elif a.gold:
         pairs = [(t, gold_reference(t)) for t in traces]
         pairs = [(t, r) for t, r in pairs if r.required or r.precedence]
         if not pairs:
@@ -124,7 +129,13 @@ def cmd_run(a: argparse.Namespace) -> int:
         ref = load_reference(a.reference)
         pairs = [(t, ref) for t in traces]
     else:
-        sys.exit("give --reference <file.json> or --gold")
+        sys.exit("give --reference <file.json>, --task-types <file.json> or --gold")
+    return pairs
+
+
+def cmd_run(a: argparse.Namespace) -> int:
+    traces = load(a.path, a.format)
+    pairs = pairs_to_check(a, traces)
 
     results = [(t, check(t, r)) for t, r in pairs]
     compliant = sum(1 for _, r in results if r.compliant)
@@ -155,7 +166,8 @@ def cmd_report(a: argparse.Namespace) -> int:
     ref = load_reference(a.reference) if a.reference else None
     checks = build_report(traces, a.output, source=f"{os.path.basename(a.path.rstrip('/'))} ({a.format})",
                           reference=ref, gold=a.gold, object_rules=rules,
-                          pictures=not a.no_pictures, noise=a.noise, by_agent=a.by_agent)
+                          pictures=not a.no_pictures, noise=a.noise, by_agent=a.by_agent,
+                          task_types=load_task_types(a.task_types) if a.task_types else None)
     print(f"{len(traces)} runs from {a.path} -> {a.output}/\n")
     mark = {"ok": "  ok  ", "warn": "  !!  ", "info": "  --  "}
     for status, line in checks:
@@ -182,6 +194,8 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--format", choices=list(FORMATS), required=True)
     r.add_argument("-o", "--output", default="report")
     r.add_argument("--reference", help="reference model JSON; default: gold actions if the source has them")
+    r.add_argument("--task-types", metavar="TEMPLATE.json",
+                   help="check every run against the model of its task type, e.g. examples/task_types_tau2_airline.json")
     r.add_argument("--gold", action="store_true", help="check against gold actions carried by the source (tau2)")
     r.add_argument("--by-agent", action="store_true",
                    help="check the reference against Agent.activity names (Parent.spawn:Child for a sub-agent start)")
@@ -210,6 +224,8 @@ def main(argv: list[str] | None = None) -> int:
                            help="drop these activities, e.g. assistant_message user_message")
         if name == "run":
             p.add_argument("--reference", help="reference model JSON")
+            p.add_argument("--task-types", metavar="TEMPLATE.json",
+                           help="check every run against the model of its task type")
             p.add_argument("--gold", action="store_true",
                            help="build a per-task reference from gold actions (tau2)")
             p.add_argument("-o", "--output", help="write per-trace verdicts as JSON")
