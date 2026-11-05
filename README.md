@@ -26,7 +26,7 @@ git clone https://github.com/NLFloris/agent-pm-pipeline.git
 cd agent-pm-pipeline
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[pm,dev]"
-pytest -q                                   # 70 passed
+pytest -q                                   # 77 passed
 ```
 
 For the pictures, also install the Graphviz binary (`brew install graphviz` on
@@ -121,6 +121,11 @@ declared as data. `analysis/discovery.py` and `analysis/performance.py` hold the
 secondary lenses: the directly-follows graph over the listing and over the steps,
 handovers and rework. `report.py`, `viz.py` and `web.py` build the report, the
 pictures and the website on top.
+
+**After the verdict, `agentpm/evaluation.py`.** Scores the verdicts against labels
+on four criteria: alignment, reproducibility, cost and path-sensitivity. Labels come
+from the source or a file, and a Judge's verdicts from the file `experiments/judge/`
+writes; the package itself calls no model.
 
 ## Repository layout
 

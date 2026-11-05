@@ -191,6 +191,21 @@ two τ² domains, and a new domain brings its own file:
 python -m agentpm.cli run examples/demos/tau2_airline/claude-opus-4-5_high_airline_gpt-5.2_4trials.json --format tau2 --task-types examples/task_types_tau2_airline.json
 ```
 
+### Scoring the verdicts
+
+`evaluate` scores the verdicts against labels from outside the agent, on alignment,
+reproducibility, cost and path-sensitivity. A τ² file carries its three labels; any
+other source takes them from `--labels labels.json`, shaped as
+`{"label": {"case_id": true if compliant}}`. `--judge name=file` adds the verdicts
+of a Judge, as `experiments/judge/run_judge.py` writes them. It reproduces the
+airline comparison of the thesis:
+
+```bash
+python -m agentpm.cli evaluate examples/demos/tau2_airline/claude-opus-4-5_high_airline_gpt-5.2_4trials.json --format tau2 \
+    --task-types examples/task_types_tau2_airline.json \
+    --judge required-actions=results/judge/verdicts_gold-actions_gpt-oss-120b.json
+```
+
 ### Writing a reference model
 
 A JSON file with any of these keys. All are optional.

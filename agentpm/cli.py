@@ -8,6 +8,7 @@
     python -m agentpm.cli run        <path> --format tau2 --reference ref.json
     python -m agentpm.cli run        <path> --format tau2 --gold
     python -m agentpm.cli run        <path> --format tau2 --task-types models.json
+    python -m agentpm.cli evaluate   <path> --format tau2 --task-types models.json --judge name=verdicts.json
 
 <path> is a file for file-based formats and a directory for formats that store
 one run per file or per folder (traceelephant, agenthallu, local_magentic).
@@ -24,6 +25,7 @@ import sys
 from typing import Callable
 
 from .analysis.conformance import check
+from .evaluation import evaluation_text, labels_from_source, load_labels
 from .ingest import agenthallu, local_magentic, otel, tau2, traceelephant
 from .ingest.claude_code import ClaudeCodeIngester
 from .ingest.generic_json import GenericJsonIngester
@@ -157,6 +159,21 @@ def cmd_run(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_evaluate(a: argparse.Namespace) -> int:
+    traces = load(a.path, a.format)
+    labels = load_labels(a.labels) if a.labels else labels_from_source(traces)
+    if not labels:
+        sys.exit("this source carries no labels: give --labels <file.json>")
+    judges = dict(j.split("=", 1) for j in a.judge or ())
+    text = evaluation_text(traces, pairs_to_check(a, traces), judges, labels, rounds=a.rounds)
+    print(text)
+    if a.output:
+        with open(a.output, "w", encoding="utf-8") as f:
+            f.write(text + "\n")
+        print(f"\nwrote {a.output}")
+    return 0
+
+
 def cmd_report(a: argparse.Namespace) -> int:
     traces = load(a.path, a.format)
     if a.objects:
@@ -206,7 +223,9 @@ def main(argv: list[str] | None = None) -> int:
 
     for name, help_text, fn in (("inventory", "count traces, events, activities, resources", cmd_inventory),
                                 ("ocel", "write an OCEL 2.0 JSON event log", cmd_ocel),
-                                ("run", "conformance-check every trace against a reference", cmd_run)):
+                                ("run", "conformance-check every trace against a reference", cmd_run),
+                                ("evaluate", "score the verdicts against labels: alignment, reproducibility, "
+                                 "cost, path-sensitivity", cmd_evaluate)):
         p = sub.add_parser(name, help=help_text)
         p.add_argument("path", help="input file, or directory for per-run formats")
         p.add_argument("--format", choices=list(FORMATS), required=True)
@@ -222,14 +241,22 @@ def main(argv: list[str] | None = None) -> int:
                            help="do not emit one tool object per activity")
             p.add_argument("--exclude", nargs="*", metavar="ACTIVITY",
                            help="drop these activities, e.g. assistant_message user_message")
-        if name == "run":
+        if name in ("run", "evaluate"):
             p.add_argument("--reference", help="reference model JSON")
             p.add_argument("--task-types", metavar="TEMPLATE.json",
                            help="check every run against the model of its task type")
             p.add_argument("--gold", action="store_true",
                            help="build a per-task reference from gold actions (tau2)")
+        if name == "run":
             p.add_argument("-o", "--output", help="write per-trace verdicts as JSON")
             p.add_argument("-v", "--verbose", action="store_true")
+        if name == "evaluate":
+            p.add_argument("--judge", action="append", metavar="NAME=VERDICTS.json",
+                           help="also score a Judge's verdict file, as run_judge.py writes it; repeatable")
+            p.add_argument("--labels", metavar="LABELS.json",
+                           help='{"label": {"case_id": true if compliant}}; default: the labels the source carries')
+            p.add_argument("--rounds", type=int, default=1000, help="bootstrap rounds for the interval on kappa")
+            p.add_argument("-o", "--output", help="also write the evaluation to this file")
 
     a = ap.parse_args(argv)
     return a.fn(a)

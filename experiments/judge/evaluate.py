@@ -21,15 +21,14 @@ Standard library only.
 from __future__ import annotations
 
 import argparse
-import collections
 import glob
 import json
-import math
 import os
-import random
 import sys
 
 from agentpm.analysis.conformance import check
+from agentpm.evaluation import (bootstrap, fleiss_kappa, ground_truth, judge_verdicts, mcnemar,  # noqa: F401
+                                metrics, verdict_cost)
 from agentpm.ingest import tau2
 from agentpm.reference import Reference
 
@@ -43,140 +42,8 @@ def gold_reference(trace):
     return Reference(name="gold", required=sorted(set(names)), precedence=pairs)
 
 
-def ground_truth(traces, label="action"):
-    """case_id -> True if every gold action matched, arguments included
-    (and, for action-or-db, the final database matched; for reward, reward 1)."""
-    out = {}
-    for t in traces:
-        checks = t.outcome.get("action_checks") or []
-        if checks:
-            if label == "reward":
-                out[t.case_id] = t.outcome.get("reward") == 1.0
-                continue
-            out[t.case_id] = all(c.get("action_match") for c in checks)
-            if label == "action-or-db":
-                out[t.case_id] = out[t.case_id] and (t.outcome.get("db_check") or {}).get("db_match", True)
-    return out
-
-
 def pm_verdicts(traces):
     return {t.case_id: check(t, gold_reference(t)).compliant for t in traces}
-
-
-def judge_verdicts(path):
-    """Majority vote over repeats; ties count as non-compliant (the cautious call)."""
-    with open(path, encoding="utf-8") as f:
-        records = json.load(f)
-    majority, per_repeat, cost = {}, {}, {}
-    for r in records:
-        votes = [x["compliant"] for x in r["repeats"] if x["compliant"] is not None]
-        if not votes:
-            continue
-        yes = sum(1 for v in votes if v)
-        majority[r["case_id"]] = yes > len(votes) / 2
-        per_repeat[r["case_id"]] = votes
-        cost[r["case_id"]] = {
-            "seconds": sum(x["seconds"] or 0 for x in r["repeats"]),
-            "prompt_tokens": sum(x["prompt_tokens"] or 0 for x in r["repeats"]),
-            "completion_tokens": sum(x["completion_tokens"] or 0 for x in r["repeats"]),
-            "parsed": sum(1 for x in r["repeats"] if x["parsed"]),
-            "n": len(r["repeats"]),
-        }
-    return majority, per_repeat, cost
-
-
-def verdict_cost(path):
-    """Mean cost of one verdict, over the calls the model actually answered.
-
-    The proxy answers a repeated identical request from its cache, with the
-    response id of the first answer; such a copy costs the model nothing and is
-    left out. A call counts as fresh if its response id is new for that run and
-    the proxy did not flag it as a cache hit. Seconds come from the verdict file,
-    tokens from the raw log next to it."""
-    with open(path, encoding="utf-8") as f:
-        seconds = {(r["case_id"], x["repeat"]): x["seconds"] for r in json.load(f) for x in r["repeats"]}
-    raw = os.path.join(os.path.dirname(path), "raw_" + os.path.basename(path)[len("verdicts_"):-5] + ".jsonl")
-    seen, fresh, cached = collections.defaultdict(set), [], 0
-    with open(raw, encoding="utf-8") as f:
-        for line in f:
-            r = json.loads(line)
-            rid = (r.get("response") or {}).get("id")
-            if not rid:
-                continue                                  # a failed call: no answer, no cost counted
-            if rid in seen[r["case_id"]] or r.get("cache_hit"):
-                cached += 1
-                continue
-            seen[r["case_id"]].add(rid)
-            usage = r["response"].get("usage") or {}
-            fresh.append((usage.get("prompt_tokens") or 0, usage.get("completion_tokens") or 0,
-                          seconds.get((r["case_id"], r["repeat"])) or 0))
-    n = len(fresh)
-    if not n:
-        return None
-    return {"verdicts": n, "cached": cached, "prompt_tokens": sum(x[0] for x in fresh) / n,
-            "completion_tokens": sum(x[1] for x in fresh) / n, "seconds": sum(x[2] for x in fresh) / n}
-
-
-# ----------------------------------------------------------------- metrics
-
-def confusion(pred, truth, ids):
-    tp = sum(1 for i in ids if not pred[i] and not truth[i])   # positive class = violation
-    fp = sum(1 for i in ids if not pred[i] and truth[i])
-    fn = sum(1 for i in ids if pred[i] and not truth[i])
-    tn = sum(1 for i in ids if pred[i] and truth[i])
-    return tp, fp, fn, tn
-
-
-def metrics(pred, truth, ids):
-    tp, fp, fn, tn = confusion(pred, truth, ids)
-    n = tp + fp + fn + tn
-    acc = (tp + tn) / n if n else 0.0
-    p = tp / (tp + fp) if tp + fp else 0.0
-    r = tp / (tp + fn) if tp + fn else 0.0
-    f1 = 2 * p * r / (p + r) if p + r else 0.0
-    # Cohen's kappa against chance agreement
-    po = acc
-    pe = (((tp + fp) * (tp + fn)) + ((fn + tn) * (fp + tn))) / (n * n) if n else 0.0
-    kappa = (po - pe) / (1 - pe) if pe < 1 else 0.0
-    return {"n": n, "accuracy": acc, "precision": p, "recall": r, "f1": f1, "kappa": kappa}
-
-
-def bootstrap(pred, truth, ids, key, rounds=1000, seed=0):
-    rng = random.Random(seed)
-    vals = []
-    for _ in range(rounds):
-        sample = [rng.choice(ids) for _ in ids]
-        vals.append(metrics(pred, truth, sample)[key])
-    vals.sort()
-    return vals[int(0.025 * rounds)], vals[int(0.975 * rounds)]
-
-
-def mcnemar(pred_a, pred_b, truth, ids):
-    """Exact McNemar: do A and B err on different runs more than chance allows?"""
-    a_only = sum(1 for i in ids if pred_a[i] == truth[i] and pred_b[i] != truth[i])
-    b_only = sum(1 for i in ids if pred_b[i] == truth[i] and pred_a[i] != truth[i])
-    both_right = sum(1 for i in ids if pred_a[i] == truth[i] and pred_b[i] == truth[i])
-    both_wrong = len(ids) - a_only - b_only - both_right
-    n = a_only + b_only
-    if n == 0:
-        return a_only, b_only, both_right, both_wrong, 1.0
-    k = min(a_only, b_only)
-    tail = sum(math.comb(n, j) for j in range(0, k + 1)) / 2 ** n
-    return a_only, b_only, both_right, both_wrong, min(1.0, 2 * tail)
-
-
-def fleiss_kappa(per_repeat):
-    """Agreement of the judge with itself across repeats, two categories."""
-    rows = [v for v in per_repeat.values() if len(v) >= 2]
-    if not rows:
-        return None
-    n = min(len(v) for v in rows)
-    rows = [v[:n] for v in rows]
-    p_yes = sum(sum(1 for x in v if x) for v in rows) / (len(rows) * n)
-    pe = p_yes ** 2 + (1 - p_yes) ** 2
-    po = sum((sum(1 for x in v if x) ** 2 + sum(1 for x in v if not x) ** 2 - n)
-             / (n * (n - 1)) for v in rows) / len(rows)
-    return (po - pe) / (1 - pe) if pe < 1 else 1.0
 
 
 # ------------------------------------------------------------------ report
