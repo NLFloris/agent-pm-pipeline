@@ -7,7 +7,7 @@ inductive miner at noise 0.0, 0.1 and 0.2, replays all 172 scored runs with
 token-based replay and alignments, and scores "fitness < 1" as a violation
 detector against the benchmark's per-action check. Also prints which
 activities each net lacks, which runs the noise-0 net flags, and the
-walk-through case of Chapter 6 (task 29, trial 0) at each threshold.
+walk-through case of Section 6 (task 29, trial 0) at each threshold.
 
 pm4py's inductive miner does not return the same net in every Python process:
 at noise 0.2 the net depends on the interpreter's hash seed (found 2026-10-26;

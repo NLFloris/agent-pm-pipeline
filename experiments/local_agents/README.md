@@ -21,7 +21,7 @@ your machine stays free. OpenAI-compatible, so the runner needs no code change.
 
 ```bash
 export LLM_BASE_URL=https://inference.mlmp.ti.bfh.ch/api/v1
-export LLM_API_KEY=<Settings, Account, API keys, press Show>
+export LLM_API_KEY=<your API key>
 ```
 
 From outside the BFH network use `https://inference.proxy.ti.bfh.ch/api/v1`
@@ -178,7 +178,7 @@ traces = local_magentic.ingest_dir("~/local_agent_runs")
 A tool call becomes its function name, a speaking turn becomes `orchestrate` or
 `report`, and a speaker selection becomes `delegate` with the chosen agent on
 the `to` attribute. Reasoning is attached to the next event from that agent and
-is never an activity, following decision L6.
+is never an activity, following requirement R2 of the thesis.
 
 ## Expect failures
 

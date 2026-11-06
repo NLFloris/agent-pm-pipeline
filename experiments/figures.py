@@ -3,7 +3,7 @@
     python experiments/figures.py --data ~/Downloads --out results/figures
 
 Two views per corpus, both frequency-filtered because the unfiltered
-directly-follows graph over a few hundred agent runs is unreadable (R9):
+directly-follows graph over a few hundred agent runs is unreadable:
 
   <name>_dfg.png       directly-follows graph, each activity coloured by the
                        agent that performs it

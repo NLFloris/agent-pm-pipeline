@@ -29,7 +29,7 @@ Mapping to the canonical model (L2)
              task as the arguments. The sub-agent's own events follow with
              ``spawned_by`` set to the parent. The task message the framework
              hands the sub-agent (source ``user``) is not a separate event.
-  reasoning  ``ThoughtEvent`` is never an activity (decision L6). Its text is
+  reasoning  ``ThoughtEvent`` is never an activity (R2). Its text is
              attached to the next event from the same agent, or to the trace.
   timestamp  step in the run: the calls of one message were issued together and
              share a step, every other event is a step of its own (the

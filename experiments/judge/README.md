@@ -1,18 +1,18 @@
 # Judge baseline and the comparison
 
-This is the evaluation of Chapter 6: the process-mining signal against an
-LLM-as-a-Judge, on the same runs, against the same ground truth.
+This is the evaluation of Section 6 of the thesis: the process-mining signal
+against an LLM-as-a-Judge, on the same runs, against the same ground truth.
 
 ## The three roles
 
 | role | what it does | here |
 |---|---|---|
 | the agent | performed the task and produced the trace | claude-opus-4-5, run by Sierra; fixed by the dataset |
-| the judge | reads a trace afterwards and gives a verdict | gpt-oss:120b, the one choice we make |
+| the judge | reads a trace afterwards and gives a verdict | gpt-oss:120b, and glm-5.3-flash as a second Judge (below) |
 | process mining | checks the trace against a reference | no model |
 
 The judge must not be the model that produced the traces, otherwise it is
-grading its own work. gpt-oss:120b is a different vendor from the agent.
+grading its own work. Both Judge models come from a different vendor than the agent.
 
 ## Ground truth
 
@@ -28,12 +28,16 @@ is part of the result, not a flaw in the design.
 
 ## Running it
 
-```bash
-export LLM_BASE_URL=https://inference.mlmp.ti.bfh.ch/api/v1
-export LLM_API_KEY=...
-source ~/venvs/agentpm/bin/activate
+Any OpenAI-compatible endpoint works. The verdicts in `results/judge/` came from
+the BFH inference service, first at `https://inference.mlmp.ti.bfh.ch/api/v1`
+and from 23 October 2026 at the proxy below (see `run_judge.py`).
 
-python experiments/judge/run_judge.py --model gpt-oss:120b --mode full
+```bash
+export LLM_BASE_URL=https://inference.proxy.ti.bfh.ch/v1
+export LLM_API_KEY=...
+
+python experiments/judge/run_judge.py --model gpt-oss:120b --mode full           # the policy Judge
+python experiments/judge/run_judge.py --model gpt-oss:120b --mode gold-actions   # the required-actions Judge
 python experiments/judge/run_judge.py --model gpt-oss:120b --mode output-only
 python experiments/judge/evaluate.py
 ```

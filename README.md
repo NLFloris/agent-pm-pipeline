@@ -11,10 +11,11 @@ verdict is computed rather than judged: it costs no tokens, gives the same
 answer every time, and names the constraint that was broken and where.
 
 This repository is the artifact of the master's thesis *From Agent Traces to
-Event Logs: A Process-Mining Pipeline for Trajectory-Level Evaluation of
-LLM-Based Agents* (Floris Kuijpers, University of Twente and Bern University of
-Applied Sciences, 2026). It holds the pipeline, the experiments, and every
-result the thesis reports.
+Event Logs: A Process Mining Framework and Pipeline for Trajectory-Level
+Evaluation of LLM-Based Agents* (Floris Kuijpers, University of Twente and Bern
+University of Applied Sciences, 2026). It holds the pipeline, the experiments,
+and every result the thesis reports, with the event logs and the recorded runs
+behind them.
 
 ## Quick start
 
@@ -26,7 +27,7 @@ git clone https://github.com/NLFloris/agent-pm-pipeline.git
 cd agent-pm-pipeline
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[pm,dev]"
-pytest -q                                   # 77 passed
+pytest -q                                   # 79 passed
 ```
 
 For the pictures, also install the Graphviz binary (`brew install graphviz` on
@@ -40,13 +41,14 @@ python -m agentpm.cli web                   # opens http://127.0.0.1:8765
 
 A local website: drop in a trace file, watch the pipeline's log while it runs,
 and read every output on one page, from what the source exposes to the
-conformance verdicts, the pm4py models, each run step by step, and downloads of
-the event logs. It listens on this machine only. Three demos fill the form in,
-one per corpus of the thesis, all bundled with the repository:
+conformance verdicts, the pm4py models, the secondary lenses, each run step by
+step, and downloads of the event logs. It runs the same `report` as the command
+line and listens on this machine only, so it is not hosted anywhere. Three demos
+fill the form in, one per corpus of the thesis, all bundled with the repository:
 
 | demo | runs | what it shows |
 |---|---|---|
-| τ²-bench airline | 200 customer-service conversations by Claude Opus 4.5 | a single agent with a database; each run checked against its task's gold actions; users, reservations, flights and payments as objects in the OCEL log |
+| τ²-bench airline | 200 customer-service conversations by Claude Opus 4.5 | a single agent with a database; each run checked against the model of its task type (16 of 172 flagged); users, reservations, flights and payments as objects in the OCEL log |
 | AgentHallu, Magentic-One | 94 runs of a team of agents | an orchestrator handing work to a web surfer, a coder and a terminal; handover network and one lane per agent; human hallucination labels per run |
 | Own harness, sub-agents | 10 runs of one task type by a Magentic-One team on gpt-oss:120b | an agent that starts two sub-agents with their own tool calls; checked against a reference model that names agents, written before any run (9 of 10 conform) |
 
@@ -132,7 +134,7 @@ writes; the package itself calls no model.
 ```
 agent-pm-pipeline/
 ├── agentpm/          the pipeline, standard library only
-├── tests/            63 tests on hand-made and recorded fixtures
+├── tests/            tests on hand-made and recorded fixtures
 ├── examples/         small inputs, and the demo data in examples/demos/
 ├── experiments/      the scripts that produce every result (may use pm4py)
 │   ├── judge/          the LLM-as-a-Judge baseline and the comparison
@@ -145,7 +147,7 @@ agent-pm-pipeline/
 ```
 
 [`experiments/README.md`](experiments/README.md) lists every script, what it
-writes and which chapter uses it, and how to regenerate everything.
+writes and which section of the thesis uses it, and how to regenerate everything.
 [`results/README.md`](results/README.md) says what each result file is.
 
 ## Main results
@@ -155,20 +157,22 @@ full picture.
 
 - **One reference model per task type** (one for all cancellations, one for all
   rebookings, and so on) on Claude Opus 4.5's 172 scorable τ²-bench airline
-  runs: precision 0.94, recall 0.41 against the benchmark's own per-action
-  check, at zero tokens. Most misses are the right action with a wrong
-  argument value, which a check on the order and presence of actions does not
-  decide.
+  runs: it flags 16 runs at precision 0.94 and recall 0.41 (κ 0.50) against the
+  benchmark's own per-action check, at zero tokens. About half of its misses
+  are the right action with a wrong argument value, which a check on the order
+  and presence of actions does not decide.
   (`results/task_type_conformance.json`)
-- **Applied unchanged to 15 other agents per domain**: pooled precision 0.89 on
-  retail; on airline 0.74 against the per-action label and 0.94 once writes the
-  task never asked for also count. Recall stays between 0.3 and 0.5.
+- **Applied unchanged to the 15 agents per domain** that τ²-bench publishes:
+  pooled precision 0.74 and recall 0.44 on airline, 0.89 and 0.31 on retail; on
+  airline, precision is 0.94 once writes the task never asked for also count as
+  violations.
   (`results/cross_agent.txt`)
-- **LLM-as-a-Judge** (gpt-oss:120b and glm-5.3-flash): handed the task's
-  required actions, the Judge reaches κ 0.95 and 0.97 on airline at about 4,400
-  tokens per verdict; handed only the policy, it sits near chance (κ −0.08 to
-  0.15), and two models given the same prompt hardly agree.
-  (`results/judge/two_judges.txt`, `results/VALIDATION.md`)
+- **LLM-as-a-Judge** (gpt-oss:120b and glm-5.3-flash) on the same airline runs:
+  handed only the policy, the Judge aligns at chance (κ 0.09 and 0.10), and the
+  two models agree with each other little more than chance; handed the
+  solution list from which the label is computed, it reaches κ 0.95 and 0.97,
+  an upper bound rather than a realistic Judge, at about 4,500 tokens per verdict.
+  (`results/judge/two_judges.txt`)
 - **Agent teams and sub-agents**: the pipeline turns AgentHallu's Magentic-One
   runs and the harness runs into OCEL logs with the agents as objects, and the
   sub-agent runs into logs where each sub-agent's tool calls are attributed to
@@ -183,11 +187,30 @@ full picture.
 | [τ²-bench](https://github.com/sierra-research/tau2-bench) | the airline file of the Claude Opus 4.5 submission, in `examples/demos/`; the rest via `experiments/mirror_tau.py` | MIT |
 | [AgentHallu](https://github.com/liuxuannan/AgentHallu) | the 94 Magentic-One runs, in `examples/demos/` | CC BY 4.0 |
 | [TraceElephant](https://huggingface.co/datasets/TraceElephant/TraceElephant) | derived logs only; explored, not used in the thesis | CC BY 4.0 |
-| harness runs, Judge outputs | `results/` | MIT, as this repository |
+| harness runs, OpenTelemetry captures, Judge outputs | `results/` | MIT, as this repository |
 
 The code is MIT licensed (see `LICENSE`). Third-party data keep their own
-licence; `examples/demos/README.md` gives the attribution. pm4py, used by the
-experiments only, is AGPL-3.0 and is installed separately.
+licence; `examples/demos/README.md` and `results/README.md` give the
+attribution. pm4py, used by the experiments only, is AGPL-3.0 and is installed
+separately.
+
+### Using the data without the code
+
+The results are plain files that other tools read directly.
+
+- **Event logs.** `results/ocel/*.ocel.json` holds one OCEL 2.0 log per corpus,
+  which `pm4py.read_ocel2_json` reads; `results/logs/` holds the τ²-bench airline
+  log flat, as CSV and XES for ProM, Disco or pm4py. Every report folder in
+  `results/` has the same three files for its own runs.
+- **Recorded runs.** The harness corpora in `results/local/`,
+  `results/local_otel_live/` and `results/local_subagents/runs/` keep one JSON
+  file per run, with every message, tool call, argument, result and reasoning
+  text; `agentpm/ingest/local_magentic.py` documents the format. OpenTelemetry
+  recordings are in `capture.jsonl` files, one OTLP/JSON payload per line.
+- **Verdicts.** The engine's verdicts per run are in `verdicts.json`,
+  `task_type_conformance*.json` and `cross_agent.json`; the Judges' verdicts are
+  in `results/judge/verdicts_*.json`, with every prompt and raw response in
+  `results/judge/raw_*.jsonl`.
 
 ## Conventions
 

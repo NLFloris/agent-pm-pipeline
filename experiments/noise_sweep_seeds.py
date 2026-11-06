@@ -8,7 +8,7 @@ changes the iteration order of sets and dicts between processes. This script
 runs noise_sweep.py once per PYTHONHASHSEED from 0 to 9, each into its own
 temporary directory, and reports per threshold what changes: the activities
 the net lacks, fitness, the number of runs flagged, kappa, and the walk-through
-case of Chapter 6. As a contrast it computes the verdicts of the declarative
+case of Section 6. As a contrast it computes the verdicts of the declarative
 engine with the per-task-type model under the same ten seeds and compares
 their hash.
 """

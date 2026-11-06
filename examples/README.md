@@ -13,6 +13,8 @@ most of them.
 | `openai_capture.py` | | the trace processor that records such an export from your own SDK application |
 | `claude_transcript_sample.jsonl` | `claude` | a hand-made Claude Code transcript: Read, Edit, Bash, and a sub-agent's Grep |
 | `claude_reference.json` | reference | a Claude Code editing protocol (Read before Edit); the sample is flagged because it ends on the sub-agent's Grep |
+| `task_types_tau2_airline.json` | task types | the template from which every τ²-bench airline run gets the model of its task type (`--task-types`), as in the thesis |
+| `task_types_tau2_retail.json` | task types | the same for the retail domain; it gives the models of `experiments/retail_task_types.py`, which were frozen before any retail run was scored (a test checks this) |
 | `demos/` | | the two public corpora behind the website's demos, see `demos/README.md` |
 
 ```bash

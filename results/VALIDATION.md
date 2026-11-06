@@ -6,6 +6,10 @@ model, what came out, and what it changes. Every number below is produced by a
 script in `experiments/` and can be found in the output file named at the start
 of each section.
 
+> **Note 2026-11-06.** This is a dated working report. Part 6 below lists what
+> the round meant for the thesis drafts of that time; the thesis and the output
+> files have the final numbers. Chapter 6 of the drafts is Section 6 of the thesis.
+
 ## Summary
 
 1. **The engine's precision holds outside the runs it was written on.** Applied

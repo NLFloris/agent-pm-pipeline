@@ -217,7 +217,7 @@ def render_single_run(trace, colors, path, title, drop=frozenset(), reasoning=Tr
 
     With ``reasoning`` set, an event that carries reasoning text gets a note
     beside it holding the first lines of that text. The note is an annotation of
-    the step, never a step of its own (decision L6).
+    the step, never a step of its own (R2).
     """
     all_ordered = trace.ordered()
     labels = trace.step_labels()

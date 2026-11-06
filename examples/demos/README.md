@@ -17,9 +17,11 @@ Cite the original work when you use these files:
 - X. Liu, X. Yang, Z. Li, P. Li and R. He, *AgentHallu: Benchmarking Automated
   Hallucination Attribution of LLM-based Agents*, arXiv:2601.06818, 2026.
 
-Run either one through the pipeline from the command line:
+Run either one through the pipeline from the command line, the airline runs with
+the task-type template as on the website:
 
 ```bash
-python -m agentpm.cli report examples/demos/tau2_airline/claude-opus-4-5_high_airline_gpt-5.2_4trials.json --format tau2 -o report_tau2
+python -m agentpm.cli report examples/demos/tau2_airline/claude-opus-4-5_high_airline_gpt-5.2_4trials.json --format tau2 \
+    --task-types examples/task_types_tau2_airline.json -o report_tau2
 python -m agentpm.cli report examples/demos/agenthallu_magentic_one --format agenthallu -o report_agenthallu
 ```

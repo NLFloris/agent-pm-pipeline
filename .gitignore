@@ -30,6 +30,6 @@ results/**/*.tmp
 # the sandboxes that run_maf.py leaves behind
 results/local_maf/*/
 
-# exploration of 2026-11-03 (object-centric checks, hybrid Judge), parked as future work; see Thesis/TODO.md
+# exploration of 2026-11-03 (object-centric checks, hybrid Judge), parked as future work
 experiments/explore_object_centric/
 results/judge/hybrid/

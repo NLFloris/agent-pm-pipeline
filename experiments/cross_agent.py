@@ -13,7 +13,7 @@ agent's runs were produced by Sierra and are read from the mirror.
 Three labels, because the experiment showed that the choice matters:
 
   action        every gold action matched, arguments included. The label of
-                Ch. 6. It cannot see a write the task did not ask for, since it
+                Section 6. It cannot see a write the task did not ask for, since it
                 only checks that the listed actions occurred.
   action-or-db  a violation if any gold action failed to match OR the final
                 database differs from the expected one. The benchmark's own
@@ -150,7 +150,7 @@ def report(domain, reads_transparent):
             print(f"    {lab:13} n {m['n']:5}  viol {m['violations']:5}  flags {m['flags']:5}  "
                   f"prec {m['precision']:.2f} [{plo:.2f}, {phi:.2f}]  rec {m['recall']:.2f}  "
                   f"kappa {m['kappa']:.2f} [{lo:.2f}, {hi:.2f}]")
-    # what the false alarms are, against the Ch. 6 label and the closed one
+    # what the false alarms are, against the Section 6 label and the closed one
     for lab in ("action", "action-or-db"):
         fa = collections.Counter("+".join(r["kinds"]) for rows in per_agent.values()
                                  for r in rows if r["flag"] and not r[lab])

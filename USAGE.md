@@ -14,7 +14,8 @@ python -m agentpm.cli web
 
 opens http://127.0.0.1:8765. Three demo links at the top fill the form in, one
 per corpus of the thesis, all bundled with the repository: τ²-bench airline
-(`examples/demos/tau2_airline/`), AgentHallu's Magentic-One runs
+(`examples/demos/tau2_airline/`) with the task-type template
+(`examples/task_types_tau2_airline.json`), AgentHallu's Magentic-One runs
 (`examples/demos/agenthallu_magentic_one/`), and the harness runs with
 sub-agents (`results/local_subagents/runs/`) with their reference model
 (`experiments/local_agents/claim_check_reference.json`), checked with
@@ -23,10 +24,12 @@ step as the pipeline takes it; the same log is saved with the report.
 Otherwise, drop a trace file on the page, or type a path on this machine for
 the folder formats, and press *Run*. The format is
 detected automatically. The result page shows what the source exposes, the
-pipeline's pictures, the pm4py models, one run step by step, the conformance
-verdicts, a preview of the event log, and downloads of every file. A reference
-model and object rules can be pasted under *Reference model and options*. Reports are kept in `~/agentpm_reports` and listed on the start
-page. The site listens on this machine only.
+pipeline's pictures, the pm4py models, the secondary lenses, one run step by
+step, the conformance verdicts, a preview of the event log, and downloads of
+every file. A reference model, or a task-type template, and object rules can be
+pasted under *Reference model and options*. Reports are kept in
+`~/agentpm_reports` and listed on the start page. The site listens on this
+machine only.
 
 ## In one command
 

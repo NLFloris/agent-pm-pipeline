@@ -2,8 +2,9 @@
 
 Deterministic, rule-based conformance of a trace against a Reference. Every
 violation names the constraint and the specific event responsible, so the verdict
-is reproducible (R4) and auditable (R5). This is the algorithmic form of a
-compliance checklist, replacing a prompt-based judge for the compliance signal.
+is reproducible (R4) and every violation can be traced to its cause (R5). This is
+the algorithmic form of a compliance checklist, replacing a prompt-based judge for
+the compliance signal.
 
 Fitness is computed with one unit of weight per constraint, so it is independent
 of trace length and comparable across runs. A single constraint may still emit

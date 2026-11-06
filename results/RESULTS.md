@@ -19,6 +19,13 @@ findings here are negative and two of those change what the thesis can claim.
 > shuffling (`results/task_type_details.txt`, section 4).
 > Chapters 4 to 6 of the thesis were rewritten against the current results.
 
+> **Note 2026-11-06.** This is a dated working report, kept as a record of how the
+> results came about; the thesis and the output files named here have the final
+> numbers. Chapter *n* of the drafts is Section *n* of the thesis. Since
+> `noise_sweep.py` fixes PYTHONHASHSEED=0, its noise-0.2 net lacks four
+> activities (`results/pm4py/noise_sweep.txt`), not one as §10.1b and the note
+> above say.
+
 Environment: Python 3.12, venv at `~/venvs/agentpm`, pm4py 2.7.23.8, pandas
 2.3.3, graphviz 0.21 with Graphviz 16.1.0. Test suite 32 passed.
 

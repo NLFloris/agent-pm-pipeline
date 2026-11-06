@@ -1,4 +1,4 @@
-"""Three details of the task-type engine that Chapter 6 reports, from one script.
+"""Three details of the task-type engine that Section 6 reports, from one script.
 
     python experiments/task_type_details.py > results/task_type_details.txt
 
