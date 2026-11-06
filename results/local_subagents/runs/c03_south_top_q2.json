@@ -581,5 +581,5 @@
   }
  },
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs_subagents/c03_south_top_q2"
+ "sandbox": "~/local_agent_runs_subagents/c03_south_top_q2"
 }

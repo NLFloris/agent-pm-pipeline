@@ -277,5 +277,5 @@
   }
  ],
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs/l03_growth"
+ "sandbox": "~/local_agent_runs/l03_growth"
 }

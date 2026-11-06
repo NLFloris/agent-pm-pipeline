@@ -310,5 +310,5 @@
   }
  ],
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs/l06_summarise_all"
+ "sandbox": "~/local_agent_runs/l06_summarise_all"
 }

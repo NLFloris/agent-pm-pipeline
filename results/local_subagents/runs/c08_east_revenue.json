@@ -863,5 +863,5 @@
   }
  },
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs_subagents/c08_east_revenue"
+ "sandbox": "~/local_agent_runs_subagents/c08_east_revenue"
 }

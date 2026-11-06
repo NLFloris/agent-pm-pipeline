@@ -369,5 +369,5 @@
   }
  ],
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs/l05_fix_bug"
+ "sandbox": "~/local_agent_runs/l05_fix_bug"
 }

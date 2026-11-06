@@ -544,5 +544,5 @@
   }
  },
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs_subagents/c09_average_price"
+ "sandbox": "~/local_agent_runs_subagents/c09_average_price"
 }

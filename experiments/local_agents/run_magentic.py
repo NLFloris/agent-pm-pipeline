@@ -10,7 +10,7 @@ what the public corpora and Claude Code's telemetry both drop:
   * which agent performed each action, not just that one was performed
   * full tool arguments, not their size in bytes
   * the model's own reasoning text, kept as an attribute and never as an
-    activity (thesis decision L6)
+    activity (requirement R2 of the thesis)
   * wall-clock start and end per message, so durations are real
 
 The team is three AssistantAgents with explicit Python tools, under the
@@ -287,7 +287,7 @@ async def main_async(a):
         print(f"[{i}/{len(tasks)}] {task['id']} ({task.get('shape')}) ...", flush=True)
         run = await run_task(task, sandbox, client, a.max_turns, otel=otel, subagents=a.subagents)
         run["model"] = a.model
-        run["sandbox"] = sandbox
+        run["sandbox"] = sandbox.replace(os.path.expanduser("~"), "~", 1)   # no home folder in the record
         run["no_cache"] = a.no_cache             # whether the proxy was asked to sample afresh
         path = os.path.join(a.out, f"{task['id']}.json")
         with open(path, "w", encoding="utf-8") as f:

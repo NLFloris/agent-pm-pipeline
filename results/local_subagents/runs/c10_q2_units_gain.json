@@ -507,5 +507,5 @@
   }
  },
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs_subagents/c10_q2_units_gain"
+ "sandbox": "~/local_agent_runs_subagents/c10_q2_units_gain"
 }

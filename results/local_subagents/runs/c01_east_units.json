@@ -618,5 +618,5 @@
   }
  },
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs_subagents/c01_east_units"
+ "sandbox": "~/local_agent_runs_subagents/c01_east_units"
 }

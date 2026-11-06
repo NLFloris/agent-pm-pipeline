@@ -251,5 +251,5 @@
   }
  ],
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs/l04_cross_check"
+ "sandbox": "~/local_agent_runs/l04_cross_check"
 }

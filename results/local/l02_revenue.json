@@ -218,5 +218,5 @@
   }
  ],
  "model": "gpt-oss:120b",
- "sandbox": "/Users/floriskuijpers/local_agent_runs/l02_revenue"
+ "sandbox": "~/local_agent_runs/l02_revenue"
 }
