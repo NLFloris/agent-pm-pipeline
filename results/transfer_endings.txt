@@ -1,0 +1,133 @@
+Runs that the simulated customer ends with ###TRANSFER### although the agent never transferred.
+
+    PYTHONHASHSEED=0 python experiments/transfer_endings.py > results/transfer_endings.txt
+
+In tau2-bench the customer is a language model. It ends a run by writing a
+token, ###STOP### or ###TRANSFER###, and after that token the agent gets no
+further turn. The token ###TRANSFER### is meant for a customer who has been
+transferred to a human agent, but the customer also writes it when the agent
+made no transfer_to_human_agents call, for example right after asking for one.
+Such a run ends on the customer's side, so an action the task required and the
+agent had not yet performed is missing from the log, and the per-action label
+and the engine both count it as a violation of the agent.
+
+Definitions:
+
+  customer-ended transfer  a scorable run whose last customer message contains
+                           ###TRANSFER### and which has no
+                           transfer_to_human_agents call
+  agent-ended transfer     the same token after such a call, for comparison
+
+For every customer-ended transfer the script counts how the per-action label,
+the per-action-or-database label and the reward mark it, and whether the engine
+with the frozen task-type model flags it, for claude-opus-4-5 and pooled over
+the fifteen agents of cross_agent.py, on both domains.
+
+Two crude indicators of whether the agent still had a turn to act. Both need
+the agent's last message before the customer's final one to ask something (it
+contains "confirm", "proceed", "approve", "would you like me to", "shall I" or
+"do you want me to"), and both look at the sentences of the customer's final
+message that contain "yes", "yeah", "yep", "go ahead", "proceed", "confirm" or
+"approve":
+
+  change confirmed at the end   such a sentence does not mention a transfer, as
+                                in "Yes, please cancel LU15PA and 8C8K4E.", so
+                                the customer confirmed a change in the message
+                                that ended the run and the agent never had a
+                                turn to make it
+  transfer accepted at the end  such a sentence mentions a transfer, as in "Yes,
+                                please transfer me to a human agent.", so the
+                                agent never had a turn to make the transfer call
+
+A run can have both. They are keyword matches and not a reading of the
+conversation: they miss a confirmation worded otherwise and can fire on a "yes"
+that answers something else. The Opus airline runs they list were read by hand.
+
+=== airline, 15 agents ===
+  claude-opus-4-5_sierra_2026-02-26: 172 scorable runs
+    ends on ###TRANSFER###: after a transfer call 50, without one (customer-ended) 20
+    action        customer-ended among violations    10 of    37 (27.0%), among compliant runs    10 of   135 ( 7.4%)
+    action-or-db  customer-ended among violations    10 of    39 (25.6%), among compliant runs    10 of   133 ( 7.5%)
+    reward        customer-ended among violations     8 of    30 (26.7%), among compliant runs    12 of   142 ( 8.5%)
+    engine flags 7 of the 20 customer-ended transfers; they are     7 of    15 (46.7%) of the engine's true positives against the per-action label
+    constraint kinds of those flags: {'required': 7}
+    change confirmed at the end: 3 of the 20, of which per-action violations 3, flagged by the engine 3, flagged and a per-action violation 3
+    transfer accepted at the end: 10 of the 20, of which per-action violations 5, flagged by the engine 3, flagged and a per-action violation 3
+  POOLED, all agents: 2576 scorable runs
+    ends on ###TRANSFER###: after a transfer call 657, without one (customer-ended) 188
+    action        customer-ended among violations    77 of   909 ( 8.5%), among compliant runs   111 of  1667 ( 6.7%)
+    action-or-db  customer-ended among violations    78 of  1076 ( 7.2%), among compliant runs   110 of  1500 ( 7.3%)
+    reward        customer-ended among violations    57 of   856 ( 6.7%), among compliant runs   131 of  1720 ( 7.6%)
+    engine flags 56 of the 188 customer-ended transfers; they are    55 of   398 (13.8%) of the engine's true positives against the per-action label
+    constraint kinds of those flags: {'required': 52, 'allowed+required': 3, 'allowed': 1}
+    change confirmed at the end: 22 of the 188, of which per-action violations 13, flagged by the engine 13, flagged and a per-action violation 13
+    transfer accepted at the end: 120 of the 188, of which per-action violations 44, flagged by the engine 34, flagged and a per-action violation 33
+  per agent: scorable runs, customer-ended transfers, of which per-action violations, flagged by the engine, change confirmed at the end, transfer accepted at the end
+    claude-3-7-sonnet_anthropic_2024-06-20    172    4    0    1    0    4
+    claude-opus-4-5_sierra_2026-02-26         172   20   10    7    3   10
+    claude-sonnet-4-5_sierra_2026-02-26       172   22   10    7    5   18
+    gemini-3-flash_sierra_2026-03-02          172   13   10    9    4   11
+    gemini-3-pro_sierra_2026-03-02            169   10    6    1    1    6
+    glm-5-think_sierra_2026-03-02             172   24    7    5    3   19
+    gpt-4-1-mini_openai_2024-06-20            172    7    5    5    0    5
+    gpt-4-1_openai_2024-06-20                 172    8    4    4    0    6
+    gpt-5-2-none_sierra_2026-02-26            172   11    5    3    2    3
+    gpt-5-2_sierra_2026-02-26                 172    9    2    0    1    2
+    gpt-5_sierra_2025-08-09                   172    6    2    1    0    4
+    o4-mini_openai_2024-06-20                 172    1    0    0    0    1
+    qwen3-max_qwen_2025-10-30                 171    8    1    1    0    6
+    qwen3-max_qwen_2026-01-23                 172   29   11   11    0   20
+    qwen3.5-397b-a17b-think_sierra_2026-03-02  172   16    4    1    3    5
+  claude-opus-4-5_sierra_2026-02-26, customer-ended transfers that the engine flags (task, trial, change confirmed / transfer accepted at the end, failing gold actions, constraint kinds):
+    task   13 trial 3  -      -         transfer_to_human_agents                       required
+    task   29 trial 0  -      -         book_reservation, cancel_reservation           required
+    task   32 trial 0  -      -         update_reservation_flights                     required
+    task   32 trial 3  -      transfer  search_direct_flight, update_reservation_flights  required
+    task   39 trial 2  change transfer  cancel_reservation                             required
+    task   39 trial 3  change transfer  cancel_reservation                             required
+    task   44 trial 2  change -         search_direct_flight, update_reservation_flights  required
+
+=== retail, 15 agents ===
+  claude-opus-4-5_sierra_2026-02-26: 448 scorable runs
+    ends on ###TRANSFER###: after a transfer call 34, without one (customer-ended) 51
+    action        customer-ended among violations    18 of   158 (11.4%), among compliant runs    33 of   290 (11.4%)
+    action-or-db  customer-ended among violations    18 of   167 (10.8%), among compliant runs    33 of   281 (11.7%)
+    reward        customer-ended among violations    13 of    93 (14.0%), among compliant runs    38 of   355 (10.7%)
+    engine flags 8 of the 51 customer-ended transfers; they are     8 of    61 (13.1%) of the engine's true positives against the per-action label
+    constraint kinds of those flags: {'required': 8}
+    change confirmed at the end: 5 of the 51, of which per-action violations 2, flagged by the engine 2, flagged and a per-action violation 2
+    transfer accepted at the end: 36 of the 51, of which per-action violations 14, flagged by the engine 6, flagged and a per-action violation 6
+  POOLED, all agents: 6645 scorable runs
+    ends on ###TRANSFER###: after a transfer call 536, without one (customer-ended) 283
+    action        customer-ended among violations   145 of  2785 ( 5.2%), among compliant runs   138 of  3860 ( 3.6%)
+    action-or-db  customer-ended among violations   150 of  2878 ( 5.2%), among compliant runs   133 of  3767 ( 3.5%)
+    reward        customer-ended among violations    84 of  1565 ( 5.4%), among compliant runs   199 of  5080 ( 3.9%)
+    engine flags 86 of the 283 customer-ended transfers; they are    84 of   875 ( 9.6%) of the engine's true positives against the per-action label
+    constraint kinds of those flags: {'required': 81, 'allowed+required': 2, 'allowed': 1, 'precedence+required': 1, 'directly_before': 1}
+    change confirmed at the end: 26 of the 283, of which per-action violations 14, flagged by the engine 13, flagged and a per-action violation 13
+    transfer accepted at the end: 169 of the 283, of which per-action violations 90, flagged by the engine 53, flagged and a per-action violation 52
+  per agent: scorable runs, customer-ended transfers, of which per-action violations, flagged by the engine, change confirmed at the end, transfer accepted at the end
+    claude-3-7-sonnet_anthropic_2024-06-20    448    3    2    2    0    3
+    claude-opus-4-5_sierra_2026-02-26         448   51   18    8    5   36
+    claude-sonnet-4-5_sierra_2026-02-26       448   57   35   22   12   40
+    gemini-3-flash_sierra_2026-03-02          448   12    7    5    1   12
+    gemini-3-pro_sierra_2026-03-02            428   10    7    1    0    7
+    glm-5-think_sierra_2026-03-02             444   31   18   11    5   21
+    gpt-4-1-mini_openai_2024-06-20            448    7    2    3    0    6
+    gpt-4-1_openai_2024-06-20                 448   11   10    8    0    8
+    gpt-5-2-none_sierra_2026-02-26            397   33   10    3    1    8
+    gpt-5-2_sierra_2026-02-26                 448   34   11    3    0    9
+    gpt-5_sierra_2025-08-09                   448    3    3    3    0    2
+    o4-mini_openai_2024-06-20                 448    1    1    0    0    0
+    qwen3-max_qwen_2025-10-30                 448    4    4    2    0    1
+    qwen3-max_qwen_2026-01-23                 448    5    5    4    0    3
+    qwen3.5-397b-a17b-think_sierra_2026-03-02  448   21   12   11    2   13
+  claude-opus-4-5_sierra_2026-02-26, customer-ended transfers that the engine flags (task, trial, change confirmed / transfer accepted at the end, failing gold actions, constraint kinds):
+    task    5 trial 3  -      transfer  return_delivered_order_items                   required
+    task   32 trial 3  -      transfer  cancel_pending_order, return_delivered_order_items  required
+    task   34 trial 1  -      transfer  find_user_id_by_name_zip, get_order_details, get_user_details, modify_pending_order_address  required
+    task   50 trial 0  -      transfer  transfer_to_human_agents                       required
+    task   99 trial 2  -      -         exchange_delivered_order_items                 required
+    task   99 trial 3  -      transfer  exchange_delivered_order_items                 required
+    task  105 trial 2  change -         exchange_delivered_order_items                 required
+    task  107 trial 2  change transfer  exchange_delivered_order_items                 required
