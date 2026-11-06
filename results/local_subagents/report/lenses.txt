@@ -1,0 +1,52 @@
+The secondary lenses. They describe the runs and enter no verdict.
+
+rework: mean 55.1% over the 10 runs with at least two tool calls
+
+handovers (the acting agent changes):
+  FileSurfer -> MagenticOneOrchestrator  20
+  MagenticOneOrchestrator -> FileSurfer  20
+  Analyst -> DataChecker  10
+  Analyst -> MagenticOneOrchestrator  10
+  Coder -> MagenticOneOrchestrator  10
+  DataChecker -> Analyst  10
+  MagenticOneOrchestrator -> Analyst  10
+  MagenticOneOrchestrator -> Coder  10
+  user -> MagenticOneOrchestrator  10
+  Analyst -> Recalculator  9
+  Recalculator -> Analyst  9
+
+directly-follows edges over the steps (16, events issued together never follow each other):
+  run_python -> run_python  54
+  report -> orchestrate  50
+  read_file -> report  19
+  run_python -> report  19
+  list_files -> report  10
+  orchestrate -> list_files  10
+  orchestrate -> orchestrate  10
+  orchestrate -> read_file  10
+  orchestrate -> run_python  10
+  orchestrate -> spawn  10
+  report -> report  10
+  list_files -> read_file  9
+  report -> spawn  9
+  spawn -> list_files  9
+  spawn -> run_python  9
+  spawn -> report  1
+
+directly-follows edges over the listed order (16):
+  report -> orchestrate  50
+  run_python -> run_python  34
+  read_file -> report  19
+  run_python -> report  19
+  list_files -> report  10
+  orchestrate -> list_files  10
+  orchestrate -> orchestrate  10
+  orchestrate -> read_file  10
+  orchestrate -> run_python  10
+  orchestrate -> spawn  10
+  report -> report  10
+  list_files -> read_file  9
+  report -> spawn  9
+  spawn -> list_files  9
+  spawn -> run_python  9
+  spawn -> report  1

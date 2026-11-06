@@ -8,6 +8,7 @@
 | `inventory.txt` | counts, and every run on one line as agent:activity |
 | `event_log.csv` | the flat event log, one row per event, with arguments, results and reasoning |
 | `runs.ocel.json` | the object-centric log, OCEL 2.0 |
+| `lenses.txt` | discovery over the listing and over the steps, handovers and rework |
 | `event_log.xes` | the flat log in XES, for ProM, Disco and pm4py |
 | `conformance.txt` | each run against the reference, with the event responsible |
 | `verdicts.json` | the same, machine-readable |

@@ -1,0 +1,27 @@
+The secondary lenses. They describe the runs and enter no verdict.
+
+rework: mean 19.2% over the 8 runs with at least two tool calls
+
+handovers (the acting agent changes):
+  root -> FileSurfer  21
+  FileSurfer -> root  19
+  root -> Coder  7
+  Coder -> root  3
+
+directly-follows edges over the steps (7, events issued together never follow each other):
+  list_files -> read_file  8
+  read_file -> read_file  4
+  read_file -> run_python  4
+  read_file -> write_file  1
+  run_python -> read_file  1
+  run_python -> run_python  1
+  write_file -> run_python  1
+
+directly-follows edges over the listed order (7):
+  list_files -> read_file  8
+  read_file -> read_file  4
+  read_file -> run_python  4
+  read_file -> write_file  1
+  run_python -> read_file  1
+  run_python -> run_python  1
+  write_file -> run_python  1

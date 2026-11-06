@@ -1,0 +1,59 @@
+The secondary lenses. They describe the runs and enter no verdict.
+
+rework: mean 53.4% over the 6 runs with at least two tool calls
+
+handovers (the acting agent changes):
+  Coder -> root  30
+  root -> Coder  30
+  FileSurfer -> root  26
+  root -> FileSurfer  26
+  Orchestrator -> root  23
+  root -> Orchestrator  23
+  Analyst -> root  11
+  root -> Analyst  11
+
+directly-follows edges over the steps (21, events issued together never follow each other):
+  read_file -> transfer_to_orchestrator  9
+  run_python -> transfer_to_orchestrator  7
+  transfer_to_filesurfer -> read_file  7
+  transfer_to_orchestrator -> transfer_to_coder  7
+  transfer_to_orchestrator -> transfer_to_filesurfer  7
+  transfer_to_coder -> write_file  6
+  read_file -> read_file  5
+  write_file -> transfer_to_orchestrator  5
+  write_file -> write_file  5
+  transfer_to_coder -> run_python  4
+  transfer_to_analyst -> read_file  3
+  transfer_to_orchestrator -> transfer_to_analyst  3
+  write_file -> run_python  3
+  list_files -> read_file  2
+  list_files -> transfer_to_orchestrator  2
+  read_file -> list_files  2
+  run_python -> write_file  2
+  transfer_to_filesurfer -> list_files  2
+  read_file -> run_python  1
+  run_python -> run_python  1
+  transfer_to_analyst -> run_python  1
+
+directly-follows edges over the listed order (21):
+  read_file -> transfer_to_orchestrator  9
+  run_python -> transfer_to_orchestrator  7
+  transfer_to_filesurfer -> read_file  7
+  transfer_to_orchestrator -> transfer_to_coder  7
+  transfer_to_orchestrator -> transfer_to_filesurfer  7
+  transfer_to_coder -> write_file  6
+  read_file -> read_file  5
+  write_file -> transfer_to_orchestrator  5
+  write_file -> write_file  5
+  transfer_to_coder -> run_python  4
+  transfer_to_analyst -> read_file  3
+  transfer_to_orchestrator -> transfer_to_analyst  3
+  write_file -> run_python  3
+  list_files -> read_file  2
+  list_files -> transfer_to_orchestrator  2
+  read_file -> list_files  2
+  run_python -> write_file  2
+  transfer_to_filesurfer -> list_files  2
+  read_file -> run_python  1
+  run_python -> run_python  1
+  transfer_to_analyst -> run_python  1
