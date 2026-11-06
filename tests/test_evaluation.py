@@ -4,7 +4,7 @@ import json
 import pytest
 
 from agentpm.cli import main
-from agentpm.evaluation import metrics, path, same_outcome_pairs, separation
+from agentpm.evaluation import flags_at_reward_one, metrics, path, same_outcome_pairs, separation
 from agentpm.model import Event, Trace
 
 RUNS = "examples/demos/tau2_airline/claude-opus-4-5_high_airline_gpt-5.2_4trials.json"
@@ -45,6 +45,14 @@ def test_separation_compares_a_method_with_the_label():
     assert (s["judged"], s["separated"], s["as_label"], s["against"], s["both_compliant"]) == (3, 2, 1, 0, 1)
 
 
+def test_flags_at_reward_one_count_only_correct_outcomes_and_judged_runs():
+    runs = [_run("a", [["x"]]), _run("b", [["x"]]), _run("c", [["x"]]), _run("d", [["x"]]),
+            _run("e", [["x"]], reward=0.0)]
+    truth = {"a": False, "b": False, "c": True, "d": True, "e": False}
+    verdict = {"a": False, "c": True, "d": False, "e": False}
+    assert flags_at_reward_one(verdict, runs, truth) == [(1, 1), (1, 2)]
+
+
 def test_evaluate_reproduces_the_reported_airline_comparison(capsys):
     assert main(["evaluate", RUNS, "--format", "tau2", "--task-types", TEMPLATE,
                  "--judge", f"required={REQUIRED}", "--rounds", "20"]) == 0
@@ -54,6 +62,8 @@ def test_evaluate_reproduces_the_reported_airline_comparison(capsys):
     assert "0.93   1.00   0.95" in out            # the required-actions Judge
     assert "3 repetitions give 1 distinct verdict hash" in out
     assert "engine: 0 tokens" in out
+    assert "flags   1 of  11 violations,   0 of 131 compliant runs" in out    # the engine
+    assert "flags  11 of  11 violations,   3 of 131 compliant runs" in out    # the required-actions Judge
     assert "other path (all activities): 167, of which the label separates 6" in out
 
 

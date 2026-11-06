@@ -12,8 +12,10 @@ labels and, for a comparison, the verdicts of a Judge. It reports four criteria.
   reproducibility   for the engine, whether repeated checks hash identically; for
                     a Judge, the share of unanimous runs and Fleiss' kappa
   cost              tokens and time per verdict
-  path-sensitivity  on pairs of runs of one task with reward 1 and different steps,
-                    how many a method separates, and how many as the label does
+  path-sensitivity  on the runs with reward 1, how often a method flags the violations
+                    against how often it flags the compliant runs; and on pairs of runs
+                    of one task with reward 1 and different steps, how many a method
+                    separates, and how many as the label does
 
 A source that carries the benchmark's checks (tau2) brings its labels with it, and
 any other source takes them from a JSON file. Judge verdicts are read from files as
@@ -217,6 +219,16 @@ def same_outcome_pairs(traces: list[Trace], tools_only: bool = False):
             if path(a, tools_only) != path(b, tools_only)]
 
 
+def flags_at_reward_one(verdict, traces: list[Trace], truth):
+    """On the runs with reward 1, (flagged, judged) for the violations and the compliant runs."""
+    correct = [t.case_id for t in traces if t.outcome.get("reward") == 1.0]
+    counts = []
+    for ids in ([c for c in correct if not truth[c]], [c for c in correct if truth[c]]):
+        judged = [c for c in ids if c in verdict]
+        counts.append((sum(1 for c in judged if not verdict[c]), len(judged)))
+    return counts
+
+
 def separation(verdict, pairs, truth):
     """How many pairs a method separates, and how that compares with the label."""
     judged = [(a, b) for a, b in pairs if a in verdict and b in verdict]
@@ -293,7 +305,10 @@ def evaluation_text(traces: list[Trace], pairs, judges: dict[str, str], labels: 
     truth = labels[main_label]
     scored = [t for t in traces if t.case_id in truth]
     if any(t.outcome.get("reward") == 1.0 and t.outcome.get("task_id") is not None for t in scored):
-        lines += ["", f"PATH-SENSITIVITY, against the label {main_label}"]
+        lines += ["", f"PATH-SENSITIVITY, against the label {main_label}", "  runs with reward 1"]
+        for name, verdict in methods.items():
+            (bad, n_bad), (ok, n_ok) = flags_at_reward_one(verdict, scored, truth)
+            lines.append(f"    {name:34} flags {bad:3} of {n_bad:3} violations, {ok:3} of {n_ok:3} compliant runs")
         for tools_only in (False, True):
             found = same_outcome_pairs(scored, tools_only)
             lines.append(f"  pairs, same task, reward 1, other path ({'tools only' if tools_only else 'all activities'}): "
