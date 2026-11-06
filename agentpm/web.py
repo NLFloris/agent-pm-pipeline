@@ -9,7 +9,8 @@ written, the way the command line would. Reports are kept under --out
 (default ~/agentpm_reports) with that log beside them.
 
 Three demos fill the form in, one per corpus of the thesis, all bundled with
-the repository: tau2-bench airline (examples/demos/tau2_airline), AgentHallu's
+the repository: tau2-bench airline (examples/demos/tau2_airline) with the
+task-type template (examples/task_types_tau2_airline.json), AgentHallu's
 Magentic-One runs (examples/demos/agenthallu_magentic_one), and the harness
 corpus with sub-agents (results/local_subagents/runs) with its reference model.
 
@@ -39,7 +40,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any, Callable, Optional
 
 from .logbuild.objects import BUILTIN as BUILTIN_RULES, rules_from_json
-from .reference import reference_from_dict
+from .reference import TaskTypes, reference_from_dict
 from .report import report
 
 FILE_ORDER = ["otel", "tau2", "openai", "claude", "generic"]
@@ -88,13 +89,16 @@ def demos() -> list[dict[str, str]]:
     """The three corpora of the thesis; a demo whose files are missing is left out."""
     out = []
     tau2 = os.path.join(DEMOS, "tau2_airline", "claude-opus-4-5_high_airline_gpt-5.2_4trials.json")
-    if os.path.exists(tau2):
+    types = os.path.join(REPO, "examples", "task_types_tau2_airline.json")
+    if os.path.exists(tau2) and os.path.exists(types):
         out.append({"key": "tau2", "label": "τ²-bench airline",
                     "note": "200 customer-service conversations by Claude Opus 4.5 (50 tasks, 4 trials each). "
-                            "Every run whose task has gold actions is checked against them; users, reservations, "
+                            "Every run with a solution list is checked against the model of its task type, one "
+                            "model for all cancellations, one for all bookings and so on; users, reservations, "
                             "flights and payments become objects in the OCEL log.",
                     "path": tau2, "format": "tau2", "name": "Demo: τ²-bench airline",
-                    "reference": "", "objects": "", "pictures": "1", "by_agent": "0"})
+                    "reference": "", "task_types": open(types, encoding="utf-8").read().strip(),
+                    "objects": "", "pictures": "1", "by_agent": "0"})
     ah = os.path.join(DEMOS, "agenthallu_magentic_one")
     if os.path.isdir(ah):
         out.append({"key": "agenthallu", "label": "AgentHallu, Magentic-One",
@@ -103,7 +107,7 @@ def demos() -> list[dict[str, str]]:
                             "for whether and at which step a hallucination entered. No reference model, so no "
                             "conformance check.",
                     "path": ah, "format": "agenthallu", "name": "Demo: AgentHallu, Magentic-One",
-                    "reference": "", "objects": "", "pictures": "1", "by_agent": "0"})
+                    "reference": "", "task_types": "", "objects": "", "pictures": "1", "by_agent": "0"})
     runs = os.path.join(REPO, "results", "local_subagents", "runs")
     ref = os.path.join(REPO, "experiments", "local_agents", "claim_check_reference.json")
     if os.path.isdir(runs) and os.path.exists(ref):
@@ -113,8 +117,8 @@ def demos() -> list[dict[str, str]]:
                             "Recalculator, which make their own tool calls. Checked against the claim_check "
                             "reference model, written before any run, with activities named by agent.",
                     "path": runs, "format": "local_magentic", "name": "Demo: own harness, sub-agents",
-                    "reference": open(ref, encoding="utf-8").read().strip(), "objects": "", "pictures": "1",
-                    "by_agent": "1"})
+                    "reference": open(ref, encoding="utf-8").read().strip(), "task_types": "", "objects": "",
+                    "pictures": "1", "by_agent": "1"})
     return out
 
 
@@ -188,6 +192,15 @@ def _run_job(job: dict[str, Any], form: dict[str, Any], out_root: str, add) -> N
             except (ValueError, KeyError, TypeError) as exc:
                 raise ValueError(f"the reference model is not valid JSON for a reference: {exc}")
             cmd += f" --reference {ref.name}.json"
+        types = None
+        if form.get("task_types"):
+            if ref is not None:
+                raise ValueError("give a reference model or task types, not both")
+            try:
+                types = TaskTypes(**json.loads(form["task_types"]))
+            except (ValueError, TypeError) as exc:
+                raise ValueError(f"the task types are not a valid template: {exc}")
+            cmd += " --task-types task_types.json"
         rules = None
         if form.get("objects"):
             try:
@@ -221,8 +234,11 @@ def _run_job(job: dict[str, Any], form: dict[str, Any], out_root: str, add) -> N
                     add(f"reference model '{ref.name}': {len(ref.required)} required, "
                         f"{len(ref.precedence)} precedence, {len(ref.forbidden_after)} forbidden-after, "
                         f"{len(ref.directly_before)} directly-before")
+                if types is not None:
+                    found = sorted({types.type_of(t) for t, _ in types.pairs(traces)})
+                    add(f"task types '{types.name}': {len(found)} types in these runs, one model each")
                 report(traces, d, source=f"{base} ({fmt})", reference=ref, object_rules=rules,
-                       pictures=pictures, noise=noise, by_agent=by_agent, say=add)
+                       pictures=pictures, noise=noise, by_agent=by_agent, say=add, task_types=types)
         meta = {"name": form.get("name") or base, "source": path, "format": fmt, "runs": len(traces),
                 "events": sum(len(x.events) for x in traces), "created": datetime.datetime.now().isoformat(),
                 "seconds": round(time.time() - job["t0"], 1)}
@@ -407,8 +423,10 @@ def index_page(out_root: str) -> bytes:
   <div class=field><label>Format</label><select name=format id=format>{opts}</select></div>
   <details><summary>Reference model and options</summary>
     <div class=field><label>Name</label><input type=text name=name id=name placeholder="optional"></div>
-    <div class=field><label>Reference model (JSON). Empty: tau2 uses its gold actions, other sources are not checked.</label>
+    <div class=field><label>Reference model (JSON). Leave this and the task types empty, and a source with a solution list per task (tau2) is checked against that answer key; other sources are not checked.</label>
     <textarea name=reference id=reference placeholder='{{"name": "my-policy", "required": ["read_file"], "precedence": [["read_file", "run_python"]]}}'></textarea></div>
+    <div class=field><label>Task types (JSON template): one model per task type instead of one reference model, as in examples/task_types_tau2_airline.json</label>
+    <textarea name=task_types id=task_types style="min-height:70px" placeholder='{{"name": "my-domain", "changes": ["cancel_order"], "lookups": [["get_order", ["cancel_order"]]]}}'></textarea></div>
     <div class=field><label>Activity names in the reference</label><select name=by_agent id=by_agent>
     <option value=0>Tool names (read_file)</option><option value=1>Agent and tool (Analyst.read_file, Analyst.spawn:DataChecker)</option></select></div>
     <div class=field><label>Object rules (JSON)</label>
@@ -431,8 +449,8 @@ file.onchange=()=>{{$('fname').textContent=file.files[0]?file.files[0].name:'';i
 drop.addEventListener('drop',ev=>{{file.files=ev.dataTransfer.files;file.onchange()}});
 document.querySelectorAll('.demos button').forEach(b=>b.onclick=()=>{{const d=DEMOS[b.dataset.k];
   file.value='';$('fname').textContent=d.label+' (demo)';
-  for(const k of ['path','format','name','reference','objects','pictures','by_agent'])$(k).value=d[k];
-  if(d.reference)document.querySelector('details').open=true}});
+  for(const k of ['path','format','name','reference','task_types','objects','pictures','by_agent'])$(k).value=d[k];
+  if(d.reference||d.task_types)document.querySelector('details').open=true}});
 const c=$('clear');if(c)c.onclick=async()=>{{if(!confirm('Delete every report in the history? The files are removed from disk.'))return;
   await fetch('/clear',{{method:'POST'}});location.reload()}};
 const esc=s=>s.replace(/[&<>]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;'}})[c]);
@@ -513,6 +531,9 @@ def report_page(rid: str, d: str) -> bytes:
         out.append(sec("Process models", "".join(pm)
                        + (f"<details><summary>variants, start and end activities</summary><pre>{html.escape(summary)}</pre></details>" if summary else ""),
                        "pm4py, inductive miner. Messages and framework bookkeeping are left out."))
+    lenses = _read(os.path.join(d, "lenses.txt"))
+    if lenses:
+        out.append(sec("Secondary lenses", f"<pre>{html.escape(lenses)}</pre>"))
     safe = lambda c: "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in c)[:60]
     pics = sorted(f[4:-4] for f in files if f.startswith("run_") and f.endswith(".png"))
     tdir = os.path.join(d, "transcripts")
@@ -531,6 +552,8 @@ def report_page(rid: str, d: str) -> bytes:
                        "The picture and the transcript below it show the run picked here. "
                        "Box numbers are steps; two boxes with the same number and a letter were issued together. The verdicts and the transcript use the same numbers."))
     if verdicts:
+        names = sorted({v.get("reference", "") for v in verdicts})
+        per_run = len(names) > 1          # one model per task type
         rows = []
         for v in sorted(verdicts, key=lambda v: (v["compliant"], v["case_id"])):
             viol = "<br>".join(html.escape(x["constraint"]) + (f" <span class=mute>at step {x.get('at_label', x['at'])}</span>" if x["at"] is not None else "")
@@ -538,15 +561,23 @@ def report_page(rid: str, d: str) -> bytes:
             sid = safe(v["case_id"])
             link = (f"<a href='#rs' class=pick data-run='{html.escape(sid)}'>{html.escape(v['case_id'])}</a>"
                     if sid in runs else html.escape(v["case_id"]))
-            rows.append(f"<tr data-run='{html.escape(sid)}'><td>{link}</td><td class={'pass' if v['compliant'] else 'fail'}>"
+            model = f"<td class=mute>{html.escape(v.get('reference', ''))}</td>" if per_run else ""
+            rows.append(f"<tr data-run='{html.escape(sid)}'><td>{link}</td>{model}<td class={'pass' if v['compliant'] else 'fail'}>"
                         f"{'pass' if v['compliant'] else 'fail'}</td><td>{v['fitness']:.2f}</td><td>{viol}</td></tr>")
+        if names == ["gold"]:
+            which = "each task's own solution list, which is an answer key"
+        elif per_run:
+            which = f"the model of each run's task type, {len(names)} models"
+        else:
+            which = names[0]
         controls = ("<p class=small style='margin:0 0 12px'>"
                     "<label><input type=checkbox id=only checked> Only the run shown above</label>"
                     "<span class=mute style='margin-left:18px'>Click a run name to show it above.</span></p>") if runs else ""
-        out.append(sec("Conformance", controls + "<div class=scroll><table id=ct><tr><th>run</th><th>verdict</th><th>fitness</th><th>violated constraint</th></tr>"
+        out.append(sec("Conformance", controls + "<div class=scroll><table id=ct><tr><th>run</th>"
+                       + ("<th>model</th>" if per_run else "") + "<th>verdict</th><th>fitness</th><th>violated constraint</th></tr>"
                        + "".join(rows) + "</table></div>"
                        + "<p class='mute small' id=none style='display:none;margin-top:10px'>This run was not checked against the reference.</p>",
-                       f"Reference: {html.escape(verdicts[0].get('reference', ''))}. Fitness is the share of constraints that hold."))
+                       f"Reference: {html.escape(which)}. Fitness is the share of constraints that hold."))
     if runs:
         viol_at = {k: sorted({x["at"] for x in v["violations"] if x["at"] is not None}) for k, v in vmap.items()}
         verdict_js = {k: {"ok": v["compliant"], "fitness": v["fitness"],
@@ -565,7 +596,8 @@ def report_page(rid: str, d: str) -> bytes:
                        + "".join("<tr>" + "".join(f"<td>{cut(r[i])}</td>" for i in keep) + "</tr>" for r in body) + "</table></div>",
                        f"First {len(body)} of {len(rd) - 1} events."))
     downloads = [("event_log.csv", "event_log.csv"), ("event_log.xes", "event_log.xes"), ("runs.ocel.json", "runs.ocel.json"),
-                 ("verdicts.json", "verdicts.json"), ("CHECKS.txt", "CHECKS.txt"), ("inventory.txt", "inventory.txt"), ("lenses.txt", "lenses.txt"),
+                 ("conformance.txt", "conformance.txt"), ("verdicts.json", "verdicts.json"), ("CHECKS.txt", "CHECKS.txt"),
+                 ("inventory.txt", "inventory.txt"), ("lenses.txt", "lenses.txt"),
                  ("run.log", "run.log"), ("README.md", "README.md")]
     out.append(sec("Files", "<div class=files>" + "".join(f"<a href='/r/{q}/{a}' download>{b}</a>" for a, b in downloads if a in files)
                    + "</div>"))

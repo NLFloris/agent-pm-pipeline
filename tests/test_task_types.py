@@ -1,6 +1,8 @@
 """One reference model per task type: the template files against the frozen models and the reported verdicts."""
+import html
 import json
 import sys
+import time
 
 from agentpm.analysis.conformance import check
 from agentpm.cli import main
@@ -61,6 +63,18 @@ def test_report_and_run_take_the_template(tmp_path, capsys):
     assert "answer key" in (tmp_path / "default" / "README.md").read_text()
     assert main(["run", RUNS, "--format", "tau2", "--task-types", AIRLINE]) == 0
     assert "172 traces checked, 156 compliant" in capsys.readouterr().out
+
+
+def test_the_website_demo_checks_the_airline_runs_against_their_task_types(tmp_path):
+    from agentpm.web import _run_job, demos, report_page
+    form = dict({d["key"]: d for d in demos()}["tau2"], pictures="0")
+    job = {"lines": [], "progress": None, "status": "queued", "rid": None, "error": None, "t0": time.time()}
+    _run_job(job, form, str(tmp_path), lambda text, raw=False: None)
+    assert job["status"] == "done", job["error"]
+    verdicts = json.loads((tmp_path / job["rid"] / "verdicts.json").read_text())
+    assert (len(verdicts), sum(v["compliant"] for v in verdicts)) == (172, 156)
+    page = html.unescape(report_page(job["rid"], str(tmp_path / job["rid"])).decode())
+    assert "Reference: the model of each run's task type, 11 models." in page
 
 
 def test_a_run_that_states_its_type_needs_no_solution_list():
