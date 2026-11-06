@@ -30,11 +30,31 @@ TAU2_AIRLINE = os.path.expanduser(
 
 
 class _PdfDigraph(viz.Digraph):
-    """The pipeline's Digraph, writing PDF instead of PNG."""
+    """The pipeline's Digraph, writing PDF instead of PNG, with larger text and
+    tighter spacing so that the lane figure stays readable at the width of one
+    column of the thesis."""
 
     def __init__(self, *args, **kwargs):
         kwargs["format"] = "pdf"
         super().__init__(*args, **kwargs)
+
+    def attr(self, kw=None, **attrs):
+        if kw is None and "rankdir" in attrs:   # the graph
+            attrs.update(nodesep="0.12", ranksep="0.3")
+        elif kw is None:                        # a lane
+            attrs.update(fontsize="20", margin="6")
+        elif kw == "node":
+            attrs.update(fontsize="20", margin="0.08,0.04")
+        return super().attr(kw, **attrs)
+
+    def node(self, *args, **attrs):
+        if "fontsize" in attrs:                 # START and END
+            attrs["fontsize"] = "18"
+        return super().node(*args, **attrs)
+
+    def edge(self, *args, **attrs):
+        attrs["fontsize"] = "18"
+        return super().edge(*args, **attrs)
 
 
 def tau2_dfg(path, out):
