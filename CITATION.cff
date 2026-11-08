@@ -12,7 +12,9 @@ authors:
   - family-names: Kuijpers
     given-names: Floris
 type: software
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 repository-code: "https://github.com/NLFloris/agent-pm-pipeline"
 keywords:
   - process mining

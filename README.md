@@ -187,12 +187,13 @@ full picture.
 | [τ²-bench](https://github.com/sierra-research/tau2-bench) | the airline file of the Claude Opus 4.5 submission, in `examples/demos/`; the rest via `experiments/mirror_tau.py` | MIT |
 | [AgentHallu](https://github.com/liuxuannan/AgentHallu) | the 94 Magentic-One runs, in `examples/demos/` | CC BY 4.0 |
 | [TraceElephant](https://huggingface.co/datasets/TraceElephant/TraceElephant) | derived logs only; explored, not used in the thesis | CC BY 4.0 |
-| harness runs, OpenTelemetry captures, Judge outputs | `results/` | MIT, as this repository |
+| harness runs, OpenTelemetry captures, event logs, verdicts, Judge outputs | `results/` | CC BY 4.0 (see `results/LICENSE.md`) |
 
-The code is MIT licensed (see `LICENSE`). Third-party data keep their own
-licence; `examples/demos/README.md` and `results/README.md` give the
-attribution. pm4py, used by the experiments only, is AGPL-3.0 and is installed
-separately.
+The code is MIT licensed (see `LICENSE`), and the data this repository adds,
+in `results/`, is licensed CC BY 4.0 (see `results/LICENSE.md`). Third-party
+data keep their own licence; `examples/demos/README.md` and `results/README.md`
+give the attribution. pm4py, used by the experiments only, is AGPL-3.0 and is
+installed separately.
 
 ### Using the data without the code
 

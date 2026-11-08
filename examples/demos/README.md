@@ -2,8 +2,8 @@
 
 The two public corpora behind the website's demos, bundled so the demos work
 on a fresh clone. Both are unmodified copies; their own licences apply, not the
-repository's MIT licence. The third demo, the harness corpus with sub-agents,
-is this repository's own data and lives in `results/local_subagents/runs/`.
+repository's. The third demo, the harness corpus with sub-agents, is this
+repository's own data (CC BY 4.0) and lives in `results/local_subagents/runs/`.
 
 | folder | what it is | source | licence |
 |---|---|---|---|
