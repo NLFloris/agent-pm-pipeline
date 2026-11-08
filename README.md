@@ -83,6 +83,48 @@ an `end_activities` violation: the failure an output-only check cannot see.
 [`USAGE.md`](USAGE.md) is the full guide: every command, the reference-model
 format, object rules, OpenTelemetry, and how to add a source.
 
+### As a Python package
+
+The engine can also run inside your own code, for example as a check in an
+existing agent workflow. Install only the package, without the data and
+experiments of this repository; it has no dependencies:
+
+```bash
+pip install git+https://github.com/NLFloris/agent-pm-pipeline.git
+```
+
+Check a run you build yourself against a reference model:
+
+```python
+from agentpm.model import Trace, Event
+from agentpm.reference import reference_from_dict
+from agentpm.analysis.conformance import check
+
+model = reference_from_dict({"name": "retrieve first",
+                             "required": ["retrieve", "answer"],
+                             "precedence": [["retrieve", "answer"]]})
+run = Trace(case_id="run-1", events=[Event("user_request", 0, "user"),
+                                     Event("answer", 1, "agent"),
+                                     Event("retrieve", 2, "agent")])
+result = check(run, model)
+print(result.compliant, result.fitness, [v.constraint for v in result.violations])
+# False 0.6667 ['precedence(retrieve,answer)']
+```
+
+The second argument of `Event` is the step: calls an agent issues together
+share one. Every ingester of the table below turns a source file into the same
+`Trace` objects, and a task-type template gives each run the model of its type:
+
+```python
+from agentpm.ingest import tau2
+from agentpm.reference import load_task_types
+
+types = load_task_types("examples/task_types_tau2_airline.json")
+traces = tau2.ingest("examples/tau2_airline_task40_trial1.json")
+for trace, model in types.pairs(traces):
+    print(trace.case_id, check(trace, model).compliant)
+```
+
 ## How it works
 
 ```
