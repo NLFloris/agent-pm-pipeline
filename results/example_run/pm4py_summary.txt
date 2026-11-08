@@ -1,0 +1,8 @@
+pm4py 2.7.23.8, inductive miner noise threshold 0.0
+1 runs, 2 events shown, 2 activities
+start activities: {'get_reservation_details': 1}
+end activities:   {'update_reservation_passengers': 1}
+directly-follows edges: 1, variants: 1
+Petri net: 3 places, 2 transitions
+process tree: ->( 'get_reservation_details', 'update_reservation_passengers' )
+  1x  get_reservation_details > update_reservation_passengers

@@ -1,0 +1,886 @@
+{
+ "eventTypes": [
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "type": "string"
+    },
+    {
+     "name": "cost",
+     "type": "float"
+    },
+    {
+     "name": "epoch_us",
+     "type": "integer"
+    },
+    {
+     "name": "reasoning",
+     "type": "string"
+    },
+    {
+     "name": "timestamp_iso",
+     "type": "string"
+    },
+    {
+     "name": "turn_idx",
+     "type": "integer"
+    }
+   ],
+   "name": "assistant_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "type": "string"
+    },
+    {
+     "name": "epoch_us",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "reasoning",
+     "type": "string"
+    },
+    {
+     "name": "result",
+     "type": "string"
+    },
+    {
+     "name": "timestamp_iso",
+     "type": "string"
+    },
+    {
+     "name": "tool_call_id",
+     "type": "string"
+    },
+    {
+     "name": "turn_idx",
+     "type": "integer"
+    }
+   ],
+   "name": "get_reservation_details"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "type": "string"
+    },
+    {
+     "name": "epoch_us",
+     "type": "integer"
+    },
+    {
+     "name": "error",
+     "type": "boolean"
+    },
+    {
+     "name": "reasoning",
+     "type": "string"
+    },
+    {
+     "name": "result",
+     "type": "string"
+    },
+    {
+     "name": "timestamp_iso",
+     "type": "string"
+    },
+    {
+     "name": "tool_call_id",
+     "type": "string"
+    },
+    {
+     "name": "turn_idx",
+     "type": "integer"
+    }
+   ],
+   "name": "update_reservation_passengers"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "type": "string"
+    },
+    {
+     "name": "cost",
+     "type": "float"
+    },
+    {
+     "name": "epoch_us",
+     "type": "integer"
+    },
+    {
+     "name": "timestamp_iso",
+     "type": "string"
+    },
+    {
+     "name": "turn_idx",
+     "type": "integer"
+    }
+   ],
+   "name": "user_message"
+  }
+ ],
+ "events": [
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "Hi! How can I help you today?"
+    },
+    {
+     "name": "cost",
+     "value": 0.0
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925457385084
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:30:57.385084"
+    },
+    {
+     "name": "turn_idx",
+     "value": 0
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000000",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:assistant",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:assistant_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:00+00:00",
+   "type": "assistant_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "Hi\u2014I'd like to change the passenger name on my reservation. It\u2019s currently **Mei Lee**, and I need it updated to **Mei Garcia**."
+    },
+    {
+     "name": "cost",
+     "value": 0.001435
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925472946353
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:12.946353"
+    },
+    {
+     "name": "turn_idx",
+     "value": 1
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000001",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:user",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:user_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:01+00:00",
+   "type": "user_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "I'd be happy to help you update the passenger name on your reservation. To get started, I'll need a couple of pieces of information:\n\n1. Your user ID\n2. Your reservation ID\n\nCould you please provide these details?"
+    },
+    {
+     "name": "cost",
+     "value": 0.030175
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925475932549
+    },
+    {
+     "name": "reasoning",
+     "value": "The user wants to change a passenger name on their reservation. To help with this, I need to:\n\n1. Get the user's user ID\n2. Get the reservation ID\n\nLet me ask for these details."
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:15.932549"
+    },
+    {
+     "name": "turn_idx",
+     "value": 2
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000002",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:assistant",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:assistant_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:02+00:00",
+   "type": "assistant_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "Sure.  \nUser ID: **anya_garcia_5901**  \nReservation ID: **3RK2T9**"
+    },
+    {
+     "name": "cost",
+     "value": 0.00124075
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925490692179
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:30.692179"
+    },
+    {
+     "name": "turn_idx",
+     "value": 3
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000003",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:user",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:user_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:03+00:00",
+   "type": "user_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": "{\"reservation_id\": \"3RK2T9\"}"
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925493225136
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "reasoning",
+     "value": "The user wants to update a passenger name on their reservation. Let me first get the reservation details to see the current passenger information."
+    },
+    {
+     "name": "result",
+     "value": "{\"reservation_id\": \"3RK2T9\", \"user_id\": \"anya_garcia_5901\", \"origin\": \"MCO\", \"destination\": \"SFO\", \"flight_type\": \"one_way\", \"cabin\": \"basic_economy\", \"flights\": [{\"flight_number\": \"HAT214\", \"origin\": \"MCO\", \"destination\": \"PHX\", \"date\": \"2024-05-19\", \"price\": 57}, {\"flight_number\": \"HAT009\", \"origin\": \"PHX\", \"destination\": \"SFO\", \"date\": \"2024-05-20\", \"price\": 83}], \"passengers\": [{\"first_name\": \"Anya\", \"last_name\": \"Garcia\", \"dob\": \"1992-11-12\"}, {\"first_name\": \"Mei\", \"last_name\": \"Lee\", \"dob\": \"1989-12-13\"}], \"payment_history\": [{\"payment_id\": \"gift_card_2550356\", \"amount\": 280}], \"created_at\": \"2024-05-02T06:02:56\", \"total_baggages\": 0, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}"
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:33.225136"
+    },
+    {
+     "name": "tool_call_id",
+     "value": "toolu_01EaL6C3piJjBf95MdqxYYwT"
+    },
+    {
+     "name": "turn_idx",
+     "value": 4
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000004",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:assistant",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:get_reservation_details",
+     "qualifier": "uses"
+    },
+    {
+     "objectId": "reservation:871f33ef-fa83-42e7-8d9a-da8474280864|3RK2T9",
+     "qualifier": "touches"
+    }
+   ],
+   "time": "2000-01-01T00:00:04+00:00",
+   "type": "get_reservation_details"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "I found your reservation. Here are the current details:\n\n**Reservation ID:** 3RK2T9  \n**Route:** MCO \u2192 PHX \u2192 SFO (One Way)  \n**Cabin:** Basic Economy  \n**Flights:**\n- HAT214: MCO \u2192 PHX on 2024-05-19\n- HAT009: PHX \u2192 SFO on 2024-05-20\n\n**Current Passengers:**\n1. Anya Garcia (DOB: 1992-11-12)\n2. Mei Lee (DOB: 1989-12-13)\n\nI'll update the second passenger's name from **Mei Lee** to **Mei Garcia**, keeping the same date of birth (1989-12-13).\n\nDo you confirm this change? Please reply **yes** to proceed."
+    },
+    {
+     "name": "cost",
+     "value": 0.03443
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925496679312
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:36.679312"
+    },
+    {
+     "name": "turn_idx",
+     "value": 6
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000005",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:assistant",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:assistant_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:05+00:00",
+   "type": "assistant_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "Yes\u2014please proceed and update **Mei Lee** to **Mei Garcia**."
+    },
+    {
+     "name": "cost",
+     "value": 0.001491
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925504520594
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:44.520594"
+    },
+    {
+     "name": "turn_idx",
+     "value": 7
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000006",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:user",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:user_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:06+00:00",
+   "type": "user_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "arguments",
+     "value": "{\"passengers\": [{\"dob\": \"1992-11-12\", \"first_name\": \"Anya\", \"last_name\": \"Garcia\"}, {\"dob\": \"1989-12-13\", \"first_name\": \"Mei\", \"last_name\": \"Garcia\"}], \"reservation_id\": \"3RK2T9\"}"
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925509159133
+    },
+    {
+     "name": "error",
+     "value": false
+    },
+    {
+     "name": "reasoning",
+     "value": "The user has confirmed the change. I need to update the passenger information using the update_reservation_passengers function. I'll keep all the same information but change the last name from \"Lee\" to \"Garcia\" for the second passenger.\n\nThe passengers array should include all passengers with their updated information:\n1. Anya Garcia (DOB: 1992-11-12) - unchanged\n2. Mei Garcia (DOB: 1989-12-13) - last name changed from Lee to Garcia"
+    },
+    {
+     "name": "result",
+     "value": "{\"reservation_id\": \"3RK2T9\", \"user_id\": \"anya_garcia_5901\", \"origin\": \"MCO\", \"destination\": \"SFO\", \"flight_type\": \"one_way\", \"cabin\": \"basic_economy\", \"flights\": [{\"flight_number\": \"HAT214\", \"origin\": \"MCO\", \"destination\": \"PHX\", \"date\": \"2024-05-19\", \"price\": 57}, {\"flight_number\": \"HAT009\", \"origin\": \"PHX\", \"destination\": \"SFO\", \"date\": \"2024-05-20\", \"price\": 83}], \"passengers\": [{\"first_name\": \"Anya\", \"last_name\": \"Garcia\", \"dob\": \"1992-11-12\"}, {\"first_name\": \"Mei\", \"last_name\": \"Garcia\", \"dob\": \"1989-12-13\"}], \"payment_history\": [{\"payment_id\": \"gift_card_2550356\", \"amount\": 280}], \"created_at\": \"2024-05-02T06:02:56\", \"total_baggages\": 0, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}"
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:49.159133"
+    },
+    {
+     "name": "tool_call_id",
+     "value": "toolu_01E1RXemRBi9WNDL2FXjmF1B"
+    },
+    {
+     "name": "turn_idx",
+     "value": 8
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000007",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:assistant",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:update_reservation_passengers",
+     "qualifier": "uses"
+    },
+    {
+     "objectId": "reservation:871f33ef-fa83-42e7-8d9a-da8474280864|3RK2T9",
+     "qualifier": "touches"
+    }
+   ],
+   "time": "2000-01-01T00:00:07+00:00",
+   "type": "update_reservation_passengers"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "The passenger name has been successfully updated. Here's the confirmation:\n\n**Reservation ID:** 3RK2T9\n\n**Updated Passengers:**\n1. Anya Garcia (DOB: 1992-11-12)\n2. Mei Garcia (DOB: 1989-12-13)\n\nIs there anything else I can help you with?"
+    },
+    {
+     "name": "cost",
+     "value": 0.035005
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925512038385
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:31:52.038385"
+    },
+    {
+     "name": "turn_idx",
+     "value": 10
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000008",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:assistant",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:assistant_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:08+00:00",
+   "type": "assistant_message"
+  },
+  {
+   "attributes": [
+    {
+     "name": "content",
+     "value": "No, that\u2019s all. Thank you.  \n\n###STOP###"
+    },
+    {
+     "name": "cost",
+     "value": 0.0015925
+    },
+    {
+     "name": "epoch_us",
+     "value": 1771925529669601
+    },
+    {
+     "name": "timestamp_iso",
+     "value": "2026-02-24T10:32:09.669601"
+    },
+    {
+     "name": "turn_idx",
+     "value": 11
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864:000009",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "run"
+    },
+    {
+     "objectId": "agent:user",
+     "qualifier": "executed_by"
+    },
+    {
+     "objectId": "tool:user_message",
+     "qualifier": "uses"
+    }
+   ],
+   "time": "2000-01-01T00:00:09+00:00",
+   "type": "user_message"
+  }
+ ],
+ "objectTypes": [
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "type": "string"
+    }
+   ],
+   "name": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "key",
+     "type": "string"
+    }
+   ],
+   "name": "reservation"
+  },
+  {
+   "attributes": [
+    {
+     "name": "action_checks",
+     "type": "string"
+    },
+    {
+     "name": "agent_cost",
+     "type": "string"
+    },
+    {
+     "name": "communicate_checks",
+     "type": "string"
+    },
+    {
+     "name": "db_check",
+     "type": "string"
+    },
+    {
+     "name": "domain",
+     "type": "string"
+    },
+    {
+     "name": "duration",
+     "type": "string"
+    },
+    {
+     "name": "gold_actions",
+     "type": "string"
+    },
+    {
+     "name": "nl_assertions",
+     "type": "string"
+    },
+    {
+     "name": "reward",
+     "type": "string"
+    },
+    {
+     "name": "reward_breakdown",
+     "type": "string"
+    },
+    {
+     "name": "seed",
+     "type": "string"
+    },
+    {
+     "name": "source",
+     "type": "string"
+    },
+    {
+     "name": "task_id",
+     "type": "string"
+    },
+    {
+     "name": "termination_reason",
+     "type": "string"
+    },
+    {
+     "name": "trial",
+     "type": "string"
+    },
+    {
+     "name": "user_cost",
+     "type": "string"
+    }
+   ],
+   "name": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "type": "string"
+    }
+   ],
+   "name": "tool"
+  }
+ ],
+ "objects": [
+  {
+   "attributes": [
+    {
+     "name": "action_checks",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[{\"action\": {\"action_id\": \"40_0\", \"arguments\": {\"reservation_id\": \"3RK2T9\"}, \"compare_args\": null, \"info\": null, \"name\": \"get_reservation_details\", \"requestor\": \"assistant\"}, \"action_match\": true, \"action_reward\": 1.0, \"tool_type\": \"read\"}, {\"action\": {\"action_id\": \"40_1\", \"arguments\": {\"passengers\": [{\"dob\": \"1992-11-12\", \"first_name\": \"Anya\", \"last_name\": \"Garcia\"}, {\"dob\": \"1989-12-13\", \"first_name\": \"Mei\", \"last_name\": \"Garcia\"}], \"reservation_id\": \"3RK2T9\"}, \"compare_args\": null, \"info\": null, \"name\": \"update_reservation_passengers\", \"requestor\": \"assistant\"}, \"action_match\": true, \"action_reward\": 1.0, \"tool_type\": \"write\"}]"
+    },
+    {
+     "name": "agent_cost",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 0.16724500000000003
+    },
+    {
+     "name": "communicate_checks",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": null
+    },
+    {
+     "name": "db_check",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "{\"db_match\": true, \"db_reward\": 1.0}"
+    },
+    {
+     "name": "domain",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "airline"
+    },
+    {
+     "name": "duration",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 72.14403724999283
+    },
+    {
+     "name": "gold_actions",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[{\"action_id\": \"40_0\", \"arguments\": {\"reservation_id\": \"3RK2T9\"}, \"compare_args\": null, \"info\": null, \"name\": \"get_reservation_details\", \"requestor\": \"assistant\"}, {\"action_id\": \"40_1\", \"arguments\": {\"passengers\": [{\"dob\": \"1992-11-12\", \"first_name\": \"Anya\", \"last_name\": \"Garcia\"}, {\"dob\": \"1989-12-13\", \"first_name\": \"Mei\", \"last_name\": \"Garcia\"}], \"reservation_id\": \"3RK2T9\"}, \"compare_args\": null, \"info\": null, \"name\": \"update_reservation_passengers\", \"requestor\": \"assistant\"}]"
+    },
+    {
+     "name": "nl_assertions",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "[{\"justification\": \"The agent confirmed the request to update the passenger name from Mei Lee to Mei Garcia, asked for confirmation, and after receiving it, processed the update. The final message confirms that the passenger name has been successfully updated to Mei Garcia on reservation 3RK2T9.\", \"met\": true, \"nl_assertion\": \"Agent updates reservation 3RK2T9 to passenger Mei Garcia.\"}]"
+    },
+    {
+     "name": "reward",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 1.0
+    },
+    {
+     "name": "reward_breakdown",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "{\"COMMUNICATE\": 1.0, \"DB\": 1.0}"
+    },
+    {
+     "name": "seed",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 373753
+    },
+    {
+     "name": "source",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "tau2"
+    },
+    {
+     "name": "task_id",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "40"
+    },
+    {
+     "name": "termination_reason",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "user_stop"
+    },
+    {
+     "name": "trial",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 1
+    },
+    {
+     "name": "user_cost",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": 0.0057592500000000005
+    }
+   ],
+   "id": "871f33ef-fa83-42e7-8d9a-da8474280864",
+   "relationships": [],
+   "type": "run"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "assistant"
+    }
+   ],
+   "id": "agent:assistant",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "participates_in"
+    }
+   ],
+   "type": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:01+00:00",
+     "value": "user"
+    }
+   ],
+   "id": "agent:user",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "participates_in"
+    }
+   ],
+   "type": "agent"
+  },
+  {
+   "attributes": [
+    {
+     "name": "key",
+     "time": "2000-01-01T00:00:04+00:00",
+     "value": "3RK2T9"
+    }
+   ],
+   "id": "reservation:871f33ef-fa83-42e7-8d9a-da8474280864|3RK2T9",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "belongs_to"
+    }
+   ],
+   "type": "reservation"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:00+00:00",
+     "value": "assistant_message"
+    }
+   ],
+   "id": "tool:assistant_message",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:04+00:00",
+     "value": "get_reservation_details"
+    }
+   ],
+   "id": "tool:get_reservation_details",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:07+00:00",
+     "value": "update_reservation_passengers"
+    }
+   ],
+   "id": "tool:update_reservation_passengers",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  },
+  {
+   "attributes": [
+    {
+     "name": "name",
+     "time": "2000-01-01T00:00:01+00:00",
+     "value": "user_message"
+    }
+   ],
+   "id": "tool:user_message",
+   "relationships": [
+    {
+     "objectId": "871f33ef-fa83-42e7-8d9a-da8474280864",
+     "qualifier": "used_in"
+    }
+   ],
+   "type": "tool"
+  }
+ ]
+}

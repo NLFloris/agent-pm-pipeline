@@ -1,0 +1,34 @@
+[
+ {
+  "status": "ok",
+  "text": "2 tool calls over 2 distinct tools"
+ },
+ {
+  "status": "info",
+  "text": "one actor for every tool call (assistant). Either a single-agent source, or the source does not say which agent ran a tool (Claude Code's OpenTelemetry does not)."
+ },
+ {
+  "status": "ok",
+  "text": "arguments on 2/2 tool calls, results on 2/2"
+ },
+ {
+  "status": "info",
+  "text": "reasoning text on 3 events (kept as an attribute, never an activity)"
+ },
+ {
+  "status": "ok",
+  "text": "strictly sequential: no calls issued together, no overlap in real time"
+ },
+ {
+  "status": "ok",
+  "text": "2/2 tool calls touch a business object: reservation 1"
+ },
+ {
+  "status": "info",
+  "text": "1 variants over 1 runs, 1 of them once"
+ },
+ {
+  "status": "ok",
+  "text": "OCEL log built twice: byte-identical"
+ }
+]

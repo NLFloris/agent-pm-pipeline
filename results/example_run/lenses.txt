@@ -1,0 +1,13 @@
+The secondary lenses. They describe the runs and enter no verdict.
+
+rework: mean 0.0% over the 1 runs with at least two tool calls
+
+handovers (the acting agent changes):
+  assistant -> user  4
+  user -> assistant  3
+
+directly-follows edges over the steps (1, events issued together never follow each other):
+  get_reservation_details -> update_reservation_passengers  1
+
+directly-follows edges over the listed order (1):
+  get_reservation_details -> update_reservation_passengers  1

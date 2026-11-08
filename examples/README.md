@@ -15,6 +15,7 @@ most of them.
 | `claude_reference.json` | reference | a Claude Code editing protocol (Read before Edit); the sample is flagged because it ends on the sub-agent's Grep |
 | `task_types_tau2_airline.json` | task types | the template from which every τ²-bench airline run gets the model of its task type (`--task-types`), as in the thesis |
 | `task_types_tau2_retail.json` | task types | the same for the retail domain; it gives the models of `experiments/retail_task_types.py`, which were frozen before any retail run was scored (a test checks this) |
+| `tau2_airline_task40_trial1.json` | `tau2` | trial 1 of airline task 40 by Claude Opus 4.5, cut out of the bundled demo file by `experiments/example_run.py`: the run that Appendix A of the thesis follows through every layer |
 | `demos/` | | the two public corpora behind the website's demos, see `demos/README.md` |
 
 ```bash
@@ -22,4 +23,5 @@ python -m agentpm.cli run examples/sample_trace.json         --format generic --
 python -m agentpm.cli run examples/sample_trace_faulted.json --format generic --reference examples/reference_model.json -v
 python -m agentpm.cli ocel examples/openai_spans.jsonl --format openai -o openai.ocel.json
 python -m agentpm.cli run examples/claude_transcript_sample.jsonl --format claude --reference examples/claude_reference.json -v
+python -m agentpm.cli report examples/tau2_airline_task40_trial1.json --format tau2 --task-types examples/task_types_tau2_airline.json -o report_example
 ```

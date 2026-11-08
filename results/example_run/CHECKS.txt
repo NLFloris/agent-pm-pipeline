@@ -1,0 +1,10 @@
+What tau2_airline_task40_trial1.json (tau2) exposes (1 runs). !! = read before trusting a result.
+
+  ok  2 tool calls over 2 distinct tools
+  --  one actor for every tool call (assistant). Either a single-agent source, or the source does not say which agent ran a tool (Claude Code's OpenTelemetry does not).
+  ok  arguments on 2/2 tool calls, results on 2/2
+  --  reasoning text on 3 events (kept as an attribute, never an activity)
+  ok  strictly sequential: no calls issued together, no overlap in real time
+  ok  2/2 tool calls touch a business object: reservation 1
+  --  1 variants over 1 runs, 1 of them once
+  ok  OCEL log built twice: byte-identical

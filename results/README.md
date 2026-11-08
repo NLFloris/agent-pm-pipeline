@@ -20,6 +20,7 @@ inside it, which keeps its own licence; `LICENSE.md` says which.
 
 | corpus | raw runs | outputs |
 |---|---|---|
+| τ²-bench airline, Claude Opus 4.5, the one run of Appendix A (task 40, trial 1) | `examples/tau2_airline_task40_trial1.json` | `example_run/` (report) |
 | τ²-bench airline, Claude Opus 4.5, 200 runs | not here: `examples/demos/tau2_airline/`, or the full mirror | `logs/`, `ocel/tau2_airline*.ocel.json`, `task_type_conformance.json`, `task_type_details.txt`, `path_sensitivity.txt`, `partial_order.txt`, `pm4py/`, `judge/`, `figures/thesis/tau2_airline_dfg.pdf` |
 | τ²-bench retail, Claude Opus 4.5, 448 scorable runs | not here: the full mirror | `task_type_conformance_retail.json`, `path_sensitivity.txt`, `judge/retail/` |
 | τ²-bench, the 15 agents per domain that the benchmark publishes, Claude Opus 4.5 among them | not here: the full mirror | `cross_agent.txt`, `cross_agent.json`, `miss_reasons.txt`, `task_versions.txt`, `transfer_endings.txt` |

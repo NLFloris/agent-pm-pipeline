@@ -1,0 +1,4 @@
+reference: update_reservation_passengers
+1/1 runs compliant, mean fitness 1.000
+
+ok        871f33ef-fa83-42e7-8d9a-da8474280864  fitness 1.00

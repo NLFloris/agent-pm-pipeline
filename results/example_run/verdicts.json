@@ -1,0 +1,9 @@
+[
+ {
+  "case_id": "871f33ef-fa83-42e7-8d9a-da8474280864",
+  "reference": "update_reservation_passengers",
+  "compliant": true,
+  "fitness": 1.0,
+  "violations": []
+ }
+]

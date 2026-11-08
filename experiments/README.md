@@ -43,10 +43,11 @@ helps to inspect the data. Sections are those of the thesis.
 | `task_versions.py` | `results/task_versions.txt`: which of the published runs used an older version of a task, and the engine's scores with and without them | Section 7 |
 | `transfer_endings.py` | `results/transfer_endings.txt`: runs the simulated customer ends with a transfer the agent never made | Section 7 |
 | `path_sensitivity.py` | `results/path_sensitivity.txt`: how often the engine and the Judges flag the violations and the compliant runs among the runs with reward 1, and whether they separate runs with the same outcome and different paths | Section 6, appendix |
+| `example_run.py` | `examples/tau2_airline_task40_trial1.json` and the report in `results/example_run/`: the one run that the thesis follows through the pipeline | Appendix A |
 | `first_divergence.py` | `results/first_divergence.txt`: first divergence against the step labels of AgentHallu | Section 5 |
 | `discover.py` | `results/pm4py/`: pm4py's discovery and conformance next to the engine | supporting |
 | `noise_sweep.py` | `results/pm4py/noise_sweep.txt`: discover-then-check at three noise thresholds (fixes `PYTHONHASHSEED=0`) | Section 6 |
-| `noise_sweep_seeds.py` | `results/pm4py/noise_sweep_seeds.txt`: the same under ten hash seeds | Section 6 |
+| `noise_sweep_seeds.py` | `results/pm4py/noise_sweep_seeds.txt`: the same under ten hash seeds | supporting |
 | `one_case_pm4py.py` | `results/pm4py/one_case/`: one τ² run through pm4py step by step | supporting |
 | `judge/` | the LLM-as-a-Judge baseline and the comparison, see `judge/README.md` | Section 6 |
 | `local_agents/` | the Magentic-One harness and its corpora, and the same tasks on Microsoft Agent Framework (`run_maf.py`, `compare_maf.py`), see `local_agents/README.md` | Section 5, appendix |
@@ -78,6 +79,7 @@ python experiments/discover.py --data ~/Downloads --out results/pm4py
 python experiments/noise_sweep.py --data ~/Downloads --out results/pm4py
 python experiments/noise_sweep_seeds.py > results/pm4py/noise_sweep_seeds.txt
 python experiments/one_case_pm4py.py
+python experiments/example_run.py
 python experiments/judge/evaluate.py > results/judge/evaluation.txt
 python experiments/judge/evaluate.py --pm-verdicts results/task_type_conformance.json > results/judge/evaluation_per_type.txt
 python experiments/judge/compare_judges.py > results/judge/two_judges.txt
