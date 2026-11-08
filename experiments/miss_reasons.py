@@ -13,6 +13,10 @@ it, the per-action label marks a violation) falls in exactly one group:
   wrong arguments   otherwise; the name occurs often enough, but no call matches
 
 Uses the frozen confirmation rule, like the main columns of the cross-agent table.
+
+The last section does the same for Claude Opus 4.5 on airline alone, for the
+task-type model and for the per-task model of evaluate.py, which is built from
+each task's solution list.
 """
 from __future__ import annotations
 
@@ -20,8 +24,10 @@ import collections
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from cross_agent import check, domain_rules, files, tau2, violation   # noqa: E402
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path[:0] = [HERE, os.path.join(HERE, "judge")]
+from cross_agent import DEV_AGENT, check, domain_rules, files, tau2, violation   # noqa: E402
+from evaluate import gold_reference   # noqa: E402
 
 
 def group(trace):
@@ -56,6 +62,22 @@ def report(domain):
         print(f"  {g:16} {groups[g]:5}  {names[g].most_common()}")
 
 
+def report_dev_agent():
+    task_type, type_model, prepare = domain_rules("airline")
+    models = (("task-type model", lambda t: check(prepare(t), type_model(task_type(t), False))),
+              ("per-task model", lambda t: check(t, gold_reference(t))))
+    path = next(p for agent, p in files("airline") if agent.startswith(DEV_AGENT))
+    traces = [t for t in tau2.ingest(path) if t.outcome.get("action_checks")]
+    print(f"\n=== airline, {DEV_AGENT}: {len(traces)} scorable runs, "
+          f"{sum(1 for t in traces if violation(t, 'action'))} per-action violations ===")
+    for name, verdict in models:
+        groups = collections.Counter(group(t)[0] for t in traces
+                                     if violation(t, "action") and verdict(t).compliant)
+        print(f"  {name:16} misses {sum(groups.values()):3}: "
+              + ", ".join(f"{g} {groups[g]}" for g in ("wrong arguments", "too few repeats", "action absent")))
+
+
 if __name__ == "__main__":
     for domain in ("airline", "retail"):
         report(domain)
+    report_dev_agent()

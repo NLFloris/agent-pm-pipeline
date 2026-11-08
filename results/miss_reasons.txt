@@ -8,3 +8,7 @@
   wrong arguments    712  []
   too few repeats    528  [('get_product_details', 194), ('get_order_details', 177), ('find_user_id_by_name_zip', 41), ('calculate', 38), ('return_delivered_order_items', 38), ('modify_pending_order_address', 20), ('exchange_delivered_order_items', 16), ('modify_pending_order_items', 16), ('find_user_id_by_email', 14), ('cancel_pending_order', 7), ('modify_user_address', 3)]
   action absent      670  [('calculate', 470), ('get_product_details', 113), ('get_user_details', 71), ('transfer_to_human_agents', 50), ('get_order_details', 21), ('find_user_id_by_name_zip', 8), ('find_user_id_by_email', 7)]
+
+=== airline, claude-opus-4-5: 172 scorable runs, 37 per-action violations ===
+  task-type model  misses  22: wrong arguments 12, too few repeats 3, action absent 7
+  per-task model   misses  15: wrong arguments 12, too few repeats 3, action absent 0

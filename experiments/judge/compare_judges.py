@@ -11,8 +11,10 @@ those 120 runs alone, so that all of them are compared on the same runs.
 
 Reported per domain and label: alignment of each method (bootstrap 95% interval
 on kappa), McNemar of the engine against each Judge, the two Judges' agreement
-with each other per condition, what the policy Judges cite on runs the label
-calls compliant, and cost. Self-agreement (five fresh samples per run, cache
+with each other per condition, the violations the engine flags and the
+output-only Judge passes, how often that Judge flags the violations the engine
+misses and the runs the label calls compliant, what the policy Judges cite on
+runs the label calls compliant, and cost. Self-agreement (five fresh samples per run, cache
 off) is reported from results/judge/self_agreement.
 
 A verdict the Judge returned as malformed JSON counts as not judged, so n
@@ -138,6 +140,12 @@ def main():
             for cid in passed:
                 r = records[name][cid]
                 print(f"  task {r.get('task_id')} trial {r.get('trial')}")
+            missed = [cid for cid, ok in truth.items() if not ok and pm.get(cid) is True]
+            compliant = [cid for cid, ok in truth.items() if ok]
+            for what, ids in (("violations the engine misses", missed), ("runs the label calls compliant", compliant)):
+                judged = [cid for cid in ids if cid in methods[name]]
+                print(f"  on the {len(ids)} {what}: flags "
+                      f"{sum(1 for cid in judged if methods[name][cid] is False)} of the {len(judged)} it judged")
         where = "of the sample " if sample else ""
         print(f"\n-- what the policy Judges cite on runs {where}the per-action label calls compliant (top 6)")
         flagged_by = {}

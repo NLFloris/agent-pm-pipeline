@@ -16,7 +16,8 @@ separates the pair and the method agrees with it on both runs.
 
 The second table takes the runs with reward 1 that the per-action label marks as
 violations, which are the failures an outcome cannot show, next to the runs with
-reward 1 that it marks as compliant.
+reward 1 that it marks as compliant, and splits those violations by whether only
+a lookup or a calculation on the solution list fails, or a change or a transfer.
 
 Reads results/task_type_conformance*.json and results/judge/, so it spends no
 tokens. Standard library only.
@@ -31,6 +32,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path[:0] = [HERE, os.path.join(HERE, "judge")]
+from cross_agent import WRITES   # noqa: E402
 from evaluate import judge_verdicts, tau2   # noqa: E402
 from task_type_conformance import DEFAULT_DATA   # noqa: E402
 
@@ -109,6 +111,12 @@ def main():
             judged = lambda ids: sum(1 for c in ids if c in verdict)
             print(f"    {name:26} flags {flagged(bad):3} of {judged(bad):3} violations, "
                   f"{flagged(ok):3} of {judged(ok):3} compliant runs")
+
+        only_reads = sum(1 for c in bad
+                         if all((x.get("action") or {}).get("name") not in WRITES[domain] + ["transfer_to_human_agents"]
+                                for x in traces[c].outcome["action_checks"] if not x.get("action_match")))
+        print(f"    the violations by what fails: only a lookup or a calculation {only_reads}, "
+              f"a change or a transfer {len(bad) - only_reads}")
 
         reasons = collections.Counter()
         for c in bad:

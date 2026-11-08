@@ -23,6 +23,7 @@
     policy, glm                flags   4 of  10 violations,  55 of 126 compliant runs
     required-actions, gpt-oss  flags  11 of  11 violations,   3 of 131 compliant runs
     required-actions, glm      flags  11 of  11 violations,   2 of 131 compliant runs
+    the violations by what fails: only a lookup or a calculation 10, a change or a transfer 1
     actions the engine's misses fail on: [('search_direct_flight', 9), ('calculate', 4)]
     violations the engine flags: [('13', ['required(transfer_to_human_agents)'])]
 
@@ -45,6 +46,7 @@
     output-only, gpt-oss       flags  77 of  81 violations, 239 of 269 compliant runs
     policy, gpt-oss            flags  27 of  81 violations, 111 of 264 compliant runs
     required-actions, gpt-oss  flags  79 of  82 violations,  17 of 273 compliant runs
+    the violations by what fails: only a lookup or a calculation 52, a change or a transfer 30
     actions the engine's misses fail on: [('calculate', 33), ('return_delivered_order_items', 19), ('get_product_details', 18), ('get_order_details', 12), ('get_user_details', 4), ('transfer_to_human_agents', 3), ('find_user_id_by_name_zip', 3), ('find_user_id_by_email', 2)]
     violations the engine flags: [('64', ['required(exchange_delivered_order_items)']), ('50', ['required(transfer_to_human_agents)']), ('44', ['directly_before(user_message,modify_pending_order_items)']), ('44', ['directly_before(user_message,modify_pending_order_items)']), ('110', ['required(modify_user_address)']), ('44', ['directly_before(user_message,modify_pending_order_items)']), ('64', ['required(exchange_delivered_order_items)']), ('110', ['required(modify_user_address)']), ('64', ['required(exchange_delivered_order_items)']), ('105', ['required(exchange_delivered_order_items)']), ('110', ['required(modify_user_address)'])]
 
