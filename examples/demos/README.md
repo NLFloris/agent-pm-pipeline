@@ -15,7 +15,8 @@ Cite the original work when you use these files:
 - V. Barres, H. Dong, S. Ray, X. Si and K. Narasimhan, *τ²-Bench: Evaluating
   Conversational Agents in a Dual-Control Environment*, arXiv:2506.07982, 2025.
 - X. Liu, X. Yang, Z. Li, P. Li and R. He, *AgentHallu: Benchmarking Automated
-  Hallucination Attribution of LLM-based Agents*, arXiv:2601.06818, 2026.
+  Hallucination Attribution of LLM-based Agents*, Proceedings of EMNLP 2026,
+  pp. 21290–21315, doi:10.18653/2026.emnlp-main.925.
 
 Run either one through the pipeline from the command line, the airline runs with
 the task-type template as on the website:

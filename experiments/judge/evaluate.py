@@ -110,6 +110,13 @@ def main():
         print("\nREPRODUCIBILITY")
         print("  process mining: three full repetitions hash identically (measured in run_three_corpora)")
         for name, rep in repeats.items():
+            c = costs.get(name)
+            if c and c["cached"]:
+                # identical requests were answered from the endpoint's cache, so the
+                # repeats copy the first answer and say nothing about the Judge itself
+                print(f"  judge {name}: not measured here, {c['cached']} of the repeats are cache copies "
+                      f"of the first answer; see results/judge/self_agreement and results/VALIDATION.md")
+                continue
             unanimous = sum(1 for v in rep.values() if len(set(v)) == 1)
             fk = fleiss_kappa(rep)
             print(f"  judge {name}: unanimous on {unanimous}/{len(rep)} runs, "

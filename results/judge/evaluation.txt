@@ -35,11 +35,11 @@ PAIRED COMPARISON, McNemar exact test, process mining vs each judge on the runs 
 REPRODUCIBILITY
   process mining: three full repetitions hash identically (measured in run_three_corpora)
   judge full glm-5-3-flash: n/a
-  judge full gpt-oss-120b: unanimous on 170/170 runs, Fleiss kappa 1.00
-  judge full gpt-oss-120b t0.7: unanimous on 50/50 runs, Fleiss kappa 1.00
+  judge full gpt-oss-120b: not measured here, 688 of the repeats are cache copies of the first answer; see results/judge/self_agreement and results/VALIDATION.md
+  judge full gpt-oss-120b t0.7: not measured here, 200 of the repeats are cache copies of the first answer; see results/judge/self_agreement and results/VALIDATION.md
   judge gold-actions glm-5-3-flash: n/a
-  judge gold-actions gpt-oss-120b: unanimous on 172/172 runs, Fleiss kappa 1.00
-  judge output-only gpt-oss-120b: unanimous on 170/170 runs, Fleiss kappa 1.00
+  judge gold-actions gpt-oss-120b: not measured here, 688 of the repeats are cache copies of the first answer; see results/judge/self_agreement and results/VALIDATION.md
+  judge output-only gpt-oss-120b: not measured here, 578 of the repeats are cache copies of the first answer; see results/judge/self_agreement and results/VALIDATION.md
 
 COST per verdict, over the calls the model answered (cache copies left out)
   process mining: 0 tokens, well under a millisecond per run

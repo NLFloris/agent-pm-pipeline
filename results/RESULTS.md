@@ -10,8 +10,7 @@ findings here are negative and two of those change what the thesis can claim.
 > judge's "byte-identical repeats" in §10 were cache copies of the endpoint, cost
 > is now reported per verdict (about 4,400 tokens for the required-actions judge,
 > not 22,221 per run), TraceElephant and AgentHallu Camel are no longer used in
-> the thesis, and the noise-0.2 net of §10.1b lacks one activity
-> (`update_reservation_passengers`), not four (`results/pm4py/noise_sweep.txt`).
+> the thesis.
 > pm4py's inductive miner at noise 0.2 builds a different net under different
 > Python hash seeds (`results/pm4py/noise_sweep_seeds.txt`), so `noise_sweep.py`
 > now fixes PYTHONHASHSEED=0; the confirmation constraint of the task-type models
@@ -23,11 +22,14 @@ findings here are negative and two of those change what the thesis can claim.
 > results came about; the thesis and the output files named here have the final
 > numbers. Chapter *n* of the drafts is Section *n* of the thesis. Since
 > `noise_sweep.py` fixes PYTHONHASHSEED=0, its noise-0.2 net lacks four
-> activities (`results/pm4py/noise_sweep.txt`), not one as §10.1b and the note
-> above say.
+> activities (`results/pm4py/noise_sweep.txt`).
+
+> **Note 2026-11-08.** The three statements below that still contradicted the
+> thesis are corrected in place and marked with this date: the noise-0.2 net in
+> §10.1b, the reasons for the 22 misses in §10.1b, and the counts of §10.2.
 
 Environment: Python 3.12, venv at `~/venvs/agentpm`, pm4py 2.7.23.8, pandas
-2.3.3, graphviz 0.21 with Graphviz 16.1.0. Test suite 32 passed.
+2.3.3, graphviz 0.21 with Graphviz 16.1.0. Test suite 32 passed (79 on 8 November 2026).
 
 ---
 
@@ -668,13 +670,14 @@ computed from. Output in `results/judge/evaluation_per_type.txt`.
 
 Of the 22 violations the required-actions judge finds and the task-type engine
 does not, the judge's stated reason is a wrong argument in 10, a missing action
-in 11, and both in 1. The eleven missing actions are gold actions outside the
-type's required set (searches, lookups, calculations): the price of a model
-that is not an answer key.
+in 11, and both in 1. Eight of the eleven missing actions are gold actions
+outside the type's required set (searches and calculations), the price of a
+model that is not an answer key; in the other three a required action occurred
+too few times (corrected 2026-11-08, `results/miss_reasons.txt`).
 
 The procedural result is now a sweep over the inductive miner's noise
 threshold (`experiments/noise_sweep.py`, `results/pm4py/noise_sweep.txt`):
-κ 0.02 at noise 0.2 (net lacks one activity, flags 156/172), 0.07 at 0.1,
+κ 0.02 at noise 0.2 (net lacks four activities, flags 156/172; corrected 2026-11-08), 0.07 at 0.1,
 0.34 at noise 0 (all activities, flags 9/172 at precision 1.00; 8 of those 9
 the task-type engine marks compliant, since nothing in it forbids repetition).
 The Chapter 6 walk-through case, task 29 trial 0, has alignment fitness 1.00 at
@@ -683,6 +686,12 @@ perfectly. That, not the dropped transition, is the argument against
 discover-then-check.
 
 ### 10.2 Reading these three results together
+
+> **Corrected 2026-11-08.** The counts in this section belong to the per-task
+> model of the engine before it compared steps (20 October). With the current
+> engine the per-task model flags 25 runs with 3 false alarms, not 8, misses 15
+> violations, and reaches κ 0.65, 0.30 below the required-actions judge
+> (Section 6.2 of the thesis, `results/judge/evaluation.txt`).
 
 **The full judge is not a fair comparison, and its number is not a verdict on
 judges.** It reads the whole policy and flags rules the ground truth does not
