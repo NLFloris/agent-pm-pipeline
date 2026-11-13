@@ -20,10 +20,18 @@
     action        n  2576  viol   909  flags   541  prec 0.74 [0.70, 0.77]  rec 0.44  kappa 0.39 [0.35, 0.43]
     action-or-db  n  2576  viol  1076  flags   541  prec 0.94 [0.92, 0.96]  rec 0.47  kappa 0.48 [0.45, 0.52]
     reward        n  2576  viol   856  flags   541  prec 0.89 [0.86, 0.92]  rec 0.56  kappa 0.58 [0.55, 0.62]
+    the same intervals, drawing whole tasks (43 tasks):
+    action        prec [0.60, 0.85]  kappa [0.29, 0.48]
+    action-or-db  prec [0.91, 0.96]  kappa [0.38, 0.59]
+    reward        prec [0.81, 0.95]  kappa [0.48, 0.69]
   POOLED, without claude-opus-4-5
     action        n  2404  viol   872  flags   525  prec 0.73 [0.69, 0.77]  rec 0.44  kappa 0.38 [0.34, 0.42]
     action-or-db  n  2404  viol  1037  flags   525  prec 0.94 [0.92, 0.96]  rec 0.47  kappa 0.48 [0.45, 0.51]
     reward        n  2404  viol   826  flags   525  prec 0.89 [0.87, 0.92]  rec 0.57  kappa 0.58 [0.54, 0.62]
+    the same intervals, drawing whole tasks (43 tasks):
+    action        prec [0.59, 0.84]  kappa [0.28, 0.47]
+    action-or-db  prec [0.90, 0.96]  kappa [0.38, 0.58]
+    reward        prec [0.81, 0.94]  kappa [0.48, 0.69]
   false alarms against 'action', by constraint kind: {'allowed': 107, 'directly_before': 36}
   false alarms against 'action-or-db', by constraint kind: {'directly_before': 32, 'allowed': 1}
   missed against 'action' (511 runs), failing gold actions: {'write wrong arguments': 375, 'read wrong arguments': 104, 'read missing': 84, 'transfer wrong arguments': 13}; arguments only: 427
@@ -50,10 +58,18 @@
     action        n  2576  viol   909  flags   478  prec 0.78 [0.74, 0.81]  rec 0.41  kappa 0.39 [0.35, 0.42]
     action-or-db  n  2576  viol  1076  flags   478  prec 1.00 [0.99, 1.00]  rec 0.44  kappa 0.48 [0.45, 0.52]
     reward        n  2576  viol   856  flags   478  prec 0.96 [0.95, 0.98]  rec 0.54  kappa 0.59 [0.56, 0.63]
+    the same intervals, drawing whole tasks (43 tasks):
+    action        prec [0.62, 0.90]  kappa [0.28, 0.49]
+    action-or-db  prec [0.99, 1.00]  kappa [0.37, 0.59]
+    reward        prec [0.87, 1.00]  kappa [0.49, 0.71]
   POOLED, without claude-opus-4-5
     action        n  2404  viol   872  flags   462  prec 0.77 [0.73, 0.81]  rec 0.41  kappa 0.38 [0.34, 0.42]
     action-or-db  n  2404  viol  1037  flags   462  prec 1.00 [0.99, 1.00]  rec 0.44  kappa 0.48 [0.44, 0.51]
     reward        n  2404  viol   826  flags   462  prec 0.96 [0.95, 0.98]  rec 0.54  kappa 0.59 [0.55, 0.63]
+    the same intervals, drawing whole tasks (43 tasks):
+    action        prec [0.62, 0.90]  kappa [0.27, 0.48]
+    action-or-db  prec [0.99, 1.00]  kappa [0.37, 0.59]
+    reward        prec [0.87, 1.00]  kappa [0.48, 0.71]
   false alarms against 'action', by constraint kind: {'allowed': 107}
   false alarms against 'action-or-db', by constraint kind: {'allowed': 1}
   missed against 'action' (538 runs), failing gold actions: {'write wrong arguments': 394, 'read wrong arguments': 116, 'read missing': 85, 'transfer wrong arguments': 13}; arguments only: 453
@@ -80,10 +96,18 @@
     action        n  6645  viol  2785  flags   979  prec 0.89 [0.87, 0.91]  rec 0.31  kappa 0.32 [0.30, 0.33]
     action-or-db  n  6645  viol  2878  flags   979  prec 0.92 [0.90, 0.93]  rec 0.31  kappa 0.31 [0.30, 0.33]
     reward        n  6645  viol  1565  flags   979  prec 0.77 [0.74, 0.79]  rec 0.48  kappa 0.50 [0.47, 0.52]
+    the same intervals, drawing whole tasks (112 tasks):
+    action        prec [0.84, 0.93]  kappa [0.24, 0.41]
+    action-or-db  prec [0.88, 0.95]  kappa [0.24, 0.40]
+    reward        prec [0.69, 0.84]  kappa [0.43, 0.57]
   POOLED, without claude-opus-4-5
     action        n  6197  viol  2627  flags   913  prec 0.89 [0.87, 0.91]  rec 0.31  kappa 0.31 [0.29, 0.33]
     action-or-db  n  6197  viol  2711  flags   913  prec 0.91 [0.89, 0.93]  rec 0.31  kappa 0.31 [0.29, 0.33]
     reward        n  6197  viol  1472  flags   913  prec 0.76 [0.73, 0.79]  rec 0.47  kappa 0.49 [0.46, 0.52]
+    the same intervals, drawing whole tasks (112 tasks):
+    action        prec [0.84, 0.93]  kappa [0.23, 0.40]
+    action-or-db  prec [0.87, 0.94]  kappa [0.23, 0.39]
+    reward        prec [0.68, 0.84]  kappa [0.42, 0.56]
   false alarms against 'action', by constraint kind: {'directly_before': 70, 'allowed': 32, 'precedence+required': 2}
   false alarms against 'action-or-db', by constraint kind: {'directly_before': 68, 'allowed': 12, 'precedence+required': 2}
   missed against 'action' (1910 runs), failing gold actions: {'write wrong arguments': 858, 'read wrong arguments': 685, 'read missing': 620, 'transfer wrong arguments': 50, 'transfer missing': 50}; arguments only: 1240
@@ -110,10 +134,18 @@
     action        n  6645  viol  2785  flags   865  prec 0.96 [0.94, 0.97]  rec 0.30  kappa 0.32 [0.30, 0.34]
     action-or-db  n  6645  viol  2878  flags   865  prec 0.98 [0.97, 0.99]  rec 0.30  kappa 0.32 [0.30, 0.34]
     reward        n  6645  viol  1565  flags   865  prec 0.83 [0.81, 0.86]  rec 0.46  kappa 0.51 [0.48, 0.54]
+    the same intervals, drawing whole tasks (112 tasks):
+    action        prec [0.92, 0.99]  kappa [0.24, 0.41]
+    action-or-db  prec [0.97, 1.00]  kappa [0.24, 0.40]
+    reward        prec [0.74, 0.93]  kappa [0.44, 0.58]
   POOLED, without claude-opus-4-5
     action        n  6197  viol  2627  flags   803  prec 0.96 [0.95, 0.98]  rec 0.29  kappa 0.31 [0.30, 0.33]
     action-or-db  n  6197  viol  2711  flags   803  prec 0.98 [0.97, 0.99]  rec 0.29  kappa 0.31 [0.29, 0.33]
     reward        n  6197  viol  1472  flags   803  prec 0.83 [0.80, 0.85]  rec 0.45  kappa 0.50 [0.47, 0.53]
+    the same intervals, drawing whole tasks (112 tasks):
+    action        prec [0.92, 0.99]  kappa [0.24, 0.41]
+    action-or-db  prec [0.97, 1.00]  kappa [0.24, 0.40]
+    reward        prec [0.74, 0.92]  kappa [0.43, 0.57]
   false alarms against 'action', by constraint kind: {'allowed': 32, 'precedence+required': 2}
   false alarms against 'action-or-db', by constraint kind: {'allowed': 12, 'precedence+required': 2}
   missed against 'action' (1954 runs), failing gold actions: {'write wrong arguments': 886, 'read wrong arguments': 704, 'read missing': 625, 'transfer wrong arguments': 50, 'transfer missing': 50}; arguments only: 1279

@@ -29,8 +29,8 @@ CORPUS 1  tau2-bench airline (public, carries its own reference model)
     most frequent: get_user_details -> get_reservation_details -> transfer_to_human_agents  (10 runs)
 
   performance proxy, split by harness label
-    reward=0.0             n=  32  calls  11.7  rework  53.0%  self-loop  52.2%
-    reward=1.0             n= 161  calls   7.4  rework  33.6%  self-loop  36.3%
+    reward=0.0             n=  32  calls  11.7  repeated tool use  53.0%  self-loop  52.2%
+    reward=1.0             n= 161  calls   7.4  repeated tool use  33.6%  self-loop  36.3%
 
 ==============================================================================
 BASELINES  conformance against trivial features
@@ -40,7 +40,7 @@ BASELINES  conformance against trivial features
     gold-action reference not satisfied          P 64%  R 53%  F1 0.58   flags  25
     more tool calls than the median (7)          P 29%  R 80%  F1 0.42   flags  84
     any tool returned an error                   P 75%  R 10%  F1 0.18   flags   4
-    rework above the median (38%)                P 26%  R 73%  F1 0.38   flags  85
+    repeated tool use above the median (38%)     P 26%  R 73%  F1 0.38   flags  85
     always predict failure                       P 17%  R 100%  F1 0.30   flags 172
 
   violations by constraint kind: {'required': 28, 'precedence': 11}
@@ -128,8 +128,8 @@ CORPUS 3  AgentHallu (public, multi-agent delegation and reporting back)
        45  ComputerTerminal -> MagenticOneOrchestrator
     reciprocated edges (every handover answered): 6/6
   performance proxy, split by the human hallucination label
-    hallucination=False    n=  25  calls   4.2  rework  19.4%  self-loop  21.8%
-    hallucination=True     n=  25  calls   4.6  rework  26.4%  self-loop  34.8%
+    hallucination=False    n=  25  calls   4.2  repeated tool use  19.4%  self-loop  21.8%
+    hallucination=True     n=  25  calls   4.6  repeated tool use  26.4%  self-loop  34.8%
   hallucination label: 54 of 94 runs
     runs with a tool call:  78, hallucinated 44 (56.4%)
     runs without a tool call:  16, hallucinated 10 (62.5%)
@@ -148,8 +148,8 @@ CORPUS 3  AgentHallu (public, multi-agent delegation and reporting back)
         1  Search Agent -> Multi-Modal Processing Agent
     reciprocated edges (every handover answered): 0/10
   performance proxy, split by the human hallucination label
-    hallucination=False    n=  26  calls   6.1  rework  30.9%  self-loop  32.4%
-    hallucination=True     n=  43  calls   7.4  rework  34.4%  self-loop  29.0%
+    hallucination=False    n=  26  calls   6.1  repeated tool use  30.9%  self-loop  32.4%
+    hallucination=True     n=  43  calls   7.4  repeated tool use  34.4%  self-loop  29.0%
   hallucination label: 57 of 93 runs
     runs with a tool call:  86, hallucinated 52 (60.5%)
     runs without a tool call:   7, hallucinated 5 (71.4%)

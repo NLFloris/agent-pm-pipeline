@@ -11,7 +11,8 @@ This is the whole pipeline in one call. It writes into the folder:
   event_log.csv       the flat event log, one row per event
   event_log.xes       the same in XES (needs pm4py)
   runs.ocel.json      the object-centric log, OCEL 2.0
-  lenses.txt          discovery over the listing and over the steps, handovers, rework
+  lenses.txt          discovery over the listing and over the steps, handovers,
+                      repeated tool use
   conformance.txt     every run against the reference, with the event responsible
   verdicts.json       the same, machine-readable
   pm4py_*.png         DFG, Petri net, process tree, BPMN from the inductive miner
@@ -41,7 +42,7 @@ from typing import Any, Optional
 
 from .analysis.conformance import check
 from .analysis.discovery import concurrency_summary, directly_follows, directly_follows_flat
-from .analysis.performance import NON_ACTION, handovers, rework
+from .analysis.performance import NON_ACTION, handovers, repeated_tool_use
 from .logbuild.objects import ObjectRule
 from .logbuild.ocel import build_ocel_from_traces, object_sharing
 from .model import Event, Trace
@@ -231,10 +232,10 @@ def lenses_text(traces: list[Trace]) -> str:
     vis = _visible(traces)
     listed, steps = directly_follows_flat(vis), directly_follows(vis)
     by_count = lambda edges: sorted(edges.items(), key=lambda kv: (-kv[1], kv[0]))
-    shares = [r for r in (rework(t) for t in traces) if r is not None]
+    shares = [r for r in (repeated_tool_use(t) for t in traces) if r is not None]
     lines = ["The secondary lenses. They describe the runs and enter no verdict.", "",
-             f"rework: mean {sum(shares) / len(shares):.1%} over the {len(shares)} runs with at least two tool calls"
-             if shares else "rework: no run has two tool calls", "",
+             f"repeated tool use: mean {sum(shares) / len(shares):.1%} over the {len(shares)} runs with at least two tool calls"
+             if shares else "repeated tool use: no run has two tool calls", "",
              "handovers (the acting agent changes):"]
     lines += [f"  {a} -> {b}  {n}" for (a, b), n in by_count(handovers(traces))] or ["  none"]
     lines += ["", f"directly-follows edges over the steps ({len(steps)}, events issued together never follow each other):"]
@@ -446,7 +447,7 @@ def report(traces: list[Trace], out: str, source: str = "", reference: Optional[
              ("inventory.txt", "counts, and every run on one line as agent:activity"),
              ("event_log.csv", "the flat event log, one row per event, with arguments, results and reasoning"),
              ("runs.ocel.json", "the object-centric log, OCEL 2.0"),
-             ("lenses.txt", "discovery over the listing and over the steps, handovers and rework")]
+             ("lenses.txt", "discovery over the listing and over the steps, handovers and repeated tool use")]
     if pm:
         files.append(("event_log.xes", "the flat log in XES, for ProM, Disco and pm4py"))
     if conf is not None:

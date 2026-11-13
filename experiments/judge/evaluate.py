@@ -32,6 +32,9 @@ from agentpm.evaluation import (bootstrap, fleiss_kappa, ground_truth, judge_ver
 from agentpm.ingest import tau2
 from agentpm.reference import Reference
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from data_dir import OPUS_AIRLINE   # noqa: E402
+
 
 # ------------------------------------------------------------------ inputs
 
@@ -50,9 +53,7 @@ def pm_verdicts(traces):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser(
-        "~/Downloads/tau-data/tau2-bench/submissions/claude-opus-4-5_sierra_2026-02-26/"
-        "trajectories/claude-opus-4-5_high_airline_gpt-5.2_4trials.json"))
+    ap.add_argument("--data", default=OPUS_AIRLINE)
     ap.add_argument("--judge", default="results/judge")
     ap.add_argument("--rounds", type=int, default=1000)
     ap.add_argument("--label", choices=["action", "action-or-db", "reward"], default="action")

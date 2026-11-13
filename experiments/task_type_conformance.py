@@ -45,6 +45,7 @@ import sys
 from agentpm.analysis.conformance import check
 from agentpm.ingest import tau2
 from agentpm.reference import Reference
+from data_dir import TAU2_SUBMISSIONS   # noqa: E402
 
 WRITES = ["book_reservation", "update_reservation_flights", "update_reservation_baggages",
           "update_reservation_passengers", "cancel_reservation", "send_certificate"]
@@ -88,7 +89,7 @@ def type_model(key, reads_transparent=False):
                      + ([t for t in TOOLS if t not in WRITES] if reads_transparent else []))
 
 
-TAU2 = os.path.expanduser("~/Downloads/tau-data/tau2-bench/submissions")
+TAU2 = TAU2_SUBMISSIONS
 DEFAULT_DATA = {
     "airline": os.path.join(TAU2, "claude-opus-4-5_sierra_2026-02-26/trajectories/"
                             "claude-opus-4-5_high_airline_gpt-5.2_4trials.json"),

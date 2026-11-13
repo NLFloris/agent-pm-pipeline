@@ -36,6 +36,7 @@ import pm4py
 from agentpm.analysis.conformance import check
 from agentpm.ingest import local_magentic, tau2, traceelephant
 from agentpm.reference import Reference
+from data_dir import DATA   # noqa: E402
 
 BASE = datetime(2026, 1, 1, tzinfo=timezone.utc)
 MESSAGES = {"assistant_message", "user_message"}
@@ -174,7 +175,7 @@ def discover_then_check(traces, out):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="results/pm4py")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)

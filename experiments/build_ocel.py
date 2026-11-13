@@ -30,6 +30,7 @@ import pm4py
 from agentpm.ingest import agenthallu, local_magentic, otel, tau2, traceelephant
 from agentpm.logbuild.objects import BUILTIN
 from agentpm.logbuild.ocel import build_ocel_from_traces, object_sharing
+from data_dir import DATA   # noqa: E402
 
 MESSAGES = {"assistant_message", "user_message"}
 
@@ -69,7 +70,7 @@ def _steps(trace, exclude):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="results/ocel")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)

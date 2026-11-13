@@ -224,7 +224,7 @@ the same 172 runs:
 |---|---|---|---|---|
 | **gold-action reference not satisfied** | **64%** | **53%** | **0.58** | **25** |
 | more tool calls than the median (7) | 29% | 80% | 0.42 | 84 |
-| rework above the median (38%) | 26% | 73% | 0.38 | 85 |
+| repeated tool use above the median (38%) | 26% | 73% | 0.38 | 85 |
 | any tool returned an error | 75% | 10% | 0.18 | 4 |
 | always predict failure | 17% | 100% | 0.30 | 172 |
 
@@ -344,14 +344,14 @@ unreadable — requirement R9 (trace variability producing spaghetti) showing up
 in practice on the first dataset tried. Every figure in `results/figures/` is
 therefore frequency-filtered, with the threshold stated in the caption.
 
-### 4.2 Rework and self-loops
+### 4.2 Repeated tool use and self-loops
 
-Rework = 1 − (distinct activities / activities). Self-loop = share of
+Repeated tool use = 1 − (distinct activities / activities). Self-loop = share of
 consecutive identical pairs.
 
 **τ²-bench airline, split by harness label:**
 
-| | n | tool calls | rework | self-loop |
+| | n | tool calls | repeated tool use | self-loop |
 |---|---|---|---|---|
 | reward = 1 | 161 | 7.4 | 33.6% | 36.3% |
 | reward = 0 | 32 | **11.7** | **53.0%** | **52.2%** |
@@ -362,7 +362,7 @@ without any reference model at all.
 
 **AgentHallu, split by the human hallucination label:**
 
-| subset | label | n | calls | rework | self-loop |
+| subset | label | n | calls | repeated tool use | self-loop |
 |---|---|---|---|---|---|
 | Magentic_One | no hallucination | 25 | 4.2 | 19.4% | 21.8% |
 | Magentic_One | hallucination | 25 | 4.6 | 26.4% | 34.8% |

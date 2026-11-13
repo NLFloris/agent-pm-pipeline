@@ -22,6 +22,7 @@ import sys
 from agentpm.ingest import agenthallu, local_magentic, tau2, traceelephant
 
 from agentpm.viz import (PALETTE, agent_colors, handover, render_dfg_by_agent,  # noqa: F401
+from data_dir import DATA   # noqa: E402
                         render_handover, render_lane_model, render_single_run)
 
 MESSAGES = {"assistant_message", "user_message"}
@@ -43,7 +44,7 @@ def emit(name, traces, out, min_edge, drop=frozenset()):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="results/figures")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)

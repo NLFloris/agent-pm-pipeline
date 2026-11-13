@@ -19,15 +19,14 @@ import pm4py
 from agentpm.analysis.conformance import check
 from agentpm.ingest import tau2
 from discover import flat_log, gold_reference
+from data_dir import OPUS_AIRLINE   # noqa: E402
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--case", default="2922cd65")
     ap.add_argument("--out", default="results/pm4py/one_case")
-    ap.add_argument("--data", default=os.path.expanduser(
-        "~/Downloads/tau-data/tau2-bench/submissions/claude-opus-4-5_sierra_2026-02-26/"
-        "trajectories/claude-opus-4-5_high_airline_gpt-5.2_4trials.json"))
+    ap.add_argument("--data", default=OPUS_AIRLINE)
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
 

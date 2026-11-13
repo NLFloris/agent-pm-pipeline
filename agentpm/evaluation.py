@@ -7,8 +7,10 @@ It comes after the verdict and needs what the telemetry does not hold, namely
 labels and, for a comparison, the verdicts of a Judge. It reports four criteria.
 
   alignment         precision, recall and Cohen's kappa against each label, kappa
-                    with a bootstrap 95% interval, and McNemar's exact test
-                    between the engine and each Judge
+                    with a bootstrap 95% interval that draws whole tasks when the
+                    runs repeat tasks, and, per Judge, the runs on which only the
+                    engine or only the Judge agrees with the label, with McNemar's
+                    exact test, which treats the runs as independent
   reproducibility   for the engine, whether repeated checks hash identically; for
                     a Judge, the share of unanimous runs and Fleiss' kappa
   cost              tokens and time per verdict
@@ -152,14 +154,38 @@ def metrics(pred, truth, ids):
     return {"n": n, "accuracy": acc, "precision": p, "recall": r, "f1": f1, "kappa": kappa}
 
 
-def bootstrap(pred, truth, ids, key, rounds=1000, seed=0):
+def bootstrap(pred, truth, ids, key, rounds=1000, seed=0, cluster=None):
+    """A percentile 95% interval for one metric.
+
+    Without cluster, each draw takes runs at random with replacement. With
+    cluster, a map from run id to its group (in tau2-bench the task), each draw
+    takes whole groups with replacement, so that the repeated runs of one task,
+    which are not independent, stay together. A run missing from the map forms
+    a group of its own."""
     rng = random.Random(seed)
     vals = []
-    for _ in range(rounds):
-        sample = [rng.choice(ids) for _ in ids]
-        vals.append(metrics(pred, truth, sample)[key])
+    if cluster is None:
+        for _ in range(rounds):
+            sample = [rng.choice(ids) for _ in ids]
+            vals.append(metrics(pred, truth, sample)[key])
+    else:
+        groups = collections.defaultdict(list)
+        for i in ids:
+            groups[cluster.get(i, i)].append(i)
+        keys = sorted(groups, key=str)
+        for _ in range(rounds):
+            sample = [i for k in (rng.choice(keys) for _ in keys) for i in groups[k]]
+            vals.append(metrics(pred, truth, sample)[key])
     vals.sort()
     return vals[int(0.025 * rounds)], vals[int(0.975 * rounds)]
+
+
+def task_clusters(traces):
+    """Run id -> task id for a source that records the task, such as tau2-bench;
+    None when no task repeats, since then each run is its own group anyway."""
+    task = {t.case_id: str(t.outcome["task_id"]) for t in traces
+            if t.outcome and t.outcome.get("task_id") is not None}
+    return task if task and len(set(task.values())) < len(task) else None
 
 
 def mcnemar(pred_a, pred_b, truth, ids):
@@ -255,7 +281,11 @@ def evaluation_text(traces: list[Trace], pairs, judges: dict[str, str], labels: 
     for name, file in judges.items():
         methods[f"Judge {name}"], votes[name], tokens[name] = judge_verdicts(file)
 
+    cluster = task_clusters(traces)
     lines = ["ALIGNMENT, positive class = violation"]
+    if cluster:
+        scored = {cluster[i] for truth in labels.values() for i in truth if i in cluster}
+        lines.append(f"  the runs repeat {len(scored)} tasks, so the intervals draw whole tasks")
     for label, truth in labels.items():
         lines.append(f"\n  label {label}: {len(truth)} runs, {sum(1 for v in truth.values() if not v)} violations")
         lines.append(f"    {'method':34} {'n':>4} {'prec':>6} {'rec':>6} {'kappa':>6}   95% interval on kappa")
@@ -264,7 +294,7 @@ def evaluation_text(traces: list[Trace], pairs, judges: dict[str, str], labels: 
             if not ids:
                 continue
             m = metrics(pred, truth, ids)
-            lo, hi = bootstrap(pred, truth, ids, "kappa", rounds)
+            lo, hi = bootstrap(pred, truth, ids, "kappa", rounds, cluster=cluster)
             lines.append(f"    {name:34} {len(ids):4} {m['precision']:6.2f} {m['recall']:6.2f} {m['kappa']:6.2f}"
                          f"   [{lo:.2f}, {hi:.2f}]")
         for name in judges:

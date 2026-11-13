@@ -10,6 +10,13 @@ AIRLINE, 200 runs, agent claude-opus-4-5
   policy, gpt-oss-120b                170  0.26  0.51   0.09  [-0.05, 0.23]     62 / 14         0.0000
   policy, glm-5-3-flash               164  0.26  0.59   0.10  [-0.02, 0.23]     63 / 11         0.0000
   output only, gpt-oss-120b           170  0.21  0.89  -0.02  [-0.07, 0.03]    124 / 20         0.0000
+  95% CI drawing whole tasks (43 tasks):
+    engine, task type                  kappa [ 0.23, 0.74]   precision [0.71, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.83, 1.00]   precision [0.76, 1.00]
+    required actions, glm-5-3-flash    kappa [ 0.88, 1.00]   precision [0.83, 1.00]
+    policy, gpt-oss-120b               kappa [-0.07, 0.24]   precision [0.12, 0.42]
+    policy, glm-5-3-flash              kappa [-0.03, 0.23]   precision [0.13, 0.40]
+    output only, gpt-oss-120b          kappa [-0.07, 0.04]   precision [0.12, 0.33]
 
 -- label action-or-db: 172 scorable runs, 39 violations
   method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
@@ -19,6 +26,13 @@ AIRLINE, 200 runs, agent claude-opus-4-5
   policy, gpt-oss-120b                170  0.28  0.51   0.09  [-0.04, 0.23]     62 / 14         0.0000
   policy, glm-5-3-flash               164  0.28  0.61   0.12  [ 0.00, 0.26]     62 / 12         0.0000
   output only, gpt-oss-120b           170  0.22  0.90  -0.01  [-0.07, 0.04]    123 / 21         0.0000
+  95% CI drawing whole tasks (43 tasks):
+    engine, task type                  kappa [ 0.26, 0.74]   precision [1.00, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.79, 1.00]   precision [0.76, 1.00]
+    required actions, glm-5-3-flash    kappa [ 0.83, 1.00]   precision [0.83, 1.00]
+    policy, gpt-oss-120b               kappa [-0.06, 0.24]   precision [0.14, 0.44]
+    policy, glm-5-3-flash              kappa [-0.00, 0.25]   precision [0.16, 0.42]
+    output only, gpt-oss-120b          kappa [-0.06, 0.04]   precision [0.12, 0.34]
 
 -- label reward: 172 scorable runs, 30 violations
   method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
@@ -28,6 +42,13 @@ AIRLINE, 200 runs, agent claude-opus-4-5
   policy, gpt-oss-120b                170  0.21  0.50   0.06  [-0.06, 0.20]     66 / 10         0.0000
   policy, glm-5-3-flash               164  0.24  0.68   0.14  [ 0.03, 0.26]     64 / 10         0.0000
   output only, gpt-oss-120b           170  0.19  0.97   0.02  [-0.01, 0.05]    128 / 16         0.0000
+  95% CI drawing whole tasks (43 tasks):
+    engine, task type                  kappa [ 0.32, 0.82]   precision [0.73, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.42, 0.88]   precision [0.38, 0.91]
+    required actions, glm-5-3-flash    kappa [ 0.44, 0.89]   precision [0.40, 0.91]
+    policy, gpt-oss-120b               kappa [-0.07, 0.20]   precision [0.09, 0.34]
+    policy, glm-5-3-flash              kappa [ 0.02, 0.26]   precision [0.13, 0.38]
+    output only, gpt-oss-120b          kappa [-0.01, 0.06]   precision [0.10, 0.29]
 
 -- the two Judges against each other (Cohen's kappa on the runs both judged)
   required actions  n  172  same verdict  171 (99%)  kappa 0.98
@@ -79,6 +100,11 @@ RETAIL, 456 runs, agent claude-opus-4-5
   required actions, gpt-oss-120b      448  0.88  0.98   0.89  [ 0.84, 0.93]     17 / 95         0.0000
   policy, gpt-oss-120b                436  0.32  0.35  -0.06  [-0.15, 0.02]    154 / 38         0.0000
   output only, gpt-oss-120b           443  0.36  0.92   0.02  [-0.03, 0.06]    260 / 92         0.0000
+  95% CI drawing whole tasks (112 tasks):
+    engine, task type                  kappa [ 0.31, 0.55]   precision [0.83, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.80, 0.96]   precision [0.79, 0.96]
+    policy, gpt-oss-120b               kappa [-0.16, 0.05]   precision [0.22, 0.42]
+    output only, gpt-oss-120b          kappa [-0.03, 0.07]   precision [0.29, 0.44]
    the same, on the stratified sample only (120 runs, 51 violations), every method on the same runs:
   method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
   engine, task type                   120  0.96  0.47   0.49  [ 0.35, 0.63]
@@ -87,6 +113,13 @@ RETAIL, 456 runs, agent claude-opus-4-5
   policy, gpt-oss-120b                118  0.41  0.33  -0.03  [-0.21, 0.15]     41 / 11         0.0000
   policy, glm-5-3-flash               120  0.45  0.45   0.05  [-0.14, 0.22]     42 / 14         0.0002
   output only, gpt-oss-120b           118  0.43  0.94   0.00  [-0.08, 0.07]     65 / 27         0.0001
+  95% CI drawing whole tasks (87 tasks):
+    engine, task type                  kappa [ 0.32, 0.65]   precision [0.87, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.82, 0.98]   precision [0.84, 1.00]
+    required actions, glm-5-3-flash    kappa [ 0.76, 0.95]   precision [0.86, 1.00]
+    policy, gpt-oss-120b               kappa [-0.20, 0.16]   precision [0.25, 0.59]
+    policy, glm-5-3-flash              kappa [-0.15, 0.26]   precision [0.31, 0.62]
+    output only, gpt-oss-120b          kappa [-0.08, 0.07]   precision [0.32, 0.56]
 
 -- label action-or-db: 448 scorable runs, 167 violations
   method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
@@ -94,6 +127,11 @@ RETAIL, 456 runs, agent claude-opus-4-5
   required actions, gpt-oss-120b      448  0.90  0.95   0.88  [ 0.83, 0.92]     17 / 95         0.0000
   policy, gpt-oss-120b                436  0.33  0.34  -0.08  [-0.16, 0.01]    156 / 36         0.0000
   output only, gpt-oss-120b           443  0.38  0.92   0.02  [-0.02, 0.06]    255 / 97         0.0000
+  95% CI drawing whole tasks (112 tasks):
+    engine, task type                  kappa [ 0.33, 0.55]   precision [0.95, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.81, 0.94]   precision [0.83, 0.97]
+    policy, gpt-oss-120b               kappa [-0.17, 0.03]   precision [0.23, 0.43]
+    output only, gpt-oss-120b          kappa [-0.03, 0.07]   precision [0.31, 0.46]
    the same, on the stratified sample only (120 runs, 53 violations), every method on the same runs:
   method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
   engine, task type                   120  1.00  0.47   0.50  [ 0.37, 0.65]
@@ -102,6 +140,13 @@ RETAIL, 456 runs, agent claude-opus-4-5
   policy, gpt-oss-120b                118  0.41  0.32  -0.05  [-0.23, 0.13]     42 / 10         0.0000
   policy, glm-5-3-flash               120  0.47  0.45   0.05  [-0.14, 0.22]     42 / 14         0.0002
   output only, gpt-oss-120b           118  0.45  0.94   0.00  [-0.07, 0.08]     64 / 28         0.0002
+  95% CI drawing whole tasks (87 tasks):
+    engine, task type                  kappa [ 0.34, 0.66]   precision [1.00, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.84, 0.98]   precision [0.90, 1.00]
+    required actions, glm-5-3-flash    kappa [ 0.76, 0.96]   precision [0.89, 1.00]
+    policy, gpt-oss-120b               kappa [-0.22, 0.14]   precision [0.25, 0.59]
+    policy, glm-5-3-flash              kappa [-0.14, 0.26]   precision [0.33, 0.62]
+    output only, gpt-oss-120b          kappa [-0.08, 0.08]   precision [0.35, 0.58]
 
 -- label reward: 448 scorable runs, 93 violations
   method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
@@ -109,6 +154,11 @@ RETAIL, 456 runs, agent claude-opus-4-5
   required actions, gpt-oss-120b      448  0.45  0.86   0.44  [ 0.37, 0.52]     85 / 27         0.0000
   policy, gpt-oss-120b                436  0.19  0.35  -0.04  [-0.12, 0.05]    169 / 23         0.0000
   output only, gpt-oss-120b           443  0.21  0.90   0.00  [-0.03, 0.03]    313 / 39         0.0000
+  95% CI drawing whole tasks (112 tasks):
+    engine, task type                  kappa [ 0.49, 0.72]   precision [0.68, 0.96]
+    required actions, gpt-oss-120b     kappa [ 0.32, 0.58]   precision [0.35, 0.58]
+    policy, gpt-oss-120b               kappa [-0.12, 0.05]   precision [0.13, 0.26]
+    output only, gpt-oss-120b          kappa [-0.04, 0.03]   precision [0.16, 0.26]
    the same, on the stratified sample only (120 runs, 30 violations), every method on the same runs:
   method                                n  prec   rec  kappa  95% CI       engine/judge only  McNemar p
   engine, task type                   120  0.80  0.67   0.65  [ 0.47, 0.80]
@@ -117,6 +167,13 @@ RETAIL, 456 runs, agent claude-opus-4-5
   policy, gpt-oss-120b                118  0.27  0.37   0.02  [-0.16, 0.19]     43 / 9          0.0000
   policy, glm-5-3-flash               120  0.33  0.57   0.15  [-0.03, 0.33]     44 / 12         0.0000
   output only, gpt-oss-120b           118  0.25  0.93  -0.01  [-0.07, 0.04]     81 / 11         0.0000
+  95% CI drawing whole tasks (87 tasks):
+    engine, task type                  kappa [ 0.45, 0.83]   precision [0.58, 1.00]
+    required actions, gpt-oss-120b     kappa [ 0.32, 0.67]   precision [0.37, 0.67]
+    required actions, glm-5-3-flash    kappa [ 0.36, 0.71]   precision [0.39, 0.71]
+    policy, gpt-oss-120b               kappa [-0.16, 0.20]   precision [0.13, 0.42]
+    policy, glm-5-3-flash              kappa [-0.02, 0.32]   precision [0.20, 0.46]
+    output only, gpt-oss-120b          kappa [-0.06, 0.05]   precision [0.17, 0.34]
 
 -- the two Judges against each other (Cohen's kappa on the runs both judged)
   required actions  n  120  same verdict  115 (96%)  kappa 0.91

@@ -1,6 +1,6 @@
 The secondary lenses. They describe the runs and enter no verdict.
 
-rework: mean 0.0% over the 1 runs with at least two tool calls
+repeated tool use: mean 0.0% over the 1 runs with at least two tool calls
 
 handovers (the acting agent changes):
   assistant -> user  4

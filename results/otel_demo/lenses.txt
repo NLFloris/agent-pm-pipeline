@@ -1,6 +1,6 @@
 The secondary lenses. They describe the runs and enter no verdict.
 
-rework: mean 53.4% over the 6 runs with at least two tool calls
+repeated tool use: mean 53.4% over the 6 runs with at least two tool calls
 
 handovers (the acting agent changes):
   Coder -> root  30

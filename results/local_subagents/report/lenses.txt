@@ -1,6 +1,6 @@
 The secondary lenses. They describe the runs and enter no verdict.
 
-rework: mean 55.1% over the 10 runs with at least two tool calls
+repeated tool use: mean 55.1% over the 10 runs with at least two tool calls
 
 handovers (the acting agent changes):
   FileSurfer -> MagenticOneOrchestrator  20

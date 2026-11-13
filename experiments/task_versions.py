@@ -23,8 +23,9 @@ from task_type_conformance import domain_rules   # noqa: E402
 
 from agentpm.analysis.conformance import check   # noqa: E402
 from agentpm.ingest import tau2   # noqa: E402
+from data_dir import TAU2_DOMAINS   # noqa: E402
 
-DOMAINS = os.path.expanduser("~/Downloads/tau-data/tau2-bench/data/tau2/domains")
+DOMAINS = TAU2_DOMAINS
 READS = ("get_", "search_", "list_", "find_", "calculate")
 
 

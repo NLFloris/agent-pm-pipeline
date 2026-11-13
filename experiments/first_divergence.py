@@ -22,6 +22,7 @@ import json
 import os
 
 from agentpm.ingest import agenthallu
+from data_dir import DATA   # noqa: E402
 
 
 def step_of(event):
@@ -66,7 +67,7 @@ def score(name, predict, runs):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     a = ap.parse_args()
     root = os.path.join(a.data, "agenthallu", "Magentic_One")
     traces = agenthallu.ingest_dir(root)

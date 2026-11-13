@@ -34,6 +34,7 @@ from agentpm.ingest import tau2
 from agentpm.logbuild.objects import BUILTIN
 from agentpm.logbuild.ocel import build_ocel_from_traces
 from agentpm.model import Trace
+from data_dir import DATA   # noqa: E402
 
 MESSAGES = {"assistant_message", "user_message"}
 BASE = datetime(2000, 1, 1, tzinfo=timezone.utc)
@@ -76,7 +77,7 @@ def compare(name, edges, flat, partial, within):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="results")
     a = ap.parse_args()
     path = os.path.join(a.data, "tau-data/tau2-bench/submissions/claude-opus-4-5_sierra_2026-02-26",

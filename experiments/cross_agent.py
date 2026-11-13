@@ -26,6 +26,11 @@ Two variants of the confirmation rule: as frozen, and looking through reads
 
 Excluded: toolorchestra_nvidia, an orchestration system with one trial per task
 rather than an agent model with four.
+
+Intervals: every pooled precision and kappa has a bootstrap 95% interval that
+draws single runs, and below it one that draws whole tasks, since the runs of a
+task share the task and its solution list over the trials and the agents. The
+json records the task and trial of every run for that reason.
 """
 from __future__ import annotations
 
@@ -92,6 +97,20 @@ def bootstrap(pairs, key, rounds=1000, seed=0):
     return vals[int(0.025 * rounds)], vals[int(0.975 * rounds)]
 
 
+def bootstrap_tasks(pairs, tasks, key, rounds=1000, seed=0):
+    """The same interval, drawing whole tasks with all their runs. The runs of one
+    task, over its four trials and over the agents, share the task and its solution
+    list, so they are not independent."""
+    groups = collections.defaultdict(list)
+    for pair, task in zip(pairs, tasks):
+        groups[task].append(pair)
+    keys = sorted(groups)
+    rng = random.Random(seed)
+    vals = sorted(metrics([p for k in (rng.choice(keys) for _ in keys) for p in groups[k]])[key]
+                  for _ in range(rounds))
+    return vals[int(0.025 * rounds)], vals[int(0.975 * rounds)]
+
+
 def misses(t, writes):
     """Why the per-action check failed, per failing gold action: write or read,
     and whether an action of that name occurred at all (then the arguments differ)."""
@@ -116,7 +135,8 @@ def run(domain, reads_transparent):
             if not t.outcome.get("action_checks"):
                 continue
             r = check(prepare(t), type_model(task_type(t), reads_transparent))
-            rows.append({"flag": not r.compliant,
+            rows.append({"task": str(t.outcome["task_id"]), "trial": t.outcome["trial"],
+                         "flag": not r.compliant,
                          "kinds": sorted({v.constraint.split("(")[0] for v in r.violations}),
                          "misses": misses(t, writes),
                          **{lab: violation(t, lab) for lab in LABELS}})
@@ -131,6 +151,7 @@ def report(domain, reads_transparent):
     print(f"  {'agent':40} {'n':>4} " + "  ".join(f"{lab + ': viol prec  rec kappa':>31}" for lab in LABELS))
     pooled = collections.defaultdict(list)
     held_out = collections.defaultdict(list)
+    tasks = {"pooled": [], "held_out": []}
     for agent, rows in per_agent.items():
         cells = []
         for lab in LABELS:
@@ -139,9 +160,14 @@ def report(domain, reads_transparent):
             if not agent.startswith(DEV_AGENT):
                 held_out[lab] += pairs
             m = metrics(pairs)
+            if lab == LABELS[0]:
+                tasks["pooled"] += [r["task"] for r in rows]
+                if not agent.startswith(DEV_AGENT):
+                    tasks["held_out"] += [r["task"] for r in rows]
             cells.append(f"{m['violations']:>14} {m['precision']:4.2f} {m['recall']:4.2f} {m['kappa']:5.2f}")
         print(f"  {agent:40} {len(rows):4} " + "  ".join(cells))
-    for name, group in (("POOLED, all agents", pooled), (f"POOLED, without {DEV_AGENT}", held_out)):
+    for name, group, key in (("POOLED, all agents", pooled, "pooled"),
+                             (f"POOLED, without {DEV_AGENT}", held_out, "held_out")):
         print(f"  {name}")
         for lab in LABELS:
             m = metrics(group[lab])
@@ -150,6 +176,11 @@ def report(domain, reads_transparent):
             print(f"    {lab:13} n {m['n']:5}  viol {m['violations']:5}  flags {m['flags']:5}  "
                   f"prec {m['precision']:.2f} [{plo:.2f}, {phi:.2f}]  rec {m['recall']:.2f}  "
                   f"kappa {m['kappa']:.2f} [{lo:.2f}, {hi:.2f}]")
+        print(f"    the same intervals, drawing whole tasks ({len(set(tasks[key]))} tasks):")
+        for lab in LABELS:
+            lo, hi = bootstrap_tasks(group[lab], tasks[key], "kappa")
+            plo, phi = bootstrap_tasks(group[lab], tasks[key], "precision")
+            print(f"    {lab:13} prec [{plo:.2f}, {phi:.2f}]  kappa [{lo:.2f}, {hi:.2f}]")
     # what the false alarms are, against the Section 6 label and the closed one
     for lab in ("action", "action-or-db"):
         fa = collections.Counter("+".join(r["kinds"]) for rows in per_agent.values()

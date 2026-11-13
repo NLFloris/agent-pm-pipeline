@@ -23,10 +23,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 
 from agentpm import viz                          # noqa: E402
 from agentpm.ingest import local_magentic, tau2  # noqa: E402
+from data_dir import OPUS_AIRLINE   # noqa: E402
 
-TAU2_AIRLINE = os.path.expanduser(
-    "~/Downloads/tau-data/tau2-bench/submissions/claude-opus-4-5_sierra_2026-02-26/"
-    "trajectories/claude-opus-4-5_high_airline_gpt-5.2_4trials.json")
+TAU2_AIRLINE = OPUS_AIRLINE
 
 
 class _PdfDigraph(viz.Digraph):

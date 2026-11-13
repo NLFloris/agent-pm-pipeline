@@ -27,6 +27,7 @@ import pm4py
 from agentpm.analysis.conformance import check
 from agentpm.ingest import tau2
 from discover import flat_log, gold_reference, kappa_f1  # experiments/ is sys.path[0] when run as a script
+from data_dir import DATA   # noqa: E402
 
 
 def main():
@@ -34,7 +35,7 @@ def main():
         os.environ["PYTHONHASHSEED"] = "0"
         os.execv(sys.executable, [sys.executable] + sys.argv)
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="results/pm4py")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)

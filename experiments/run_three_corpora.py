@@ -6,7 +6,7 @@ Sections, per corpus where the data supports them:
   1. ingestion inventory
   2. conformance against a reference derived from the data (tau2 gold actions)
   3. discovery: variants, directly-follows structure
-  4. performance proxy: rework and self-loops, split by outcome
+  4. performance proxy: repeated tool use and self-loops, split by outcome
   5. organizational: handover of work between agents
   6. localization: first structural divergence vs the expert mistake step
 
@@ -25,6 +25,7 @@ import sys
 from agentpm.analysis.conformance import check
 from agentpm.ingest import agenthallu, tau2, traceelephant
 from agentpm.reference import Reference
+from data_dir import DATA   # noqa: E402
 
 MESSAGES = {"assistant_message", "user_message"}
 CONTROL = {"delegate", "report", "orchestrate"}
@@ -54,8 +55,8 @@ def inventory(name, traces, drop=MESSAGES):
     return acts
 
 
-def rework(traces, label_fn):
-    """Rework rate and self-loop rate, split by a binary label."""
+def repeated_tool_use(traces, label_fn):
+    """Share of repeated tool calls and self-loop rate, split by a binary label."""
     groups = collections.defaultdict(list)
     for t in traces:
         s = tool_seq(t)
@@ -69,7 +70,7 @@ def rework(traces, label_fn):
     for key in sorted(groups, key=str):
         g = groups[key]
         print(f"    {str(key):22} n={len(g):4}  calls {statistics.mean(x[0] for x in g):5.1f}"
-              f"  rework {statistics.mean(x[1] for x in g):6.1%}"
+              f"  repeated tool use {statistics.mean(x[1] for x in g):6.1%}"
               f"  self-loop {statistics.mean(x[2] for x in g):6.1%}")
 
 
@@ -168,7 +169,7 @@ def tau2_section(path):
           f"  ({variants.most_common(1)[0][1]} runs)")
 
     print("\n  performance proxy, split by harness label")
-    rework(traces, lambda t: f"reward={t.outcome.get('reward')}")
+    repeated_tool_use(traces, lambda t: f"reward={t.outcome.get('reward')}")
     return traces
 
 
@@ -277,7 +278,7 @@ def ah_section(root, subsets):
                      if edges.get((b, a), 0) == n and n)
         print(f"    reciprocated edges (every handover answered): {closed}/{len(edges)}")
         print("  performance proxy, split by the human hallucination label")
-        rework(traces, lambda t: f"hallucination={t.outcome.get('is_hallucination')}")
+        repeated_tool_use(traces, lambda t: f"hallucination={t.outcome.get('is_hallucination')}")
         # does using a tool at all go with hallucinating? a structural feature against the label
         talk = {"delegate", "orchestrate", "report"}
         print(f"  hallucination label: {sum(bool(t.outcome.get('is_hallucination')) for t in traces)} "
@@ -295,7 +296,7 @@ def ah_section(root, subsets):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="results")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
@@ -427,12 +428,12 @@ def baselines_section(path):
     def calls(t):
         return sum(1 for e in t.events if e.activity not in MESSAGES)
 
-    def rework_of(t):
+    def repeated_of(t):
         s = [e.activity for e in t.ordered() if e.activity not in MESSAGES]
         return 1 - len(set(s)) / len(s) if s else 0.0
 
     med = sorted(calls(t) for t, _ in scored)[n // 2]
-    medr = sorted(rework_of(t) for t, _ in scored)[n // 2]
+    medr = sorted(repeated_of(t) for t, _ in scored)[n // 2]
 
     def report(label, predicate):
         tp = sum(1 for t, r in scored if predicate(t, r) and t.outcome["reward"] == 0.0)
@@ -447,7 +448,7 @@ def baselines_section(path):
     report(f"more tool calls than the median ({med})", lambda t, r: calls(t) > med)
     report("any tool returned an error",
            lambda t, r: any(e.attributes.get("error") for e in t.events))
-    report(f"rework above the median ({medr:.0%})", lambda t, r: rework_of(t) > medr)
+    report(f"repeated tool use above the median ({medr:.0%})", lambda t, r: repeated_of(t) > medr)
     report("always predict failure", lambda t, r: True)
 
     fired = collections.Counter()

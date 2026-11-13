@@ -163,7 +163,7 @@ constraints that hold, and every violation names its constraint and the event
 responsible. `reference.py` also builds one model per task type from a template
 declared as data. `analysis/discovery.py` and `analysis/performance.py` hold the
 secondary lenses: the directly-follows graph over the listing and over the steps,
-handovers and rework. `report.py`, `viz.py` and `web.py` build the report, the
+handovers and repeated tool use. `report.py`, `viz.py` and `web.py` build the report, the
 pictures and the website on top.
 
 **After the verdict, `agentpm/evaluation.py`.** Scores the verdicts against labels

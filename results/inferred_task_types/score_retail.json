@@ -1,0 +1,402 @@
+{
+ "solution list": {
+  "runs": 448,
+  "type_agrees": 448,
+  "vs_per_action_label": {
+   "n": 448,
+   "flags": 66,
+   "tp": 61,
+   "fp": 5,
+   "fn": 97,
+   "tn": 285,
+   "precision": 0.92,
+   "recall": 0.39,
+   "kappa": 0.43
+  },
+  "vs_reward": {
+   "n": 448,
+   "flags": 66,
+   "tp": 54,
+   "fp": 12,
+   "fn": 39,
+   "tn": 343,
+   "precision": 0.82,
+   "recall": 0.58,
+   "kappa": 0.61
+  }
+ },
+ "customer+lookups, v2": {
+  "runs": 448,
+  "type_agrees": 356,
+  "vs_per_action_label": {
+   "n": 448,
+   "flags": 80,
+   "tp": 47,
+   "fp": 33,
+   "fn": 111,
+   "tn": 257,
+   "precision": 0.59,
+   "recall": 0.3,
+   "kappa": 0.21
+  },
+  "vs_reward": {
+   "n": 448,
+   "flags": 80,
+   "tp": 37,
+   "fp": 43,
+   "fn": 56,
+   "tn": 312,
+   "precision": 0.46,
+   "recall": 0.4,
+   "kappa": 0.29
+  },
+  "tokens_per_run": 5243,
+  "tasks_stable": 67,
+  "tasks": 112,
+  "verdict_changed": 68,
+  "disagreements": [
+   {
+    "given": "exchange_delivered_order_items",
+    "inferred": "no-write",
+    "runs": 24
+   },
+   {
+    "given": "return_delivered_order_items",
+    "inferred": "no-write",
+    "runs": 12
+   },
+   {
+    "given": "modify_pending_order_items",
+    "inferred": "no-write",
+    "runs": 8
+   },
+   {
+    "given": "transfer",
+    "inferred": "no-write",
+    "runs": 7
+   },
+   {
+    "given": "transfer",
+    "inferred": "return_delivered_order_items",
+    "runs": 5
+   },
+   {
+    "given": "cancel_pending_order+return_delivered_order_items",
+    "inferred": "cancel_pending_order",
+    "runs": 5
+   },
+   {
+    "given": "exchange_delivered_order_items+modify_pending_order_items",
+    "inferred": "modify_pending_order_items",
+    "runs": 3
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+modify_user_address",
+    "inferred": "modify_pending_order_address+modify_pending_order_items",
+    "runs": 3
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_address+modify_pending_order_items+modify_pending_order_payment",
+    "runs": 3
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_address+modify_pending_order_items",
+    "runs": 2
+   },
+   {
+    "given": "cancel_pending_order+return_delivered_order_items",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "modify_pending_order_address+modify_user_address",
+    "inferred": "modify_user_address",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_items",
+    "inferred": "cancel_pending_order+modify_pending_order_items+modify_pending_order_payment",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_items+modify_pending_order_payment",
+    "runs": 1
+   },
+   {
+    "given": "exchange_delivered_order_items",
+    "inferred": "return_delivered_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+modify_user_address",
+    "inferred": "modify_pending_order_address+modify_user_address",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_address+modify_pending_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_items+modify_pending_order_payment+return_delivered_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+modify_user_address",
+    "inferred": "modify_pending_order_address+modify_pending_order_items+modify_pending_order_payment+modify_user_address",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_items+modify_pending_order_payment",
+    "runs": 1
+   },
+   {
+    "given": "return_delivered_order_items",
+    "inferred": "exchange_delivered_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+modify_user_address",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "exchange_delivered_order_items+modify_pending_order_items",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_items",
+    "inferred": "cancel_pending_order",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_address",
+    "inferred": "cancel_pending_order",
+    "runs": 1
+   }
+  ]
+ },
+ "customer+lookups, v2, transfer kept": {
+  "runs": 448,
+  "type_agrees": 359,
+  "vs_per_action_label": {
+   "n": 448,
+   "flags": 84,
+   "tp": 51,
+   "fp": 33,
+   "fn": 107,
+   "tn": 257,
+   "precision": 0.61,
+   "recall": 0.32,
+   "kappa": 0.23
+  },
+  "vs_reward": {
+   "n": 448,
+   "flags": 84,
+   "tp": 40,
+   "fp": 44,
+   "fn": 53,
+   "tn": 311,
+   "precision": 0.48,
+   "recall": 0.43,
+   "kappa": 0.32
+  },
+  "tokens_per_run": 5243,
+  "tasks_stable": 63,
+  "tasks": 112,
+  "verdict_changed": 64,
+  "disagreements": [
+   {
+    "given": "exchange_delivered_order_items",
+    "inferred": "no-write",
+    "runs": 16
+   },
+   {
+    "given": "return_delivered_order_items",
+    "inferred": "no-write",
+    "runs": 10
+   },
+   {
+    "given": "exchange_delivered_order_items",
+    "inferred": "transfer",
+    "runs": 8
+   },
+   {
+    "given": "modify_pending_order_items",
+    "inferred": "no-write",
+    "runs": 8
+   },
+   {
+    "given": "transfer",
+    "inferred": "return_delivered_order_items",
+    "runs": 5
+   },
+   {
+    "given": "cancel_pending_order+return_delivered_order_items",
+    "inferred": "cancel_pending_order",
+    "runs": 5
+   },
+   {
+    "given": "exchange_delivered_order_items+modify_pending_order_items",
+    "inferred": "modify_pending_order_items",
+    "runs": 3
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+modify_user_address",
+    "inferred": "modify_pending_order_address+modify_pending_order_items",
+    "runs": 3
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_address+modify_pending_order_items+modify_pending_order_payment",
+    "runs": 3
+   },
+   {
+    "given": "no-write",
+    "inferred": "transfer",
+    "runs": 2
+   },
+   {
+    "given": "transfer",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_address+modify_pending_order_items",
+    "runs": 2
+   },
+   {
+    "given": "return_delivered_order_items",
+    "inferred": "transfer",
+    "runs": 2
+   },
+   {
+    "given": "modify_pending_order_address+modify_user_address",
+    "inferred": "modify_user_address",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_items",
+    "inferred": "cancel_pending_order+modify_pending_order_items+modify_pending_order_payment",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_items+modify_pending_order_payment",
+    "runs": 1
+   },
+   {
+    "given": "exchange_delivered_order_items",
+    "inferred": "return_delivered_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+return_delivered_order_items",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+modify_user_address",
+    "inferred": "modify_pending_order_address+modify_user_address",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_address+modify_pending_order_items",
+    "inferred": "modify_pending_order_address+modify_pending_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_items+modify_pending_order_payment+return_delivered_order_items",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+return_delivered_order_items",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_address+modify_pending_order_items+modify_user_address",
+    "inferred": "modify_pending_order_address+modify_pending_order_items+modify_pending_order_payment+modify_user_address",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+return_delivered_order_items",
+    "inferred": "modify_pending_order_items+modify_pending_order_payment",
+    "runs": 1
+   },
+   {
+    "given": "return_delivered_order_items",
+    "inferred": "exchange_delivered_order_items",
+    "runs": 1
+   },
+   {
+    "given": "modify_pending_order_items+modify_user_address",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "exchange_delivered_order_items+modify_pending_order_items",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_items",
+    "inferred": "cancel_pending_order",
+    "runs": 1
+   },
+   {
+    "given": "cancel_pending_order+modify_pending_order_address",
+    "inferred": "cancel_pending_order",
+    "runs": 1
+   }
+  ]
+ }
+}

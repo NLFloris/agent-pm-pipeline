@@ -61,6 +61,8 @@ import urllib.error
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(HERE, ".."))
+from data_dir import OPUS_AIRLINE   # noqa: E402
 MAX_TOOL_RESULT = 600          # characters of a tool result shown to the judge
 
 SYSTEM_FULL = (
@@ -230,9 +232,7 @@ def main():
     ap.add_argument("--mode", choices=["full", "output-only", "gold-actions"], default="full")
     ap.add_argument("--base-url", default=os.environ.get("LLM_BASE_URL", "http://localhost:1234/v1"))
     ap.add_argument("--api-key", default=os.environ.get("LLM_API_KEY", "not-needed"))
-    ap.add_argument("--data", default=os.path.expanduser(
-        "~/Downloads/tau-data/tau2-bench/submissions/claude-opus-4-5_sierra_2026-02-26/"
-        "trajectories/claude-opus-4-5_high_airline_gpt-5.2_4trials.json"))
+    ap.add_argument("--data", default=OPUS_AIRLINE)
     ap.add_argument("--out", default="results/judge")
     ap.add_argument("--repeats", type=int, default=5)
     ap.add_argument("--limit", type=int, help="judge only the first N scorable runs")

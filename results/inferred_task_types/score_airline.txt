@@ -1,0 +1,134 @@
+airline: 172 scorable runs, 37 violations (per-action label)
+
+== task type from solution list: 172 runs, type equals the solution-list type on 172 (100%)
+   engine vs per-action label: {'n': 172, 'flags': 16, 'tp': 15, 'fp': 1, 'fn': 22, 'tn': 134, 'precision': 0.94, 'recall': 0.41, 'kappa': 0.5}
+   engine vs reward:           {'n': 172, 'flags': 16, 'tp': 15, 'fp': 1, 'fn': 15, 'tn': 141, 'precision': 0.94, 'recall': 0.5, 'kappa': 0.6}
+
+== task type from customer, v1: 172 runs, type equals the solution-list type on 80 (47%)
+   engine vs per-action label: {'n': 172, 'flags': 67, 'tp': 21, 'fp': 46, 'fn': 16, 'tn': 89, 'precision': 0.31, 'recall': 0.57, 'kappa': 0.18}
+   engine vs reward:           {'n': 172, 'flags': 67, 'tp': 18, 'fp': 49, 'fn': 12, 'tn': 93, 'precision': 0.27, 'recall': 0.6, 'kappa': 0.17}
+   tokens per run 2930; tasks with one type over all trials 12/43; engine verdict changes on 65 runs
+   on the 80 runs with the right type: {'n': 80, 'flags': 4, 'tp': 4, 'fp': 0, 'fn': 9, 'tn': 67, 'precision': 1.0, 'recall': 0.31, 'kappa': 0.43}
+   disagreements (solution-list type -> inferred type: runs)
+     no-write                                           -> transfer                                           30
+     update_reservation_flights                         -> no-write                                           12
+     book_reservation                                   -> no-write                                           8
+     no-write                                           -> cancel_reservation                                 7
+     book_reservation+cancel_reservation                -> no-write                                           6
+     cancel_reservation                                 -> no-write                                           5
+     update_reservation_flights                         -> transfer                                           4
+     cancel_reservation                                 -> transfer                                           3
+     update_reservation_baggages+update_reservation_flights+update_reservation_passengers -> update_reservation_flights+update_reservation_passengers 2
+     update_reservation_baggages+update_reservation_flights+update_reservation_passengers -> no-write                                           2
+     update_reservation_baggages+update_reservation_flights -> no-write                                           2
+     cancel_reservation+update_reservation_flights      -> transfer                                           2
+     book_reservation+cancel_reservation                -> transfer                                           2
+     book_reservation+cancel_reservation                -> cancel_reservation                                 2
+     update_reservation_baggages                        -> transfer                                           1
+
+== task type from customer, v2: 172 runs, type equals the solution-list type on 128 (74%)
+   engine vs per-action label: {'n': 172, 'flags': 33, 'tp': 12, 'fp': 21, 'fn': 25, 'tn': 114, 'precision': 0.36, 'recall': 0.32, 'kappa': 0.18}
+   engine vs reward:           {'n': 172, 'flags': 33, 'tp': 10, 'fp': 23, 'fn': 20, 'tn': 119, 'precision': 0.3, 'recall': 0.33, 'kappa': 0.16}
+   tokens per run 3451; tasks with one type over all trials 25/43; engine verdict changes on 35 runs
+   on the 128 runs with the right type: {'n': 128, 'flags': 4, 'tp': 4, 'fp': 0, 'fn': 15, 'tn': 109, 'precision': 1.0, 'recall': 0.21, 'kappa': 0.31}
+   disagreements (solution-list type -> inferred type: runs)
+     no-write                                           -> cancel_reservation                                 11
+     update_reservation_flights                         -> no-write                                           7
+     transfer                                           -> no-write                                           4
+     no-write                                           -> send_certificate                                   4
+     no-write                                           -> update_reservation_flights                         3
+     book_reservation+cancel_reservation                -> update_reservation_baggages+update_reservation_flights 3
+     cancel_reservation                                 -> no-write                                           3
+     book_reservation+cancel_reservation                -> no-write                                           2
+     update_reservation_baggages                        -> no-write                                           1
+     update_reservation_flights                         -> cancel_reservation                                 1
+     update_reservation_baggages+update_reservation_flights -> update_reservation_flights                         1
+     no-write                                           -> cancel_reservation+update_reservation_flights      1
+     cancel_reservation+update_reservation_flights      -> no-write                                           1
+     book_reservation                                   -> cancel_reservation                                 1
+     book_reservation+cancel_reservation                -> cancel_reservation                                 1
+
+== task type from customer, v2, transfer kept: 172 runs, type equals the solution-list type on 113 (66%)
+   engine vs per-action label: {'n': 172, 'flags': 44, 'tp': 16, 'fp': 28, 'fn': 21, 'tn': 107, 'precision': 0.36, 'recall': 0.43, 'kappa': 0.21}
+   engine vs reward:           {'n': 172, 'flags': 44, 'tp': 13, 'fp': 31, 'fn': 17, 'tn': 111, 'precision': 0.3, 'recall': 0.43, 'kappa': 0.18}
+   tokens per run 3451; tasks with one type over all trials 19/43; engine verdict changes on 38 runs
+   on the 113 runs with the right type: {'n': 113, 'flags': 5, 'tp': 5, 'fp': 0, 'fn': 15, 'tn': 93, 'precision': 1.0, 'recall': 0.25, 'kappa': 0.35}
+   disagreements (solution-list type -> inferred type: runs)
+     no-write                                           -> transfer                                           18
+     no-write                                           -> cancel_reservation                                 11
+     update_reservation_flights                         -> transfer                                           4
+     no-write                                           -> send_certificate                                   4
+     no-write                                           -> update_reservation_flights                         3
+     book_reservation+cancel_reservation                -> update_reservation_baggages+update_reservation_flights 3
+     update_reservation_flights                         -> no-write                                           3
+     cancel_reservation                                 -> no-write                                           2
+     update_reservation_baggages                        -> transfer                                           1
+     update_reservation_flights                         -> cancel_reservation                                 1
+     transfer                                           -> no-write                                           1
+     update_reservation_baggages+update_reservation_flights -> update_reservation_flights                         1
+     no-write                                           -> cancel_reservation+update_reservation_flights      1
+     cancel_reservation+update_reservation_flights      -> no-write                                           1
+     book_reservation+cancel_reservation                -> transfer                                           1
+
+== task type from customer+lookups, v1: 172 runs, type equals the solution-list type on 105 (61%)
+   engine vs per-action label: {'n': 172, 'flags': 42, 'tp': 18, 'fp': 24, 'fn': 19, 'tn': 111, 'precision': 0.43, 'recall': 0.49, 'kappa': 0.29}
+   engine vs reward:           {'n': 172, 'flags': 42, 'tp': 18, 'fp': 24, 'fn': 12, 'tn': 118, 'precision': 0.43, 'recall': 0.6, 'kappa': 0.37}
+   tokens per run 4889; tasks with one type over all trials 17/43; engine verdict changes on 32 runs
+   on the 105 runs with the right type: {'n': 105, 'flags': 7, 'tp': 6, 'fp': 1, 'fn': 14, 'tn': 84, 'precision': 0.86, 'recall': 0.3, 'kappa': 0.38}
+   disagreements (solution-list type -> inferred type: runs)
+     no-write                                           -> transfer                                           41
+     update_reservation_flights                         -> transfer                                           6
+     update_reservation_flights                         -> no-write                                           3
+     book_reservation                                   -> no-write                                           3
+     book_reservation+cancel_reservation                -> no-write                                           2
+     cancel_reservation                                 -> no-write                                           2
+     book_reservation+cancel_reservation                -> transfer                                           2
+     update_reservation_baggages                        -> transfer                                           1
+     book_reservation+cancel_reservation                -> update_reservation_baggages+update_reservation_flights 1
+     update_reservation_baggages+update_reservation_flights -> transfer                                           1
+     book_reservation+cancel_reservation                -> cancel_reservation                                 1
+     update_reservation_baggages+update_reservation_flights+update_reservation_passengers -> no-write                                           1
+     cancel_reservation+update_reservation_flights      -> no-write                                           1
+     book_reservation                                   -> transfer                                           1
+     book_reservation+cancel_reservation                -> book_reservation                                   1
+
+== task type from customer+lookups, v2: 172 runs, type equals the solution-list type on 147 (85%)
+   engine vs per-action label: {'n': 172, 'flags': 14, 'tp': 9, 'fp': 5, 'fn': 28, 'tn': 130, 'precision': 0.64, 'recall': 0.24, 'kappa': 0.27}
+   engine vs reward:           {'n': 172, 'flags': 14, 'tp': 8, 'fp': 6, 'fn': 22, 'tn': 136, 'precision': 0.57, 'recall': 0.27, 'kappa': 0.28}
+   tokens per run 5451; tasks with one type over all trials 31/43; engine verdict changes on 16 runs
+   on the 147 runs with the right type: {'n': 147, 'flags': 6, 'tp': 6, 'fp': 0, 'fn': 18, 'tn': 123, 'precision': 1.0, 'recall': 0.25, 'kappa': 0.36}
+   disagreements (solution-list type -> inferred type: runs)
+     update_reservation_flights                         -> no-write                                           6
+     transfer                                           -> no-write                                           4
+     book_reservation+cancel_reservation                -> update_reservation_baggages+update_reservation_flights 3
+     cancel_reservation+update_reservation_flights      -> cancel_reservation                                 2
+     book_reservation                                   -> no-write                                           2
+     book_reservation+cancel_reservation                -> cancel_reservation                                 2
+     no-write                                           -> cancel_reservation                                 1
+     update_reservation_baggages+update_reservation_flights -> no-write                                           1
+     update_reservation_baggages+update_reservation_flights+update_reservation_passengers -> no-write                                           1
+     cancel_reservation                                 -> no-write                                           1
+     book_reservation                                   -> cancel_reservation                                 1
+     no-write                                           -> cancel_reservation+update_reservation_flights      1
+
+== task type from customer+lookups, v2, transfer kept: 172 runs, type equals the solution-list type on 117 (68%)
+   engine vs per-action label: {'n': 172, 'flags': 27, 'tp': 11, 'fp': 16, 'fn': 26, 'tn': 119, 'precision': 0.41, 'recall': 0.3, 'kappa': 0.2}
+   engine vs reward:           {'n': 172, 'flags': 27, 'tp': 10, 'fp': 17, 'fn': 20, 'tn': 125, 'precision': 0.37, 'recall': 0.33, 'kappa': 0.22}
+   tokens per run 5451; tasks with one type over all trials 19/43; engine verdict changes on 25 runs
+   on the 117 runs with the right type: {'n': 117, 'flags': 6, 'tp': 6, 'fp': 0, 'fn': 18, 'tn': 93, 'precision': 1.0, 'recall': 0.25, 'kappa': 0.35}
+   disagreements (solution-list type -> inferred type: runs)
+     no-write                                           -> transfer                                           32
+     update_reservation_flights                         -> transfer                                           5
+     book_reservation+cancel_reservation                -> update_reservation_baggages+update_reservation_flights 3
+     transfer                                           -> no-write                                           2
+     cancel_reservation+update_reservation_flights      -> cancel_reservation                                 2
+     book_reservation                                   -> no-write                                           2
+     book_reservation+cancel_reservation                -> cancel_reservation                                 2
+     no-write                                           -> cancel_reservation                                 1
+     update_reservation_baggages+update_reservation_flights -> transfer                                           1
+     update_reservation_baggages+update_reservation_flights+update_reservation_passengers -> no-write                                           1
+     cancel_reservation                                 -> no-write                                           1
+     update_reservation_flights                         -> no-write                                           1
+     book_reservation                                   -> cancel_reservation                                 1
+     no-write                                           -> cancel_reservation+update_reservation_flights      1
+

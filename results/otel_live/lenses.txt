@@ -1,6 +1,6 @@
 The secondary lenses. They describe the runs and enter no verdict.
 
-rework: mean 19.2% over the 8 runs with at least two tool calls
+repeated tool use: mean 19.2% over the 8 runs with at least two tool calls
 
 handovers (the acting agent changes):
   root -> FileSurfer  21

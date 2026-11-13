@@ -1,7 +1,9 @@
 """Secondary lenses on how a run went (R8). They describe runs and enter no verdict.
 
-Rework is the share of a run's tool calls that repeat a tool the run has already
-used. A handover is a transition at which the acting agent changes.
+Repeated tool use is the share of a run's tool calls that repeat a tool the run
+has already used. It counts repeats, whatever their cause, so it is not rework in
+the sense of work redone after an error. A handover is a transition at which the
+acting agent changes.
 """
 from __future__ import annotations
 
@@ -17,8 +19,9 @@ NON_ACTION = {"assistant_message", "user_message", "orchestrate", "report", "del
               "subagent_completed", "handoff", "guardrail"}
 
 
-def rework(trace: Trace) -> Optional[float]:
-    """The run's rework, or None for a run with fewer than two tool calls."""
+def repeated_tool_use(trace: Trace) -> Optional[float]:
+    """The share of the run's tool calls that repeat a tool the run has already used,
+    or None for a run with fewer than two tool calls."""
     calls = [a for a in trace.activities if a not in NON_ACTION]
     return 1 - len(set(calls)) / len(calls) if len(calls) >= 2 else None
 

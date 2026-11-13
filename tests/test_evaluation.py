@@ -4,7 +4,8 @@ import json
 import pytest
 
 from agentpm.cli import main
-from agentpm.evaluation import flags_at_reward_one, metrics, path, same_outcome_pairs, separation
+from agentpm.evaluation import (bootstrap, flags_at_reward_one, metrics, path, same_outcome_pairs, separation,
+                                task_clusters)
 from agentpm.model import Event, Trace
 
 RUNS = "examples/demos/tau2_airline/claude-opus-4-5_high_airline_gpt-5.2_4trials.json"
@@ -24,6 +25,31 @@ def test_kappa_and_precision_treat_a_violation_as_the_positive_class():
     m = metrics(pred, truth, list(truth))
     assert (m["precision"], m["recall"]) == (1.0, 0.5)
     assert m["kappa"] == pytest.approx(0.5)
+
+
+def test_a_bootstrap_over_groups_of_one_run_is_the_plain_bootstrap():
+    truth = {f"r{i}": i % 3 != 0 for i in range(30)}
+    pred = {f"r{i}": i % 4 != 0 for i in range(30)}
+    ids = sorted(truth)
+    assert bootstrap(pred, truth, ids, "kappa", 200, cluster={i: i for i in ids}) == \
+        bootstrap(pred, truth, ids, "kappa", 200)
+
+
+def test_a_bootstrap_over_tasks_keeps_the_runs_of_a_task_together():
+    # Two tasks with four runs each: the engine is right on every run of task a and
+    # wrong on every run of task b. Drawing whole tasks can give a sample of task b
+    # only, so the interval reaches 0; drawing single runs almost never does.
+    truth = {f"{t}{k}": False for t in "ab" for k in range(4)}
+    pred = {f"a{k}": False for k in range(4)} | {f"b{k}": True for k in range(4)}
+    ids = sorted(truth)
+    lo, hi = bootstrap(pred, truth, ids, "recall", 400, cluster={i: i[0] for i in ids})
+    assert (lo, hi) == (0.0, 1.0)
+    assert bootstrap(pred, truth, ids, "recall", 400)[0] > 0.0
+
+
+def test_task_clusters_only_when_runs_repeat_a_task():
+    assert task_clusters([_run("x", [["a"]], task="1"), _run("y", [["a"]], task="2")]) is None
+    assert task_clusters([_run("x", [["a"]], task="1"), _run("y", [["a"]], task="1")]) == {"x": "1", "y": "1"}
 
 
 def test_the_listing_of_calls_issued_together_is_not_another_path():
@@ -58,6 +84,7 @@ def test_evaluate_reproduces_the_reported_airline_comparison(capsys):
                  "--judge", f"required={REQUIRED}", "--rounds", "20"]) == 0
     out = capsys.readouterr().out
     assert "label per-action: 172 runs, 37 violations" in out
+    assert "the runs repeat 43 tasks, so the intervals draw whole tasks" in out
     assert "0.94   0.41   0.50" in out            # the engine
     assert "0.93   1.00   0.95" in out            # the required-actions Judge
     assert "3 repetitions give 1 distinct verdict hash" in out

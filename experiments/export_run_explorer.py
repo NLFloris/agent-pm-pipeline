@@ -16,6 +16,7 @@ import os
 import sys
 
 from agentpm.ingest import traceelephant
+from data_dir import DATA   # noqa: E402
 
 SUBSETS = ["captain-runs-gaia", "magentic-runs-gaia", "swe-agent-runs-swe-bench"]
 
@@ -56,7 +57,7 @@ def export_run(t):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="runs_te.json")
     ap.add_argument("--per-subset", type=int, default=7)
     a = ap.parse_args()

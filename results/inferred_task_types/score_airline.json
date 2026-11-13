@@ -1,0 +1,690 @@
+{
+ "solution list": {
+  "runs": 172,
+  "type_agrees": 172,
+  "vs_per_action_label": {
+   "n": 172,
+   "flags": 16,
+   "tp": 15,
+   "fp": 1,
+   "fn": 22,
+   "tn": 134,
+   "precision": 0.94,
+   "recall": 0.41,
+   "kappa": 0.5
+  },
+  "vs_reward": {
+   "n": 172,
+   "flags": 16,
+   "tp": 15,
+   "fp": 1,
+   "fn": 15,
+   "tn": 141,
+   "precision": 0.94,
+   "recall": 0.5,
+   "kappa": 0.6
+  }
+ },
+ "customer, v1": {
+  "runs": 172,
+  "type_agrees": 80,
+  "vs_per_action_label": {
+   "n": 172,
+   "flags": 67,
+   "tp": 21,
+   "fp": 46,
+   "fn": 16,
+   "tn": 89,
+   "precision": 0.31,
+   "recall": 0.57,
+   "kappa": 0.18
+  },
+  "vs_reward": {
+   "n": 172,
+   "flags": 67,
+   "tp": 18,
+   "fp": 49,
+   "fn": 12,
+   "tn": 93,
+   "precision": 0.27,
+   "recall": 0.6,
+   "kappa": 0.17
+  },
+  "tokens_per_run": 2930,
+  "tasks_stable": 12,
+  "tasks": 43,
+  "verdict_changed": 65,
+  "disagreements": [
+   {
+    "given": "no-write",
+    "inferred": "transfer",
+    "runs": 30
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 12
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "no-write",
+    "runs": 8
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation",
+    "runs": 7
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "no-write",
+    "runs": 6
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "no-write",
+    "runs": 5
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "transfer",
+    "runs": 4
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "transfer",
+    "runs": 3
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights+update_reservation_passengers",
+    "inferred": "update_reservation_flights+update_reservation_passengers",
+    "runs": 2
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights+update_reservation_passengers",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "cancel_reservation+update_reservation_flights",
+    "inferred": "transfer",
+    "runs": 2
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "transfer",
+    "runs": 2
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 2
+   },
+   {
+    "given": "update_reservation_baggages",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "cancel_reservation+update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "no-write",
+    "inferred": "send_certificate",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "update_reservation_baggages",
+    "runs": 1
+   }
+  ]
+ },
+ "customer, v2": {
+  "runs": 172,
+  "type_agrees": 128,
+  "vs_per_action_label": {
+   "n": 172,
+   "flags": 33,
+   "tp": 12,
+   "fp": 21,
+   "fn": 25,
+   "tn": 114,
+   "precision": 0.36,
+   "recall": 0.32,
+   "kappa": 0.18
+  },
+  "vs_reward": {
+   "n": 172,
+   "flags": 33,
+   "tp": 10,
+   "fp": 23,
+   "fn": 20,
+   "tn": 119,
+   "precision": 0.3,
+   "recall": 0.33,
+   "kappa": 0.16
+  },
+  "tokens_per_run": 3451,
+  "tasks_stable": 25,
+  "tasks": 43,
+  "verdict_changed": 35,
+  "disagreements": [
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation",
+    "runs": 11
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 7
+   },
+   {
+    "given": "transfer",
+    "inferred": "no-write",
+    "runs": 4
+   },
+   {
+    "given": "no-write",
+    "inferred": "send_certificate",
+    "runs": 4
+   },
+   {
+    "given": "no-write",
+    "inferred": "update_reservation_flights",
+    "runs": 3
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "update_reservation_baggages+update_reservation_flights",
+    "runs": 3
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "no-write",
+    "runs": 3
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "update_reservation_baggages",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights",
+    "inferred": "update_reservation_flights",
+    "runs": 1
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation+update_reservation_flights",
+    "runs": 1
+   },
+   {
+    "given": "cancel_reservation+update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   }
+  ]
+ },
+ "customer, v2, transfer kept": {
+  "runs": 172,
+  "type_agrees": 113,
+  "vs_per_action_label": {
+   "n": 172,
+   "flags": 44,
+   "tp": 16,
+   "fp": 28,
+   "fn": 21,
+   "tn": 107,
+   "precision": 0.36,
+   "recall": 0.43,
+   "kappa": 0.21
+  },
+  "vs_reward": {
+   "n": 172,
+   "flags": 44,
+   "tp": 13,
+   "fp": 31,
+   "fn": 17,
+   "tn": 111,
+   "precision": 0.3,
+   "recall": 0.43,
+   "kappa": 0.18
+  },
+  "tokens_per_run": 3451,
+  "tasks_stable": 19,
+  "tasks": 43,
+  "verdict_changed": 38,
+  "disagreements": [
+   {
+    "given": "no-write",
+    "inferred": "transfer",
+    "runs": 18
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation",
+    "runs": 11
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "transfer",
+    "runs": 4
+   },
+   {
+    "given": "no-write",
+    "inferred": "send_certificate",
+    "runs": 4
+   },
+   {
+    "given": "no-write",
+    "inferred": "update_reservation_flights",
+    "runs": 3
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "update_reservation_baggages+update_reservation_flights",
+    "runs": 3
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 3
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "update_reservation_baggages",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "transfer",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights",
+    "inferred": "update_reservation_flights",
+    "runs": 1
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation+update_reservation_flights",
+    "runs": 1
+   },
+   {
+    "given": "cancel_reservation+update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "no-write",
+    "runs": 1
+   }
+  ]
+ },
+ "customer+lookups, v1": {
+  "runs": 172,
+  "type_agrees": 105,
+  "vs_per_action_label": {
+   "n": 172,
+   "flags": 42,
+   "tp": 18,
+   "fp": 24,
+   "fn": 19,
+   "tn": 111,
+   "precision": 0.43,
+   "recall": 0.49,
+   "kappa": 0.29
+  },
+  "vs_reward": {
+   "n": 172,
+   "flags": 42,
+   "tp": 18,
+   "fp": 24,
+   "fn": 12,
+   "tn": 118,
+   "precision": 0.43,
+   "recall": 0.6,
+   "kappa": 0.37
+  },
+  "tokens_per_run": 4889,
+  "tasks_stable": 17,
+  "tasks": 43,
+  "verdict_changed": 32,
+  "disagreements": [
+   {
+    "given": "no-write",
+    "inferred": "transfer",
+    "runs": 41
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "transfer",
+    "runs": 6
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 3
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "no-write",
+    "runs": 3
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "transfer",
+    "runs": 2
+   },
+   {
+    "given": "update_reservation_baggages",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "update_reservation_baggages+update_reservation_flights",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights+update_reservation_passengers",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "cancel_reservation+update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "book_reservation",
+    "runs": 1
+   }
+  ]
+ },
+ "customer+lookups, v2": {
+  "runs": 172,
+  "type_agrees": 147,
+  "vs_per_action_label": {
+   "n": 172,
+   "flags": 14,
+   "tp": 9,
+   "fp": 5,
+   "fn": 28,
+   "tn": 130,
+   "precision": 0.64,
+   "recall": 0.24,
+   "kappa": 0.27
+  },
+  "vs_reward": {
+   "n": 172,
+   "flags": 14,
+   "tp": 8,
+   "fp": 6,
+   "fn": 22,
+   "tn": 136,
+   "precision": 0.57,
+   "recall": 0.27,
+   "kappa": 0.28
+  },
+  "tokens_per_run": 5451,
+  "tasks_stable": 31,
+  "tasks": 43,
+  "verdict_changed": 16,
+  "disagreements": [
+   {
+    "given": "update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 6
+   },
+   {
+    "given": "transfer",
+    "inferred": "no-write",
+    "runs": 4
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "update_reservation_baggages+update_reservation_flights",
+    "runs": 3
+   },
+   {
+    "given": "cancel_reservation+update_reservation_flights",
+    "inferred": "cancel_reservation",
+    "runs": 2
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 2
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights+update_reservation_passengers",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation+update_reservation_flights",
+    "runs": 1
+   }
+  ]
+ },
+ "customer+lookups, v2, transfer kept": {
+  "runs": 172,
+  "type_agrees": 117,
+  "vs_per_action_label": {
+   "n": 172,
+   "flags": 27,
+   "tp": 11,
+   "fp": 16,
+   "fn": 26,
+   "tn": 119,
+   "precision": 0.41,
+   "recall": 0.3,
+   "kappa": 0.2
+  },
+  "vs_reward": {
+   "n": 172,
+   "flags": 27,
+   "tp": 10,
+   "fp": 17,
+   "fn": 20,
+   "tn": 125,
+   "precision": 0.37,
+   "recall": 0.33,
+   "kappa": 0.22
+  },
+  "tokens_per_run": 5451,
+  "tasks_stable": 19,
+  "tasks": 43,
+  "verdict_changed": 25,
+  "disagreements": [
+   {
+    "given": "no-write",
+    "inferred": "transfer",
+    "runs": 32
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "transfer",
+    "runs": 5
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "update_reservation_baggages+update_reservation_flights",
+    "runs": 3
+   },
+   {
+    "given": "transfer",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "cancel_reservation+update_reservation_flights",
+    "inferred": "cancel_reservation",
+    "runs": 2
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "no-write",
+    "runs": 2
+   },
+   {
+    "given": "book_reservation+cancel_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 2
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights",
+    "inferred": "transfer",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_baggages+update_reservation_flights+update_reservation_passengers",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "cancel_reservation",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "update_reservation_flights",
+    "inferred": "no-write",
+    "runs": 1
+   },
+   {
+    "given": "book_reservation",
+    "inferred": "cancel_reservation",
+    "runs": 1
+   },
+   {
+    "given": "no-write",
+    "inferred": "cancel_reservation+update_reservation_flights",
+    "runs": 1
+   }
+  ]
+ }
+}

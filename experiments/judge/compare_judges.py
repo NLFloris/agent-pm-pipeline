@@ -10,7 +10,8 @@ it one request at a time; on retail every method is therefore also scored on
 those 120 runs alone, so that all of them are compared on the same runs.
 
 Reported per domain and label: alignment of each method (bootstrap 95% interval
-on kappa), McNemar of the engine against each Judge, the two Judges' agreement
+on kappa, drawing single runs and, below it, whole tasks, since the
+runs repeat each task), McNemar of the engine against each Judge, the two Judges' agreement
 with each other per condition, the violations the engine flags and the
 output-only Judge passes, how often that Judge flags the violations the engine
 misses and the runs the label calls compliant, what the policy Judges cite on
@@ -36,6 +37,7 @@ from evaluate import (bootstrap, fleiss_kappa, ground_truth, judge_verdicts, mcn
                       verdict_cost)
 from task_type_conformance import DEFAULT_DATA   # noqa: E402
 
+from agentpm.evaluation import task_clusters   # noqa: E402
 from agentpm.ingest import tau2   # noqa: E402
 
 DOMAINS = {
@@ -89,7 +91,7 @@ def load(domain):
     return traces, methods, costs, records, sample
 
 
-def alignment(methods, truth, restrict=None):
+def alignment(methods, truth, restrict=None, cluster=None):
     pm = methods["engine, task type"]
     print(f"  {'method':34} {'n':>4} {'prec':>5} {'rec':>5} {'kappa':>6}  95% CI       engine/judge only  McNemar p")
     for name, pred in methods.items():
@@ -105,21 +107,35 @@ def alignment(methods, truth, restrict=None):
             extra = f"  {a_only:5} / {b_only:<5}      {p:.4f}"
         print(f"  {name:34} {len(ids):4} {m['precision']:5.2f} {m['recall']:5.2f} {m['kappa']:6.2f}  "
               f"[{lo:5.2f}, {hi:4.2f}]{extra}")
+    if cluster:
+        # The runs repeat each task four times, so they are not independent. These
+        # intervals draw whole tasks, with all their runs, instead of single runs.
+        tasks = {cluster[i] for i in truth if restrict is None or i in restrict}
+        print(f"  95% CI drawing whole tasks ({len(tasks)} tasks):")
+        for name, pred in methods.items():
+            ids = sorted(i for i in truth if i in pred and (restrict is None or i in restrict))
+            if not ids:
+                continue
+            lo, hi = bootstrap(pred, truth, ids, "kappa", cluster=cluster)
+            plo, phi = bootstrap(pred, truth, ids, "precision", cluster=cluster)
+            print(f"    {name:34} kappa [{lo:5.2f}, {hi:4.2f}]   precision [{plo:4.2f}, {phi:4.2f}]")
 
 
 def main():
     for domain in DOMAINS:
         traces, methods, costs, records, sample = load(domain)
+        cluster = task_clusters(traces)
         print(f"\n{'=' * 100}\n{domain.upper()}, {len(traces)} runs, agent claude-opus-4-5")
         for lab in LABELS:
             truth = ground_truth(traces, lab)
             print(f"\n-- label {lab}: {len(truth)} scorable runs, {sum(1 for v in truth.values() if not v)} violations")
-            alignment({k: v for k, v in methods.items() if sample is None or "glm" not in k}, truth)
+            alignment({k: v for k, v in methods.items() if sample is None or "glm" not in k}, truth,
+                      cluster=cluster)
             if sample:
                 st = {i: v for i, v in truth.items() if i in sample}
                 print(f"   the same, on the stratified sample only ({len(st)} runs, "
                       f"{sum(1 for v in st.values() if not v)} violations), every method on the same runs:")
-                alignment(methods, truth, sample)
+                alignment(methods, truth, sample, cluster=cluster)
 
         print("\n-- the two Judges against each other (Cohen's kappa on the runs both judged)")
         for cond in CONDITIONS:

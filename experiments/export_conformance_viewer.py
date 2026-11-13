@@ -22,6 +22,7 @@ import sys
 from agentpm.analysis.conformance import check
 from agentpm.ingest import tau2
 from agentpm.reference import Reference
+from data_dir import DATA   # noqa: E402
 
 MESSAGES = {"assistant_message", "user_message"}
 MAX_TEXT = 100000
@@ -81,7 +82,7 @@ def export_run(trace, result):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default=os.path.expanduser("~/Downloads"))
+    ap.add_argument("--data", default=DATA)
     ap.add_argument("--out", default="runs_conformance.json")
     ap.add_argument("--per-cell", type=int, default=5)
     ap.add_argument("--all", action="store_true", help="export every run, not a sample")

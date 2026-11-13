@@ -9,6 +9,7 @@ scripts may use pm4py and pandas.
 ## Data
 
 Most scripts read the public corpora from a data folder, `~/Downloads` unless
+the environment variable `AGENTPM_DATA` names another one (`data_dir.py`), or
 `--data` says otherwise, laid out as follows:
 
 ```
@@ -28,7 +29,8 @@ helps to inspect the data. Sections are those of the thesis.
 
 | script | writes | thesis |
 |---|---|---|
-| `run_three_corpora.py` | `results/three_corpora.txt` (stdout), `three_corpora_summary.json`: inventory, conformance, discovery and rework per corpus | Section 5 |
+| `run_three_corpora.py` | `results/three_corpora.txt` (stdout), `three_corpora_summary.json`: inventory, conformance, discovery and repeated tool use per corpus | Section 5 |
+| `repeated_tool_use.py` | `results/repeated_tool_use.txt`: whether the higher share of repeated tool calls in failed airline runs survives a comparison within the same task, at the same run length, and against the repeats the solution list requires | Section 5 |
 | `build_ocel.py` | `results/ocel/*.ocel.json`, read back with pm4py; stdout in `results/ocel/BUILD.txt` | Section 5 |
 | `export_event_log.py` | `results/logs/`: the flat τ² event log as CSV and XES, verdicts per run | supporting |
 | `partial_order.py` | `results/partial_order.txt`: what discovery does with calls issued together | Section 5 |
@@ -74,6 +76,7 @@ python experiments/miss_reasons.py > results/miss_reasons.txt
 python experiments/task_versions.py > results/task_versions.txt
 python experiments/transfer_endings.py > results/transfer_endings.txt
 python experiments/path_sensitivity.py > results/path_sensitivity.txt
+python experiments/repeated_tool_use.py > results/repeated_tool_use.txt
 python experiments/first_divergence.py > results/first_divergence.txt
 python experiments/discover.py --data ~/Downloads --out results/pm4py
 python experiments/noise_sweep.py --data ~/Downloads --out results/pm4py
